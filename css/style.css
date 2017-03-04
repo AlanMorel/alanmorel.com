@@ -16,8 +16,13 @@ h1 {
 }
 
 h3 {
-    padding: 0 15%;
     font-weight: lighter;
+}
+
+.intro {
+    width: 70%;
+    max-width: 600px;
+    margin: auto;
 }
 
 .project {
@@ -87,7 +92,7 @@ h3 {
 }
 
 table {
-    width: 70%;
+    width: 50%;
     margin: auto;
 }
 

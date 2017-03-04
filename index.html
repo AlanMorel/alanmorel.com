@@ -11,8 +11,10 @@
     <h1>Alan Morel</h1>
     <div>Software Engineer with a passion.</div>
     <object type="image/svg+xml" data="images/svg.svg"></object>
-    <h2>Welcome to my personal website.</h2>
-    <h3>I'm a software engineer that loves coding and designing cool things. This website is a collection of my software, artwork, thoughts and achievements. I hope that my projects inspire you to collaborate, learn and grow!</h3>
+    <div class="intro">
+        <h2>Welcome to my personal website.</h2>
+        <h3>I'm a software engineer that loves coding and designing cool things. This website is a collection of my software, artwork, thoughts and achievements. I hope that my projects inspire you to collaborate, learn and grow!</h3>
+    </div>
     <div class="contacts"></div>
     <h2>Here are my projects.</h2>
     <div class="projects"></div>
@@ -22,9 +24,9 @@
             <tr>
                 {{#each this}}
                 <th>
-                  <a href="{{this.link}}">
-                    <img src="images/{{this.name}}.png"></img>
-                  </a>
+                    <a href="{{this.link}}">
+                        <img src="images/{{this.name}}.png"></img>
+                    </a>
                 </th>
                 {{/each}}
             </tr>
@@ -47,19 +49,16 @@
                         <div class="name">{{this.name}}</div>
                         <div class="date">Released {{this.date}}</div>
                         <div class="description">{{this.description}}</div>
-                        {{#if this.technologies}}
                         <div>Technologies</div>
                         <div class="technologies">
                             {{#each this.technologies}}
                             <span class="technology">{{this}}</span> {{/each}}
                         </div>
-                        {{/if}} {{#if this.platforms}}
                         <div>Platforms</div>
                         <div class="platforms">
                             {{#each this.platforms}}
                             <span class="platform">{{this}}</span> {{/each}}
                         </div>
-                        {{/if}}
                         <div class="images">
                             {{#each this.images}}
                             <img src="projects/{{../id}}/{{this}}.png"></img>
@@ -72,7 +71,7 @@
                             <li>{{@key}}: {{this}}</li>
                             {{/each}}
                         </ul>
-                        {{/if}} {{#if this.links}}
+                        {{/if}}
                         <div>Links</div>
                         <ul class="links">
                             {{#each this.links}}
@@ -81,7 +80,6 @@
                             </li>
                             {{/each}}
                         </ul>
-                        {{/if}}
                     </div>
                 </div>
                 {{/each}}
