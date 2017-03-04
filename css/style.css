@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:700,400');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+
+body{
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  letter-spacing: 0.05rem;
+}
+
+img {
+    vertical-align: middle;
+    user-select: none;
+    border: none;
+  }
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+	padding: 0 15%;
+	font-weight: lighter;
+}
+
+.project {
+    display: inline-block;
+    width: 100%;
+    padding: 2rem 0;
+}
+.project-icon {
+    float: left;
+    width: 20%;
+}
+
+.project-icon img {
+  width: 100%;
+}
+
+.project-details {
+    float: right;
+    width: 70%;
+    margin: 0 5%;
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.project-name {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+.project-images img {
+  height: 300px;
+}

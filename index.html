@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alan Morel: Software Engineer with a passion.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Alan Morel</h1>
+    <div>Software Engineer with a passion.</div>
+    <object type="image/svg+xml" data="images/svg.svg"></object>
+    <h2>Welcome to my personal website.</h2>
+    <h3>I'm a software engineer that loves coding and designing cool things. This website is a collection of my software, artwork, thoughts and achievements. I hope that my projects inspire you to collaborate, learn and grow!</h3>
+    <h2>Here are my projects.</h2>
+    <div class="projects"></div>
+    <div class="skills"></div>
+    <script id="projects-template" type="text/x-handlebars-template">
+        <div class="projects">
+            {{#each this}}
+            <div class="project-container" style="background-color:{{this.background}}; color:{{this.color}}">
+                <div class="project">
+                    <div class="project-icon">
+                        <img src="projects/{{this.name}}/icon.png"></img>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-name">{{this.name}}</div>
+                        <div class="project-description">{{this.description}}</div>
+                        <div class="project-images">
+                            {{#each this.images}}
+                            <img src="projects/{{../name}}/{{this}}.png"/>
+                            {{/each}}
+                        </div>
+                        {{#if this.credits}}
+                        <div>Credits</div>
+                        <ul class="project-credits">
+                            {{#each this.credits}}
+                            <li>{{@key}}: {{this}}</li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+    </script>
+    <script src="javascript/handlebars.js"></script>
+    <script src="javascript/data.js"></script>
+    <script src="javascript/app.js"></script>
+</body>
+
+</html>
