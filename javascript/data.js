@@ -44,7 +44,7 @@ var data = {
         "chainball": {
             id: "chainball",
             name: "Chainball",
-            background: "#f63f6a",
+            background: "#ff7394",
             color: "#ffffff",
             date: "July 2014",
             description: "Use your fast reflexives to build yourself a chain as you navigate the endless stream of circles. Hit the blue and green circles while avoiding the red and gray ones to score as high as you can. When you’re finished, brag to your friends and challenge them to score higher than you in Chainball!",
@@ -67,7 +67,7 @@ var data = {
         "balloon frenzy": {
             id: "balloonfrenzy",
             name: "Balloon Frenzy!",
-            background: "#0077ff",
+            background: "#78b7ff",
             color: "#000000",
             date: "August 2011",
             description: "Start off with one balloon and soon end up with many! Every 5 levels unlocks yet another balloon so things will become interesting real quick! Your goal is to obtain as high of a score as possible without missing too many balloons.",
@@ -85,8 +85,8 @@ var data = {
         "danger zone": {
             id: "dangerzone",
             name: "Danger Zone",
-            background: "#222222",
-            color: "#ffffff",
+            background: "#e2e2e2",
+            color: "#000000",
             date: "June 2012",
             description: "Your job is simple. Just survive. With just your jumping and ducking skills at your disposal, you will need to avoid incoming missiles to keep yourself alive. The longer you can stay alive, the more score you’ll earn! At the end of the game your performance will be ranked from an (A+) to and (F-)! Be warned, this can get addicting!",
             images: ["image1", "image2", "image3", "image4", "image5", "image6", "image7"],
