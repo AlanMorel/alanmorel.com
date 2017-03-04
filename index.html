@@ -21,22 +21,41 @@
             {{#each this}}
             <div class="project-container" style="background-color:{{this.background}}; color:{{this.color}}">
                 <div class="project">
-                    <div class="project-icon">
+                    <div class="icon">
                         <img src="projects/{{this.name}}/icon.png"></img>
                     </div>
-                    <div class="project-details">
-                        <div class="project-name">{{this.name}}</div>
-                        <div class="project-description">{{this.description}}</div>
-                        <div class="project-images">
+                    <div class="details">
+                        <div class="name">{{this.name}}</div>
+                        <div class="date">Released {{this.date}}</div>
+                        <div class="description">{{this.description}}</div>
+                        {{#if this.technologies}}
+                        <div>Technologies</div>
+                        <div class="technologies">
+                            {{#each this.technologies}}
+                            <span class="technology">{{this}}</span>
+                            {{/each}}
+                        </div>
+                        {{/if}}
+                        <div class="images">
                             {{#each this.images}}
-                            <img src="projects/{{../name}}/{{this}}.png"/>
+                            <img src="projects/{{../name}}/{{this}}.png"></img>
                             {{/each}}
                         </div>
                         {{#if this.credits}}
                         <div>Credits</div>
-                        <ul class="project-credits">
+                        <ul class="credits">
                             {{#each this.credits}}
                             <li>{{@key}}: {{this}}</li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
+                        {{#if this.links}}
+                        <div>Links</div>
+                        <ul class="links">
+                            {{#each this.links}}
+                            <li class="link">
+                              <a href="{{this}}">{{@key}}</a>
+                            </li>
                             {{/each}}
                         </ul>
                         {{/if}}

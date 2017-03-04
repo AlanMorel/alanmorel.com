@@ -26,18 +26,18 @@ h3 {
 .project {
     display: inline-block;
     width: 100%;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 }
-.project-icon {
+.icon {
     float: left;
     width: 20%;
 }
 
-.project-icon img {
+.icon img {
   width: 100%;
 }
 
-.project-details {
+.details {
     float: right;
     width: 70%;
     margin: 0 5%;
@@ -45,18 +45,33 @@ h3 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.project-name {
+.name {
     font-size: 2rem;
     text-align: left;
-    margin-bottom: 1rem;
 }
 
-.project-description {
+.date {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+.description {
     font-size: 1rem;
     font-weight: 100;
     margin-bottom: 1rem;
 }
 
-.project-images img {
+.images img {
   height: 300px;
+}
+
+.technologies {
+    padding: 1rem 0;
+}
+
+.technology{
+  padding: 0.3rem 0.5rem;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 0.5rem;
 }
