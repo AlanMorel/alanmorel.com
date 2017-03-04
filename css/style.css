@@ -1,26 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:700,400');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    letter-spacing: 0.05rem;
+}
 
-body{
-  margin: 0;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-  letter-spacing: 0.05rem;
+a {
+    color: white;
 }
 
 img {
     vertical-align: middle;
     user-select: none;
     border: none;
-  }
+}
 
 h1 {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 h3 {
-	padding: 0 15%;
-	font-weight: lighter;
+    padding: 0 15%;
+    font-weight: lighter;
 }
 
 .project {
@@ -28,13 +31,14 @@ h3 {
     width: 100%;
     padding: 1.5rem 0;
 }
+
 .icon {
     float: left;
     width: 20%;
 }
 
 .icon img {
-  width: 100%;
+    width: 100%;
 }
 
 .details {
@@ -48,6 +52,7 @@ h3 {
 .name {
     font-size: 2rem;
     text-align: left;
+    margin-bottom: 0.5rem;
 }
 
 .date {
@@ -62,16 +67,20 @@ h3 {
 }
 
 .images img {
-  height: 300px;
+    height: 300px;
 }
 
-.technologies {
+.technologies, .platforms {
     padding: 1rem 0;
 }
 
-.technology{
-  padding: 0.3rem 0.5rem;
-  display: inline-block;
-  background-color: rgba(0,0,0,0.25);
-  border-radius: 0.5rem;
+.technology, .platform {
+    padding: 0.3rem 0.5rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+}
+
+.images {
+    margin-bottom: 2rem;
 }

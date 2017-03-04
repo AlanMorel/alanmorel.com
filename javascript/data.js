@@ -7,11 +7,16 @@ var data = {
       date: "March 2017",
       description: "Trumpulse uses data from multiple news sources so you can get the pulse of America under Trump. It is a single-page application made using Angular, HTML, CSS, and JavaScript. Using data from various news sources and social networks like Facebook and Twitter, you can get a diverse picture of the state of America under the Trump administration.",
       images: ["image1", "image2", "image3"],
-      technologies:[
-        "angular",
-        "html",
-        "css",
-        "javascript"
+      technologies: [
+        "Cordova",
+        "Angular",
+        "HTML 5",
+        "CSS 3",
+        "JavaScript"
+      ],
+      platforms: [
+        "Web",
+        "Android"
       ],
       links: {
         "Demo": "http://alanmorel.com/trump",
@@ -29,8 +34,11 @@ var data = {
         "Music": "NoSoapRadio.us"
       },
       technologies:[
-        "java",
-        "libgdx"
+        "Java",
+        "libGDX"
+      ],
+      platforms: [
+        "Android"
       ],
       links: {
         "Google Play Store": "https://play.google.com/store/apps/details?id=com.luminositygames.chainball.android",

@@ -36,6 +36,14 @@
                             {{/each}}
                         </div>
                         {{/if}}
+                        {{#if this.platforms}}
+                        <div>Platforms</div>
+                        <div class="platforms">
+                            {{#each this.platforms}}
+                            <span class="platform">{{this}}</span>
+                            {{/each}}
+                        </div>
+                        {{/if}}
                         <div class="images">
                             {{#each this.images}}
                             <img src="projects/{{../name}}/{{this}}.png"></img>
