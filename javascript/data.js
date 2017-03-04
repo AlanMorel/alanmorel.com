@@ -7,7 +7,6 @@ var data = {
     },
     projects: {
         "trumpulse": {
-            id: "trumpulse",
             name: "Trumpulse",
             background: "#2f61de",
             color: "#ffffff",
@@ -21,7 +20,6 @@ var data = {
             },
         },
         "chainball": {
-            id: "chainball",
             name: "Chainball",
             background: "#ff7394",
             color: "#ffffff",
@@ -38,8 +36,7 @@ var data = {
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.luminositygames.chainball.android",
             },
         },
-        "balloon frenzy": {
-            id: "balloonfrenzy",
+        "balloonfrenzy": {
             name: "Balloon Frenzy!",
             background: "#78b7ff",
             color: "#000000",
@@ -52,8 +49,7 @@ var data = {
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.sharpacex.BalloonFrenzy",
             },
         },
-        "danger zone": {
-            id: "dangerzone",
+        "dangerzone": {
             name: "Danger Zone",
             background: "#e2e2e2",
             color: "#000000",

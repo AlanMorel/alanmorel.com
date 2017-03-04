@@ -24,8 +24,8 @@
             <tr>
                 {{#each this}}
                 <th>
-                    <a href="{{this.link}}">
-                        <img src="images/{{this.name}}.png"></img>
+                    <a href="{{this}}">
+                        <img src="images/{{@key}}.png"></img>
                     </a>
                 </th>
                 {{/each}}
@@ -42,7 +42,7 @@
         <div class="project-container" style="background-color:{{this.background}}; color:{{this.color}}">
             <div class="project">
                 <div class="icon">
-                    <img src="projects/{{this.id}}/icon.png"></img>
+                    <img src="projects/{{@key}}/icon.png"></img>
                 </div>
                 <div class="details">
                     <div class="name">{{this.name}}</div>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="images">
                         {{#each this.images}}
-                        <img src="projects/{{../id}}/{{this}}.png"></img>
+                        <img src="projects/{{@../key}}/{{this}}.png"></img>
                         {{/each}}
                     </div>
                     {{#if this.credits}}
