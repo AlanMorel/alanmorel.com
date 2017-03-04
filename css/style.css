@@ -81,3 +81,16 @@ h3 {
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
 }
+
+.contacts a {
+  text-decoration:
+}
+
+table {
+    width: 70%;
+    margin: auto;
+}
+
+table img {
+  max-width: 64px;
+}
