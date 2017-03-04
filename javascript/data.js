@@ -1,5 +1,5 @@
 var data = {
-    contact: {
+    contacts: {
         github: {
             name: "Github",
             link: "https://github.com/AlanMorel"
