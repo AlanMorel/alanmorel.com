@@ -38,52 +38,51 @@
         </table>
     </script>
     <script id="projects-template" type="text/x-handlebars-template">
-        <div class="projects">
-            {{#each this}}
-            <div class="project-container" style="background-color:{{this.background}}; color:{{this.color}}">
-                <div class="project">
-                    <div class="icon">
-                        <img src="projects/{{this.id}}/icon.png"></img>
-                    </div>
-                    <div class="details">
-                        <div class="name">{{this.name}}</div>
-                        <div class="date">Released {{this.date}}</div>
-                        <div class="description">{{this.description}}</div>
-                        <div>Technologies</div>
-                        <div class="technologies">
-                            {{#each this.technologies}}
-                            <span class="technology">{{this}}</span> {{/each}}
-                        </div>
-                        <div>Platforms</div>
-                        <div class="platforms">
-                            {{#each this.platforms}}
-                            <span class="platform">{{this}}</span> {{/each}}
-                        </div>
-                        <div class="images">
-                            {{#each this.images}}
-                            <img src="projects/{{../id}}/{{this}}.png"></img>
-                            {{/each}}
-                        </div>
-                        {{#if this.credits}}
-                        <div>Credits</div>
-                        <ul class="credits">
-                            {{#each this.credits}}
-                            <li>{{@key}}: {{this}}</li>
-                            {{/each}}
-                        </ul>
-                        {{/if}}
-                        <div>Links</div>
-                        <ul class="links">
-                            {{#each this.links}}
-                            <li class="link">
-                                <a href="{{this}}" style="color:{{../color}}">{{@key}}</a>
-                            </li>
-                            {{/each}}
-                        </ul>
-                    </div>
+        {{#each this}}
+        <div class="project-container" style="background-color:{{this.background}}; color:{{this.color}}">
+            <div class="project">
+                <div class="icon">
+                    <img src="projects/{{this.id}}/icon.png"></img>
                 </div>
-                {{/each}}
+                <div class="details">
+                    <div class="name">{{this.name}}</div>
+                    <div class="date">Released {{this.date}}</div>
+                    <div class="description">{{this.description}}</div>
+                    <div>Technologies</div>
+                    <div class="technologies">
+                        {{#each this.technologies}}
+                        <span class="technology">{{this}}</span> {{/each}}
+                    </div>
+                    <div>Platforms</div>
+                    <div class="platforms">
+                        {{#each this.platforms}}
+                        <span class="platform">{{this}}</span> {{/each}}
+                    </div>
+                    <div class="images">
+                        {{#each this.images}}
+                        <img src="projects/{{../id}}/{{this}}.png"></img>
+                        {{/each}}
+                    </div>
+                    {{#if this.credits}}
+                    <div>Credits</div>
+                    <ul class="credits">
+                        {{#each this.credits}}
+                        <li>{{@key}}: {{this}}</li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                    <div>Links</div>
+                    <ul class="links">
+                        {{#each this.links}}
+                        <li class="link">
+                            <a href="{{this}}" style="color:{{../color}}">{{@key}}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
             </div>
+        </div>
+        {{/each}}
     </script>
     <script src="javascript/handlebars.js"></script>
     <script src="javascript/data.js"></script>
