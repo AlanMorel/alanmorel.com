@@ -22,7 +22,7 @@
             <div class="project-container" style="background-color:{{this.background}}; color:{{this.color}}">
                 <div class="project">
                     <div class="icon">
-                        <img src="projects/{{this.name}}/icon.png"></img>
+                        <img src="projects/{{this.id}}/icon.png"></img>
                     </div>
                     <div class="details">
                         <div class="name">{{this.name}}</div>
@@ -46,7 +46,7 @@
                         {{/if}}
                         <div class="images">
                             {{#each this.images}}
-                            <img src="projects/{{../name}}/{{this}}.png"></img>
+                            <img src="projects/{{../id}}/{{this}}.png"></img>
                             {{/each}}
                         </div>
                         {{#if this.credits}}
@@ -62,7 +62,7 @@
                         <ul class="links">
                             {{#each this.links}}
                             <li class="link">
-                              <a href="{{this}}">{{@key}}</a>
+                              <a href="{{this}}" style="color:{{../color}}">{{@key}}</a>
                             </li>
                             {{/each}}
                         </ul>
