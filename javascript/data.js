@@ -17,6 +17,7 @@ var data = {
             platforms: ["Web", "Windows", "macOS", "Android"],
             links: {
                 "Demo": "http://alanmorel.com/trump",
+                "Github": "https://github.com/AlanMorel/trumpulse"
             },
         },
         "chainball": {
@@ -34,6 +35,23 @@ var data = {
             },
             links: {
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.luminositygames.chainball.android",
+                "Github": "https://github.com/AlanMorel/chainball",
+            },
+        },
+        "smoothietycoon": {
+            name: "Smoothie Tycoon",
+            background: "#ffb533",
+            color: "#000000",
+            date: "Sept 2014",
+            description: "Start off small as you sell smoothies on the streets of New York to build your smoothie stand. Buy supplies and set your own price, and determine your own destiny!",
+            images: ["image1", "image2", "image3", "image4"],
+            technologies: ["Java", "libGDX"],
+            platforms: ["Windows", "macOS", "Linux"],
+            credits: {
+                "Framework": "LibGDX"
+            },
+            links: {
+                "Github": "https://github.com/AlanMorel/smoothie-tycoon",
             },
         },
         "balloonfrenzy": {
