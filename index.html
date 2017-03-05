@@ -12,6 +12,7 @@
     <div>Software Engineer with a passion.</div>
     <object type="image/svg+xml" data="images/svg.svg"></object>
     <div class="intro">
+        <img src="images/pic.png" class="pic"/>
         <h2>Welcome to my personal website.</h2>
         <h3>I'm a software engineer that loves coding and designing cool things. This website is a collection of my software, artwork, thoughts and achievements. I hope that my projects inspire you to collaborate, learn and grow!</h3>
     </div>
@@ -25,7 +26,7 @@
                 {{#each this}}
                 <th>
                     <a href="{{this}}">
-                        <img src="images/{{@key}}.png"></img>
+                        <img src="images/{{@key}}.png"/>
                     </a>
                 </th>
                 {{/each}}
@@ -42,7 +43,7 @@
         <div class="project-container" style="background-color:{{this.background}}; color:{{this.color}}">
             <div class="project">
                 <div class="icon">
-                    <img src="projects/{{@key}}/icon.png"></img>
+                    <img src="projects/{{@key}}/icon.png"/>
                 </div>
                 <div class="details">
                     <div class="name">{{this.name}}</div>
@@ -60,7 +61,7 @@
                     </div>
                     <div class="images">
                         {{#each this.images}}
-                        <img src="projects/{{@../key}}/{{this}}.png"></img>
+                        <img src="projects/{{@../key}}/{{this}}.png"/>
                         {{/each}}
                     </div>
                     {{#if this.credits}}

@@ -26,7 +26,7 @@ var data = {
             date: "July 2014",
             description: "Use your fast reflexives to build yourself a chain as you navigate the endless stream of circles. Hit the blue and green circles while avoiding the red and gray ones to score as high as you can. When you’re finished, brag to your friends and challenge them to score higher than you in Chainball!",
             images: ["image1", "image2", "image3", "image4"],
-            technologies: ["Java", "libGDX" ],
+            technologies: ["Java", "libGDX"],
             platforms: ["Android"],
             credits: {
                 "Framework": "LibGDX",
