@@ -13,8 +13,8 @@ var data = {
             date: "March 2017",
             description: "Trumpulse uses data from multiple news sources so you can get the pulse of America under Trump. It is a single-page application made using Angular, HTML, CSS, and JavaScript. Using data from various news sources and social networks like Facebook and Twitter, you can get a diverse picture of the state of America under the Trump administration.",
             images: ["image1", "image2", "image3"],
-            technologies: ["Cordova", "Angular", "HTML 5", "CSS 3", "JavaScript"],
-            platforms: ["Web", "Android"],
+            technologies: ["Cordova", "Electron", "Angular", "HTML", "CSS", "JavaScript", "PHP", "News API", "Facebook API", "Twitter API"],
+            platforms: ["Web", "Windows", "macOS", "Android"],
             links: {
                 "Demo": "http://alanmorel.com/trump",
             },
@@ -43,7 +43,7 @@ var data = {
             date: "August 2011",
             description: "Start off with one balloon and soon end up with many! Every 5 levels unlocks yet another balloon so things will become interesting real quick! Your goal is to obtain as high of a score as possible without missing too many balloons.",
             images: ["image1", "image2", "image3", "image4", "image5"],
-            technologies: ["Java"],
+            technologies: ["Java", "PHP"],
             platforms: ["Android"],
             links: {
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.sharpacex.BalloonFrenzy",
@@ -56,7 +56,7 @@ var data = {
             date: "June 2012",
             description: "Your job is simple. Just survive. With just your jumping and ducking skills at your disposal, you will need to avoid incoming missiles to keep yourself alive. The longer you can stay alive, the more score you’ll earn! At the end of the game your performance will be ranked from an (A+) to and (F-)! Be warned, this can get addicting!",
             images: ["image1", "image2", "image3", "image4", "image5", "image6", "image7"],
-            technologies: ["Java"],
+            technologies: ["Java", "PHP"],
             platforms: ["Android", "Windows"],
             links: {
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.sharpacex.dangerzone",
