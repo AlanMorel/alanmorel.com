@@ -41,7 +41,7 @@ var data = {
         },
         "smoothietycoon": {
             name: "Smoothie Tycoon",
-            background: "#ffb533",
+            background: "#ffbf4f",
             color: "#000000",
             date: "Sept 2014",
             description: "Start off small as you sell smoothies on the streets of New York to build your smoothie stand. Buy supplies and set your own price, and determine your own destiny!",
