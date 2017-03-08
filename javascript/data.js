@@ -85,13 +85,13 @@ var data = {
             name: "Flash",
             background: "#781ab5",
             color: "#ffffff",
-            date: "",
+            date: "March 2014",
             description: "If you want to have the benefits of physical flash cards with the flexibility and convenience of a program on your computer then Flash is the right program for you. Using Flash, you will be able to create flash cards in which you can use to study for your next final, midterm, or anything you’d like!",
             images: ["image1", "image2", "image3"],
-            technologies: ["C#"],
+            technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-
+                "Download": "",
             },
         },
         "sacredfire": {
