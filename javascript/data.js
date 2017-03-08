@@ -39,6 +39,19 @@ var data = {
                 "Github": "https://github.com/AlanMorel/chainball",
             },
         },
+        "metronavigator": {
+            name: "Metro Navigator",
+            background: "#1d4f88",
+            color: "#ffffff",
+            date: "Feb 2014",
+            description: "You’ll be able to find out the shortest routes between two stations, read the statuses of train lines and view the official map. It’s extremely useful for both experienced riders and newcomers to New York’s subways.",
+            images: ["image1", "image2"],
+            technologies: ["C#", ".NET"],
+            platforms: ["Windows", "Web"],
+            links: {
+                "Download": "",
+            },
+        },
         "smoothietycoon": {
             name: "Smoothie Tycoon",
             background: "#ffbf4f",
