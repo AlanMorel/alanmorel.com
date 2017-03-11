@@ -25,7 +25,7 @@ var data = {
             name: "Zhigly",
             background: "#db3030",
             color: "#ffffff",
-            date: "April 2016",
+            date: "March 2016",
             description: "Zhigly is a hub where you can connect with your college campus. It allows you to look for items you'd like to buy or sell, browse upcoming on-campus events, search for jobs/internships/opportunities, look for housing, and much more.",
             images: ["image1", "image2", "image3"],
             technologies: ["ASP.NET", "C#", "Facebook SDK", "Twitter SDK",  "Google+ API", "Imgur API"],
@@ -64,6 +64,20 @@ var data = {
             platforms: ["Windows", "Web"],
             links: {
                 "Download": "",
+            },
+        },
+        "pokedex": {
+            name: "Pokédex",
+            background: "#252525",
+            color: "#ffffff",
+            date: "April 2016",
+            description: "Pokédex is a fun web app that you can use to learn more about Pokemon and play the famous 'Who's that Pokemon?'' game. It is a Flask fullstack web app written using Python, HTML, CSS and JavaScript, powered by data provided by PokéAPI.",
+            images: ["image1", "image2", "image3"],
+            technologies: ["Python", "Flask", "PIL", "Requests", "PokéAPI"],
+            platforms: ["Web"],
+            links: {
+                "Live Demo": "http://alanmorel.pythonanywhere.com/",
+                "Github": "https://github.com/AlanMorel/pokedex",
             },
         },
         "smoothietycoon": {
