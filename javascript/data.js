@@ -21,6 +21,20 @@ var data = {
                 "Github": "https://github.com/AlanMorel/trumpulse"
             },
         },
+        "zhigly": {
+            name: "Zhigly",
+            background: "#db3030",
+            color: "#ffffff",
+            date: "April 2016",
+            description: "Zhigly is a hub where you can connect with your college campus. It allows you to look for items you'd like to buy or sell, browse upcoming on-campus events, search for jobs/internships/opportunities, look for housing, and much more.",
+            images: ["image1", "image2", "image3"],
+            technologies: ["ASP.NET", "C#", "Facebook SDK", "Twitter SDK",  "Google+ API", "Imgur API"],
+            platforms: ["Web"],
+            links: {
+                "Live Demo": "http://zhigly.com/",
+                "Github": "https://github.com/AlanMorel/zhigly",
+            },
+        },
         "chainball": {
             name: "Chainball",
             background: "#f5577c",
