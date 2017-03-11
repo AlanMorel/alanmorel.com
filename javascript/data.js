@@ -174,5 +174,18 @@ var data = {
                 "Visual Boy Advance": "https://sourceforge.net/projects/vba/",
             },
         },
+        "khaos": {
+            name: "Khaos Map",
+            background: "#548845",
+            color: "#ffffff",
+            date: "June 2013",
+            description: "This program allows you to easily to create and modify maps for the now-canceled game, Khaos Online. Places tiles, switch tilesets, save and load maps with ease.",
+            images: ["image1"],
+            technologies: ["C#", ".NET"],
+            platforms: ["Windows"],
+            links: {
+                "Download": "",
+            },
+        },
     }
 };
