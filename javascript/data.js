@@ -57,7 +57,7 @@ var data = {
             name: "Metro Navigator",
             background: "#1d4f88",
             color: "#ffffff",
-            date: "Feb 2014",
+            date: "February 2014",
             description: "You’ll be able to find out the shortest routes between two stations, read the statuses of train lines and view the official map. It’s extremely useful for both experienced riders and newcomers to New York’s subways.",
             images: ["image1", "image2"],
             technologies: ["C#", ".NET"],
@@ -97,7 +97,7 @@ var data = {
             name: "Smoothie Tycoon",
             background: "#ffbf4f",
             color: "#000000",
-            date: "Sept 2014",
+            date: "September 2014",
             description: "Start off small as you sell smoothies on the streets of New York to build your smoothie stand. Buy supplies and set your own price, and determine your own destiny!",
             images: ["image1", "image2", "image3", "image4"],
             technologies: ["Java", "libGDX"],
@@ -107,6 +107,19 @@ var data = {
             },
             links: {
                 "Github": "https://github.com/AlanMorel/smoothie-tycoon",
+            },
+        },
+        "mars2o": {
+            name: "Mars2O",
+            background: "#bab9cc",
+            color: "#000000",
+            date: "October 2015",
+            description: "Mars2O is a fun arcade game for Windows and Mac. You're tasked with returning back water from Mars, but there's just one problem: the asteroid belt is abnormally turbulent! Dodge asteroids and refuel your spaceship throughout your journey back to Earth.",
+            images: ["image1", "image2", "image3"],
+            technologies: ["Java", "Processing"],
+            platforms: ["Windows", "Mac", "Linux"],
+            links: {
+                "Github": "https://github.com/AlanMorel/Mars2O",
             },
         },
         "balloonfrenzy": {
