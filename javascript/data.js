@@ -187,6 +187,19 @@ var data = {
                 "Download": "",
             },
         },
+        "quadratix": {
+            name: "Quadratix",
+            background: "#d6d6d6",
+            color: "#000000",
+            date: "Oct 2013",
+            description: "Need help FOILing? Do you have a terrible math teacher? Wish you could easily factor your quadratics? Want to figure out the distance and slope between two points? Look no further than Quadratix! This program does exactly that! Enter either your factors or your quadratic and it will instantly solve it for you! Enter two points on the right and it will give you the slope and distance between those two points!",
+            images: ["image1"],
+            technologies: ["C#", ".NET"],
+            platforms: ["Windows"],
+            links: {
+                "Download": "",
+            },
+        },
         "alancryption": {
             name: "Alancryption",
             background: "#e69806",
