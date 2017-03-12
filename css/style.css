@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:700,400');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
-
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
@@ -114,4 +113,36 @@ table img {
     width: 49%;
     display: inline-block;
     vertical-align: top;
+}
+
+.footer-top {
+    background: url("../images/footer.png")no-repeat center center;
+    background-size: 100%;
+    padding: 10rem 0;
+}
+
+footer {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footer-top div {
+    font-size: 2rem;
+    margin: auto;
+}
+
+.footer-bottom {
+    font-size: 1rem;
+    padding: 2rem 0;
+    color: white;
+    background-color: #111111;
+}
+
+.footer-bottom a {
+    color: white;
+}
+
+.footer-bottom div {
+    width: 30%;
+    display: inline-block;
 }
