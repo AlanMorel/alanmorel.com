@@ -15,7 +15,7 @@ var data = {
             description: "Trumpulse uses data from multiple news sources so you can get the pulse of America under Trump. It is a single-page application made using Angular, HTML, CSS, and JavaScript. Using data from various news sources and social networks like Facebook and Twitter, you can get a diverse picture of the state of America under the Trump administration.",
             images: ["image1", "image2", "image3"],
             technologies: ["Cordova", "Electron", "Angular", "HTML", "CSS", "JavaScript", "PHP", "News API", "Facebook API", "Twitter API"],
-            platforms: ["Web", "Windows", "macOS", "Android"],
+            platforms: ["Web", "Windows", "Mac", "Android"],
             links: {
                 "Demo": "http://alanmorel.com/trump",
                 "Github": "https://github.com/AlanMorel/trumpulse"
@@ -109,13 +109,13 @@ var data = {
         },
         "smoothietycoon": {
             name: "Smoothie Tycoon",
-            background: "#ffbf4f",
+            background: "#ffa200",
             color: "#000000",
             date: "September 2014",
             description: "Start off small as you sell smoothies on the streets of New York to build your smoothie stand. Buy supplies and set your own price, and determine your own destiny!",
             images: ["image1", "image2", "image3", "image4"],
             technologies: ["Java", "libGDX"],
-            platforms: ["Windows", "macOS", "Linux"],
+            platforms: ["Windows", "Mac", "Linux"],
             credits: {
                 "Framework": "LibGDX"
             },

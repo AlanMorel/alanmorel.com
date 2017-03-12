@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:700,400');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
-
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
@@ -35,7 +34,7 @@ h3 {
 .project {
     display: inline-block;
     width: 90%;
-    padding: 1.5rem 5%;
+    padding: 1.25rem 5%;
     max-width: 1000px;
 }
 
@@ -62,9 +61,10 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
-.date {
+.mini {
     margin-bottom: 1rem;
     font-size: 0.8rem;
+    letter-spacing: 0.1rem;
 }
 
 .description {
@@ -84,10 +84,6 @@ h3 {
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5), 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.technologies, .platforms {
-    padding: 1rem 0;
-}
-
 .technology, .platform {
     padding: 0.3rem 0.5rem;
     display: inline-block;
@@ -101,7 +97,7 @@ h3 {
 }
 
 .contacts a {
-    text-decoration:
+    text-decoration: none;
 }
 
 table {
@@ -111,4 +107,10 @@ table {
 
 table img {
     max-width: 64px;
+}
+
+.technologies-container, .platforms-container {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
 }
