@@ -11,14 +11,28 @@ var data = {
             name: "Trumpulse",
             background: "#2f61de",
             color: "#ffffff",
-            date: "March 2017",
+            date: "April 2017",
             description: "Trumpulse uses data from multiple news sources so you can get the pulse of America under Trump. It is a single-page application made using Angular, HTML, CSS, and JavaScript. Using data from various news sources and social networks like Facebook and Twitter, you can get a diverse picture of the state of America under the Trump administration.",
             images: ["image1", "image2", "image3"],
             technologies: ["Cordova", "Electron", "Angular", "HTML", "CSS", "JavaScript", "PHP", "News API", "Facebook API", "Twitter API"],
-            platforms: ["Web", "Windows", "Mac", "Android"],
+            platforms: ["Android", "Web", "Windows", "Mac"],
             links: {
                 "Demo": "http://alanmorel.com/trump",
                 "Github": "https://github.com/AlanMorel/trumpulse"
+            },
+        },
+        "wasdwithme": {
+            name: "WASD With Me",
+            background: "#5a26a5",
+            color: "#ffffff",
+            date: "February 2017",
+            description: "WASD With Me is the online destination to meet and play with gamers. Discover and connect with gamers, set up gaming sessions and browse other gamers' libraries.",
+            images: ["image1", "image2", "image3", "image4", "image5", "image6"],
+            technologies: ["Node.js", "Express.js", "MondoDB", "Handlebars Templating", "Socket.io", "Stylus", "HTML", "CSS", "JavaScript", "jQuery", "IGDB API", "News API", "Steam API", "Twitch API"],
+            platforms: ["Web"],
+            links: {
+                "Live Demo": "http://zhigly.com/",
+                "Github": "https://github.com/AlanMorel/zhigly",
             },
         },
         "zhigly": {
@@ -28,7 +42,7 @@ var data = {
             date: "March 2016",
             description: "Zhigly is a hub where you can connect with your college campus. It allows you to look for items you'd like to buy or sell, browse upcoming on-campus events, search for jobs/internships/opportunities, look for housing, and much more.",
             images: ["image1", "image2", "image3"],
-            technologies: ["ASP.NET", "C#", "Facebook SDK", "Twitter SDK",  "Google+ API", "Imgur API"],
+            technologies: ["ASP.NET", "C#", "Facebook SDK", "Twitter SDK", "Google+ API", "Imgur API", "HTML", "CSS", "JavaScript", "jQuery"],
             platforms: ["Web"],
             links: {
                 "Live Demo": "http://zhigly.com/",
@@ -86,7 +100,7 @@ var data = {
             date: "April 2016",
             description: "Pokédex is a fun web app that you can use to learn more about Pokémon and play the famous 'Who's that Pokémon?'' game. It is a Flask fullstack web app written using Python, HTML, CSS and JavaScript, powered by data provided by PokéAPI.",
             images: ["image1", "image2", "image3"],
-            technologies: ["Python", "Flask", "PIL", "Requests", "PokéAPI"],
+            technologies: ["Python", "Flask", "PIL", "Requests", "PokéAPI", "HTML", "CSS", "JavaScript", "jQuery"],
             platforms: ["Web"],
             links: {
                 "Live Demo": "http://alanmorel.pythonanywhere.com/",
