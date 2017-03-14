@@ -5,7 +5,7 @@ var data = {
         "Facebook": "https://www.facebook.com/SharpAceX",
         "Twitter": "https://www.twitter.com/SharpAceX",
         "Email": "mailto:alan.morel@nyu.edu",
-        "Resume": "/downloads/resume.pdf"
+        "Resume": "downloads/resume.pdf"
     },
     projects: {
         "trumpulse": {
@@ -29,7 +29,7 @@ var data = {
             color: "#ffffff",
             date: "February 2017",
             description: "WASD With Me is the online destination to meet and play with gamers. Discover and connect with gamers, set up gaming sessions and browse other gamers' libraries.",
-            images: ["image1", "image2", "image3", "image4", "image5", "image6"],
+            images: ["image1", "image2", "image3"],
             technologies: ["Node.js", "Express.js", "MondoDB", "Handlebars Templating", "Socket.io", "Stylus", "HTML", "CSS", "JavaScript", "jQuery", "IGDB API", "News API", "Steam API", "Twitch API"],
             platforms: ["Web"],
             links: {
@@ -57,7 +57,7 @@ var data = {
             color: "#ffffff",
             date: "July 2014",
             description: "Use your fast reflexives to build yourself a chain as you navigate the endless stream of circles. Hit the blue and green circles while avoiding the red and gray ones to score as high as you can. When you’re finished, brag to your friends and challenge them to score higher than you in Chainball!",
-            images: ["image1", "image2", "image3", "image4"],
+            images: ["image1", "image2", "image3"],
             technologies: ["Java", "libGDX"],
             platforms: ["Android"],
             links: {
@@ -75,7 +75,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows", "Web"],
             links: {
-                "Download for Windows": "/downloads/metronavigator.zip",
+                "Download for Windows": "downloads/metronavigator.zip",
             },
         },
         "wavewarriors": {
@@ -125,11 +125,11 @@ var data = {
             color: "#000000",
             date: "September 2014",
             description: "Start off small as you sell smoothies on the streets of New York to build your smoothie stand. Buy supplies and set your own price, and determine your own destiny!",
-            images: ["image1", "image2", "image3", "image4"],
+            images: ["image1", "image2", "image3"],
             technologies: ["Java", "libGDX"],
             platforms: ["Windows", "Mac", "Linux"],
             links: {
-                "Download": "/downloads/smoothietycoon.zip",
+                "Download": "downloads/smoothietycoon.zip",
                 "Github": "https://github.com/AlanMorel/smoothie-tycoon",
             },
         },
@@ -152,7 +152,7 @@ var data = {
             color: "#000000",
             date: "August 2011",
             description: "Start off with one balloon and soon end up with many! Every 5 levels unlocks yet another balloon so things will become interesting real quick! Your goal is to obtain as high of a score as possible without missing too many balloons.",
-            images: ["image1", "image2", "image3", "image4", "image5"],
+            images: ["image1", "image2", "image3"],
             technologies: ["Java", "PHP"],
             platforms: ["Android"],
             links: {
@@ -165,11 +165,11 @@ var data = {
             color: "#000000",
             date: "June 2012",
             description: "Your job is simple. Just survive. With just your jumping and ducking skills at your disposal, you will need to avoid incoming missiles to keep yourself alive. The longer you can stay alive, the more score you’ll earn! At the end of the game your performance will be ranked from an (A+) to and (F-)! Be warned, this can get addicting!",
-            images: ["image1", "image2", "image3", "image4", "image5", "image6", "image7"],
+            images: ["image1", "image2", "image3"],
             technologies: ["Java", "PHP"],
             platforms: ["Android", "Windows"],
             links: {
-                "Download for Windows": "/downloads/dangerzone.zip",
+                "Download for Windows": "downloads/dangerzone.zip",
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.sharpacex.dangerzone",
             },
         },
@@ -183,7 +183,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-              "Download for Windows": "/downloads/flash.zip",
+              "Download for Windows": "downloads/flash.zip",
             },
         },
         "sacredfire": {
@@ -212,7 +212,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-                "Download for Windows": "/downloads/khaos.zip",
+                "Download for Windows": "downloads/khaos.zip",
             },
         },
         "quadratix": {
@@ -225,7 +225,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-                "Download for Windows": "/downloads/quadratix.zip",
+                "Download for Windows": "downloads/quadratix.zip",
             },
         },
         "alancryption": {
@@ -238,7 +238,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-                "Download for Windows": "/downloads/alancryption.zip",
+                "Download for Windows": "downloads/alancryption.zip",
             },
         },
         "prime": {
@@ -251,7 +251,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-                "Download for Windows": "/downloads/prime.zip",
+                "Download for Windows": "downloads/prime.zip",
             },
         },
     }
