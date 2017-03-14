@@ -4,7 +4,8 @@ var data = {
         "LinkedIn": "https://linkedin.com/in/AlanMorel/",
         "Facebook": "https://www.facebook.com/SharpAceX",
         "Twitter": "https://www.twitter.com/SharpAceX",
-        "Email": "mailto:alan.morel@nyu.edu"
+        "Email": "mailto:alan.morel@nyu.edu",
+        "Resume": "/downloads/resume.pdf"
     },
     projects: {
         "trumpulse": {
