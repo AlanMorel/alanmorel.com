@@ -17,6 +17,7 @@ var data = {
             technologies: ["Cordova", "Electron", "Angular", "HTML", "CSS", "JavaScript", "PHP", "News API", "Facebook API", "Twitter API"],
             platforms: ["Android", "Web", "Windows", "Mac"],
             links: {
+                "Google Play": "https://play.google.com/store/apps/details?id=alanmorel.trumpulse",
                 "Demo": "http://alanmorel.com/trump",
                 "Github": "https://github.com/AlanMorel/trumpulse"
             },
@@ -77,7 +78,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows", "Web"],
             links: {
-                "Download": "",
+                "Download for Windows": "/downloads/metronavigator.zip",
             },
         },
         "wavewarriors": {
@@ -134,6 +135,7 @@ var data = {
                 "Framework": "LibGDX"
             },
             links: {
+                "Download": "/downloads/smoothietycoon.zip",
                 "Github": "https://github.com/AlanMorel/smoothie-tycoon",
             },
         },
@@ -173,6 +175,7 @@ var data = {
             technologies: ["Java", "PHP"],
             platforms: ["Android", "Windows"],
             links: {
+                "Download for Windows": "/downloads/dangerzone.zip",
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.sharpacex.dangerzone",
             },
         },
@@ -186,7 +189,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-                "Download": "",
+              "Download for Windows": "/downloads/flash.zip",
             },
         },
         "sacredfire": {
@@ -199,6 +202,9 @@ var data = {
             technologies: ["Assembly"],
             platforms: ["Game Boy Advance", "Windows", "Mac"],
             links: {
+                "Pokémon: SacredFire Patch File": "/downloads/sacredfire.zip",
+                "Lunar IPS (LIPS)": "http://fusoya.eludevisibility.org/lips/",
+                "Pokémon: FireRed ROM": "https://www.loveroms.com/download/gameboy-advance/pokemon-fire-red-version-u-/39",
                 "Visual Boy Advance": "https://sourceforge.net/projects/vba/",
             },
         },
@@ -212,7 +218,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-                "Download": "",
+                "Download for Windows": "/downloads/khaos.zip",
             },
         },
         "quadratix": {
@@ -225,7 +231,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-                "Download": "",
+                "Download for Windows": "/downloads/quadratix.zip",
             },
         },
         "alancryption": {
@@ -238,7 +244,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-                "Download": "",
+                "Download for Windows": "/downloads/alancryption.zip",
             },
         },
         "prime": {
@@ -251,7 +257,7 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-                "Download": "",
+                "Download for Windows": "/downloads/prime.zip",
             },
         },
     }
