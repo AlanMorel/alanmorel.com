@@ -59,10 +59,6 @@ var data = {
             images: ["image1", "image2", "image3", "image4"],
             technologies: ["Java", "libGDX"],
             platforms: ["Android"],
-            credits: {
-                "Framework": "LibGDX",
-                "Music": "NoSoapRadio.us"
-            },
             links: {
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.luminositygames.chainball.android",
                 "Github": "https://github.com/AlanMorel/chainball",
@@ -131,9 +127,6 @@ var data = {
             images: ["image1", "image2", "image3", "image4"],
             technologies: ["Java", "libGDX"],
             platforms: ["Windows", "Mac", "Linux"],
-            credits: {
-                "Framework": "LibGDX"
-            },
             links: {
                 "Download": "/downloads/smoothietycoon.zip",
                 "Github": "https://github.com/AlanMorel/smoothie-tycoon",
