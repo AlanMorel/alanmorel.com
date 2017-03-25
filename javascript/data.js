@@ -33,8 +33,8 @@ var data = {
             technologies: ["Node.js", "Express.js", "MondoDB", "Handlebars Templating", "Socket.io", "Stylus", "HTML", "CSS", "JavaScript", "jQuery", "IGDB API", "News API", "Steam API", "Twitch API"],
             platforms: ["Web"],
             links: {
-                "Live Demo": "http://zhigly.com/",
-                "Github": "https://github.com/AlanMorel/zhigly",
+                "Live Demo": "http://wasdwithme.herokuapp.com/",
+                "Github": "https://github.com/AlanMorel/wasdWithMe",
             },
         },
         "zhigly": {
