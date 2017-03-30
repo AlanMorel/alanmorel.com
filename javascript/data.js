@@ -5,7 +5,8 @@ var data = {
         "Facebook": "https://www.facebook.com/SharpAceX",
         "Twitter": "https://www.twitter.com/SharpAceX",
         "Email": "mailto:alan.morel@nyu.edu",
-        "Resume": "downloads/resume.pdf"
+        "Resume": "downloads/resume.pdf",
+		"Medium": "https://medium.com/@alanmorel"
     },
     projects: {
         "trumpulse": {
