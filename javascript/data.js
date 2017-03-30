@@ -20,7 +20,7 @@ var data = {
             links: {
                 "Google Play": "https://play.google.com/store/apps/details?id=alanmorel.trumpulse",
 				"Download for Windows": "downloads/trumpulse.zip",
-                "Demo": "http://alanmorel.com/trumpulse",
+                "Demo": "http://alanmorel.com/trump",
                 "Github": "https://github.com/AlanMorel/trumpulse"
             },
         },
