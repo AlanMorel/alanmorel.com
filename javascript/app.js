@@ -12,7 +12,7 @@ var actions = ["collaborate", "create", "share", "build", "learn", "code", "teac
 
 var i = 0;
 
-setInterval(() => {
+setInterval(function() {
     action.innerHTML = actions[i];
     i = (i + 1) % actions.length;
 }, 1500);
