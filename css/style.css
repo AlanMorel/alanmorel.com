@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:700,400');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 
 body {
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
-    font-family: 'Raleway', sans-serif;
     text-align: center;
     letter-spacing: 0.05rem;
 }
@@ -14,11 +13,11 @@ img {
 
 h1 {
     font-size: 3rem;
+    font-weight: bold;
 }
 
 h3 {
     font-weight: lighter;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .intro {
@@ -35,7 +34,6 @@ h3 {
 
 #action {
     font-weight: bold;
-    font-family: 'Raleway', sans-serif;
 }
 
 .project {
@@ -59,24 +57,26 @@ h3 {
     width: 70%;
     margin: 0 5%;
     text-align: left;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .name {
     font-size: 2rem;
     text-align: left;
     margin-bottom: 0.5rem;
+    font-weight: 100;
+    letter-spacing: 0.05rem;
+    margin-top: -0.5rem;
 }
 
 .mini {
-    margin-bottom: 1rem;
-    font-size: 0.8rem;
-    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 900;
 }
 
 .description {
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 400;
     margin-bottom: 1rem;
 }
 
@@ -126,12 +126,11 @@ table img {
 .footer-top {
     background: url("../images/footer.png")no-repeat center center;
     background-size: 100%;
-    padding: 8rem 0;
+    padding: 4rem 0;
 }
 
 footer {
     color: white;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .footer-top div {
@@ -153,4 +152,29 @@ footer {
 .footer-bottom div {
     width: 30%;
     display: inline-block;
+}
+
+@media screen and (max-width: 50rem) {
+
+    .details {
+        float: initial;
+        width: 100%;
+        margin: 0;
+    }
+
+    .icon {
+        margin-right: 1rem;
+    }
+
+    table img {
+        max-width: 48px;
+    }
+
+    .footer-top {
+        padding: 3rem 0;
+    }
+
+    .footer-top div {
+        font-size: 1rem;
+    }
 }
