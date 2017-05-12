@@ -107,14 +107,9 @@ h3 {
     text-decoration: none;
 }
 
-table {
-    width: 50%;
-    margin: auto;
-    max-width: 40rem;
-}
-
-table img {
-    max-width: 64px;
+.contacts img {
+    width: 4rem;
+    padding: 0.25rem;
 }
 
 .technologies-container, .platforms-container {
@@ -164,10 +159,6 @@ footer {
 
     .icon {
         margin-right: 1rem;
-    }
-
-    table img {
-        max-width: 48px;
     }
 
     .footer-top {

@@ -51,22 +51,11 @@
       </section>
     </footer>
     <script id="contacts-template" type="text/x-handlebars-template">
-        <table>
-            <tr>
-                {{#each this}}
-                <th>
-                    <a href="{{this}}" target="_blank">
-                        <img src="images/{{@key}}.png"/>
-                    </a>
-                </th>
-                {{/each}}
-            </tr>
-            <tr>
-                {{#each this}}
-                <th>{{this.name}}</th>
-                {{/each}}
-            </tr>
-        </table>
+        {{#each this}}
+            <a href="{{this}}" target="_blank">
+                <img src="images/{{@key}}.png"/>
+            </a>
+        {{/each}}
     </script>
     <script id="projects-template" type="text/x-handlebars-template">
         {{#each this}}
