@@ -128,7 +128,7 @@ footer {
     color: white;
 }
 
-.footer-top div {
+.footer-top {
     font-size: 2rem;
     margin: auto;
 }
@@ -136,17 +136,7 @@ footer {
 .footer-bottom {
     font-size: 1rem;
     padding: 2rem 0;
-    color: white;
     background-color: #111111;
-}
-
-.footer-bottom a {
-    color: white;
-}
-
-.footer-bottom div {
-    width: 30%;
-    display: inline-block;
 }
 
 @media screen and (max-width: 50rem) {
@@ -163,9 +153,6 @@ footer {
 
     .footer-top {
         padding: 3rem 0;
-    }
-
-    .footer-top div {
         font-size: 1rem;
     }
 }
