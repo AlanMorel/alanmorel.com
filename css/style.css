@@ -141,10 +141,22 @@ h3 {
     padding: 0.5rem;
 }
 
+.tags-container {
+    width: 100%;
+    display: inline-block;
+}
+
 .technologies-container, .platforms-container {
-    width: 49%;
     display: inline-block;
     vertical-align: top;
+}
+
+.technologies-container {
+    width: 70%;
+}
+
+.platforms-container {
+    width: 25%;
 }
 
 .footer-top {
@@ -182,6 +194,7 @@ footer {
 
     .icon {
         margin-right: 1rem;
+        margin-bottom: 1rem;
     }
 
     .footer-top {

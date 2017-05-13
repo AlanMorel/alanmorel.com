@@ -65,21 +65,23 @@
                     <div class="name">{{this.name}}</div>
                     <div class="mini">Released {{this.date}}</div>
                     <div class="description">{{this.description}}</div>
-                    <div class="technologies-container">
-                      <div class="mini">Technologies</div>
-                      <div class="technologies">
-                          {{#each this.technologies}}
-                          <span class="technology">{{this}}</span>
-                          {{/each}}
-                      </div>
-                    </div>
-                    <div class="platforms-container">
-                      <div class="mini">Platforms</div>
-                      <div class="platforms">
-                          {{#each this.platforms}}
-                          <span class="platform">{{this}}</span>
-                          {{/each}}
-                      </div>
+                    <div class="tags-container">
+                        <div class="technologies-container">
+                          <div class="mini">Technologies</div>
+                          <div class="technologies">
+                              {{#each this.technologies}}
+                              <span class="technology">{{this}}</span>
+                              {{/each}}
+                          </div>
+                        </div>
+                        <div class="platforms-container">
+                          <div class="mini">Platforms</div>
+                          <div class="platforms">
+                              {{#each this.platforms}}
+                              <span class="platform">{{this}}</span>
+                              {{/each}}
+                          </div>
+                        </div>
                     </div>
                     <div class="images">
                         {{#each this.images}}
