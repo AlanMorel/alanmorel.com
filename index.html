@@ -88,13 +88,11 @@
                         <img src="projects/{{@../key}}/{{this}}.png"/>
                         {{/each}}
                     </div>
-                    <ul class="links">
-                        {{#each this.links}}
-                        <li class="link">
-                            <a href="{{this}}" style="color:{{../color}}">{{@key}}</a>
-                        </li>
-                        {{/each}}
-                    </ul>
+                    <div class="links">
+                    {{#each this.links}}
+                        <a href="{{this}}" style="color:{{../color}}">{{@key}}</a>
+                    {{/each}}
+                    </div>
                 </div>
             </div>
         </div>

@@ -115,7 +115,7 @@ var data = {
             description: "Sonar allows you to easily see performance attributes of websites as you browse the web. This helps both end-users and developers understand why a webpage might be slow or experiencing problems. With Sonar, you can quickly identify how long a page took to load, the size of the page in bytes, if any requests caused bottlenecks, the number of hosts that served content, and details about the type of files delivered.",
             images: ["image1"],
             technologies: ["Chrome API", "HTML", "CSS", "JavaScript"],
-            platforms: ["Chrome Web Browser"],
+            platforms: ["Chrome"],
             links: {
                 "Promotional Page": "http://pages.catchpoint.com/sonar.html",
                 "Chrome Web Store": "https://chrome.google.com/webstore/detail/sonar/dibilcjfahbokhiodajibcajcabfjein"
