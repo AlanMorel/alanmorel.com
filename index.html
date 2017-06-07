@@ -61,7 +61,7 @@
         <div style="background-color:{{this.background}}; color:{{this.color}}">
             <div class="project">
                 <div class="icon">
-                    <img src="projects/{{@key}}/icon.webp" alt="{{@key}}"/>
+                    <img data-src="projects/{{@key}}/icon.webp" alt="{{@key}}"/>
                 </div>
                 <div class="details">
                     <div class="name">{{this.name}}</div>
@@ -107,7 +107,7 @@
     <script>
         if('serviceWorker' in navigator) {
           navigator.serviceWorker.register('/sw.js').then(
-              function() { 
+              function() {
                   console.log("Service Worker Registered");
               }
           );
