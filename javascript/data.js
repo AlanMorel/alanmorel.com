@@ -53,20 +53,6 @@ var data = {
                 "Github": "https://github.com/AlanMorel/zhigly",
             },
         },
-        "chainball": {
-            name: "Chainball",
-            background: "#f5577c",
-            color: "#ffffff",
-            date: "July 2014",
-            description: "Use your fast reflexives to build yourself a chain as you navigate the endless stream of circles. Hit the blue and green circles while avoiding the red and gray ones to score as high as you can. When you’re finished, brag to your friends and challenge them to score higher than you in Chainball!",
-            images: ["image1", "image2", "image3"],
-            technologies: ["Java", "libGDX"],
-            platforms: ["Android"],
-            links: {
-                "Google Play Store": "https://play.google.com/store/apps/details?id=com.luminositygames.chainball.android",
-                "Github": "https://github.com/AlanMorel/chainball",
-            },
-        },
         "metronavigator": {
             name: "Metro Navigator",
             background: "#1d4f88",
@@ -78,6 +64,20 @@ var data = {
             platforms: ["Windows", "Web"],
             links: {
                 "Download for Windows": "downloads/metronavigator.zip",
+            },
+        },
+        "chainball": {
+            name: "Chainball",
+            background: "#c33a5a",
+            color: "#ffffff",
+            date: "July 2014",
+            description: "Use your fast reflexives to build yourself a chain as you navigate the endless stream of circles. Hit the blue and green circles while avoiding the red and gray ones to score as high as you can. When you’re finished, brag to your friends and challenge them to score higher than you in Chainball!",
+            images: ["image1", "image2", "image3"],
+            technologies: ["Java", "libGDX"],
+            platforms: ["Android"],
+            links: {
+                "Google Play Store": "https://play.google.com/store/apps/details?id=com.luminositygames.chainball.android",
+                "Github": "https://github.com/AlanMorel/chainball",
             },
         },
         "wavewarriors": {
@@ -206,7 +206,7 @@ var data = {
         },
         "khaos": {
             name: "Khaos Map",
-            background: "#548845",
+            background: "#355d2a",
             color: "#ffffff",
             date: "June 2013",
             description: "This program allows you to easily to create and modify maps for the now-canceled game, Khaos Online. Places tiles, switch tilesets, save and load maps with ease.",
