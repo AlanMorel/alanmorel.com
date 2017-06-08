@@ -18,6 +18,7 @@ setInterval(function() {
 }, 1500);
 
 var bLazy = new Blazy({
-        selector: 'img'
+        selector: 'img',
+        offset: 500
     }
 );
