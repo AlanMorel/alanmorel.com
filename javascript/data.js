@@ -61,7 +61,7 @@ var data = {
             description: "You’ll be able to find out the shortest routes between two stations, read the statuses of train lines and view the official map. It’s extremely useful for both experienced riders and newcomers to New York’s transportation system.",
             images: ["image1", "image2"],
             technologies: ["C#", ".NET"],
-            platforms: ["Windows", "Web"],
+            platforms: ["Windows"],
             links: {
                 "Download for Windows": "downloads/metronavigator.zip",
             },
