@@ -9,6 +9,19 @@ var data = {
 		"Medium": "https://medium.com/@alanmorel"
     },
     projects: {
+        "sabe": {
+            name: "Sabe.io",
+            background: "#26272f",
+            color: "#ffffff",
+            date: "September 2017",
+            description: "Sabe is an online destination for free high quality web development tutorials, classes and resources. Sabe is the place to learn HTML, CSS and JavaScript! Browse high-quality classes, tutorials and resources on front-end development so you can master the web.",
+            images: ["image1", "image2", "image3"],
+            technologies: ["PHP", "HTML", "CSS", "JavaScript"],
+            platforms: ["Web"],
+            links: {
+                "Sabe.io": "https://sabe.io/"
+            },
+        },
         "trumpulse": {
             name: "Trumpulse",
             background: "#2f61de",
