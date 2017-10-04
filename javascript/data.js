@@ -22,6 +22,20 @@ var data = {
                 "Sabe.io": "https://sabe.io/"
             },
         },
+        "aria": {
+            name: "Aria",
+            background: "#414caf",
+            color: "#ffffff",
+            date: "May 2017",
+            description: "Aria is an open-source front-end for a CMS for the MMORPG MapleStory written using React.",
+            images: ["image1", "image2", "image3"],
+            technologies: ["React", "HTML", "CSS", "JavaScript"],
+            platforms: ["Web"],
+            links: {
+                "Live Demo": "http://aria.austinradams.com/",
+                "Github": "https://github.com/AlanMorel/aria"
+            },
+        },
         "trumpulse": {
             name: "Trumpulse",
             background: "#2f61de",
