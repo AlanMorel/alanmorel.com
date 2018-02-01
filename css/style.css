@@ -3,56 +3,45 @@ body {
     margin: 0;
     text-align: center;
     letter-spacing: 0.025rem;
+    background-color: #fbfbfb;
 }
 
-.rainbow {
-    top: 0;
-    width: 100%;
-    height: 6rem;
-    z-index: -1;
-    position: absolute;
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
-    animation: rainbow 10s ease infinite;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-}
-
-@keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+header {
+    display: flex;
+    max-width: 60rem;
+    margin: 4rem auto 4rem;
 }
 
 img {
     vertical-align: middle;
 }
 
-h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
-    margin: 1rem 0 3rem;
+.contacts img:hover {
+    filter: brightness(0.85);
 }
 
-.tagline {
-    font-size: 1.25rem;
+h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    text-align: left;
+    letter-spacing: -0.75rem;
+    color: #1f1f1f;
 }
 
 h3 {
     font-weight: 400;
+    text-align: left;
 }
 
-.intro {
-    padding-top: 2rem;
-    width: 75%;
-    max-width: 40rem;
-    margin: auto;
+.pic-container {
+    margin-right: 3rem;
+    width: 70%;
 }
 
 .pic {
-    border-radius: 50%;
-    width: 50%;
+    width: 100%;
+    border-radius: 50%
 }
 
 #action {
@@ -61,9 +50,8 @@ h3 {
 
 .project {
     display: inline-block;
-    width: 90%;
-    padding: 1.25rem 5% 0.5rem;
-    max-width: 1000px;
+    padding: 1.5rem 1rem 0.5rem;
+    max-width: 65rem;
 }
 
 .icon {
@@ -83,11 +71,10 @@ h3 {
 }
 
 .name {
-    font-size: 1.75rem;
-    text-align: left;
-    font-weight: 100;
-    letter-spacing: 0.05rem;
-    margin-top: -0.65rem;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -0.25rem;
+    margin-top: -1.25rem;
 }
 
 .links a {
@@ -105,14 +92,12 @@ h3 {
 }
 
 .mini {
-    margin: 0.5rem 0 0.75rem;
-    font-size: 0.8rem;
+    margin: 0.25rem 0 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
 }
 
 .description {
-    font-size: 0.9rem;
-    font-weight: 400;
     margin-bottom: 0.5rem;
 }
 
@@ -137,7 +122,7 @@ h3 {
 }
 
 .contacts {
-    padding: 0.5rem 0 2rem;
+    padding: 0.5rem 0 3rem;
 }
 
 .contacts a {
@@ -191,14 +176,36 @@ footer {
 
 @media screen and (max-width: 50rem) {
 
-    .intro {
-        width: 90%;
+    header {
+        display: initial;
+        text-align: center;
+    }
+
+    .pic-container {
+        width: 50%;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 5rem;
+        letter-spacing: -0.5rem;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
     }
 
     .details {
         float: initial;
         width: 100%;
         margin: 0;
+    }
+
+    .name {
+        font-size: 2rem;
+        letter-spacing: -0.1rem;
+        margin-top: -0.5rem;
     }
 
     .icon {
