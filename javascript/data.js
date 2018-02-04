@@ -76,7 +76,7 @@ var data = {
             technologies: ["ASP.NET", "C#", "Facebook SDK", "Twitter SDK", "Google+ API", "Imgur API"],
             platforms: ["Web"],
             links: {
-                "Live Demo": "http://zhigly.com/",
+                "Live Demo": "http://zhigly.gear.host/",
                 "Github": "https://github.com/AlanMorel/zhigly",
             },
         },
