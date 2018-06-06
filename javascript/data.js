@@ -1,11 +1,11 @@
 var data = {
     contacts: {
         "Github": "https://github.com/AlanMorel",
-        "LinkedIn": "https://linkedin.com/in/AlanMorel/",
+        "LinkedIn": "https://linkedin.com/in/AlanMorel",
         "Facebook": "https://www.facebook.com/SharpAceX",
         "Twitter": "https://www.twitter.com/SharpAceX",
         "Email": "mailto:alan.morel@nyu.edu",
-        "Resume": "downloads/resume.pdf",
+        "Resume": "/resume",
 		"Medium": "https://medium.com/@alanmorel"
     },
     projects: {
@@ -76,7 +76,7 @@ var data = {
             technologies: ["ASP.NET", "C#", "Facebook SDK", "Twitter SDK", "Google+ API", "Imgur API"],
             platforms: ["Web"],
             links: {
-                "Live Demo": "http://zhigly.gear.host/",
+                "Live Demo": "https://zhigly.gear.host/",
                 "Github": "https://github.com/AlanMorel/zhigly",
             },
         },
