@@ -32,7 +32,7 @@ var data = {
             technologies: ["React", "HTML", "CSS", "JavaScript"],
             platforms: ["Web"],
             links: {
-                "Live Demo": "http://aria.austinradams.com/",
+                "Live Demo": "https://aria.austinradams.com/",
                 "Github": "https://github.com/AlanMorel/aria"
             },
         },
@@ -48,7 +48,7 @@ var data = {
             links: {
                 "Google Play": "https://play.google.com/store/apps/details?id=alanmorel.trumpulse",
 				"Download for Windows": "downloads/trumpulse.zip",
-                "Demo": "http://alanmorel.com/trumpulse",
+                "Demo": "https://alanmorel.com/trumpulse",
                 "Github": "https://github.com/AlanMorel/trumpulse"
             },
         },
@@ -62,7 +62,7 @@ var data = {
             technologies: ["Node.js", "Express.js", "MondoDB", "Handlebars.js", "Socket.io", "Stylus", "IGDB API", "News API", "Steam API", "Twitch API"],
             platforms: ["Web"],
             links: {
-                "Live Demo": "http://wasdwithme.herokuapp.com/",
+                "Live Demo": "https://wasdwithme.herokuapp.com/",
                 "Github": "https://github.com/AlanMorel/wasdWithMe",
             },
         },
@@ -130,7 +130,7 @@ var data = {
             technologies: ["Python", "Flask", "PIL", "Requests", "PokéAPI"],
             platforms: ["Web"],
             links: {
-                "Live Demo": "http://alanmorel.pythonanywhere.com/",
+                "Live Demo": "https://alanmorel.pythonanywhere.com/",
                 "Github": "https://github.com/AlanMorel/pokedex",
             },
         },
@@ -144,7 +144,7 @@ var data = {
             technologies: ["Chrome API", "HTML", "CSS", "JavaScript"],
             platforms: ["Chrome"],
             links: {
-                "Promotional Page": "http://pages.catchpoint.com/sonar.html",
+                "Promotional Page": "https://pages.catchpoint.com/sonar.html",
                 "Chrome Web Store": "https://chrome.google.com/webstore/detail/sonar/dibilcjfahbokhiodajibcajcabfjein"
             },
         },
@@ -226,7 +226,7 @@ var data = {
             platforms: ["Game Boy Advance", "Windows", "Mac"],
             links: {
                 "Pokémon: SacredFire Patch File": "/downloads/sacredfire.zip",
-                "Lunar IPS (LIPS)": "http://fusoya.eludevisibility.org/lips/",
+                "Lunar IPS (LIPS)": "https://fusoya.eludevisibility.org/lips/",
                 "Pokémon: FireRed ROM": "https://www.loveroms.com/download/gameboy-advance/pokemon-fire-red-version-u-/39",
                 "Visual Boy Advance": "https://sourceforge.net/projects/vba/",
             },
