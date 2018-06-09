@@ -36,6 +36,19 @@ var data = {
                 "Github": "https://github.com/AlanMorel/aria"
             },
         },
+        "solaxia": {
+            name: "Solaxia Online",
+            background: "#88a0d6",
+            color: "#000000",
+            date: "May 2017",
+            description: "Solaxia Online is an 2D side-scroller MMORPG with the core written in Java and the scripts in Python.",
+            images: ["image1", "image2", "image3", "image4", "image5"],
+            technologies: ["Java", "libGDX", "Python"],
+            platforms: ["Windows", "Mac"],
+            links: {
+                "Download for Windows": "downloads/solaxia.zip",
+            },
+        },
         "trumpulse": {
             name: "Trumpulse",
             background: "#2f61de",
