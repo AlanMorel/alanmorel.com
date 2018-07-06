@@ -157,7 +157,7 @@ var data = {
             technologies: ["Chrome API", "HTML", "CSS", "JavaScript"],
             platforms: ["Chrome"],
             links: {
-                "Promotional Page": "https://pages.catchpoint.com/sonar.html",
+                "Promotional Page": "http://pages.catchpoint.com/sonar.html",
                 "Chrome Web Store": "https://chrome.google.com/webstore/detail/sonar/dibilcjfahbokhiodajibcajcabfjein"
             },
         },

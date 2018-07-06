@@ -36,6 +36,10 @@ h3 {
     text-align: left;
 }
 
+ul {
+    padding: 0;
+}
+
 .pic-container {
     margin-right: 3rem;
     width: 70%;
