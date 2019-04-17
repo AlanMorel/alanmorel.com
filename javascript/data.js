@@ -6,7 +6,8 @@ var data = {
         "Twitter": "https://www.twitter.com/SharpAceX",
         "Email": "mailto:alan.morel@nyu.edu",
         "Resume": "/resume",
-		"Medium": "https://medium.com/@alanmorel"
+		"Medium": "https://medium.com/@alanmorel",
+        "Instagram": "https://instagram.com/SharpAceX"
     },
     projects: {
         "sabe": {
