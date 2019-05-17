@@ -55,7 +55,7 @@ var data = {
             background: "#2f61de",
             color: "#ffffff",
             date: "April 2017",
-            description: "Trumpulse uses data from multiple news sources so you can get the pulse of America under Trump. Using data from various news sources and social networks like Facebook and Twitter, you can get a diverse picture of the state of America under the Trump administration.",
+            description: "Trumpulse uses data from multiple news sources so you can get the pulse of America under Trump. Using data from various news sources and social networks like Facebook and Twitter, you can get a diverse picture of the state of America under the Trump administration. Created purely for educational purposes and not indicative of political views whatsoever.",
             images: ["image1", "image2", "image3"],
             technologies: ["Angular.js", "Electron", "Cordova", "PHP", "News API", "Facebook API", "Twitter API"],
             platforms: ["Android", "Web", "Windows", "Mac"],
