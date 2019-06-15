@@ -7,7 +7,7 @@ function render(template) {
     destination.innerHTML = Handlebars.compile(source)(data[template]);
 }
 
-var action = document.getElementById("action");
+var action = document.querySelector(".action");
 var actions = ["collaborate", "create", "share", "build", "learn", "code", "teach", "dream"];
 
 var i = 0;
@@ -18,7 +18,7 @@ setInterval(function() {
 }, 1500);
 
 var bLazy = new Blazy({
-        selector: 'img',
+        selector: "img",
         offset: 500
     }
 );

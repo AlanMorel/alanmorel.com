@@ -50,13 +50,13 @@ ul {
     border-radius: 50%
 }
 
-#action {
+.action {
     font-weight: bold;
 }
 
 .project {
     display: inline-block;
-    padding: 1.5rem 1rem 0.5rem;
+    padding: 2rem 1rem 0.5rem;
     max-width: 65rem;
 }
 
@@ -160,7 +160,7 @@ ul {
 }
 
 .footer-top {
-    background: url("../images/footer.png")no-repeat center center;
+    background: url("../images/footer.png") no-repeat center center;
     background-size: 100%;
     padding: 3rem 0;
 }

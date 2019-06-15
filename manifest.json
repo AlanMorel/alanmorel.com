@@ -7,27 +7,27 @@
   "background_color": "white",
   "description": "Alan Morel - Software Engineer with a Passion",
   "icons": [{
-    "src": "assets/images/pic.png",
+    "src": "images/pic.png",
     "sizes": "48x48",
     "type": "image/png"
   }, {
-    "src": "assets/images/pic.png",
+    "src": "images/pic.png",
     "sizes": "72x72",
     "type": "image/png"
   }, {
-    "src": "assets/images/pic.png",
+    "src": "images/pic.png",
     "sizes": "96x96",
     "type": "image/png"
   }, {
-    "src": "assets/images/pic.png",
+    "src": "images/pic.png",
     "sizes": "144x144",
     "type": "image/png"
   }, {
-    "src": "assets/images/pic.png",
+    "src": "images/pic.png",
     "sizes": "168x168",
     "type": "image/png"
   }, {
-    "src": "assets/images/pic.png",
+    "src": "images/pic.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
