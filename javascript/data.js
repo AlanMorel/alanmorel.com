@@ -73,7 +73,7 @@ var data = {
             date: "February 2017",
             description: "WASD With Me is the online destination to meet and play with gamers. Discover and connect with gamers, set up gaming sessions and browse other gamers' libraries.",
             images: ["image1", "image2", "image3"],
-            technologies: ["Node.js", "Express.js", "MondoDB", "Handlebars.js", "Socket.io", "Stylus", "IGDB API", "News API", "Steam API", "Twitch API"],
+            technologies: ["Node.js", "Express.js", "MongoDB", "Handlebars.js", "Socket.io", "Stylus", "IGDB API", "News API", "Steam API", "Twitch API"],
             platforms: ["Web"],
             links: {
                 "Live Demo": "https://wasdwithme.herokuapp.com/",
@@ -149,16 +149,16 @@ var data = {
             },
         },
         "sonar": {
-            name: "Sonar",
+            name: "DEX Sonar",
             background: "#0b6cb3",
             color: "#ffffff",
             date: "August 2015",
-            description: "Sonar allows you to easily see performance attributes of websites as you browse the web. This helps both end-users and developers understand why a webpage might be slow or experiencing problems. With Sonar, you can quickly identify how long a page took to load, the size of the page in bytes, if any requests caused bottlenecks, the number of hosts that served content, and details about the type of files delivered.",
+            description: "DEX Sonar allows you to easily see performance attributes of websites as you browse the web. This helps both end-users and developers understand why a webpage might be slow or experiencing problems. With DEX Sonar, you can quickly identify how long a page took to load, the size of the page in bytes, if any requests caused bottlenecks, the number of hosts that served content, and details about the type of files delivered.",
             images: ["image1"],
             technologies: ["Chrome API", "HTML", "CSS", "JavaScript"],
             platforms: ["Chrome"],
             links: {
-                "Promotional Page": "http://pages.catchpoint.com/sonar.html",
+                "Promotional Page": "https://www.catchpoint.com/dex-sonar",
                 "Chrome Web Store": "https://chrome.google.com/webstore/detail/sonar/dibilcjfahbokhiodajibcajcabfjein"
             },
         },
