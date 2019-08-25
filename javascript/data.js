@@ -10,6 +10,19 @@ var data = {
         "Instagram": "https://instagram.com/SharpAceX"
     },
     projects: {
+        "mixcurb": {
+            name: "Mixcurb.com",
+            background: "#2256ef",
+            color: "#ffffff",
+            date: "September 2019",
+            description: "Mixcurb is an online destination to discover, buy, and sell music and beats. Create a store to sell your music, discover great new music, and connect with an entire community of musicians, producers, writers, and music-lovers.",
+            images: ["image1", "image2", "image3"],
+            technologies: ["Vue", "Vuex", "Vue Router", "PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+            platforms: ["Web"],
+            links: {
+                "Mixcurb.com": "https://mixcurb.com/"
+            }
+        },
         "sabe": {
             name: "Sabe.io",
             background: "#26272f",
@@ -17,11 +30,11 @@ var data = {
             date: "September 2017",
             description: "Sabe is an online destination for free high quality web development tutorials, classes and resources. Sabe is the place to learn HTML, CSS and JavaScript! Browse high-quality classes, tutorials and resources on front-end development so you can master the web.",
             images: ["image1", "image2", "image3"],
-            technologies: ["PHP", "HTML", "CSS", "JavaScript"],
+            technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
             platforms: ["Web"],
             links: {
                 "Sabe.io": "https://sabe.io/"
-            },
+            }
         },
         "aria": {
             name: "Aria",
@@ -35,7 +48,7 @@ var data = {
             links: {
                 "Live Demo": "https://aria.austinradams.com/",
                 "Github": "https://github.com/AlanMorel/aria"
-            },
+            }
         },
         "solaxia": {
             name: "Solaxia Online",
@@ -48,7 +61,7 @@ var data = {
             platforms: ["Windows", "Mac"],
             links: {
                 "Download for Windows": "downloads/solaxia.zip",
-            },
+            }
         },
         "trumpulse": {
             name: "Trumpulse",
@@ -64,7 +77,7 @@ var data = {
 				"Download for Windows": "downloads/trumpulse.zip",
                 "Demo": "https://alanmorel.com/trumpulse",
                 "Github": "https://github.com/AlanMorel/trumpulse"
-            },
+            }
         },
         "wasdwithme": {
             name: "WASD With Me",
@@ -78,7 +91,7 @@ var data = {
             links: {
                 "Live Demo": "https://wasdwithme.herokuapp.com/",
                 "Github": "https://github.com/AlanMorel/wasdWithMe",
-            },
+            }
         },
         "zhigly": {
             name: "Zhigly",
@@ -92,7 +105,7 @@ var data = {
             links: {
                 "Live Demo": "https://zhigly.gear.host/",
                 "Github": "https://github.com/AlanMorel/zhigly",
-            },
+            }
         },
         "metronavigator": {
             name: "Metro Navigator",
@@ -105,7 +118,7 @@ var data = {
             platforms: ["Windows"],
             links: {
                 "Download for Windows": "downloads/metronavigator.zip",
-            },
+            }
         },
         "chainball": {
             name: "Chainball",
@@ -119,7 +132,7 @@ var data = {
             links: {
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.luminositygames.chainball.android",
                 "Github": "https://github.com/AlanMorel/chainball",
-            },
+            }
         },
         "wavewarriors": {
             name: "Wave Warriors",
@@ -132,7 +145,7 @@ var data = {
             platforms: ["Windows", "Mac", "Linux"],
             links: {
                 "Github": "https://github.com/AlanMorel/WaveWarriors",
-            },
+            }
         },
         "pokedex": {
             name: "Pokédex",
@@ -146,7 +159,7 @@ var data = {
             links: {
                 "Live Demo": "https://alanmorel.pythonanywhere.com/",
                 "Github": "https://github.com/AlanMorel/pokedex",
-            },
+            }
         },
         "sonar": {
             name: "DEX Sonar",
@@ -160,7 +173,7 @@ var data = {
             links: {
                 "Promotional Page": "https://www.catchpoint.com/dex-sonar",
                 "Chrome Web Store": "https://chrome.google.com/webstore/detail/sonar/dibilcjfahbokhiodajibcajcabfjein"
-            },
+            }
         },
         "smoothietycoon": {
             name: "Smoothie Tycoon",
@@ -174,7 +187,7 @@ var data = {
             links: {
                 "Download": "downloads/smoothietycoon.zip",
                 "Github": "https://github.com/AlanMorel/smoothie-tycoon",
-            },
+            }
         },
         "mars2o": {
             name: "Mars2O",
@@ -187,7 +200,7 @@ var data = {
             platforms: ["Windows", "Mac", "Linux"],
             links: {
                 "Github": "https://github.com/AlanMorel/Mars2O",
-            },
+            }
         },
         "balloonfrenzy": {
             name: "Balloon Frenzy!",
@@ -200,7 +213,7 @@ var data = {
             platforms: ["Android"],
             links: {
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.sharpacex.BalloonFrenzy",
-            },
+            }
         },
         "dangerzone": {
             name: "Danger Zone",
@@ -214,7 +227,7 @@ var data = {
             links: {
                 "Download for Windows": "downloads/dangerzone.zip",
                 "Google Play Store": "https://play.google.com/store/apps/details?id=com.sharpacex.dangerzone",
-            },
+            }
         },
         "flash": {
             name: "Flash",
@@ -226,8 +239,8 @@ var data = {
             technologies: ["C#", ".NET"],
             platforms: ["Windows"],
             links: {
-              "Download for Windows": "downloads/flash.zip",
-            },
+                "Download for Windows": "downloads/flash.zip",
+            }
         },
         "sacredfire": {
             name: "Pokémon: SacredFire",
@@ -243,7 +256,7 @@ var data = {
                 "Lunar IPS (LIPS)": "https://fusoya.eludevisibility.org/lips/",
                 "Pokémon: FireRed ROM": "https://www.loveroms.com/download/gameboy-advance/pokemon-fire-red-version-u-/39",
                 "Visual Boy Advance": "https://sourceforge.net/projects/vba/",
-            },
+            }
         },
         "khaos": {
             name: "Khaos Map",
@@ -256,7 +269,7 @@ var data = {
             platforms: ["Windows"],
             links: {
                 "Download for Windows": "downloads/khaos.zip",
-            },
+            }
         },
         "quadratix": {
             name: "Quadratix",
@@ -269,7 +282,7 @@ var data = {
             platforms: ["Windows"],
             links: {
                 "Download for Windows": "downloads/quadratix.zip",
-            },
+            }
         },
         "alancryption": {
             name: "Alancryption",
@@ -282,7 +295,7 @@ var data = {
             platforms: ["Windows"],
             links: {
                 "Download for Windows": "downloads/alancryption.zip",
-            },
+            }
         },
         "prime": {
             name: "Prime Factorizer",
@@ -295,7 +308,7 @@ var data = {
             platforms: ["Windows"],
             links: {
                 "Download for Windows": "downloads/prime.zip",
-            },
-        },
+            }
+        }
     }
 };
