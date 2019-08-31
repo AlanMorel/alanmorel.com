@@ -67,7 +67,7 @@
             <div style="background-color:{{this.background}}; color:{{this.color}}">
                 <div class="project">
                     <div class="icon">
-                        <img data-src="projects/{{@key}}/icon.png" alt="{{@key}}"/>
+                        <img data-src="projects/{{@key}}/icon.png" alt="{{@key}}" loading="lazy" />
                     </div>
                     <div class="details">
                         <div class="name">{{this.name}}</div>
@@ -93,7 +93,7 @@
                         </div>
                         <div class="images">
                             {{#each this.images}}
-                            <img data-src="projects/{{@../key}}/{{this}}.png" alt="{{@key}} image" />
+                            <img data-src="projects/{{@../key}}/{{this}}.png" alt="{{@key}} image" loading="lazy" />
                             {{/each}}
                         </div>
                         <div class="links">

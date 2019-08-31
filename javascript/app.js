@@ -17,8 +17,15 @@ setInterval(function() {
     i = (i + 1) % actions.length;
 }, 1500);
 
-var bLazy = new Blazy({
+if ("loading" in HTMLImageElement.prototype) {
+    document.querySelectorAll("[data-src]").forEach(image => {
+        image.src = image.dataset.src;
+    });
+} else {
+    var bLazyOptions = {
         selector: "img",
         offset: 500
-    }
-);
+    };
+
+    var bLazy = new Blazy(bLazyOptions);
+}

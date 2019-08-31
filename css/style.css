@@ -37,6 +37,10 @@ h3 {
     line-height: 1.5;
 }
 
+p {
+    text-align: left;
+}
+
 ul {
     padding: 0;
 }
