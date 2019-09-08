@@ -36,6 +36,7 @@
 
     p {
         text-align: left;
+        line-height: 1.5;
     }
 
     ul {

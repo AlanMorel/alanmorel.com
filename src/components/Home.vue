@@ -7,7 +7,7 @@
             <div class="intro-container">
                 <h1>Alan Morel</h1>
                 <p>I'm a software engineer, photographer, and music producer from New York. I like making cool things and this is my collection of my software, artwork, projects and achievements.</p>
-                <h3>I hope that it inspires you to <span class="action">collaborate</span>!</h3>
+                <h3>I hope that it inspires you to <span class="action">{{ this.actions[actionsIndex] }}</span>!</h3>
             </div>
         </header>
         <ul class="contacts">
@@ -31,11 +31,17 @@
         },
         data: () => ({
             contacts: [],
-            projects: []
+            projects: [],
+            actions: ["collaborate", "create", "share", "build", "learn", "code", "teach", "dream"],
+            actionsIndex: 0
         }),
         created() {
             this.contacts = data.contacts;
             this.projects = data.projects;
+
+            setInterval(() => {
+                this.actionsIndex = (this.actionsIndex + 1) % this.actions.length;
+            }, 2000);
         }
     }
 </script>
@@ -55,6 +61,10 @@
     .picture {
         width: 100%;
         border-radius: 50%
+    }
+
+    .action {
+        font-weight: bold;
     }
 
     @media screen and (max-width: 50rem) {

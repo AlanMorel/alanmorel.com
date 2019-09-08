@@ -86,22 +86,16 @@
     }
 
     .tags-container {
-        width: 100%;
-        display: inline-block;
-    }
-
-    .technologies-container, .platforms-container {
-        display: inline-block;
-        vertical-align: top;
+        display: flex;
     }
 
     .technologies-container {
-        width: 65%;
+        flex: 65%;
         margin-right: 5%;
     }
 
     .platforms-container {
-        width: 25%;
+        flex: 25%;
     }
 
     .icon {
@@ -164,9 +158,13 @@
             padding: 0;
         }
 
+        .tags-container {
+            flex-direction: column;
+        }
+
         .icon {
             margin-right: 1rem;
-            margin-bottom: 0.5rem;
+            transform: translateY(-0.5rem);
             float: left;
             width: 20%;
         }
