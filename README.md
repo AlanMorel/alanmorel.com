@@ -3,7 +3,7 @@
 This repository hosts home to the code that powers my [personal site](https://www.alanmorel.com/).
 
 ## Technologies
-* [Handlebars](https://handlebarsjs.com/) - html templating
+* [Vue](https://vuejs.org/) - user interface library
 
 ## Screenshots
 ![alt tag](https://i.imgur.com/iQRyICc.png)
