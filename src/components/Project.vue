@@ -28,7 +28,7 @@
                 </div>
                 <ul class="project-images">
                     <li class="project-image" v-for="image in project.images">
-                        <img :src="'/assets/images/projects/' + name + '/' + image + '.png'" :alt="name + ' image'" loading="lazy" />
+                        <img :src="'/assets/images/projects/' + name + '/image' + image + '.png'" :alt="name + ' image'" loading="lazy" />
                     </li>
                 </ul>
                 <ul class="links">
@@ -52,6 +52,10 @@
 </script>
 
 <style lang="stylus">
+    .projects {
+        margin-bottom: 0;
+    }
+
     .project {
         display: flex;
         padding: 2rem 1rem 0.5rem;
