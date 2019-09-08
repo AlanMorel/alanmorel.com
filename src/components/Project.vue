@@ -154,7 +154,7 @@
             display: block;
         }
 
-        .name {
+        .project__name {
             font-size: 2rem;
             letter-spacing: -0.1rem;
             margin-top: -0.5rem;
