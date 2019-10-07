@@ -119,7 +119,9 @@
 
     .project-images {
         margin: 1rem 0 0.5rem;
-        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .project-image img {
@@ -144,6 +146,7 @@
 
             &:hover {
                 background-color: rgba(0, 0, 0, 0.4);
+            }
         }
     }
 
