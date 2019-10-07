@@ -6,7 +6,7 @@
             </div>
             <div class="intro-container">
                 <h1>Alan Morel</h1>
-                <p>I'm a software engineer, photographer, and music producer from New York. I like making cool things and this is my collection of my software, artwork, projects and achievements.</p>
+                <p>I'm a software engineer, photographer, music producer, and technical writer, from New York. I like making cool things and this is my collection of my software, artwork, projects, and achievements.</p>
                 <h3>I hope that it inspires you to <span class="action">{{ this.actions[actionsIndex] }}</span>!</h3>
             </div>
         </header>

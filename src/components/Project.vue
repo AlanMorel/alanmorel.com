@@ -104,10 +104,10 @@
 
     .icon {
         flex: 20%;
-    }
 
-    .icon img {
-        width: 100%;
+        img {
+            width: 100%;
+        }
     }
 
     .project__details {
@@ -131,19 +131,19 @@
 
     .links {
         display: flex;
-    }
+        flex-wrap: wrap;
 
-    .links a {
-        text-decoration: none;
-        background-color: rgba(0, 0, 0, 0.25);
-        padding: 0.3rem 0.5rem;
-        border-radius: 0.5rem;
-        margin-right: 0.2rem;
-        display: inline-block;
-        margin-bottom: 0.5rem;
+        a {
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.25);
+            padding: 0.3rem 0.5rem;
+            border-radius: 0.25rem;
+            margin-right: 0.5rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
 
-        &:hover {
-            background-color: rgba(0, 0, 0, 0.4);
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.4);
         }
     }
 
