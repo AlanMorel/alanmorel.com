@@ -29,13 +29,13 @@
     }
 
     .contact__image {
-        width: 4rem;
+        width: 3rem;
         padding: 0.5rem;
     }
 
     @media screen and (max-width: 50rem) {
         .contact__image {
-            width: 3.5rem;
+            width: 2.5rem;
         }
     }
 </style>

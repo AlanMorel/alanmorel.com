@@ -138,7 +138,7 @@
         a {
             text-decoration: none;
             background-color: rgba(0, 0, 0, 0.25);
-            padding: 0.3rem 0.5rem;
+            padding: 0.3rem 0.75rem;
             border-radius: 0.25rem;
             margin-right: 0.5rem;
             display: inline-block;
