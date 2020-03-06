@@ -44,6 +44,10 @@
         list-style-type: none;
     }
 
+    a {
+        color: black;
+    }
+
     @media screen and (max-width: 50rem) {
         h1 {
             font-size: 4rem;

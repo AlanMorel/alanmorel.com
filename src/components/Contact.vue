@@ -30,7 +30,7 @@
 
     .contact__image {
         width: 3rem;
-        padding: 0.5rem;
+        margin: 0.5rem;
     }
 
     @media screen and (max-width: 50rem) {
