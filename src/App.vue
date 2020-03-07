@@ -26,6 +26,11 @@
         text-align: left;
         letter-spacing: -0.75rem;
         color: #1f1f1f;
+        background-size: 100% 25%;
+        background-repeat: repeat-x;
+        background-position: left 0% bottom 0%;
+        display: inline-block;
+        background-image: linear-gradient(182deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 52%, transparent 100%);
     }
 
     h3 {
