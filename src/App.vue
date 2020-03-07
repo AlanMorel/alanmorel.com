@@ -6,7 +6,7 @@
 
 <style lang="stylus">
     body {
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
         margin: 0;
         text-align: center;
         letter-spacing: 0.025rem;

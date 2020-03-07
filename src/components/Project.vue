@@ -6,11 +6,11 @@
             </div>
             <div class="project__details">
                 <h2 class="project__name">{{ project.name }}</h2>
-                <div class="mini">Released {{ project.date }}</div>
-                <div class="description">{{ project.description }}</div>
+                <div class="project__subheader">Released {{ project.date }}</div>
+                <div class="project__description">{{ project.description }}</div>
                 <div class="tags-container">
                     <div class="technologies-container">
-                      <div class="mini">Technologies</div>
+                      <div class="project__subheader">Technologies</div>
                       <ul class="technologies">
                           <li class="tag" v-for="technology in project.technologies">
                               {{ technology }}
@@ -18,7 +18,7 @@
                       </ul>
                     </div>
                     <div class="platforms-container">
-                      <div class="mini">Platforms</div>
+                      <div class="project__subheader">Platforms</div>
                       <ul class="platforms">
                           <li class="tag" v-for="platform in project.platforms">
                               {{ platform }}
@@ -71,7 +71,7 @@
         margin: 0 0.5rem 0.4rem 0;
     }
 
-    .mini {
+    .project__subheader {
         margin: 0.25rem 0 1rem;
         font-size: 0.9rem;
         font-weight: 700;
@@ -85,7 +85,7 @@
         margin-bottom: 0;
     }
 
-    .description {
+    .project__description {
         margin-bottom: 0.5rem;
     }
 

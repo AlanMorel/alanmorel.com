@@ -18,7 +18,6 @@
 
 <style lang="stylus">
     .contacts {
-        padding: 0.5rem 0 3rem;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
