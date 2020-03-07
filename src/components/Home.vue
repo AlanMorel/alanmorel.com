@@ -1,15 +1,6 @@
 <template>
     <section class="home">
-        <header>
-            <div class="picture-container">
-                <img src="/assets/images/pic.png" class="picture" alt="profile pic" />
-            </div>
-            <div class="intro-container">
-                <h1>Alan Morel</h1>
-                <p>I'm a software engineer, photographer, music producer, and technical writer, from New York. I like making cool things and this is my collection of my software, artwork, projects, and achievements.</p>
-                <p class="intro__ending">Feel free to reach out to me via <a href="mailto:alan@alanmorel.com">email</a>. My resume can be <a href="/resume" target="_blank">found here</a>.</p>
-            </div>
-        </header>
+        <Intro />
         <ul class="contacts">
             <Contact v-for="(link, name) in contacts" :name="name" :link="link" :key="name" />
         </ul>
@@ -20,12 +11,14 @@
 </template>
 
 <script>
+    import Intro from "@/components/Intro.vue";
     import Project from "@/components/Project.vue";
     import Contact from "@/components/Contact.vue";
 
     export default {
         name: "Home",
         components: {
+            Intro,
             Project,
             Contact
         },
@@ -41,45 +34,5 @@
 </script>
 
 <style lang="stylus">
-    header {
-        display: flex;
-        max-width: 60rem;
-        margin: 4rem auto 4rem;
-    }
 
-    .picture-container {
-        margin-right: 3rem;
-        width: 70%;
-    }
-
-    .picture {
-        width: 100%;
-        border-radius: 50%;
-        box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
-    }
-
-    .action {
-        font-weight: bold;
-    }
-
-    .intro__ending {
-        font-size: 1.15rem;
-    }
-
-    @media screen and (max-width: 50rem) {
-        header {
-            display: initial;
-            text-align: center;
-        }
-
-        .intro-container {
-            padding: 0 1rem;
-        }
-
-        .picture-container {
-            width: 50%;
-            margin: auto;
-            padding-top: 2rem;
-        }
-    }
 </style>

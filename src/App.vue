@@ -22,7 +22,7 @@
     h1 {
         font-size: 7rem;
         font-weight: 700;
-        margin: 0 0 1rem;
+        margin: 0;
         text-align: left;
         letter-spacing: -0.75rem;
         color: #1f1f1f;
@@ -51,6 +51,36 @@
 
     a {
         color: black;
+    }
+
+    [data-tip] {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: attr(data-tip);
+            background-color: rgba(0, 0, 0, 0.8);
+            bottom: calc(100% + 0.25rem);
+            border-radius: 0.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0.25rem 0.75rem;
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility 0s linear 0.2s, opacity 0.2s 0s;
+        }
+
+        &:hover,
+        &:focus {
+            &:before {
+                opacity: 1;
+                visibility: visible;
+                transition: visibility 0s linear 0s, opacity 0.2s 0s;
+            }
+        }
     }
 
     @media screen and (max-width: 50rem) {
