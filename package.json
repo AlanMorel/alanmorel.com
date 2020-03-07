@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "build-local": "vue-cli-service build --mode development --dest dist --target app --watch",
+        "build-local": "vue-cli-service build --mode development --dest dev --target app --watch",
         "build-prod": "vue-cli-service build --mode production --dest dist --target app --modern"
     },
     "dependencies": {

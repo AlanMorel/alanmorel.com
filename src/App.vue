@@ -21,7 +21,8 @@
 
     h1 {
         font-size: 7rem;
-        font-weight: 700;
+        padding: 0 1rem;
+        font-weight: bold;
         margin: 0;
         text-align: left;
         letter-spacing: -0.75rem;
