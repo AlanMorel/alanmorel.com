@@ -5,23 +5,27 @@
                 <img :src="'/assets/images/projects/' + name + '/icon.png'" :alt="name" loading="lazy" class="project__icon" />
             </div>
             <div class="project__details">
-                <h2 class="project__name">{{ project.name }}</h2>
-                <div class="project__subheader">Released {{ project.date }}</div>
+                <div class="project__headers">
+                    <h2 class="project__name">{{ project.name }}</h2>
+                    <div class="project__subheader">Released {{ project.date }}</div>
+                </div>
                 <div class="project__description">{{ project.description }}</div>
                 <div class="project__tags-container">
                     <div class="project__technologies">
                       <div class="project__subheader">Technologies</div>
                       <ul>
                           <li class="project__tag" v-for="technology in project.technologies">
-                              {{ technology }}
+                              <DynamicIcon :icon="technology" />
+                              <span>{{ technology }}</span>
                           </li>
                       </ul>
                     </div>
                     <div class="project__platforms">
-                      <div class="project__subheader">Platforms</div>
+                      <div class="project__subheader">Available on</div>
                       <ul>
                           <li class="project__tag" v-for="platform in project.platforms">
-                              {{ platform }}
+                              <DynamicIcon :icon="platform" />
+                              <span>{{ platform }}</span>
                           </li>
                       </ul>
                     </div>
@@ -36,8 +40,9 @@
             </ul>
             <ul class="project__links">
                 <li class="project__link-container" v-for="(link, name) in project.links">
-                    <a :href="link" target="_blank" rel="noopener" :style="'color:' + project.color + ';'" class="project__link">
-                        {{ name }}
+                    <a :href="link" target="_blank" rel="noopener" class="project__tag project__link">
+                        <DynamicIcon :icon="name" />
+                        <span>{{ name }}</span>
                     </a>
                 </li>
             </ul>
@@ -46,8 +51,13 @@
 </template>
 
 <script>
+    import DynamicIcon from "@/components/icons/DynamicIcon.vue";
+
     export default {
         name: "Project",
+        components: {
+            DynamicIcon
+        },
         props: {
             name: String,
             project: Object
@@ -63,7 +73,7 @@
     .project__inner-container {
         display: flex;
         padding: 2rem 1rem 0.5rem;
-        max-width: 65rem;
+        max-width: 70rem;
         margin: auto;
     }
 
@@ -73,14 +83,19 @@
 
     .project__icon {
         width: 100%;
+        border-radius: 1rem;
     }
 
     .project__tag {
-        padding: 0.3rem 0.75rem;
-        display: inline-block;
+        padding: 0.35rem 0.75rem;
         background-color: rgba(0, 0, 0, 0.25);
         border-radius: 0.25rem;
-        margin: 0 0.5rem 0.4rem 0;
+        margin: 0 0.6rem 0.6rem 0;
+        color: white;
+        vertical-align: middle;
+        display: inline-flex;
+        align-items: center;
+        border-bottom: solid 3px rgba(0, 0, 0, 0.1);
     }
 
     .project__subheader {
@@ -101,6 +116,8 @@
         background-repeat: repeat-x;
         background-position: left 0% bottom 0%;
         background-image: linear-gradient(182deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 52%, transparent 100%);
+        padding: 0 0.5rem;
+        transform: translateX(-0.75rem);
     }
 
     .project__description {
@@ -109,23 +126,21 @@
 
     .project__tags-container {
         display: flex;
+        flex-direction: column;
     }
 
     .project__technologies {
-        flex: 65%;
-        margin-right: 5%;
         margin-bottom: 0.5rem;
     }
 
     .project__platforms {
-        flex: 25%;
     }
 
     .project__details {
         flex: 80%;
         text-align: left;
         box-sizing: border-box;
-        padding-left: 2rem;
+        padding-left: 3rem;
     }
 
     .project__images {
@@ -147,17 +162,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 1rem 0;
+        padding: 1.5rem 1rem;
     }
 
     .project__link {
         text-decoration: none;
-        background-color: rgba(0, 0, 0, 0.25);
-        padding: 0.3rem 0.75rem;
-        border-radius: 0.25rem;
-        margin-right: 0.5rem;
-        display: inline-block;
-        margin-bottom: 0.5rem;
         transition: background-color 0.1s ease;
 
         &:hover {
@@ -170,18 +179,23 @@
             display: block;
         }
 
+        .project__inner-container {
+            flex-direction: column;
+        }
+
+        .project__headers {
+            padding-left: 6rem;
+            margin-bottom: 1.25rem;
+        }
+
         .project__name {
             font-size: 2rem;
             letter-spacing: -0.1rem;
-            margin-top: -1rem;
+            margin-bottom: 0;
         }
 
         .project__details {
             padding: 0;
-        }
-
-        .project__tags-container {
-            flex-direction: column;
         }
 
         .project__technologies {
@@ -192,11 +206,15 @@
             font-size: 0.9rem;
         }
 
+        .project__description {
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
         .project__icon-container {
-            margin-right: 1rem;
-            transform: translateY(-0.5rem);
-            float: left;
+            transform: translateY(-1rem);
             width: 20%;
+            position: absolute;
         }
 
         .project__image {
