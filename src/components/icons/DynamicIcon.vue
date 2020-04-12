@@ -32,6 +32,8 @@
     import GooglePlayIcon from "@/components/icons/GooglePlayIcon";
     import GithubIcon from "@/components/icons/GithubIcon";
     import DownloadIcon from "@/components/icons/DownloadIcon";
+    import StripeIcon from "@/components/icons/StripeIcon";
+    import PayPalIcon from "@/components/icons/PayPalIcon";
 
     export default {
         name: "DynamicIcon",
@@ -64,7 +66,9 @@
             GameBoyAdvanceIcon,
             GooglePlayIcon,
             GithubIcon,
-            DownloadIcon
+            DownloadIcon,
+            StripeIcon,
+            PayPalIcon
         },
         props: {
             icon: {

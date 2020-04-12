@@ -18,7 +18,6 @@
 
 <style lang="stylus">
     .icon {
-        width: 1.2rem;
         height: 1.2rem;
         margin-right: 0.5rem;
     }

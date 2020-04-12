@@ -167,7 +167,7 @@
 
     .project__link {
         text-decoration: none;
-        transition: background-color 0.1s ease;
+        transition: background-color 0.15s ease;
 
         &:hover {
             background-color: rgba(0, 0, 0, 0.5);
@@ -192,6 +192,8 @@
             font-size: 2rem;
             letter-spacing: -0.1rem;
             margin-bottom: 0;
+            padding: 0 0.25rem;
+            transform: translateX(-0.25rem);
         }
 
         .project__details {

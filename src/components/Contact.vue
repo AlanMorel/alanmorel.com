@@ -31,6 +31,11 @@
     .contact__image {
         width: 3rem;
         margin: 0.5rem;
+        transition: filter 0.15s ease;
+
+        &:hover {
+            filter: brightness(75%);
+        }
     }
 
     @media screen and (max-width: 50rem) {
