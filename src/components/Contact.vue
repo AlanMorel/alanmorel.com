@@ -32,6 +32,7 @@
         width: 3rem;
         margin: 0.5rem;
         transition: filter 0.15s ease;
+        border-radius: 0.25rem;
 
         &:hover {
             filter: brightness(75%);
