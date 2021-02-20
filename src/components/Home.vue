@@ -30,9 +30,7 @@
             this.contacts = data.contacts;
             this.projects = data.projects;
         }
-    }
+    };
 </script>
 
-<style lang="stylus">
-
-</style>
+<style lang="stylus"></style>

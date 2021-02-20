@@ -10,10 +10,16 @@
     export default {
         name: "Contact",
         props: {
-            name: String,
-            link: String
+            name: {
+                type: String,
+                required: true
+            },
+            link: {
+                type: String,
+                required: true
+            }
         }
-    }
+    };
 </script>
 
 <style lang="stylus">
