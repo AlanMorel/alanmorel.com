@@ -1,10 +1,15 @@
 {
     "name": "alanmorelcom",
     "version": "0.1.0",
+    "author": "Alan Morel",
     "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AlanMorel/alanmorelcom.git"
+    },
     "scripts": {
-        "build-local": "vue-cli-service build --mode development --dest dev --target app --watch",
-        "build-prod": "vue-cli-service build --mode production --dest dist --target app --modern"
+        "build-dev": "vue-cli-service build --mode development --dest dist/development --target app --watch",
+        "build-prod": "vue-cli-service build --mode production --dest dist/production --target app --modern"
     },
     "dependencies": {
         "core-js": "^3.9.0",
@@ -12,10 +17,11 @@
         "vue-router": "^4.0.0-rc.6"
     },
     "devDependencies": {
-        "@vue/cli-plugin-babel": "^4.5.11",
-        "@vue/cli-service": "^4.5.11",
+        "@vue/cli-plugin-babel": "^v5.0.0-alpha.4",
+        "@vue/cli-plugin-router": "^v5.0.0-alpha.4",
+        "@vue/cli-service": "^v5.0.0-alpha.4",
         "@vue/compiler-sfc": "^3.0.5",
-        "sass": "^1.32.7",
-        "sass-loader": "^10.0.1"
+        "sass": "^1.32.8",
+        "sass-loader": "^11.0.1"
     }
 }
