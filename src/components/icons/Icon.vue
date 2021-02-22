@@ -16,7 +16,7 @@
     }
 </script>
 
-<style lang="stylus">
+<style lang="scss">
     .icon {
         height: 1.2rem;
         margin-right: 0.5rem;

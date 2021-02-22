@@ -65,7 +65,7 @@
     }
 </script>
 
-<style lang="stylus">
+<style lang="scss">
     .projects {
         margin-bottom: 0;
     }

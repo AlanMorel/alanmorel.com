@@ -2,7 +2,7 @@
     <router-view />
 </template>
 
-<style lang="stylus">
+<style lang="scss">
     body {
         font-family: "Open Sans", sans-serif;
         margin: 0;

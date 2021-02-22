@@ -22,7 +22,7 @@
     };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
     .contacts {
         display: flex;
         justify-content: center;

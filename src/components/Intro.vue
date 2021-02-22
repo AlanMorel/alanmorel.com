@@ -17,7 +17,7 @@
     }
 </script>
 
-<style lang="stylus">
+<style lang="scss">
     .intro {
         display: flex;
         max-width: 60rem;
