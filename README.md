@@ -4,13 +4,11 @@ This repository hosts home to the code that powers my [personal site](https://ww
 
 ## Installation
 
-Install node, npm, then clone this repository
+Install node, npm, clone this repository, then install the dependencies
 
 ```sh
 $ git clone https://github.com/AlanMorel/alanmorelcom alanmorelcom
 ```
-
-Install the dependencies
 
 ```sh
 $ cd alanmorelcom

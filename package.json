@@ -2,6 +2,7 @@
     "name": "alanmorelcom",
     "version": "0.1.0",
     "author": "Alan Morel",
+    "license": "MIT",
     "private": true,
     "repository": {
         "type": "git",

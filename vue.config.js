@@ -1,5 +1,3 @@
-const path = require("path");
-
 module.exports = {
     productionSourceMap: false,
     filenameHashing: false,
@@ -13,9 +11,5 @@ module.exports = {
             filename: "[name].js",
             chunkFilename: "[name].js"
         }
-    },
-    chainWebpack: config => {
-        config.resolve.alias.set("@", path.resolve(__dirname, "src"));
-        config.module.rules.delete("eslint");
     }
 };
