@@ -80,37 +80,43 @@
             iconName() {
                 let startsWith = ["AWS", "Vue", "Chrome"];
                 let equalTo = {
-                    "Java": ["libGDX", "Processing"],
-                    "Python": ["Flask", "PIL", "Requests"],
-                    "NET": ["C#", "ASP.NET", ".NET"],
-                    "Node": ["Express", "Socket.io", "Handlebars.js"],
-                    "Github": ["Open Source on Github"],
-                    "Windows": ["Download for Windows"],
-                    "Web": ["Live Demo", "Promotional Page", "Pokémon: SacredFire Patch File", "Lunar IPS (LIPS)", "Pokémon: FireRed ROM"],
-                    "GooglePlay": ["Google Play Store"],
-                    "GameBoyAdvance": ["Game Boy Advance", "Visual Boy Advance"]
+                    Java: ["libGDX", "Processing"],
+                    Python: ["Flask", "PIL", "Requests"],
+                    NET: ["C#", "ASP.NET", ".NET"],
+                    Node: ["Express", "Socket.io", "Handlebars.js"],
+                    Github: ["Open Source on Github"],
+                    Windows: ["Download for Windows"],
+                    Web: [
+                        "Live Demo",
+                        "Promotional Page",
+                        "Pokémon: SacredFire Patch File",
+                        "Lunar IPS (LIPS)",
+                        "Pokémon: FireRed ROM"
+                    ],
+                    GooglePlay: ["Google Play Store"],
+                    GameBoyAdvance: ["Game Boy Advance", "Visual Boy Advance"]
                 };
                 let endsWith = {
-                    "API": ["API", "SDK", "Assembly"],
-                    "Web": [".com", ".io"]
+                    API: ["API", "SDK", "Assembly"],
+                    Web: [".com", ".io"]
                 };
 
-                for (var starts of startsWith) {
+                for (const starts of startsWith) {
                     if (this.icon.startsWith(starts)) {
                         return starts + "Icon";
                     }
                 }
 
-                for (var to of Object.keys(equalTo)) {
-                    for (var from of equalTo[to]) {
+                for (const to of Object.keys(equalTo)) {
+                    for (const from of equalTo[to]) {
                         if (this.icon === from) {
                             return to + "Icon";
                         }
                     }
                 }
 
-                for (var to of Object.keys(endsWith)) {
-                    for (var from of endsWith[to]) {
+                for (const to of Object.keys(endsWith)) {
+                    for (const from of endsWith[to]) {
                         if (this.icon.endsWith(from)) {
                             return to + "Icon";
                         }
@@ -120,9 +126,7 @@
                 return this.icon + "Icon";
             }
         }
-    }
+    };
 </script>
 
-<style lang="stylus">
-
-</style>
+<style lang="stylus"></style>

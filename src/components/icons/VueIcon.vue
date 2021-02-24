@@ -17,5 +17,5 @@
         components: {
             Icon
         }
-    }
+    };
 </script>

@@ -2,7 +2,12 @@
     <li class="project" :style="'background-color:' + project.background + '; color:' + project.color + ';'">
         <div class="project__inner-container">
             <div class="project__icon-container">
-                <img :src="'/assets/images/projects/' + name + '/icon.png'" :alt="name" loading="lazy" class="project__icon" />
+                <img
+                    :src="'/assets/images/projects/' + name + '/icon.png'"
+                    :alt="name"
+                    loading="lazy"
+                    class="project__icon"
+                />
             </div>
             <div class="project__details">
                 <div class="project__headers">
@@ -12,34 +17,39 @@
                 <div class="project__description">{{ project.description }}</div>
                 <div class="project__tags-container">
                     <div class="project__technologies">
-                      <div class="project__subheader">Technologies</div>
-                      <ul>
-                          <li class="project__tag" v-for="technology in project.technologies">
-                              <DynamicIcon :icon="technology" />
-                              <span>{{ technology }}</span>
-                          </li>
-                      </ul>
+                        <div class="project__subheader">Technologies</div>
+                        <ul>
+                            <li class="project__tag" v-for="(technology, index) in project.technologies" :key="index">
+                                <DynamicIcon :icon="technology" />
+                                <span>{{ technology }}</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="project__platforms">
-                      <div class="project__subheader">Available on</div>
-                      <ul>
-                          <li class="project__tag" v-for="platform in project.platforms">
-                              <DynamicIcon :icon="platform" />
-                              <span>{{ platform }}</span>
-                          </li>
-                      </ul>
+                        <div class="project__subheader">Available on</div>
+                        <ul>
+                            <li class="project__tag" v-for="(platform, index) in project.platforms" :key="index">
+                                <DynamicIcon :icon="platform" />
+                                <span>{{ platform }}</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="project__body">
             <ul class="project__images">
-                <li class="project__image-container" v-for="image in project.images">
-                    <img :src="'/assets/images/projects/' + name + '/image' + image + '.png'" :alt="name + ' image'" loading="lazy" class="project__image" />
+                <li class="project__image-container" v-for="(image, index) in project.images" :key="index">
+                    <img
+                        :src="'/assets/images/projects/' + name + '/image' + image + '.png'"
+                        :alt="name + ' image'"
+                        loading="lazy"
+                        class="project__image"
+                    />
                 </li>
             </ul>
             <ul class="project__links">
-                <li class="project__link-container" v-for="(link, name) in project.links">
+                <li class="project__link-container" v-for="(link, name) in project.links" :key="name">
                     <a :href="link" target="_blank" rel="noopener" class="project__tag project__link">
                         <DynamicIcon :icon="name" />
                         <span>{{ name }}</span>
@@ -62,7 +72,7 @@
             name: String,
             project: Object
         }
-    }
+    };
 </script>
 
 <style lang="scss">
@@ -115,7 +125,13 @@
         background-size: 100% 25%;
         background-repeat: repeat-x;
         background-position: left 0% bottom 0%;
-        background-image: linear-gradient(182deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 52%, transparent 100%);
+        background-image: linear-gradient(
+            182deg,
+            rgba(255, 255, 255, 0.25) 0%,
+            rgba(255, 255, 255, 0.25) 50%,
+            transparent 52%,
+            transparent 100%
+        );
         padding: 0 0.5rem;
         transform: translateX(-0.75rem);
     }

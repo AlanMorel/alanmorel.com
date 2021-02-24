@@ -5,8 +5,15 @@
         </div>
         <div class="intro__text-container">
             <h1>Alan Morel</h1>
-            <p>Hey! My name is Alan and I'm a software engineer, photographer, music producer, and technical writer, from New York. I like writing software to build cool things, and this is my collection of my works, art, and projects.</p>
-            <p class="intro__ending">Feel free to reach out to me via <a href="mailto:alan@alanmorel.com">email</a>. My resume can be <a href="/resume" target="_blank">found here</a>.</p>
+            <p>
+                Hey! My name is Alan and I'm a software engineer, photographer, music producer, and technical writer,
+                from New York. I like writing software to build cool things, and this is my collection of my works, art,
+                and projects.
+            </p>
+            <p class="intro__ending">
+                Feel free to reach out to me via <a href="mailto:alan@alanmorel.com">email</a>. My resume can be
+                <a href="/resume" target="_blank">found here</a>.
+            </p>
         </div>
     </header>
 </template>
@@ -14,7 +21,7 @@
 <script>
     export default {
         name: "Intro"
-    }
+    };
 </script>
 
 <style lang="scss">

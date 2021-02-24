@@ -21,7 +21,11 @@
         "@vue/cli-plugin-babel": "^v5.0.0-alpha.4",
         "@vue/cli-plugin-router": "^v5.0.0-alpha.4",
         "@vue/cli-service": "^v5.0.0-alpha.4",
+        "@vue/cli-plugin-eslint": "^v5.0.0-alpha.4",
         "@vue/compiler-sfc": "^3.0.5",
+        "eslint": "^7.20.0",
+        "eslint-plugin-vue": "^7.6.0",
+        "babel-eslint": "^10.1.0",
         "sass": "^1.32.8",
         "sass-loader": "^11.0.1"
     }
