@@ -149,9 +149,6 @@
         margin-bottom: 0.5rem;
     }
 
-    .project__platforms {
-    }
-
     .project__details {
         flex: 80%;
         text-align: left;

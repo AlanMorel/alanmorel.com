@@ -22,13 +22,11 @@
             Project,
             Contact
         },
-        data: () => ({
-            contacts: [],
-            projects: []
-        }),
-        created() {
-            this.contacts = data.contacts;
-            this.projects = data.projects;
+        setup() {
+            const contacts = data.contacts;
+            const projects = data.projects;
+
+            return { contacts, projects };
         }
     };
 </script>
