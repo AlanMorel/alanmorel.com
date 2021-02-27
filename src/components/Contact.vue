@@ -7,7 +7,9 @@
 </template>
 
 <script>
-    export default {
+    import { defineComponent } from "vue";
+
+    export default defineComponent({
         name: "Contact",
         props: {
             name: {
@@ -19,7 +21,7 @@
                 required: true
             }
         }
-    };
+    });
 </script>
 
 <style lang="scss">

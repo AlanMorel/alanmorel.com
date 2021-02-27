@@ -36,12 +36,14 @@
 </template>
 
 <script>
+    import { defineComponent } from "vue";
+
     import Icon from "@/components/icons/Icon";
 
-    export default {
+    export default defineComponent({
         name: "JavaIcon",
         components: {
             Icon
         }
-    };
+    });
 </script>

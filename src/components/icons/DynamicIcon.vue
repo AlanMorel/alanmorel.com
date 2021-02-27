@@ -3,6 +3,8 @@
 </template>
 
 <script>
+    import { defineComponent } from "vue";
+
     import VueIcon from "@/components/icons/VueIcon";
     import JavaScriptIcon from "@/components/icons/JavaScriptIcon";
     import AWSIcon from "@/components/icons/AWSIcon";
@@ -35,7 +37,7 @@
     import StripeIcon from "@/components/icons/StripeIcon";
     import PayPalIcon from "@/components/icons/PayPalIcon";
 
-    export default {
+    export default defineComponent({
         name: "DynamicIcon",
         components: {
             VueIcon,
@@ -126,7 +128,7 @@
                 return this.icon + "Icon";
             }
         }
-    };
+    });
 </script>
 
 <style lang="stylus"></style>

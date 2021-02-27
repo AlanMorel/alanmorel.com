@@ -5,7 +5,9 @@
 </template>
 
 <script>
-    export default {
+    import { defineComponent } from "vue";
+
+    export default defineComponent({
         name: "Icon",
         props: {
             viewBox: {
@@ -13,7 +15,7 @@
                 required: true
             }
         }
-    };
+    });
 </script>
 
 <style lang="scss">

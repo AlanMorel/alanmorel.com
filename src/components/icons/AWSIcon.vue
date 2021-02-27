@@ -18,12 +18,14 @@
 </template>
 
 <script>
+    import { defineComponent } from "vue";
+
     import Icon from "@/components/icons/Icon";
 
-    export default {
+    export default defineComponent({
         name: "AWSIcon",
         components: {
             Icon
         }
-    };
+    });
 </script>

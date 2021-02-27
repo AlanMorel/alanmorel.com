@@ -61,9 +61,11 @@
 </template>
 
 <script>
+    import { defineComponent } from "vue";
+
     import DynamicIcon from "@/components/icons/DynamicIcon.vue";
 
-    export default {
+    export default defineComponent({
         name: "Project",
         components: {
             DynamicIcon
@@ -72,7 +74,7 @@
             name: String,
             project: Object
         }
-    };
+    });
 </script>
 
 <style lang="scss">

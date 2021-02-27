@@ -11,11 +11,13 @@
 </template>
 
 <script>
+    import { defineComponent } from "vue";
+
     import Intro from "@/components/Intro.vue";
     import Project from "@/components/Project.vue";
     import Contact from "@/components/Contact.vue";
 
-    export default {
+    export default defineComponent({
         name: "Home",
         components: {
             Intro,
@@ -28,5 +30,5 @@
 
             return { contacts, projects };
         }
-    };
+    });
 </script>
