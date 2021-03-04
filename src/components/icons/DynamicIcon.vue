@@ -21,6 +21,7 @@
     import AndroidIcon from "@/components/icons/AndroidIcon";
     import NETIcon from "@/components/icons/NETIcon";
     import CSSIcon from "@/components/icons/CSSIcon";
+    import SassIcon from "@/components/icons/SassIcon";
     import NodeIcon from "@/components/icons/NodeIcon";
     import APIIcon from "@/components/icons/APIIcon";
     import MySQLIcon from "@/components/icons/MySQLIcon";
@@ -56,6 +57,7 @@
             AndroidIcon,
             NETIcon,
             CSSIcon,
+            SassIcon,
             NodeIcon,
             APIIcon,
             MySQLIcon,
