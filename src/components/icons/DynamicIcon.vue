@@ -37,6 +37,7 @@
     import DownloadIcon from "@/components/icons/DownloadIcon";
     import StripeIcon from "@/components/icons/StripeIcon";
     import PayPalIcon from "@/components/icons/PayPalIcon";
+    import DockerIcon from "@/components/icons/DockerIcon";
 
     export default defineComponent({
         name: "DynamicIcon",
@@ -72,7 +73,8 @@
             GithubIcon,
             DownloadIcon,
             StripeIcon,
-            PayPalIcon
+            PayPalIcon,
+            DockerIcon
         },
         props: {
             icon: {
