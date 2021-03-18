@@ -10,7 +10,7 @@
     </section>
 </template>
 
-<script>
+<script lang="ts">
     import { defineComponent } from "vue";
 
     import Intro from "@/components/Intro.vue";
@@ -25,8 +25,17 @@
             Contact
         },
         setup() {
-            const contacts = data.contacts;
-            const projects = data.projects;
+            const textContent = document.querySelector("#data")?.textContent;
+
+            let contacts = null;
+            let projects = null;
+
+            if (textContent) {
+                const data = JSON.parse(textContent);
+
+                contacts = data.contacts;
+                projects = data.projects;
+            }
 
             return { contacts, projects };
         }

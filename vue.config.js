@@ -3,7 +3,7 @@ module.exports = {
     filenameHashing: false,
     pages: {
         index: {
-            entry: "src/main.js"
+            entry: "./src/main.ts"
         }
     },
     configureWebpack: {

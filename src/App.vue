@@ -2,6 +2,14 @@
     <router-view />
 </template>
 
+<script lang="ts">
+    import { defineComponent } from "vue";
+
+    export default defineComponent({
+        name: "App"
+    });
+</script>
+
 <style lang="scss">
     body {
         font-family: "Open Sans", sans-serif;
@@ -29,7 +37,13 @@
         background-repeat: repeat-x;
         background-position: left 0% bottom 0%;
         display: inline-block;
-        background-image: linear-gradient(182deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 52%, transparent 100%);
+        background-image: linear-gradient(
+            182deg,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.1) 50%,
+            transparent 52%,
+            transparent 100%
+        );
     }
 
     h3 {

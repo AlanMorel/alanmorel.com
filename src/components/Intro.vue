@@ -6,9 +6,9 @@
         <div class="intro__text-container">
             <h1>Alan Morel</h1>
             <p>
-                Hey! My name is Alan and I'm a software engineer, photographer, music producer, and technical writer,
-                from New York. I like writing software to build cool things, and this is my collection of my works, art,
-                and projects.
+                Hey! My name is Alan and I'm a senior software engineer, photographer, music producer, and technical
+                writer, from New York. I like writing software to build cool things, and this is my collection of my
+                works, art, and projects.
             </p>
             <p class="intro__ending">
                 Feel free to reach out to me via <a href="mailto:alan@alanmorel.com">email</a>. My resume can be
@@ -18,7 +18,7 @@
     </header>
 </template>
 
-<script>
+<script lang="ts">
     import { defineComponent } from "vue";
 
     export default defineComponent({
