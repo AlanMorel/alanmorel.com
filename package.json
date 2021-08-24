@@ -16,9 +16,7 @@
         "lint-server": "eslint ./server --fix",
         "server": "nodemon --config ./nodemon.config.json server/core/Server.ts --watch server",
         "server-static": "node ./dist/server/core/Server.js",
-        "server-runtime": "pm2-runtime start ./dist/server/core/Server.js --env production --instances max",
         "build-all": "yarn build-prod && yarn run build-server",
-        "start": "yarn server-runtime",
         "docker-up-prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --detach"
     },
     "dependencies": {

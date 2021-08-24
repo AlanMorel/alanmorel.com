@@ -2,8 +2,6 @@ FROM node:alpine as base
 
 WORKDIR /app
 
-RUN npm install pm2@latest --global
-
 COPY package.json yarn.lock ./
 
 RUN rm -rf node_modules && yarn install --frozen-lockfile && yarn cache clean
@@ -12,6 +10,6 @@ COPY . .
 
 RUN yarn build-all && cp .env.docker .env
 
-CMD ["yarn", "start"]
+CMD ["node", "./dist/server/core/Server.js"]
 
 FROM base as production
