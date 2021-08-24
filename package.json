@@ -6,7 +6,7 @@
     "private": true,
     "repository": {
         "type": "git",
-        "url": "https://github.com/AlanMorel/alanmorelcom.git"
+        "url": "https://github.com/AlanMorel/alanmorel.com.git"
     },
     "scripts": {
         "build-dev": "vue-cli-service build --mode development --dest dist/development --target app --watch",

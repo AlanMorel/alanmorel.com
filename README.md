@@ -7,11 +7,11 @@ This repository hosts home to the code that powers my [personal site](https://ww
 Install node, npm, clone this repository, then install the dependencies
 
 ```sh
-$ git clone https://github.com/AlanMorel/alanmorelcom alanmorelcom
+$ git clone https://github.com/AlanMorel/alanmorel.com
 ```
 
 ```sh
-$ cd alanmorelcom
+$ cd alanmorel.com
 ```
 
 ```sh
