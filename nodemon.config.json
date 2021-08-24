@@ -1,0 +1,6 @@
+{
+    "watch": ["./server/"],
+    "ext": "ts",
+    "ignore": ["**/*.test.ts"],
+    "exec": "ts-node --project ./server/tsconfig.json --files ./server/core/Server.ts"
+}

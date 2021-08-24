@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+    alanmorel:
+        container_name: alanmorel
+        image: alanmorel
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: base
+        volumes:
+            - /app/node_modules
+        env_file:
+            - ./.env.docker
+        restart: always
+        ports:
+            - "${PORT}:${PORT}"
+        expose:
+            - "${PORT}"
+        networks:
+            - docker
+
+networks:
+    docker:
+        external: true

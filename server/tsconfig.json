@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "commonjs",
+        "outDir": "../dist/server",
+        "strict": true,
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "removeComments": true,
+        "typeRoots": ["node_modules/@types"],
+        "sourceMap": true,
+        "baseUrl": ".",
+        "types": [
+            "webpack-env"
+        ],
+        "paths": {
+            "@/*": [
+                "./*"
+            ]
+         }
+    },
+    "files": ["./core/Server.ts"],
+    "include": [
+      "./**/*.ts"
+    ],
+    "exclude": ["node_modules", "dist"],
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
+    }
+}
+  
