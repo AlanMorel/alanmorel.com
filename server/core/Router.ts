@@ -1,8 +1,8 @@
 import Config from "@/Config";
-import AssetController from "@/Controllers/AssetController";
-import LinkController from "@/Controllers/LinkController";
-import MainController from "@/Controllers/MainController";
-import ResumeController from "@/Controllers/ResumeController";
+import AssetController from "@/controllers/AssetController";
+import LinkController from "@/controllers/LinkController";
+import MainController from "@/controllers/MainController";
+import ResumeController from "@/controllers/ResumeController";
 import links from "@/links.json";
 import { Application } from "express";
 
