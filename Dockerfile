@@ -10,7 +10,7 @@ RUN rm -rf node_modules && yarn install --frozen-lockfile && yarn cache clean
 
 COPY . .
 
-RUN yarn build-all
+RUN yarn build-all && cp .env.docker .env
 
 CMD ["yarn", "start"]
 
