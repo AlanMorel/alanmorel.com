@@ -22,6 +22,14 @@ $ npm install yarn -g
 $ yarn install
 ```
 
+Create `.env` and `.env.docker` files
+
+```
+NODE_ENV=development
+PORT=8080
+ORIGIN=http://localhost:8080
+```
+
 ## Screenshots
 
 ![alt tag](https://i.imgur.com/iQRyICc.png) ![alt tag](https://i.imgur.com/lIHwdPA.png)
