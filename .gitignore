@@ -19,3 +19,4 @@ php
 .htaccess
 
 server/links.json
+version.txt
