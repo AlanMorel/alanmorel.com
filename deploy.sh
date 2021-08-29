@@ -1,3 +1,4 @@
+set -x
 git stash
 git pull
 git stash apply 0
