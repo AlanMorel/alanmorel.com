@@ -17,7 +17,7 @@
         "server": "nodemon --config ./nodemon.config.json server/core/Server.ts --watch server",
         "server-static": "node ./dist/server/core/Server.js",
         "build-all": "yarn build-prod && yarn run build-server",
-        "docker-up-prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --detach"
+        "docker-up-prod": "docker compose -f docker compose.yml -f docker compose.prod.yml up --detach"
     },
     "dependencies": {
         "core-js": "^3.16.2",
