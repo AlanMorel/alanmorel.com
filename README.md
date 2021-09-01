@@ -30,6 +30,12 @@ PORT=8080
 ORIGIN=http://localhost:8080
 ```
 
+Create a folder called `logs` at the root:
+
+```
+mkdir logs
+```
+
 ## Screenshots
 
 ![alt tag](https://i.imgur.com/iQRyICc.png) ![alt tag](https://i.imgur.com/lIHwdPA.png)

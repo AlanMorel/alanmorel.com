@@ -9,7 +9,7 @@ services:
             dockerfile: Dockerfile
             target: base
         volumes:
-            - /app/node_modules
+            - "./logs:./logs"
         env_file:
             - ./.env.docker
         restart: always

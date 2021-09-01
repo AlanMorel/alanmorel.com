@@ -1,8 +1,5 @@
 import dotenv from "dotenv";
 import fs from "fs";
-import { Logger } from "./tools/Logger";
-
-dotenv.config();
 
 dotenv.config();
 
@@ -15,7 +12,7 @@ const getRoot = (): string => {
 const getVersion = (): number => {
     const path = getRoot() + "/version.txt";
     if (!fs.existsSync(path)) {
-        Logger.error("Please create ./version.txt file");
+        console.error("Please create ./version.txt file");
         return 0;
     }
     const contents = fs.readFileSync(path, { encoding: "utf8", flag: "r" });
