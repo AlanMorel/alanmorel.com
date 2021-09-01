@@ -1,6 +1,7 @@
 import Config from "@/Config";
+import { formatTimestamp } from "@/tools/DateFormatter";
+import { HexColor } from "@/tools/HexColor";
 import fs from "fs";
-import { HexColor } from "./HexColor";
 
 interface Color {
     r: number;
@@ -39,7 +40,9 @@ export class Logger {
     }
 
     private static writeToFile(filename: string, message: string): void {
-        fs.appendFile(Config.root + "/logs/" + filename + ".log", message + "\r\n", error => {
+        const timestamp = formatTimestamp(new Date());
+        const log = "[" + timestamp + "]: " + message + "\r\n";
+        fs.appendFile(Config.root + "/logs/" + filename + ".log", log, error => {
             if (error) {
                 throw error;
             }
