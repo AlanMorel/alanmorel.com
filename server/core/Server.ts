@@ -3,6 +3,7 @@ import EJS from "@/core/EJS";
 import router from "@/core/Router";
 import SignalHandler from "@/core/SignalHandler";
 import staticAssets from "@/core/Static";
+import { Logger } from "@/tools/Logger";
 import express from "express";
 
 const app = express();
@@ -12,7 +13,7 @@ EJS(app);
 router(app);
 
 const server = app.listen(Config.port, "0.0.0.0", () => {
-    console.log(`${Config.name} v${Config.version} is running at ${Config.origin} in ${Config.env} mode`);
+    Logger.log(`${Config.name} v${Config.version} is running at ${Config.origin} in ${Config.env} mode`);
 });
 
 SignalHandler(server);

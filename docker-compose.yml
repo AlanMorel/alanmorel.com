@@ -13,8 +13,6 @@ services:
         env_file:
             - ./.env.docker
         restart: always
-        ports:
-            - "${PORT}:${PORT}"
         expose:
             - "${PORT}"
         networks:

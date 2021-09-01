@@ -1,3 +1,4 @@
+import { Logger } from "@/tools/Logger";
 import { Server, Socket } from "net";
 
 export default (server: Server): void => {
@@ -9,23 +10,23 @@ export default (server: Server): void => {
     });
 
     const shutdown = (): void => {
-        console.log("Received kill signal, shutting down gracefully");
+        Logger.log("Received kill signal, shutting down gracefully");
 
         server.close(() => {
-            console.log("Closed out remaining connections");
+            Logger.log("Closed out remaining connections");
             process.exit(0);
         });
 
         setTimeout(() => {
-            console.error("Could not close connections in time, forcefully shutting down");
+            Logger.error("Could not close connections in time, forcefully shutting down");
             process.exit(1);
         }, 10000);
 
-        console.log("Ending all connections");
+        Logger.log("Ending all connections");
         connections.forEach(con => con.end());
 
         setTimeout(() => {
-            console.log("Destorying all connections");
+            Logger.log("Destorying all connections");
             connections.forEach(con => con.destroy());
         }, 5000);
     };
