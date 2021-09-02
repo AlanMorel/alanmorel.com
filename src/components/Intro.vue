@@ -30,7 +30,8 @@
     .intro {
         display: flex;
         max-width: 60rem;
-        margin: 4rem auto;
+        padding: 4rem;
+        margin: auto;
     }
 
     .intro__picture-container {

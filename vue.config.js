@@ -11,5 +11,14 @@ module.exports = {
             filename: "[name].js",
             chunkFilename: "[name].js"
         }
+    },
+    css: {
+        loaderOptions: {
+            sass: {
+                additionalData: `
+                    @import "~@/styles/variables.scss";
+                `
+            }
+        }
     }
 };

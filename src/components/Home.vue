@@ -37,7 +37,16 @@
                 projects = data.projects;
             }
 
-            return { contacts, projects };
+            return {
+                contacts,
+                projects
+            };
         }
     });
 </script>
+
+<style lang="scss">
+    .home {
+        background-color: var(--background-color);
+    }
+</style>

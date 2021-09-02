@@ -11,12 +11,11 @@ dist
 # editor directories and files
 .vscode
 
-composer.json
-composer.lock
-vendor
-assets/downloads
-php
-.htaccess
-
-server/links.json
+/assets/downloads
+/server/links.json
 version.txt
+
+/php
+/vendor
+composer*
+.htaccess

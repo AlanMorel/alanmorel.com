@@ -1,5 +1,9 @@
 <template>
-    <li class="project" :style="'background-color:' + project.background + '; color:' + project.color + ';'">
+    <li
+        class="project"
+        :class="'project__theme--' + project.theme"
+        :style="'background-color:' + project.background + ';'"
+    >
         <div class="project__inner-container">
             <div class="project__icon-container">
                 <img
@@ -80,6 +84,16 @@
 <style lang="scss">
     .projects {
         margin-bottom: 0;
+    }
+
+    .project__theme {
+        &--light {
+            color: $light-text;
+        }
+
+        &--dark {
+            color: $dark-text;
+        }
     }
 
     .project__inner-container {

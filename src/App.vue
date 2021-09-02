@@ -1,23 +1,47 @@
 <template>
-    <router-view />
+    <router-view :theme="darkMode ? 'dark' : 'light'" />
+    <DarkModeToggler v-model="darkMode" />
 </template>
 
 <script lang="ts">
-    import { defineComponent } from "vue";
+    import { defineComponent, reactive, toRefs } from "vue";
+    import DarkModeToggler from "@/components/DarkModeToggler.vue";
 
     export default defineComponent({
-        name: "App"
+        name: "App",
+        components: {
+            DarkModeToggler
+        },
+        setup() {
+            const data = reactive({
+                darkMode: false
+            });
+
+            return {
+                ...toRefs(data)
+            };
+        }
     });
 </script>
 
 <style lang="scss">
+    :root {
+        --background-color: #{$light-background};
+        --light-text: #{$light-text};
+        --dark-text: #{$dark-text};
+    }
+
+    [theme="dark"] {
+        --background-color: #{$dark-background};
+        --light-text: #{$dark-text};
+        --dark-text: #{$light-text};
+    }
+
     body {
         font-family: "Open Sans", sans-serif;
         margin: 0;
         text-align: center;
         letter-spacing: 0.025rem;
-        background-color: #fbfbfb;
-        -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
     }
 
@@ -32,7 +56,7 @@
         margin: 0;
         text-align: left;
         letter-spacing: -0.75rem;
-        color: #1f1f1f;
+        color: var(--dark-text);
         background-size: 100% 25%;
         background-repeat: repeat-x;
         background-position: left 0% bottom 0%;
@@ -44,6 +68,16 @@
             transparent 52%,
             transparent 100%
         );
+
+        [theme="dark"] & {
+            background-image: linear-gradient(
+                182deg,
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                transparent 52%,
+                transparent 100%
+            );
+        }
     }
 
     h3 {
@@ -55,6 +89,7 @@
     p {
         text-align: left;
         line-height: 1.5;
+        color: var(--dark-text);
     }
 
     ul {
@@ -63,7 +98,7 @@
     }
 
     a {
-        color: black;
+        color: var(--dark-text);
     }
 
     [data-tip] {

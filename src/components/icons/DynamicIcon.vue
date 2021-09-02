@@ -36,6 +36,7 @@
     import GithubIcon from "@/components/icons/GithubIcon.vue";
     import DownloadIcon from "@/components/icons/DownloadIcon.vue";
     import StripeIcon from "@/components/icons/StripeIcon.vue";
+    import TypeScriptIcon from "@/components/icons/TypeScriptIcon.vue";
     import PayPalIcon from "@/components/icons/PayPalIcon.vue";
     import DockerIcon from "@/components/icons/DockerIcon.vue";
 
@@ -74,7 +75,8 @@
             DownloadIcon,
             StripeIcon,
             PayPalIcon,
-            DockerIcon
+            DockerIcon,
+            TypeScriptIcon
         },
         props: {
             icon: {
