@@ -55,6 +55,8 @@
         box-shadow: none;
         appearance: none;
         cursor: pointer;
+        -webkit-appearance: none;
+        border: 0;
 
         &::before {
             font-size: 1.5rem;
