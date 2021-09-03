@@ -56,7 +56,8 @@
         appearance: none;
         cursor: pointer;
         -webkit-appearance: none;
-        border: 0;
+        width: 2rem;
+        height: 2rem;
 
         &::before {
             font-size: 1.5rem;
