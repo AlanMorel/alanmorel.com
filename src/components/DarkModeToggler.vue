@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent, reactive, toRefs } from "vue";
+    import { defineComponent, reactive, toRefs, watch } from "vue";
 
     export default defineComponent({
         name: "DarkModeToggler",
@@ -28,6 +28,12 @@
             const data = reactive({
                 checked: props.modelValue
             });
+            watch(
+                () => props.modelValue,
+                newValue => {
+                    data.checked = newValue;
+                }
+            );
             const handleInput = () => {
                 emit("update:modelValue", data.checked);
             };
@@ -55,7 +61,7 @@
         box-shadow: none;
         appearance: none;
         cursor: pointer;
-        -webkit-appearance: none;
+        border: 0;
         width: 2rem;
         height: 2rem;
 

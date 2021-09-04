@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent, reactive, toRefs } from "vue";
+    import { defineComponent, ref, watch } from "vue";
     import DarkModeToggler from "@/components/DarkModeToggler.vue";
 
     export default defineComponent({
@@ -13,12 +13,29 @@
             DarkModeToggler
         },
         setup() {
-            const data = reactive({
-                darkMode: false
+            const darkMedia = window.matchMedia("(prefers-color-scheme: dark)");
+
+            const darkMode = ref(darkMedia.matches);
+
+            watch(darkMode, newSetting => {
+                console.log("new setting: " + newSetting);
+                localStorage.setItem("darkMode", JSON.stringify(newSetting));
+            });
+
+            const darkModeSetting = localStorage.getItem("darkMode");
+
+            if (darkModeSetting && JSON.parse(darkModeSetting)) {
+                darkMode.value = true;
+            }
+
+            darkMedia.addEventListener("change", event => {
+                console.log("new change: " + event.matches);
+                darkMode.value = event.matches;
+                localStorage.setItem("darkMode", JSON.stringify(event.matches));
             });
 
             return {
-                ...toRefs(data)
+                darkMode
             };
         }
     });
