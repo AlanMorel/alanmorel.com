@@ -18,7 +18,6 @@
             const darkMode = ref(darkMedia.matches);
 
             watch(darkMode, newSetting => {
-                console.log("new setting: " + newSetting);
                 localStorage.setItem("darkMode", JSON.stringify(newSetting));
             });
 
@@ -29,7 +28,6 @@
             }
 
             darkMedia.addEventListener("change", event => {
-                console.log("new change: " + event.matches);
                 darkMode.value = event.matches;
                 localStorage.setItem("darkMode", JSON.stringify(event.matches));
             });
