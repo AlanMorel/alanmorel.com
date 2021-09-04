@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include("partials/head.ejs"); %> <% if (app.prod) { %>
+        <%- include("partials/head.ejs"); %> <% if (env === "production") { %>
         <style>
-            <%- include(app.root + "/dist/production/css/index.css"); %>
+            <%- include(root + "/dist/production/css/index.css"); %>
         </style>
         <% } %>
     </head>
     <body>
         <div id="app"></div>
         <script type="application/json" id="data">
-            <%- include(app.root + "/server/data.json"); %>
+            <%- include(root + "/server/data.json"); %>
         </script>
         <script>
             const data = JSON.parse(document.querySelector("#data").textContent);
         </script>
 
-        <script src="<%= base %>/dist/chunk-vendors.js?v=<%= app.version %>"></script>
-        <script src="<%= base %>/dist/index.js?v=<%= app.version %>"></script>
+        <script src="<%= base %>/dist/chunk-vendors.<%= version %>.js"></script>
+        <script src="<%= base %>/dist/index.<%= version %>.js"></script>
 
         <script type="application/ld+json">
             {
@@ -27,5 +27,9 @@
                 "url": "<%= base %>"
             }
         </script>
+        <!--
+            <%= (new Date() - now) + " milliseconds" %>
+            <%= new Date() %>
+        -->
     </body>
 </html>
