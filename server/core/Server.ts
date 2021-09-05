@@ -5,9 +5,19 @@ import router from "@/core/Router";
 import SignalHandler from "@/core/SignalHandler";
 import staticAssets from "@/core/Static";
 import { Logger } from "@/tools/Logger";
-import express from "express";
+import express, { RequestHandler } from "express";
+import fileUpload from "express-fileupload";
 
 const app = express();
+
+app.use(fileUpload());
+
+app.use(express.json() as RequestHandler);
+app.use(
+    express.urlencoded({
+        extended: true
+    }) as RequestHandler
+);
 
 redirects(app);
 staticAssets(app);

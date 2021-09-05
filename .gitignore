@@ -19,3 +19,4 @@ version.txt
 /vendor
 composer*
 .htaccess
+/images/*.png

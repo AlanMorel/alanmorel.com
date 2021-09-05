@@ -28,6 +28,8 @@ Create `.env` and `.env.docker` files
 NODE_ENV=development
 PORT=8080
 ORIGIN=http://localhost:8080
+
+SHAREX_SECRET=
 ```
 
 Create a folder called `logs` at the root:

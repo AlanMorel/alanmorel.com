@@ -19,6 +19,10 @@ const getVersion = (): number => {
     return parseInt(contents);
 };
 
+const sharex = {
+    secret: process.env.SHAREX_SECRET || ""
+};
+
 const name = "AlanMorel";
 const port = parseInt(process.env.PORT || "8080");
 const origin = process.env.ORIGIN || "http://localhost:" + port;
@@ -32,5 +36,6 @@ export default {
     origin,
     env,
     root,
-    version
+    version,
+    sharex
 };

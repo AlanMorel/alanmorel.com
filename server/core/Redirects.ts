@@ -1,4 +1,4 @@
-import RewriteController from "@/controllers/RewriteController";
+import RewriteController from "@/controllers/get/RewriteController";
 import { Application } from "express";
 
 export default (app: Application): void => {
