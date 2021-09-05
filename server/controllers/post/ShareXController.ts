@@ -6,7 +6,7 @@ import { Logger } from "@/tools/Logger";
 import { Request, Response } from "express";
 import { UploadedFile } from "express-fileupload";
 
-const filenameLength = 5;
+const filenameLength = 3;
 
 export default function (req: Request, res: Response): void {
     const app = AppInfo(req);
@@ -25,6 +25,7 @@ export default function (req: Request, res: Response): void {
 
     const image = req.files["sharex"] as UploadedFile;
     const filename = getRandomFilename(filenameLength);
+
     const path = "/images/" + filename + ".png";
 
     image.mv(Config.root + path, error => {
@@ -36,7 +37,7 @@ export default function (req: Request, res: Response): void {
         Logger.log("Uploaded " + image.name + " as " + filename + ".png from ShareX successfully");
 
         const result = {
-            link: app.base + "/images/" + filename + ".png"
+            link: app.base + path
         };
 
         sendSuccess(res, result);
