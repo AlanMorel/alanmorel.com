@@ -20,12 +20,12 @@ const getVersion = (): number => {
 };
 
 const getOrigin = (): string => {
-    let origin = process.env.ORIGIN || "http://localhost:" + port;
+    const docker = process.env.DOCKER ? true : false;
     if (docker) {
-        origin = process.env.DOCKER_ORIGIN ?? "http://" + name.toLowerCase() + ".localhost";
+        return process.env.DOCKER_ORIGIN || "http://" + name.toLowerCase() + ".localhost";
+    } else {
+        return process.env.ORIGIN || "http://localhost:" + port;
     }
-
-    return origin;
 };
 
 const name = "AlanMorel";
@@ -33,7 +33,6 @@ const port = parseInt(process.env.PORT || "8080");
 const env = process.env.NODE_ENV || "development";
 const root = getRoot();
 const version = getVersion();
-const docker = process.env.DOCKER ? true : false;
 const origin = getOrigin();
 
 const sharex = {

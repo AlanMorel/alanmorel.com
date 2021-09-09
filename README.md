@@ -22,16 +22,15 @@ $ npm install yarn -g
 $ yarn install
 ```
 
-Create `.env` file
+Create a `.env` file
 
 ```
 NODE_ENV=development
 PORT=8080
 ORIGIN=http://localhost:8080
+DOCKER_ORIGIN=http://localhost:8080
 
 SHAREX_SECRET=
-
-DOCKER_ORIGIN=http://localhost:8080
 ```
 
 Create a folder called `logs` at the root:
