@@ -32,13 +32,17 @@
     import StylusIcon from "@/components/icons/StylusIcon.vue";
     import HandlebarsIcon from "@/components/icons/HandlebarsIcon.vue";
     import GameBoyAdvanceIcon from "@/components/icons/GameBoyAdvanceIcon.vue";
+    import LinkedInIcon from "@/components/icons/LinkedInIcon.vue";
     import GooglePlayIcon from "@/components/icons/GooglePlayIcon.vue";
     import GithubIcon from "@/components/icons/GithubIcon.vue";
     import DownloadIcon from "@/components/icons/DownloadIcon.vue";
     import StripeIcon from "@/components/icons/StripeIcon.vue";
     import TypeScriptIcon from "@/components/icons/TypeScriptIcon.vue";
+    import FacebookIcon from "@/components/icons/FacebookIcon.vue";
     import PayPalIcon from "@/components/icons/PayPalIcon.vue";
     import DockerIcon from "@/components/icons/DockerIcon.vue";
+    import TwitterIcon from "@/components/icons/TwitterIcon.vue";
+    import InstagramIcon from "@/components/icons/InstagramIcon.vue";
 
     export default defineComponent({
         name: "DynamicIcon",
@@ -49,12 +53,15 @@
             HTMLIcon,
             WebIcon,
             PHPIcon,
+            LinkedInIcon,
             WindowsIcon,
             MacIcon,
             ReactIcon,
             JavaIcon,
             PythonIcon,
+            FacebookIcon,
             ChromeIcon,
+            TwitterIcon,
             LinuxIcon,
             AndroidIcon,
             NETIcon,
@@ -66,6 +73,7 @@
             AngularIcon,
             ElectronIcon,
             CordovaIcon,
+            InstagramIcon,
             MongoDBIcon,
             StylusIcon,
             HandlebarsIcon,

@@ -1,16 +1,21 @@
 <template>
     <li class="contact" :data-tip="name">
         <a :href="link" target="_blank" :alt="name" rel="noopener" class="contact__link">
-            <img :src="'/assets/images/contact/' + name.toLowerCase() + '.png'" :alt="name" class="contact__image" />
+            <DynamicIcon :icon="name" />
         </a>
     </li>
 </template>
 
 <script lang="ts">
+    import DynamicIcon from "@/components/icons/DynamicIcon.vue";
+
     import { defineComponent } from "vue";
 
     export default defineComponent({
         name: "Contact",
+        components: {
+            DynamicIcon
+        },
         props: {
             name: {
                 type: String,
@@ -29,27 +34,24 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin: 1.5rem 0;
+        margin: 1rem 0 2rem;
+    }
+
+    .contact {
+        margin: 0 1.25rem;
     }
 
     .contact__link {
         text-decoration: none;
     }
 
-    .contact__image {
-        width: 3rem;
-        margin: 0.5rem;
-        transition: filter 0.15s ease;
-        border-radius: 0.25rem;
-
-        &:hover {
-            filter: brightness(75%);
+    @media screen and (max-width: $tablet) {
+        .contacts {
+            margin: 2rem 0 2rem;
         }
-    }
 
-    @media screen and (max-width: 50rem) {
-        .contact__image {
-            width: 2.5rem;
+        .contact {
+            margin: 0 1rem;
         }
     }
 </style>

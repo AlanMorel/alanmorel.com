@@ -4,16 +4,18 @@ services:
     alanmorel:
         container_name: alanmorel
         image: alanmorel
+        restart: always
         build:
             context: .
             dockerfile: Dockerfile
             target: base
+            args:
+                ENV: ${NODE_ENV}
+        environment:
+            DOCKER: "true"
         volumes:
             - "./logs:/app/logs"
             - "./images:/app/images"
-        env_file:
-            - ./.env.docker
-        restart: always
         expose:
             - "${PORT}"
         networks:

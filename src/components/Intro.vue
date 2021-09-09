@@ -30,7 +30,7 @@
     .intro {
         display: flex;
         max-width: 60rem;
-        padding: 4rem;
+        padding: 4rem 0;
         margin: auto;
     }
 
@@ -49,7 +49,7 @@
         font-size: 1.15rem;
     }
 
-    @media screen and (max-width: 50rem) {
+    @media screen and (max-width: $tablet) {
         .intro {
             display: initial;
             text-align: center;

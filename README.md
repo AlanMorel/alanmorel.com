@@ -1,6 +1,6 @@
 # AlanMorel.com
 
-This repository hosts home to the code that powers my [personal site](https://www.alanmorel.com/).
+This repository hosts home to the code that powers my [personal site](https://alanmorel.com/).
 
 ## Installation
 
@@ -22,7 +22,7 @@ $ npm install yarn -g
 $ yarn install
 ```
 
-Create `.env` and `.env.docker` files
+Create `.env` file
 
 ```
 NODE_ENV=development
@@ -30,6 +30,8 @@ PORT=8080
 ORIGIN=http://localhost:8080
 
 SHAREX_SECRET=
+
+DOCKER_ORIGIN=http://localhost:8080
 ```
 
 Create a folder called `logs` at the root:
@@ -37,6 +39,8 @@ Create a folder called `logs` at the root:
 ```
 mkdir logs
 ```
+
+Visit `http://localhost:8080` to see the app running.
 
 ## Screenshots
 

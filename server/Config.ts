@@ -19,16 +19,26 @@ const getVersion = (): number => {
     return parseInt(contents);
 };
 
-const sharex = {
-    secret: process.env.SHAREX_SECRET || ""
+const getOrigin = (): string => {
+    let origin = process.env.ORIGIN || "http://localhost:" + port;
+    if (docker) {
+        origin = process.env.DOCKER_ORIGIN ?? "http://" + name.toLowerCase() + ".localhost";
+    }
+
+    return origin;
 };
 
 const name = "AlanMorel";
 const port = parseInt(process.env.PORT || "8080");
-const origin = process.env.ORIGIN || "http://localhost:" + port;
 const env = process.env.NODE_ENV || "development";
 const root = getRoot();
 const version = getVersion();
+const docker = process.env.DOCKER ? true : false;
+const origin = getOrigin();
+
+const sharex = {
+    secret: process.env.SHAREX_SECRET || ""
+};
 
 export default {
     name,

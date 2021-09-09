@@ -44,12 +44,16 @@
         --background-color: #{$light-background};
         --light-text: #{$light-text};
         --dark-text: #{$dark-text};
+        --icon-fill: #{$dark-icon-fill};
+        --icon-fill-hover: #{$dark-icon-fill-hover};
     }
 
     [theme="dark"] {
         --background-color: #{$dark-background};
         --light-text: #{$dark-text};
         --dark-text: #{$light-text};
+        --icon-fill: #{$light-icon-fill};
+        --icon-fill-hover: #{$light-icon-fill-hover};
     }
 
     body {
@@ -122,8 +126,8 @@
         &:before {
             position: absolute;
             content: attr(data-tip);
-            background-color: rgba(0, 0, 0, 0.8);
-            bottom: calc(100% + 0.25rem);
+            background-color: rgba(0, 0, 0, 0.5);
+            bottom: calc(100% + 0.5rem);
             border-radius: 0.2rem;
             left: 50%;
             transform: translateX(-50%);
@@ -146,7 +150,7 @@
         }
     }
 
-    @media screen and (max-width: 50rem) {
+    @media screen and (max-width: $tablet) {
         h1 {
             font-size: 4rem;
             letter-spacing: -0.4rem;

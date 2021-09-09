@@ -203,7 +203,7 @@
         }
     }
 
-    @media screen and (max-width: 50rem) {
+    @media screen and (max-width: $tablet) {
         .project {
             display: block;
         }

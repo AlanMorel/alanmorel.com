@@ -22,5 +22,19 @@
     .icon {
         height: 1.2rem;
         margin-right: 0.5rem;
+
+        .contact & {
+            height: 2.5rem;
+            transition: fill 0.1s ease;
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        .icon {
+            .contact & {
+                height: 2.25rem;
+            }
+        }
     }
 </style>

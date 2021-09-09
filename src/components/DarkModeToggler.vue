@@ -1,13 +1,17 @@
 <template>
-    <div class="dark-mode-toggler-container">
+    <div class="dark-mode-toggler">
         <label>
             <input
                 type="checkbox"
-                class="dark-mode-toggler"
+                class="dark-mode-toggler__input"
                 name="dark-mode-toggler"
                 v-model="checked"
                 @change="handleInput"
             />
+            <div class="dark-mode-toggler__icons">
+                <SunIcon v-if="checked" />
+                <MoonIcon v-else />
+            </div>
             Dark mode toggler
         </label>
     </div>
@@ -15,9 +19,15 @@
 
 <script lang="ts">
     import { defineComponent, reactive, toRefs, watch } from "vue";
+    import SunIcon from "@/components/icons/SunIcon.vue";
+    import MoonIcon from "@/components/icons/MoonIcon.vue";
 
     export default defineComponent({
         name: "DarkModeToggler",
+        components: {
+            SunIcon,
+            MoonIcon
+        },
         props: {
             modelValue: {
                 type: Boolean,
@@ -46,7 +56,7 @@
 </script>
 
 <style lang="scss">
-    .dark-mode-toggler-container {
+    .dark-mode-toggler {
         position: fixed;
         bottom: 0.5rem;
         right: 0;
@@ -56,7 +66,7 @@
         }
     }
 
-    .dark-mode-toggler {
+    .dark-mode-toggler__input {
         outline: none;
         box-shadow: none;
         appearance: none;
@@ -64,17 +74,18 @@
         border: 0;
         width: 2rem;
         height: 2rem;
+    }
 
-        &::before {
-            font-size: 1.5rem;
-            content: "🌙";
-            text-shadow: 0 0 0.75rem rgba(255, 255, 255, 0.5);
-        }
+    .dark-mode-toggler__icons {
+        cursor: pointer;
+        margin-right: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
 
-        &:checked {
-            &:before {
-                content: "🌞";
-            }
+        .icon {
+            margin-right: 0;
+            fill: #fcc21b;
         }
     }
 </style>
