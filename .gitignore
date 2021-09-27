@@ -13,7 +13,6 @@ dist
 
 /assets/downloads
 /server/links.json
-version.txt
 
 /php
 /vendor

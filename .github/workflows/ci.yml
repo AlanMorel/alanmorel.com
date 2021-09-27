@@ -15,6 +15,6 @@ jobs:
                   username: ${{ secrets.SERVER_USERNAME }}
                   password: ${{ secrets.SERVER_PASSWORD }}
                   script: |
-                      cd ${{ secrets.PROJECT_PATH }}
+                      cd docker
                       chmod +x ./deploy.sh
-                      ./deploy.sh
+                      ./deploy.sh ${{ secrets.APP }}
