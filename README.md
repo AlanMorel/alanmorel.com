@@ -7,24 +7,24 @@ This repository hosts home to the code that powers my [personal site](https://al
 Install node, npm, clone this repository, then install the dependencies
 
 ```sh
-$ git clone https://github.com/AlanMorel/alanmorel.com
+git clone https://github.com/AlanMorel/alanmorel.com
 ```
 
 ```sh
-$ cd alanmorel.com
+cd alanmorel.com
 ```
 
 ```sh
-$ npm install yarn -g
+npm install yarn -g
 ```
 
 ```sh
-$ yarn install
+yarn install
 ```
 
 Create a `.env` file
 
-```
+```sh
 VERSION=0
 NODE_ENV=development
 PORT=8080
@@ -36,7 +36,7 @@ SHAREX_SECRET=
 
 Create a folder called `logs` at the root:
 
-```
+```sh
 mkdir logs
 ```
 
