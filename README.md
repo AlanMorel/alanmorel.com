@@ -44,7 +44,8 @@ Visit `http://localhost:8080` to see the app running.
 
 ## Screenshots
 
-![alt tag](https://i.imgur.com/iQRyICc.png) ![alt tag](https://i.imgur.com/lIHwdPA.png)
+![alt tag](https://i.imgur.com/iQRyICc.png)
+![alt tag](https://i.imgur.com/lIHwdPA.png)
 
 ## License
 
