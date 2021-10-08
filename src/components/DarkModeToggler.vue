@@ -2,10 +2,10 @@
     <div class="dark-mode-toggler">
         <label>
             <input
+                v-model="checked"
                 type="checkbox"
                 class="dark-mode-toggler__input"
                 name="dark-mode-toggler"
-                v-model="checked"
                 @change="handleInput"
             />
             <div class="dark-mode-toggler__icons">
@@ -34,6 +34,7 @@
                 required: true
             }
         },
+        emits: ["update:modelValue"],
         setup(props, { emit }) {
             const data = reactive({
                 checked: props.modelValue

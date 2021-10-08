@@ -3,9 +3,15 @@ module.exports = {
     env: {
         node: true
     },
-    extends: ["plugin:vue/vue3-essential", "eslint:recommended"],
+    extends: [
+        "plugin:vue/vue3-recommended",
+        "@vue/typescript/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    parser: "vue-eslint-parser",
     parserOptions: {
-        parser: "babel-eslint"
+        parser: "@typescript-eslint/parser"
     },
     rules: {
         "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
@@ -19,6 +25,40 @@ module.exports = {
                 switchCase: 1
             }
         ],
+        "vue/html-indent": [
+            "error",
+            4,
+            {
+                attribute: 1,
+                baseIndent: 1
+            }
+        ],
+        "vue/max-attributes-per-line": [
+            "warn",
+            {
+                singleline: {
+                    max: 6,
+                    allowFirstLine: true
+                },
+                multiline: {
+                    max: 6,
+                    allowFirstLine: false
+                }
+            }
+        ],
+        "vue/html-self-closing": [
+            "warn",
+            {
+                html: {
+                    void: "always",
+                    normal: "always",
+                    component: "always"
+                },
+                svg: "always",
+                math: "always"
+            }
+        ],
+        "vue/no-v-html": "off",
         "no-undef": 1,
         "no-prototype-builtins": 1
     },

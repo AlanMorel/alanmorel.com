@@ -15,15 +15,19 @@
             </div>
             <div class="project__details">
                 <div class="project__headers">
-                    <h2 class="project__name">{{ project.name }}</h2>
+                    <h2 class="project__name">
+                        {{ project.name }}
+                    </h2>
                     <div class="project__subheader">Released {{ project.date }}</div>
                 </div>
-                <div class="project__description">{{ project.description }}</div>
+                <div class="project__description">
+                    {{ project.description }}
+                </div>
                 <div class="project__tags-container">
                     <div class="project__technologies">
                         <div class="project__subheader">Technologies</div>
                         <ul>
-                            <li class="project__tag" v-for="(technology, index) in project.technologies" :key="index">
+                            <li v-for="(technology, index) in project.technologies" :key="index" class="project__tag">
                                 <DynamicIcon :icon="technology" />
                                 <span>{{ technology }}</span>
                             </li>
@@ -32,7 +36,7 @@
                     <div class="project__platforms">
                         <div class="project__subheader">Available on</div>
                         <ul>
-                            <li class="project__tag" v-for="(platform, index) in project.platforms" :key="index">
+                            <li v-for="(platform, index) in project.platforms" :key="index" class="project__tag">
                                 <DynamicIcon :icon="platform" />
                                 <span>{{ platform }}</span>
                             </li>
@@ -43,7 +47,7 @@
         </div>
         <div class="project__body">
             <ul class="project__images">
-                <li class="project__image-container" v-for="(image, index) in project.images" :key="index">
+                <li v-for="(image, index) in project.images" :key="index" class="project__image-container">
                     <img
                         :src="'/assets/images/projects/' + name + '/image' + image + '.png'"
                         :alt="name + ' image'"
@@ -53,7 +57,7 @@
                 </li>
             </ul>
             <ul class="project__links">
-                <li class="project__link-container" v-for="(link, name) in project.links" :key="name">
+                <li v-for="(link, name) in project.links" :key="name" class="project__link-container">
                     <a :href="link" target="_blank" rel="noopener" class="project__tag project__link">
                         <DynamicIcon :icon="name" />
                         <span>{{ name }}</span>
@@ -75,8 +79,14 @@
             DynamicIcon
         },
         props: {
-            name: String,
-            project: Object
+            name: {
+                type: String,
+                default: ""
+            },
+            project: {
+                type: Object,
+                default: null
+            }
         }
     });
 </script>
