@@ -57,10 +57,10 @@
                 </li>
             </ul>
             <ul class="project__links">
-                <li v-for="(link, name) in project.links" :key="name" class="project__link-container">
+                <li v-for="(link, title) in project.links" :key="title" class="project__link-container">
                     <a :href="link" target="_blank" rel="noopener" class="project__tag project__link">
-                        <DynamicIcon :icon="name" />
-                        <span>{{ name }}</span>
+                        <DynamicIcon :icon="title" />
+                        <span>{{ title }}</span>
                     </a>
                 </li>
             </ul>
