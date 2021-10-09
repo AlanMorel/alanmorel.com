@@ -1,6 +1,8 @@
 <template>
-    <router-view :theme="darkMode ? 'dark' : 'light'" />
-    <DarkModeToggler v-model="darkMode" />
+    <div>
+        <router-view :theme="darkMode ? 'dark' : 'light'" />
+        <DarkModeToggler v-model="darkMode" />
+    </div>
 </template>
 
 <script lang="ts">

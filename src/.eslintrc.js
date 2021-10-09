@@ -4,11 +4,15 @@ module.exports = {
         node: true
     },
     extends: [
+        "plugin:vue/recommended",
         "plugin:vue/vue3-recommended",
+        "eslint:recommended",
         "@vue/typescript/recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:security/recommended"
+        "plugin:security/recommended",
+        "@vue/prettier",
+        "@vue/prettier/@typescript-eslint"
     ],
     parser: "vue-eslint-parser",
     parserOptions: {
@@ -17,7 +21,7 @@ module.exports = {
     rules: {
         "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
         "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-        indent: 2,
+        indent: ["error", 4],
         "vue/script-indent": [
             "error",
             4,
@@ -61,7 +65,8 @@ module.exports = {
         ],
         "vue/no-v-html": "off",
         "no-undef": 1,
-        "no-prototype-builtins": 1
+        "no-prototype-builtins": 1,
+        "prettier/prettier": ["error"]
     },
     overrides: [
         {

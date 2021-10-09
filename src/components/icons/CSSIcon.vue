@@ -1,6 +1,6 @@
 <template>
     <Icon viewBox="48 48">
-        <g style="transform: scale(1.3) translate(-6px, -5px);">
+        <g style="transform: scale(1.3) translate(-6px, -5px)">
             <path fill="#0277BD" d="M41 5H7l3 34 14 4 14-4z" />
             <path fill="#039BE5" d="M24 8v31.898L35.2 36.7 37.7 8z" />
             <path
