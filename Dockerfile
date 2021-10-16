@@ -1,5 +1,7 @@
 FROM node:alpine as base
 
+ENV TZ America/New_York
+
 ARG ENV
 
 WORKDIR /app
