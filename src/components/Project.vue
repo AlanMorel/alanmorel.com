@@ -124,14 +124,14 @@
 
     .project__tag {
         padding: 0.35rem 0.75rem;
-        background-color: rgba(0, 0, 0, 0.25);
+        background-color: rgba(0, 0, 0, 0.1);
         border-radius: 0.25rem;
         margin: 0 0.6rem 0.6rem 0;
         color: white;
         vertical-align: middle;
         display: inline-flex;
         align-items: center;
-        border-bottom: solid 3px rgba(0, 0, 0, 0.1);
+        border-bottom: solid 2px rgba(0, 0, 0, 0.1);
     }
 
     .project__subheader {
