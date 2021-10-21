@@ -1,51 +1,31 @@
 import Config from "@/Config";
 import { formatTimestamp } from "@/tools/DateFormatter";
-import { HexColor } from "@/tools/HexColor";
-import fs from "fs";
-
-interface Color {
-    r: number;
-    b: number;
-    g: number;
-}
-
+import chalk from "chalk";
+import { promises as fs } from "fs";
 export class Logger {
-    public static log(message: string, hex: HexColor = HexColor.BLUE): void {
-        this.print(message, hex);
+    public static log(message: string, color: chalk.Chalk = chalk.blue): void {
+        this.print(message, color);
         this.writeToFile("log", message);
     }
 
-    public static error(error: string, hex: HexColor = HexColor.ORANGE): void {
-        this.print(error, hex);
+    public static error(error: string, color: chalk.Chalk = chalk.yellow): void {
+        this.print(error, color);
         this.writeToFile("error", error);
     }
 
-    public static debug(message: string, hex: HexColor = HexColor.PURPLE): void {
-        this.print(message, hex);
+    public static debug(message: string, color: chalk.Chalk = chalk.magenta): void {
+        this.print(message, color);
         this.writeToFile("debug", message);
     }
 
-    private static hexToColor(color: number): Color {
-        const r = color >> 16;
-        const g = (color >> 8) & 0xff;
-        const b = color & 0xff;
-
-        return { r, g, b };
-    }
-
-    private static print(message: string, hex: HexColor): void {
-        const color = this.hexToColor(hex);
-        console.log("\u001b[38;2;" + color.r + ";" + color.g + ";" + color.b + "m" + message + "\u001b[0m");
+    private static print(message: string, color: chalk.Chalk): void {
+        console.log(`${color(message)}`);
         this.writeToFile("all", message);
     }
 
     private static writeToFile(filename: string, message: string): void {
         const timestamp = formatTimestamp(new Date());
         const log = "[" + timestamp + "]: " + message + "\r\n";
-        fs.appendFile(Config.root + "/logs/" + filename + ".log", log, error => {
-            if (error) {
-                throw error;
-            }
-        });
+        fs.appendFile(Config.root + "/logs/" + filename + ".log", log);
     }
 }
