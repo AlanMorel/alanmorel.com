@@ -43,15 +43,14 @@ module.exports = {
             "warn",
             {
                 singleline: {
-                    max: 6,
-                    allowFirstLine: true
+                    max: 6
                 },
                 multiline: {
-                    max: 6,
-                    allowFirstLine: false
+                    max: 6
                 }
             }
         ],
+        "vue/multi-word-component-names": "off",
         "vue/html-self-closing": [
             "warn",
             {
