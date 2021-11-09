@@ -1,10 +1,6 @@
 FROM node:alpine as base
 
-ARG TZ
-
 ARG ENV
-
-ENV TZ $TZ
 
 WORKDIR /app
 
