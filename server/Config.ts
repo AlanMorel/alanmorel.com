@@ -2,12 +2,6 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const getRoot = (): string => {
-    const root = __dirname.split("dist")[0].split("server")[0];
-    root.endsWith("/") ? root.slice(0, -1) : root;
-    return root;
-};
-
 const getOrigin = (): string => {
     const docker = process.env.DOCKER ? true : false;
     if (docker) {
@@ -20,7 +14,7 @@ const getOrigin = (): string => {
 const name = "AlanMorel";
 const port = parseInt(process.env.PORT || "8080");
 const env = process.env.NODE_ENV || "development";
-const root = getRoot();
+const root = process.cwd();
 const version = parseInt(process.env.VERSION || "0");
 const origin = getOrigin();
 
