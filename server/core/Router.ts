@@ -11,7 +11,7 @@ const setGetRoutes = (app: Application): void => {
     for (const link of links) {
         app.get(link.from, LinkController(link.to));
     }
-    app.get("/robots.txt", AssetController(Config.root + "/assets/robots.txt"));
+    app.get("/robots.txt", AssetController(`${Config.root}/assets/robots.txt`));
     app.get("/resume", ResumeController);
     app.get("*", MainController);
 };

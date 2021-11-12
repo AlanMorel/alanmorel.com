@@ -12,7 +12,6 @@ import helmet from "helmet";
 const app = express();
 
 app.use(fileUpload());
-
 app.use(express.json());
 app.use(
     express.urlencoded({

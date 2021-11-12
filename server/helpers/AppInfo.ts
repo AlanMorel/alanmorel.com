@@ -7,7 +7,7 @@ export default function (req: Request): any {
         domain: "alanmorel.com",
         env: Config.env,
         now: new Date(),
-        base: req.protocol + "://" + req.get("host"),
+        base: `${req.protocol}://${req.get("host")}`,
         canonical: req.originalUrl,
         root: Config.root,
         version: Config.version

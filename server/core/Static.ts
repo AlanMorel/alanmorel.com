@@ -6,7 +6,7 @@ const staticOptions = {
 };
 
 export default (app: Application): void => {
-    app.use("/dist", express.static(Config.root + "/dist/" + Config.env, staticOptions));
-    app.use("/assets", express.static(Config.root + "/assets", staticOptions));
-    app.use("/images", express.static(Config.root + "/images", staticOptions));
+    app.use("/dist", express.static(`${Config.root}/dist/${Config.env}`, staticOptions));
+    app.use("/assets", express.static(`${Config.root}/assets`, staticOptions));
+    app.use("/images", express.static(`${Config.root}/images`, staticOptions));
 };

@@ -25,7 +25,7 @@ export class Logger {
 
     private static writeToFile(filename: string, message: string): void {
         const timestamp = formatTimestamp(new Date());
-        const log = "[" + timestamp + "]: " + message + "\r\n";
-        fs.appendFile(Config.root + "/logs/" + filename + ".log", log);
+        const log = `[${timestamp}]: ${message}\r\n`;
+        fs.appendFile(`${Config.root}/logs/${filename}.log`, log);
     }
 }

@@ -26,7 +26,7 @@ export default function (req: Request, res: Response): void {
     const image = req.files["sharex"] as UploadedFile;
     const filename = getRandomFilename(filenameLength);
 
-    const path = "/images/" + filename + ".png";
+    const path = `/images/${filename}.png`;
 
     image.mv(Config.root + path, error => {
         if (error) {
@@ -34,7 +34,7 @@ export default function (req: Request, res: Response): void {
             return;
         }
 
-        Logger.log("Uploaded " + image.name + " as " + filename + ".png from ShareX successfully");
+        Logger.log(`Uploaded ${image.name} as ${filename}.png from ShareX successfully`);
 
         const result = {
             link: app.base + path
