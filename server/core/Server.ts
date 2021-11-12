@@ -5,18 +5,24 @@ import router from "@/core/Router";
 import SignalHandler from "@/core/SignalHandler";
 import staticAssets from "@/core/Static";
 import { Logger } from "@/tools/Logger";
-import express, { RequestHandler } from "express";
+import express from "express";
 import fileUpload from "express-fileupload";
+import helmet from "helmet";
 
 const app = express();
 
 app.use(fileUpload());
 
-app.use(express.json() as RequestHandler);
+app.use(express.json());
 app.use(
     express.urlencoded({
         extended: true
-    }) as RequestHandler
+    })
+);
+app.use(
+    helmet({
+        contentSecurityPolicy: false
+    })
 );
 
 redirects(app);
