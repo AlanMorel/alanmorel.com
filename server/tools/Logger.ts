@@ -2,6 +2,7 @@ import Config from "@/Config";
 import { formatTimestamp } from "@/tools/DateFormatter";
 import chalk from "chalk";
 import { promises as fs } from "fs";
+
 export class Logger {
     public static log(message: string, color: chalk.Chalk = chalk.blue): void {
         this.print(message, color);
@@ -23,9 +24,13 @@ export class Logger {
         this.writeToFile("all", message);
     }
 
-    private static writeToFile(filename: string, message: string): void {
-        const timestamp = formatTimestamp(new Date());
-        const log = `[${timestamp}]: ${message}\r\n`;
-        fs.appendFile(`${Config.root}/logs/${filename}.log`, log);
+    private static async writeToFile(type: string, message: string): Promise<void> {
+        const timestamp = new Date().toISOString().split("T")[0];
+        const timestampReadable = formatTimestamp(new Date());
+
+        const path = `${Config.root}/logs/${type}/${timestamp}.log`;
+        const log = `[${timestampReadable}]: ${message}\r\n`;
+
+        fs.appendFile(path, log);
     }
 }
