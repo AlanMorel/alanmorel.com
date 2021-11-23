@@ -41,9 +41,9 @@
             "background": "#26272f",
             "theme": "light",
             "date": "September 2017",
-            "description": "Sabe is an online destination for free high quality web development tutorials, classes and resources. Sabe is the place to learn HTML, CSS,  JavaScript, Vue, React, PHP, Python, Java, and much more! Browse high-quality classes, tutorials and resources on front-end development so you can master the web.",
+            "description": "Sabe is an online publisher for free high-quality classes, tutorials, tools, and resources. Sabe is the place to learn HTML, CSS, JavaScript, Vue, React, PHP, Python, Java, Docker, and much more! become a better developer and master your craft.",
             "images": 3,
-            "technologies": ["PHP", "MySQL", "Node", "Docker", "JavaScript", "HTML", "CSS", "Sass", "Stripe", "PayPal"],
+            "technologies": ["Node", "Docker", "MySQL", "JavaScript", "HTML", "CSS", "Sass", "Stripe", "PayPal"],
             "platforms": ["Web"],
             "links": { "Sabe.io": "https://sabe.io/" }
         },
