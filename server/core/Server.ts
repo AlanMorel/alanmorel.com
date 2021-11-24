@@ -10,6 +10,7 @@ import fileUpload from "express-fileupload";
 import helmet from "helmet";
 
 const app = express();
+app.enable("trust proxy");
 
 app.use(fileUpload());
 app.use(express.json());
