@@ -20,13 +20,13 @@
         "server:run": "node ./dist/server/core/Server.js"
     },
     "dependencies": {
-        "chalk": "^4.1.2",
         "core-js": "^3.19.1",
         "dotenv": "^10.0.0",
         "ejs": "^3.1.6",
         "express": "^4.17.1",
         "express-fileupload": "^1.2.1",
         "helmet": "^4.6.0",
+        "picocolors": "^1.0.0",
         "vue": "^3.2.0-beta.8",
         "vue-router": "^4.0.0-rc.6"
     },

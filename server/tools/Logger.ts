@@ -1,25 +1,26 @@
 import Config from "@/Config";
 import { formatTimestamp } from "@/tools/DateFormatter";
-import chalk from "chalk";
 import { promises as fs } from "fs";
+import { blue, magenta, yellow } from "picocolors";
+import { Formatter } from "picocolors/types";
 
 export class Logger {
-    public static log(message: string, color: chalk.Chalk = chalk.blue): void {
+    public static log(message: string, color: Formatter = blue): void {
         this.print(message, color);
         this.writeToFile("log", message);
     }
 
-    public static error(error: string, color: chalk.Chalk = chalk.yellow): void {
+    public static error(error: string, color: Formatter = yellow): void {
         this.print(error, color);
         this.writeToFile("error", error);
     }
 
-    public static debug(message: string, color: chalk.Chalk = chalk.magenta): void {
+    public static debug(message: string, color: Formatter = magenta): void {
         this.print(message, color);
         this.writeToFile("debug", message);
     }
 
-    private static print(message: string, color: chalk.Chalk): void {
+    private static print(message: string, color: Formatter): void {
         console.log(`${color(message)}`);
         this.writeToFile("all", message);
     }
