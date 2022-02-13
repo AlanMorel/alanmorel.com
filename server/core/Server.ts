@@ -22,7 +22,8 @@ app.use(
 );
 app.use(
     helmet({
-        contentSecurityPolicy: false
+        contentSecurityPolicy: false,
+        crossOriginEmbedderPolicy: false
     })
 );
 
