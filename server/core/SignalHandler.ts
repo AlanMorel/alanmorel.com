@@ -33,4 +33,8 @@ export default (server: Server): void => {
 
     process.on("SIGTERM", shutdown);
     process.on("SIGINT", shutdown);
+
+    process.on("uncaughtException", (err: Error) => {
+        Logger.error(err.stack as string);
+    });
 };
