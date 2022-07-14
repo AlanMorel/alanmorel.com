@@ -6,7 +6,7 @@ import { Logger } from "@/tools/Logger";
 import { Request, Response } from "express";
 import { UploadedFile } from "express-fileupload";
 
-const filenameLength = 4;
+const filenameLength = 8;
 
 export default function (req: Request, res: Response): void {
     const app = AppInfo(req);
