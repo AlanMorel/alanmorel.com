@@ -1,4 +1,5 @@
 import Config from "@/server/Config";
+import { fileExists } from "@/server/helpers/FileSystemHelper";
 import { formatTimestamp } from "@/server/tools/DateFormatter";
 import { promises as fs } from "fs";
 import picocolors from "picocolors";
@@ -28,12 +29,23 @@ export class Logger {
     }
 
     private static async writeToFile(type: string, message: string): Promise<void> {
-        const timestamp = new Date().toISOString().split("T")[0];
-        const timestampReadable = formatTimestamp(new Date());
+        const now = new Date();
 
-        const path = `${Config.root}/logs/${type}/${timestamp}.log`;
+        const timestamp = now.toISOString().split("T")[0];
+        const [year, month] = [...timestamp.split("-")];
+
+        const directory = `${Config.root}/logs/${type}/${year}/${month}`;
+        const path = `${directory}/${timestamp}.log`;
+
+        const timestampReadable = formatTimestamp(now);
         const log = `[${timestampReadable}]: ${message}\r\n`;
 
-        fs.appendFile(path, log);
+        const exists = await fileExists(directory);
+
+        if (!exists) {
+            await fs.mkdir(directory, { recursive: true });
+        }
+
+        await fs.appendFile(path, log);
     }
 }
