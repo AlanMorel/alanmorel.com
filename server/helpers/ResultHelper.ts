@@ -1,4 +1,4 @@
-import { Logger } from "@/tools/Logger";
+import { Logger } from "@/server/tools/Logger";
 import { Response } from "express";
 
 export function sendSuccess(res: Response, payload: any = {}): void {

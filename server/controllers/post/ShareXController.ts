@@ -1,8 +1,8 @@
-import Config from "@/Config";
-import AppInfo from "@/helpers/AppInfo";
-import { sendFailure, sendSuccess } from "@/helpers/ResultHelper";
-import { compareStrings, getRandomFilename } from "@/helpers/StringHelper";
-import { Logger } from "@/tools/Logger";
+import Config from "@/server/Config";
+import AppInfo from "@/server/helpers/AppInfo";
+import { sendFailure, sendSuccess } from "@/server/helpers/ResultHelper";
+import { compareStrings, getRandomFilename } from "@/server/helpers/StringHelper";
+import { Logger } from "@/server/tools/Logger";
 import { Request, Response } from "express";
 import { UploadedFile } from "express-fileupload";
 

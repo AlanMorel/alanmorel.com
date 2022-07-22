@@ -1,4 +1,4 @@
-import AppInfo from "@/helpers/AppInfo";
+import AppInfo from "@/server/helpers/AppInfo";
 import { Request, Response } from "express";
 
 export default function (req: Request, res: Response): void {

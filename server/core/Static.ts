@@ -1,4 +1,4 @@
-import Config from "@/Config";
+import Config from "@/server/Config";
 import express, { Application } from "express";
 
 const staticOptions = {
@@ -6,7 +6,6 @@ const staticOptions = {
 };
 
 export default (app: Application): void => {
-    app.use("/dist", express.static(`${Config.root}/dist/${Config.env}`, staticOptions));
     app.use("/assets", express.static(`${Config.root}/assets`, staticOptions));
     app.use("/images", express.static(`${Config.root}/images`, staticOptions));
 };

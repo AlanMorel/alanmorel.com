@@ -223,7 +223,7 @@
         }
 
         .project__headers {
-            padding-left: 6rem;
+            padding-left: 25%;
             margin-bottom: 1.25rem;
         }
 
@@ -250,6 +250,7 @@
         .project__description {
             font-size: 0.95rem;
             text-align: justify;
+            padding-left: 25%;
         }
 
         .project__icon-container {

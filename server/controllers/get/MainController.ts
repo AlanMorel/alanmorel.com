@@ -1,10 +1,22 @@
-import AppInfo from "@/helpers/AppInfo";
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
+import { renderPage } from "vite-plugin-ssr";
 
-export default function (req: Request, res: Response): void {
-    const app = AppInfo(req);
+export default async function (req: Request, res: Response, next: NextFunction): Promise<void> {
+    const pageContextInit = {
+        url: req.originalUrl,
+        userAgent: req.headers["user-agent"]
+    };
 
-    res.render("main", {
-        ...app
-    });
+    const pageContext = await renderPage(pageContextInit);
+    const { httpResponse } = pageContext;
+
+    if (!httpResponse) {
+        next();
+        return;
+    }
+
+    const { statusCode, contentType } = httpResponse;
+
+    res.status(statusCode).type(contentType);
+    httpResponse.pipe(res);
 }

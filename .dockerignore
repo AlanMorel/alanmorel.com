@@ -8,7 +8,4 @@
 .dockerignore
 Dockerfile
 docker-compose.yml
-docker-compose.prod.yml
-/php
-/logs
-/images
+*-error.log

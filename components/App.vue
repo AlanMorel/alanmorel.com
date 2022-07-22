@@ -1,45 +1,9 @@
 <template>
-    <div>
-        <router-view :theme="darkMode ? 'dark' : 'light'" />
-        <DarkModeToggler v-model="darkMode" />
-    </div>
+    <main class="content">
+        <slot />
+    </main>
+    <DarkModeToggler />
 </template>
-
-<script lang="ts">
-    import { defineComponent, ref, watch } from "vue";
-    import DarkModeToggler from "@/components/DarkModeToggler.vue";
-
-    export default defineComponent({
-        name: "App",
-        components: {
-            DarkModeToggler
-        },
-        setup() {
-            const darkMedia = window.matchMedia("(prefers-color-scheme: dark)");
-
-            const darkMode = ref(darkMedia.matches);
-
-            watch(darkMode, newSetting => {
-                localStorage.setItem("darkMode", JSON.stringify(newSetting));
-            });
-
-            const darkModeSetting = localStorage.getItem("darkMode");
-
-            if (darkModeSetting && JSON.parse(darkModeSetting)) {
-                darkMode.value = true;
-            }
-
-            darkMedia.addEventListener("change", event => {
-                darkMode.value = event.matches;
-                localStorage.setItem("darkMode", JSON.stringify(event.matches));
-            });
-
-            return {
-                darkMode
-            };
-        }
-    });
-</script>
 
 <style lang="scss">
     :root {

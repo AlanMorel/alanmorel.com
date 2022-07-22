@@ -1,4 +1,4 @@
-import { Logger } from "@/tools/Logger";
+import { Logger } from "@/server/tools/Logger";
 import { NextFunction, Request, Response } from "express";
 import AppInfo from "./AppInfo";
 

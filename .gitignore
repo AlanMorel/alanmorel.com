@@ -6,7 +6,7 @@ dist
 .env*
 
 # log files
-*.log
+/logs
 
 # editor directories and files
 .vscode

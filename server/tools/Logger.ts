@@ -1,8 +1,10 @@
-import Config from "@/Config";
-import { formatTimestamp } from "@/tools/DateFormatter";
+import Config from "@/server/Config";
+import { formatTimestamp } from "@/server/tools/DateFormatter";
 import { promises as fs } from "fs";
-import { blue, magenta, yellow } from "picocolors";
+import picocolors from "picocolors";
 import { Formatter } from "picocolors/types";
+
+const { blue, magenta, yellow } = picocolors;
 
 export class Logger {
     public static log(message: string, color: Formatter = blue): void {

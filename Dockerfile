@@ -10,8 +10,8 @@ RUN npx browserslist@latest --update-db && rm -rf node_modules && yarn install -
 
 COPY . .
 
-RUN yarn build:$ENV && yarn run build:server
+RUN yarn build:client
 
-CMD ["node", "./dist/server/core/Server.js"]
+CMD ["sh", "-c", "yarn cross-env NODE_ENV=production node --loader @bleed-believer/path-alias/esm --experimental-specifier-resolution=node ./server/core/Server.ts"]
 
 FROM base as production

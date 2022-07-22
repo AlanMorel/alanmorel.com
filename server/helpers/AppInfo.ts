@@ -1,4 +1,4 @@
-import Config from "@/Config";
+import Config from "@/server/Config";
 import { Request } from "express";
 
 export default function (req: Request): any {

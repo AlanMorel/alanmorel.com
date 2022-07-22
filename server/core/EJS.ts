@@ -1,4 +1,4 @@
-import Config from "@/Config";
+import Config from "@/server/Config";
 import { Application } from "express";
 
 export default (app: Application): void => {

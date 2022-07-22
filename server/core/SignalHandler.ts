@@ -1,4 +1,4 @@
-import { Logger } from "@/tools/Logger";
+import { Logger } from "@/server/tools/Logger";
 import { Server, Socket } from "net";
 
 export default (server: Server): void => {

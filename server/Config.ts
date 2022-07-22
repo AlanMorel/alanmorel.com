@@ -17,6 +17,7 @@ const env = process.env.NODE_ENV || "development";
 const root = `${process.cwd()}`;
 const version = parseInt(process.env.VERSION || "0");
 const origin = getOrigin();
+const twitterHandle = process.env.TWITTER_HANDLE ?? "";
 
 const sharex = {
     secret: process.env.SHAREX_SECRET || ""
@@ -29,5 +30,6 @@ export default {
     env,
     root,
     version,
+    twitterHandle,
     sharex
 };

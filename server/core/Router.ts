@@ -1,10 +1,11 @@
-import Config from "@/Config";
-import AssetController from "@/controllers/get/AssetController";
-import LinkController from "@/controllers/get/LinkController";
-import MainController from "@/controllers/get/MainController";
-import ResumeController from "@/controllers/get/ResumeController";
-import ShareXController from "@/controllers/post/ShareXController";
-import links from "@/links.json";
+import Config from "@/server/Config";
+import AssetController from "@/server/controllers/get/AssetController";
+import LinkController from "@/server/controllers/get/LinkController";
+import MainController from "@/server/controllers/get/MainController";
+import ResumeController from "@/server/controllers/get/ResumeController";
+import ShareXController from "@/server/controllers/post/ShareXController";
+import links from "../links.json" assert { type: "json" };
+
 import { Application } from "express";
 
 const setGetRoutes = (app: Application): void => {

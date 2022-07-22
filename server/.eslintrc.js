@@ -2,7 +2,14 @@ module.exports = {
     root: true,
     env: {
         node: true,
-        es2021: true
+        es2021: true,
+        jest: true
+    },
+    globals: {
+        page: true,
+        browser: true,
+        context: true,
+        jestPuppeteer: true
     },
     parser: "@typescript-eslint/parser",
     plugins: ["@typescript-eslint", "security", "prettier"],
@@ -18,7 +25,8 @@ module.exports = {
         "@typescript-eslint/explicit-function-return-type": ["error"],
         "@typescript-eslint/no-inferrable-types": "off",
         "@typescript-eslint/explicit-member-accessibility": ["error"],
-        indent: [
+        indent: "off",
+        "@typescript-eslint/indent": [
             "error",
             4,
             {
@@ -26,7 +34,14 @@ module.exports = {
             }
         ],
         semi: 2,
-        quotes: 2,
+        quotes: [
+            2,
+            "double",
+            {
+                avoidEscape: true,
+                allowTemplateLiterals: true
+            }
+        ],
         "no-trailing-spaces": "error",
         "no-case-declarations": "off",
         "prefer-template": "error",
