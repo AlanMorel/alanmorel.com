@@ -33,6 +33,8 @@ DOCKER_ORIGIN=http://localhost:8080
 TZ=America/New_York
 
 SHAREX_SECRET=
+
+TWITTER_HANDLE=
 ```
 
 Create a folder called `logs` at the root:

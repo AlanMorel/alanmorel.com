@@ -13,7 +13,7 @@
     "scripts": {
         "dev": "nodemon --config ./nodemon.config.json ./server/core/Server.ts --watch server",
         "build:client": "rimraf ./dist/ && vite build",
-        "lint:app": "eslint ./src --fix",
+        "lint:app": "eslint ./components --fix",
         "lint:server": "eslint ./server --fix"
     },
     "dependencies": {
