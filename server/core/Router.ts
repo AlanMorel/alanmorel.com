@@ -13,6 +13,7 @@ const setGetRoutes = (app: Application): void => {
         app.get(link.from, LinkController(link.to));
     }
     app.get("/robots.txt", AssetController(`${Config.root}/assets/robots.txt`));
+    app.get("/favicon.ico", AssetController(`${Config.root}/assets/images/favicons/favicon.ico`));
     app.get("/resume", ResumeController);
     app.get("*", MainController);
 };
