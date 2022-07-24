@@ -1,7 +1,7 @@
 <template>
     <header class="intro">
         <div class="intro__picture-container">
-            <img src="/assets/images/pic.png" class="intro__picture" alt="profile pic" />
+            <img src="/assets/images/profile-picture.png" class="intro__picture" alt="profile pic" />
         </div>
         <div class="intro__text-container">
             <h1>Alan Morel</h1>

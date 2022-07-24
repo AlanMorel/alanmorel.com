@@ -11,7 +11,7 @@ export function getPageTitle(pageContext: PageContext): string {
 }
 
 export function getImage(pageContext: PageContext): string {
-    return pageContext.documentProps?.image || Config.app.origin + "/images/meta-image.png";
+    return pageContext.documentProps?.image || Config.app.origin + "/assets/images/meta-image.png";
 }
 
 export function getSchema(pageContext: PageContext): string {

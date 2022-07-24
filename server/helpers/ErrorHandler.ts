@@ -1,6 +1,6 @@
+import AppInfo from "@/server/helpers/AppInfo";
 import { Logger } from "@/server/tools/Logger";
 import { NextFunction, Request, Response } from "express";
-import AppInfo from "./AppInfo";
 
 export default (err: any, req: Request, res: Response, next: NextFunction): void => {
     const app = AppInfo(req);

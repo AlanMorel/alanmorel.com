@@ -7,7 +7,7 @@ export const organization = {
     url: Config.app.origin,
     logo: {
         "@type": "ImageObject",
-        url: `${Config.app.origin}/images/meta-logo.png`,
+        url: `${Config.app.origin}/assets/images/meta-logo.png`,
         width: 1024,
         height: 1024
     },

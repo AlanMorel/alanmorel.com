@@ -16,7 +16,7 @@ export default function (req: Request): any {
     const metaInfo = {
         title: "Alan Morel - Software Engineer, Photographer, Music Producer",
         description: "Alan Morel - Software Engineer, Photographer, Music Producer",
-        image: "/assets/images/pic.png",
+        image: "/assets/images/meta-image.png",
         twitter: "AlanMorelX"
     };
 
