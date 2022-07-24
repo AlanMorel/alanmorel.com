@@ -211,7 +211,7 @@
             "technologies": ["Chrome API", "Node", "JavaScript", "HTML", "CSS"],
             "platforms": ["Chrome"],
             "links": {
-                "Homepage": "https://websee.com/",
+                "Live Demo": "https://websee.com/",
                 "Chrome Web Store": "https://chrome.google.com/webstore/detail/websee-catchpoint-user-ex/dibilcjfahbokhiodajibcajcabfjein"
             }
         },

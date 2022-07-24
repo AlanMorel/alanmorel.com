@@ -1,6 +1,6 @@
 <template>
     <li class="contact" :data-tip="name">
-        <a :href="link" target="_blank" :alt="name" rel="noopener" class="contact__link">
+        <a :href="link" target="_blank" rel="noopener" class="contact__link">
             <DynamicIcon :icon="name" />
         </a>
     </li>
