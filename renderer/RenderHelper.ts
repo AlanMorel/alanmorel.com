@@ -3,11 +3,11 @@ import { organization, website } from "@/server/helpers/Schema";
 import Config from "@/shared/Config";
 
 export function getPageDescription(pageContext: PageContext): string {
-    return pageContext.documentProps?.description || "Hashfully";
+    return pageContext.documentProps?.description || Config.metaInfo.description;
 }
 
 export function getPageTitle(pageContext: PageContext): string {
-    return pageContext.documentProps?.title || "Hashfully";
+    return pageContext.documentProps?.title || Config.metaInfo.title;
 }
 
 export function getImage(pageContext: PageContext): string {

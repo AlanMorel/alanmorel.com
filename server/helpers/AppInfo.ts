@@ -13,15 +13,7 @@ export default function (req: Request): any {
         version: Config.version
     };
 
-    const metaInfo = {
-        title: "Alan Morel - Software Engineer, Photographer, Music Producer",
-        description: "Alan Morel - Software Engineer, Photographer, Music Producer",
-        image: "/assets/images/meta-image.png",
-        twitter: "AlanMorelX"
-    };
-
     return {
-        ...app,
-        ...metaInfo
+        ...app
     };
 }
