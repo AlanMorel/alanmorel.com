@@ -2,7 +2,7 @@ import Config from "@/server/Config";
 import { Request } from "express";
 
 export default function (req: Request): any {
-    const app = {
+    return {
         slug: "alanmorel",
         domain: "alanmorel.com",
         env: Config.env,
@@ -11,9 +11,5 @@ export default function (req: Request): any {
         canonical: req.originalUrl,
         root: Config.root,
         version: Config.version
-    };
-
-    return {
-        ...app
     };
 }

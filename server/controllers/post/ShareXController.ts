@@ -1,5 +1,5 @@
 import Config from "@/server/Config";
-import AppInfo from "@/server/helpers/AppInfo";
+import Context from "@/server/helpers/Context";
 import { sendFailure, sendSuccess } from "@/server/helpers/ResultHelper";
 import { compareStrings, getRandomFilename } from "@/server/helpers/StringHelper";
 import { Logger } from "@/server/tools/Logger";
@@ -8,8 +8,8 @@ import { UploadedFile } from "express-fileupload";
 
 const filenameLength = 8;
 
-export default function (req: Request, res: Response): void {
-    const app = AppInfo(req);
+export default async function (req: Request, res: Response): Promise<void> {
+    const context = Context(req);
 
     if (!req.body.secret || !req.files) {
         sendFailure(res, "Error uploading");
@@ -28,18 +28,13 @@ export default function (req: Request, res: Response): void {
 
     const path = `/images/${filename}.png`;
 
-    image.mv(Config.root + path, error => {
-        if (error) {
-            sendFailure(res, error);
-            return;
-        }
+    await image.mv(Config.root + path);
 
-        Logger.log(`Uploaded ${image.name} as ${filename}.png from ShareX successfully`);
+    Logger.log(`Uploaded ${image.name} as ${filename}.png from ShareX successfully`);
 
-        const result = {
-            link: app.base + path
-        };
+    const result = {
+        link: context.base + path
+    };
 
-        sendSuccess(res, result);
-    });
+    sendSuccess(res, result);
 }
