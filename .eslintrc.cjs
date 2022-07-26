@@ -2,6 +2,7 @@ module.exports = {
     root: true,
     env: {
         node: true,
+        browser: true,
         es2021: true,
         jest: true
     },
@@ -19,6 +20,10 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "plugin:security/recommended"
     ],
+    parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module"
+    },
     rules: {
         "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
         "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
@@ -50,5 +55,5 @@ module.exports = {
         "no-prototype-builtins": 1,
         "prettier/prettier": ["error"]
     },
-    ignorePatterns: ["**/*.ejs"]
+    ignorePatterns: ["**/*.ejs", "**/*.vue", "components.d.ts", "dist"]
 };

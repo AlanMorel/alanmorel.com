@@ -1,9 +1,9 @@
-export const formatNumber = (number: number) => {
+export const formatNumber = (number: number): string => {
     const formatter = Intl.NumberFormat("en", { notation: "compact" });
     return formatter.format(number);
 };
 
-export const formatDate = (date: Date) => {
+export const formatDate = (date: Date): string => {
     const formatter = Intl.DateTimeFormat(undefined, {
         month: "short",
         day: "2-digit"
@@ -16,7 +16,7 @@ export const formatDate = (date: Date) => {
     return formatter.format(UTCDate);
 };
 
-export const getMonthName = (date: Date) => {
+export const getMonthName = (date: Date): string => {
     const formatter = Intl.DateTimeFormat(undefined, {
         month: "short"
     });
@@ -28,7 +28,7 @@ export const getMonthName = (date: Date) => {
     return formatter.format(UTCDate);
 };
 
-export const getDayNumber = (date: Date) => {
+export const getDayNumber = (date: Date): number => {
     const UTCdatestring = new Date(date).toLocaleString("en-US", { timeZone: "UTC" });
 
     const UTCDate = new Date(UTCdatestring);
@@ -36,7 +36,7 @@ export const getDayNumber = (date: Date) => {
     return UTCDate.getDate();
 };
 
-export const formatFullDate = (date: Date) => {
+export const formatFullDate = (date: Date): string => {
     const formatter = Intl.DateTimeFormat(undefined, {
         month: "short",
         day: "2-digit",
@@ -52,7 +52,7 @@ export const formatFullDate = (date: Date) => {
     return formatter.format(UTCDate);
 };
 
-export const extractHandle = (value: string) => {
+export const extractHandle = (value: string): string => {
     if (!value || !value.length) {
         return "";
     }

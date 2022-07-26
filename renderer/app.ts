@@ -7,7 +7,7 @@ import VueGtag from "vue-gtag-next";
 
 export { createApp };
 
-function createApp(pageContext: PageContext) {
+function createApp(pageContext: PageContext): any {
     const { Page } = pageContext;
 
     let rootComponent: Component;
@@ -17,7 +17,7 @@ function createApp(pageContext: PageContext) {
             pageProps: markRaw(pageContext.pageProps || {})
         }),
         created() {
-            rootComponent = this;
+            rootComponent = this as Component;
         },
         render() {
             return h(

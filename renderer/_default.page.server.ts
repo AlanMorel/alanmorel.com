@@ -8,7 +8,7 @@ import { dangerouslySkipEscape, escapeInject, PageContextBuiltIn } from "vite-pl
 
 const passToClient = ["pageProps", "documentProps", "initialState"];
 
-async function render(pageContext: PageContextBuiltIn & PageContext) {
+async function render(pageContext: PageContextBuiltIn & PageContext): Promise<any> {
     const app = createApp(pageContext);
 
     pageContext.initialState = Object.assign({}, pageContext.initialState);

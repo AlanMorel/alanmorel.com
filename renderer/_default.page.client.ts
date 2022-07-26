@@ -6,7 +6,7 @@ import { useGtag } from "vue-gtag-next";
 
 let app: ReturnType<typeof createApp>;
 
-const render = async (pageContext: PageContextBuiltInClient & PageContext) => {
+const render = async (pageContext: PageContextBuiltInClient & PageContext): Promise<any> => {
     if (!app) {
         app = createApp(pageContext);
 
@@ -22,11 +22,11 @@ const render = async (pageContext: PageContextBuiltInClient & PageContext) => {
     document.title = getPageTitle(pageContext);
 };
 
-const onPageTransitionStart = () => {
+const onPageTransitionStart = (): void => {
     document.querySelector(".content")!.classList.add("page-transition");
 };
 
-const onPageTransitionEnd = () => {
+const onPageTransitionEnd = (): void => {
     document.querySelector(".content")!.classList.remove("page-transition");
 };
 

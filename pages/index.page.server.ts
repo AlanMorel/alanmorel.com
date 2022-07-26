@@ -1,6 +1,6 @@
 export { onBeforeRender };
 
-async function onBeforeRender() {
+async function onBeforeRender(): Promise<any> {
     return {
         pageContext: {
             documentProps: {
