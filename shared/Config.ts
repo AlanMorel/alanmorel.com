@@ -1,7 +1,7 @@
 const app = {
     name: "AlanMorel",
     origin: "https://alanmorel.com",
-    social: {
+    socials: {
         twitter: "https://twitter.com/AlanMorelX"
     }
 };

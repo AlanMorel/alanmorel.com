@@ -11,12 +11,16 @@ const getOrigin = (): string => {
     }
 };
 
+const root = `${process.cwd()}`;
+
 const name = "AlanMorel";
+const partials = `${root}/server/views/partials`;
+
 const port = parseInt(process.env.PORT || "8080");
 const env = process.env.NODE_ENV || "development";
-const root = `${process.cwd()}`;
 const version = parseInt(process.env.VERSION || "0");
 const origin = getOrigin();
+
 const twitterHandle = process.env.TWITTER_HANDLE ?? "";
 
 const sharex = {
@@ -24,12 +28,13 @@ const sharex = {
 };
 
 export default {
-    name,
-    port,
-    origin,
-    env,
     root,
+    name,
+    partials,
+    port,
+    env,
     version,
+    origin,
     twitterHandle,
     sharex
 };

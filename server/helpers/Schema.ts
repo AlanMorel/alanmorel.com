@@ -12,7 +12,7 @@ export const organization = {
         height: 1024
     },
     brand: Config.app.name,
-    sameAs: Object.values(Config.app.social)
+    sameAs: Object.values(Config.app.socials)
 };
 
 export const website = {
