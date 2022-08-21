@@ -16,7 +16,7 @@ const render = async (pageContext: PageContextBuiltInClient & PageContext): Prom
 
         const { pageview } = useGtag();
 
-        pageview({ page_path: pageContext.url });
+        pageview({ page_path: pageContext.urlOriginal });
     }
 
     document.title = getPageTitle(pageContext);

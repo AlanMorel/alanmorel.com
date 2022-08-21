@@ -40,7 +40,8 @@
     ],
     "related_applications": [
         {
-            "platform": "web"
+            "platform": "web",
+            "url": "http://alanmorel.com"
         }
     ]
 }

@@ -3,7 +3,7 @@ import { renderPage } from "vite-plugin-ssr";
 
 export default async function (req: Request, res: Response, next: NextFunction): Promise<void> {
     const pageContextInit = {
-        url: req.originalUrl,
+        urlOriginal: req.originalUrl,
         userAgent: req.headers["user-agent"]
     };
 
