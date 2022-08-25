@@ -123,7 +123,6 @@
             ],
             "platforms": ["Web"],
             "links": {
-                "Live Demo": "https://wasdwithme.herokuapp.com/",
                 "Open Source on Github": "https://github.com/AlanMorel/wasdWithMe"
             }
         },
