@@ -3,19 +3,14 @@ node_modules
 dist
 
 # env files
-.env*
+.env
 
 # log files
-/logs
+*.log
 
 # editor directories and files
 .vscode
 
+# app-specific
 /assets/downloads
 /server/links.json
-
-/php
-/vendor
-composer*
-.htaccess
-/images/*.png
