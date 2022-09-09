@@ -20,13 +20,6 @@ const config: UserConfig = {
             "@": path.resolve(__dirname, "./")
         }
     },
-    css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: `@import "@/assets/variables.scss";`
-            }
-        }
-    },
     build: {
         rollupOptions: {
             output: {

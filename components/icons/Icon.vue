@@ -19,6 +19,8 @@
 </script>
 
 <style lang="scss">
+    @use "@/assets/scss/variables.scss";
+
     .icon {
         height: 1.2rem;
         margin-right: 0.5rem;
@@ -30,7 +32,7 @@
         }
     }
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: variables.$tablet) {
         .icon {
             .contact & {
                 height: 2.25rem;

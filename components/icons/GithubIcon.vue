@@ -21,8 +21,10 @@
 </script>
 
 <style lang="scss">
+    @use "@/assets/scss/colors";
+
     .github-icon {
-        fill: $light-text;
+        fill: colors.$light-text;
 
         .contact & {
             fill: var(--icon-fill);

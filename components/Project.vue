@@ -92,17 +92,20 @@
 </script>
 
 <style lang="scss">
+    @use "@/assets/scss/colors";
+    @use "@/assets/scss/variables.scss";
+
     .projects {
         margin-bottom: 0;
     }
 
     .project__theme {
         &--light {
-            color: $light-text;
+            color: colors.$light-text;
         }
 
         &--dark {
-            color: $dark-text;
+            color: colors.$dark-text;
         }
     }
 
@@ -213,7 +216,7 @@
         }
     }
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: variables.$tablet) {
         .project {
             display: block;
         }

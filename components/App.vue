@@ -6,20 +6,23 @@
 </template>
 
 <style lang="scss">
+    @use "@/assets/scss/variables.scss";
+    @use "@/assets/scss/colors.scss";
+
     :root {
-        --background-color: #{$light-background};
-        --light-text: #{$light-text};
-        --dark-text: #{$dark-text};
-        --icon-fill: #{$dark-icon-fill};
-        --icon-fill-hover: #{$dark-icon-fill-hover};
+        --background-color: #{colors.$light-background};
+        --light-text: #{colors.$light-text};
+        --dark-text: #{colors.$dark-text};
+        --icon-fill: #{colors.$dark-icon-fill};
+        --icon-fill-hover: #{colors.$dark-icon-fill-hover};
     }
 
     [theme="dark"] {
-        --background-color: #{$dark-background};
-        --light-text: #{$dark-text};
-        --dark-text: #{$light-text};
-        --icon-fill: #{$light-icon-fill};
-        --icon-fill-hover: #{$light-icon-fill-hover};
+        --background-color: #{colors.$dark-background};
+        --light-text: #{colors.$dark-text};
+        --dark-text: #{colors.$light-text};
+        --icon-fill: #{colors.$light-icon-fill};
+        --icon-fill-hover: #{colors.$light-icon-fill-hover};
     }
 
     body {
@@ -116,7 +119,7 @@
         }
     }
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: variables.$tablet) {
         h1 {
             font-size: 4rem;
             letter-spacing: -0.4rem;

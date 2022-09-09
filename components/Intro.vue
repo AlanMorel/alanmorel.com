@@ -27,6 +27,8 @@
 </script>
 
 <style lang="scss">
+    @use "@/assets/scss/variables.scss";
+
     .intro {
         display: flex;
         max-width: 60rem;
@@ -49,7 +51,7 @@
         font-size: 1.15rem;
     }
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: variables.$tablet) {
         .intro {
             display: initial;
             text-align: center;

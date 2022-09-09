@@ -30,6 +30,8 @@
 </script>
 
 <style lang="scss">
+    @use "@/assets/scss/variables.scss";
+
     .contacts {
         display: flex;
         justify-content: center;
@@ -45,7 +47,7 @@
         text-decoration: none;
     }
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: variables.$tablet) {
         .contacts {
             margin: 2rem 0 2rem;
         }
