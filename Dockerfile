@@ -10,7 +10,7 @@ RUN npx browserslist@latest --update-db && rm -rf node_modules && yarn install -
 
 COPY . .
 
-RUN yarn build:client
+RUN yarn ts:check && yarn build:client
 
 CMD ["sh", "-c", "yarn cross-env NODE_ENV=production node --loader @bleed-believer/path-alias/esm --experimental-specifier-resolution=node ./server/core/Server.ts"]
 

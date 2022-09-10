@@ -13,7 +13,8 @@
     "scripts": {
         "dev": "nodemon --config ./nodemon.config.json ./server/core/Server.ts --watch server",
         "build:client": "rimraf ./dist/ && vite build",
-        "lint": "eslint ./ --fix"
+        "lint": "eslint ./ --fix",
+        "ts:check": "tsc --noEmit"
     },
     "dependencies": {
         "@bleed-believer/path-alias": "^0.10.16",
