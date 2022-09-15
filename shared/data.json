@@ -43,7 +43,7 @@
             "date": "September 2017",
             "description": "Sabe is an online publisher for free high-quality classes, tutorials, tools, and resources. Sabe is the place to learn HTML, CSS, JavaScript, Vue, React, PHP, Python, Java, Docker, and much more! become a better developer and master your craft.",
             "images": 3,
-            "technologies": ["Node", "Docker", "PostgresSQL", "JavaScript", "HTML", "CSS", "Sass", "Stripe", "PayPal"],
+            "technologies": ["Node", "Docker", "PostgreSQL", "JavaScript", "HTML", "CSS", "Sass", "Stripe", "PayPal"],
             "platforms": ["Web"],
             "links": { "Sabe.io": "https://sabe.io/" }
         },

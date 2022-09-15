@@ -42,7 +42,7 @@ declare module '@vue/runtime-core' {
     NodeIcon: typeof import('./components/icons/NodeIcon.vue')['default']
     PayPalIcon: typeof import('./components/icons/PayPalIcon.vue')['default']
     PHPIcon: typeof import('./components/icons/PHPIcon.vue')['default']
-    PostgresSQLIcon: typeof import('./components/icons/PostgresSQLIcon.vue')['default']
+    PostgreSQLIcon: typeof import('./components/icons/PostgreSQLIcon.vue')['default']
     Project: typeof import('./components/Project.vue')['default']
     PythonIcon: typeof import('./components/icons/PythonIcon.vue')['default']
     ReactIcon: typeof import('./components/icons/ReactIcon.vue')['default']

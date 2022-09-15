@@ -31,7 +31,7 @@
     import NodeIcon from "@/components/icons/NodeIcon.vue";
     import PayPalIcon from "@/components/icons/PayPalIcon.vue";
     import PHPIcon from "@/components/icons/PHPIcon.vue";
-    import PostgresSQLIcon from "@/components/icons/PostgresSQLIcon.vue";
+    import PostgreSQLIcon from "@/components/icons/PostgreSQLIcon.vue";
     import PythonIcon from "@/components/icons/PythonIcon.vue";
     import ReactIcon from "@/components/icons/ReactIcon.vue";
     import SassIcon from "@/components/icons/SassIcon.vue";
@@ -72,7 +72,7 @@
         NodeIcon,
         PayPalIcon,
         PHPIcon,
-        PostgresSQLIcon,
+        PostgreSQLIcon,
         PythonIcon,
         ReactIcon,
         SassIcon,
