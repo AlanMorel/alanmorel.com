@@ -1,10 +1,8 @@
 <template>
-    <component :is="iconName" />
+    <component :is="components[iconName()]" />
 </template>
 
-<script lang="ts">
-    import { defineComponent } from "vue";
-
+<script lang="ts" setup>
     import AndroidIcon from "@/components/icons/AndroidIcon.vue";
     import AngularIcon from "@/components/icons/AngularIcon.vue";
     import APIIcon from "@/components/icons/APIIcon.vue";
@@ -45,104 +43,101 @@
     import WebIcon from "@/components/icons/WebIcon.vue";
     import WindowsIcon from "@/components/icons/WindowsIcon.vue";
 
-    export default defineComponent({
-        name: "DynamicIcon",
-        components: {
-            VueIcon,
-            JavaScriptIcon,
-            AWSIcon,
-            HTMLIcon,
-            WebIcon,
-            PHPIcon,
-            LinkedInIcon,
-            WindowsIcon,
-            MacIcon,
-            ReactIcon,
-            JavaIcon,
-            PythonIcon,
-            FacebookIcon,
-            ChromeIcon,
-            TwitterIcon,
-            LinuxIcon,
-            AndroidIcon,
-            NETIcon,
-            CSSIcon,
-            SassIcon,
-            NodeIcon,
-            APIIcon,
-            MySQLIcon,
-            PostgresSQLIcon,
-            AngularIcon,
-            ElectronIcon,
-            CordovaIcon,
-            InstagramIcon,
-            MongoDBIcon,
-            StylusIcon,
-            HandlebarsIcon,
-            GameBoyAdvanceIcon,
-            GooglePlayIcon,
-            GithubIcon,
-            DownloadIcon,
-            StripeIcon,
-            PayPalIcon,
-            DockerIcon,
-            TypeScriptIcon
-        },
-        props: {
-            icon: {
-                type: String,
-                required: true
-            }
-        },
-        computed: {
-            iconName(): string {
-                const startsWith = ["AWS", "Vue", "Chrome"];
-                const equalTo: { [key: string]: any } = {
-                    Java: ["libGDX", "Processing"],
-                    Python: ["Flask", "PIL", "Requests"],
-                    NET: ["C#", "ASP.NET", ".NET"],
-                    Node: ["Express", "Socket.io", "Handlebars.js"],
-                    Github: ["Open Source on Github"],
-                    Windows: ["Download for Windows"],
-                    Web: [
-                        "Live Demo",
-                        "Promotional Page",
-                        "Pokémon: SacredFire Patch File",
-                        "Lunar IPS (LIPS)",
-                        "Pokémon: FireRed ROM"
-                    ],
-                    GooglePlay: ["Google Play Store"],
-                    GameBoyAdvance: ["Game Boy Advance", "Visual Boy Advance"]
-                };
-                const endsWith: { [key: string]: any } = {
-                    API: ["API", "SDK", "Assembly"],
-                    Web: [".com", ".io"]
-                };
+    const components: any = {
+        AndroidIcon,
+        AngularIcon,
+        APIIcon,
+        AWSIcon,
+        ChromeIcon,
+        CordovaIcon,
+        CSSIcon,
+        DockerIcon,
+        DownloadIcon,
+        ElectronIcon,
+        FacebookIcon,
+        GameBoyAdvanceIcon,
+        GithubIcon,
+        GooglePlayIcon,
+        HandlebarsIcon,
+        HTMLIcon,
+        InstagramIcon,
+        JavaIcon,
+        JavaScriptIcon,
+        LinkedInIcon,
+        LinuxIcon,
+        MacIcon,
+        MongoDBIcon,
+        MySQLIcon,
+        NETIcon,
+        NodeIcon,
+        PayPalIcon,
+        PHPIcon,
+        PostgresSQLIcon,
+        PythonIcon,
+        ReactIcon,
+        SassIcon,
+        StripeIcon,
+        StylusIcon,
+        TwitterIcon,
+        TypeScriptIcon,
+        VueIcon,
+        WebIcon,
+        WindowsIcon
+    };
 
-                for (const starts of startsWith) {
-                    if (this.icon.startsWith(starts)) {
-                        return starts + "Icon";
-                    }
-                }
-
-                for (const to of Object.keys(equalTo)) {
-                    for (const from of equalTo[to]) {
-                        if (this.icon === from) {
-                            return to + "Icon";
-                        }
-                    }
-                }
-
-                for (const to of Object.keys(endsWith)) {
-                    for (const from of endsWith[to]) {
-                        if (this.icon.endsWith(from)) {
-                            return to + "Icon";
-                        }
-                    }
-                }
-
-                return this.icon + "Icon";
-            }
+    const { icon } = defineProps({
+        icon: {
+            type: String,
+            required: true
         }
     });
+
+    const iconName = (): string => {
+        const startsWith = ["AWS", "Vue", "Chrome"];
+        const equalTo: { [key: string]: any } = {
+            Java: ["libGDX", "Processing"],
+            Python: ["Flask", "PIL", "Requests"],
+            NET: ["C#", "ASP.NET", ".NET"],
+            Node: ["Express", "Socket.io", "Handlebars.js"],
+            Github: ["Open Source on Github"],
+            Windows: ["Download for Windows"],
+            Web: [
+                "Live Demo",
+                "Promotional Page",
+                "Pokémon: SacredFire Patch File",
+                "Lunar IPS (LIPS)",
+                "Pokémon: FireRed ROM"
+            ],
+            GooglePlay: ["Google Play Store"],
+            GameBoyAdvance: ["Game Boy Advance", "Visual Boy Advance"]
+        };
+        const endsWith: { [key: string]: any } = {
+            API: ["API", "SDK", "Assembly"],
+            Web: [".com", ".io"]
+        };
+
+        for (const starts of startsWith) {
+            if (icon.startsWith(starts)) {
+                return starts + "Icon";
+            }
+        }
+
+        for (const to of Object.keys(equalTo)) {
+            for (const from of equalTo[to]) {
+                if (icon === from) {
+                    return to + "Icon";
+                }
+            }
+        }
+
+        for (const to of Object.keys(endsWith)) {
+            for (const from of endsWith[to]) {
+                if (icon.endsWith(from)) {
+                    return to + "Icon";
+                }
+            }
+        }
+
+        return icon + "Icon";
+    };
 </script>
