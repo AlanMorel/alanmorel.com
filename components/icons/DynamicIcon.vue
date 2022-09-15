@@ -5,44 +5,45 @@
 <script lang="ts">
     import { defineComponent } from "vue";
 
-    import VueIcon from "@/components/icons/VueIcon.vue";
-    import JavaScriptIcon from "@/components/icons/JavaScriptIcon.vue";
-    import AWSIcon from "@/components/icons/AWSIcon.vue";
-    import HTMLIcon from "@/components/icons/HTMLIcon.vue";
-    import WebIcon from "@/components/icons/WebIcon.vue";
-    import PHPIcon from "@/components/icons/PHPIcon.vue";
-    import WindowsIcon from "@/components/icons/WindowsIcon.vue";
-    import MacIcon from "@/components/icons/MacIcon.vue";
-    import ReactIcon from "@/components/icons/ReactIcon.vue";
-    import JavaIcon from "@/components/icons/JavaIcon.vue";
-    import PythonIcon from "@/components/icons/PythonIcon.vue";
-    import ChromeIcon from "@/components/icons/ChromeIcon.vue";
-    import LinuxIcon from "@/components/icons/LinuxIcon.vue";
     import AndroidIcon from "@/components/icons/AndroidIcon.vue";
-    import NETIcon from "@/components/icons/NETIcon.vue";
-    import CSSIcon from "@/components/icons/CSSIcon.vue";
-    import SassIcon from "@/components/icons/SassIcon.vue";
-    import NodeIcon from "@/components/icons/NodeIcon.vue";
-    import APIIcon from "@/components/icons/APIIcon.vue";
-    import MySQLIcon from "@/components/icons/MySQLIcon.vue";
     import AngularIcon from "@/components/icons/AngularIcon.vue";
-    import ElectronIcon from "@/components/icons/ElectronIcon.vue";
+    import APIIcon from "@/components/icons/APIIcon.vue";
+    import AWSIcon from "@/components/icons/AWSIcon.vue";
+    import ChromeIcon from "@/components/icons/ChromeIcon.vue";
     import CordovaIcon from "@/components/icons/CordovaIcon.vue";
-    import MongoDBIcon from "@/components/icons/MongoDBIcon.vue";
-    import StylusIcon from "@/components/icons/StylusIcon.vue";
-    import HandlebarsIcon from "@/components/icons/HandlebarsIcon.vue";
-    import GameBoyAdvanceIcon from "@/components/icons/GameBoyAdvanceIcon.vue";
-    import LinkedInIcon from "@/components/icons/LinkedInIcon.vue";
-    import GooglePlayIcon from "@/components/icons/GooglePlayIcon.vue";
-    import GithubIcon from "@/components/icons/GithubIcon.vue";
-    import DownloadIcon from "@/components/icons/DownloadIcon.vue";
-    import StripeIcon from "@/components/icons/StripeIcon.vue";
-    import TypeScriptIcon from "@/components/icons/TypeScriptIcon.vue";
-    import FacebookIcon from "@/components/icons/FacebookIcon.vue";
-    import PayPalIcon from "@/components/icons/PayPalIcon.vue";
+    import CSSIcon from "@/components/icons/CSSIcon.vue";
     import DockerIcon from "@/components/icons/DockerIcon.vue";
-    import TwitterIcon from "@/components/icons/TwitterIcon.vue";
+    import DownloadIcon from "@/components/icons/DownloadIcon.vue";
+    import ElectronIcon from "@/components/icons/ElectronIcon.vue";
+    import FacebookIcon from "@/components/icons/FacebookIcon.vue";
+    import GameBoyAdvanceIcon from "@/components/icons/GameBoyAdvanceIcon.vue";
+    import GithubIcon from "@/components/icons/GithubIcon.vue";
+    import GooglePlayIcon from "@/components/icons/GooglePlayIcon.vue";
+    import HandlebarsIcon from "@/components/icons/HandlebarsIcon.vue";
+    import HTMLIcon from "@/components/icons/HTMLIcon.vue";
     import InstagramIcon from "@/components/icons/InstagramIcon.vue";
+    import JavaIcon from "@/components/icons/JavaIcon.vue";
+    import JavaScriptIcon from "@/components/icons/JavaScriptIcon.vue";
+    import LinkedInIcon from "@/components/icons/LinkedInIcon.vue";
+    import LinuxIcon from "@/components/icons/LinuxIcon.vue";
+    import MacIcon from "@/components/icons/MacIcon.vue";
+    import MongoDBIcon from "@/components/icons/MongoDBIcon.vue";
+    import MySQLIcon from "@/components/icons/MySQLIcon.vue";
+    import NETIcon from "@/components/icons/NETIcon.vue";
+    import NodeIcon from "@/components/icons/NodeIcon.vue";
+    import PayPalIcon from "@/components/icons/PayPalIcon.vue";
+    import PHPIcon from "@/components/icons/PHPIcon.vue";
+    import PostgresSQLIcon from "@/components/icons/PostgresSQLIcon.vue";
+    import PythonIcon from "@/components/icons/PythonIcon.vue";
+    import ReactIcon from "@/components/icons/ReactIcon.vue";
+    import SassIcon from "@/components/icons/SassIcon.vue";
+    import StripeIcon from "@/components/icons/StripeIcon.vue";
+    import StylusIcon from "@/components/icons/StylusIcon.vue";
+    import TwitterIcon from "@/components/icons/TwitterIcon.vue";
+    import TypeScriptIcon from "@/components/icons/TypeScriptIcon.vue";
+    import VueIcon from "@/components/icons/VueIcon.vue";
+    import WebIcon from "@/components/icons/WebIcon.vue";
+    import WindowsIcon from "@/components/icons/WindowsIcon.vue";
 
     export default defineComponent({
         name: "DynamicIcon",
@@ -70,6 +71,7 @@
             NodeIcon,
             APIIcon,
             MySQLIcon,
+            PostgresSQLIcon,
             AngularIcon,
             ElectronIcon,
             CordovaIcon,
