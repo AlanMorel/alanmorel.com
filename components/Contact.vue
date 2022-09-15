@@ -6,25 +6,15 @@
     </li>
 </template>
 
-<script lang="ts">
-    import DynamicIcon from "@/components/icons/DynamicIcon.vue";
-
-    import { defineComponent } from "vue";
-
-    export default defineComponent({
-        name: "Contact",
-        components: {
-            DynamicIcon
+<script lang="ts" setup>
+    const { name, link } = defineProps({
+        name: {
+            type: String,
+            required: true
         },
-        props: {
-            name: {
-                type: String,
-                required: true
-            },
-            link: {
-                type: String,
-                required: true
-            }
+        link: {
+            type: String,
+            required: true
         }
     });
 </script>

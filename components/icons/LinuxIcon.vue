@@ -7,16 +7,3 @@
         </g>
     </Icon>
 </template>
-
-<script lang="ts">
-    import { defineComponent } from "vue";
-
-    import Icon from "@/components/icons/Icon.vue";
-
-    export default defineComponent({
-        name: "LinuxIcon",
-        components: {
-            Icon
-        }
-    });
-</script>

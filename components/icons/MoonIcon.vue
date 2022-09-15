@@ -4,19 +4,6 @@
     </Icon>
 </template>
 
-<script lang="ts">
-    import { defineComponent } from "vue";
-
-    import Icon from "@/components/icons/Icon.vue";
-
-    export default defineComponent({
-        name: "MoonIcon",
-        components: {
-            Icon
-        }
-    });
-</script>
-
 <style lang="scss">
     .moon-icon {
         width: 2rem;

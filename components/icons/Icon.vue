@@ -4,16 +4,11 @@
     </svg>
 </template>
 
-<script lang="ts">
-    import { defineComponent } from "vue";
-
-    export default defineComponent({
-        name: "Icon",
-        props: {
-            viewBox: {
-                type: String,
-                required: true
-            }
+<script lang="ts" setup>
+    const { viewBox } = defineProps({
+        viewBox: {
+            type: String,
+            required: true
         }
     });
 </script>

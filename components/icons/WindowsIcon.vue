@@ -6,16 +6,3 @@
         <polygon style="fill: #00b4f2" points="0,436.547 206.596,467.088 206.596,278.456 0,278.456" />
     </Icon>
 </template>
-
-<script lang="ts">
-    import { defineComponent } from "vue";
-
-    import Icon from "@/components/icons/Icon.vue";
-
-    export default defineComponent({
-        name: "WindowsIcon",
-        components: {
-            Icon
-        }
-    });
-</script>

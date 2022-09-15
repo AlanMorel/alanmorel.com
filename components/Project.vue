@@ -57,7 +57,7 @@
                 </li>
             </ul>
             <ul class="project__links">
-                <li v-for="(link, title) in project.links" :key="title" class="project__link-container">
+                <li v-for="(link, title, index) in project.links" :key="title" class="project__link-container">
                     <a :href="link" target="_blank" rel="noopener" class="project__tag project__link">
                         <DynamicIcon :icon="title" />
                         <span>{{ title }}</span>
@@ -68,25 +68,15 @@
     </li>
 </template>
 
-<script lang="ts">
-    import { defineComponent } from "vue";
-
-    import DynamicIcon from "@/components/icons/DynamicIcon.vue";
-
-    export default defineComponent({
-        name: "Project",
-        components: {
-            DynamicIcon
+<script lang="ts" setup>
+    const { name, project } = defineProps({
+        name: {
+            type: String,
+            default: ""
         },
-        props: {
-            name: {
-                type: String,
-                default: ""
-            },
-            project: {
-                type: Object,
-                default: null
-            }
+        project: {
+            type: Object,
+            default: null
         }
     });
 </script>

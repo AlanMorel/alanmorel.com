@@ -18,16 +18,3 @@
         <rect height="42.691" style="fill: #099cec" width="47.505" x="117.738" y="199.043" />
     </Icon>
 </template>
-
-<script lang="ts">
-    import { defineComponent } from "vue";
-
-    import Icon from "@/components/icons/Icon.vue";
-
-    export default defineComponent({
-        name: "DockerIcon",
-        components: {
-            Icon
-        }
-    });
-</script>
