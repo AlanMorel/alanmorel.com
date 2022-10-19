@@ -2,5 +2,5 @@
     "watch": ["./server/"],
     "ext": "ts",
     "ignore": ["**/*.test.ts"],
-    "exec": "node --loader @bleed-believer/path-alias/esm --experimental-specifier-resolution=node ./server/core/Server.ts"
+    "exec": "node --loader @bleed-believer/path-alias/esm ./server/core/Server.ts"
 }

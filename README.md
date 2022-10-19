@@ -15,11 +15,11 @@ cd alanmorel.com
 ```
 
 ```sh
-npm install yarn -g
+npm install pnpm -g
 ```
 
 ```sh
-yarn install
+pnpm install
 ```
 
 Create a `.env` file

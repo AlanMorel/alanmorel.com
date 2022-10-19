@@ -2,16 +2,18 @@ FROM node:alpine as base
 
 ARG ENV
 
+RUN npm install -g pnpm
+
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package.json pnpm-lock.yaml ./
 
-RUN npx browserslist@latest --update-db && rm -rf node_modules && yarn install --frozen-lockfile && yarn cache clean
+RUN pnpm install --frozen-lockfile --prod
 
 COPY . .
 
-RUN yarn ts:check && yarn build:client
+RUN pnpm ts:check && pnpm build:client
 
-CMD ["sh", "-c", "yarn cross-env NODE_ENV=production node --loader @bleed-believer/path-alias/esm --experimental-specifier-resolution=node ./server/core/Server.ts"]
+CMD ["sh", "-c", "pnpm cross-env NODE_ENV=production node --loader @bleed-believer/path-alias/esm ./server/core/Server.ts"]
 
 FROM base as production
