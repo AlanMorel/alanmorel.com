@@ -14,6 +14,6 @@ COPY . .
 
 RUN pnpm ts:check && pnpm build:client
 
-CMD ["sh", "-c", "pnpm cross-env NODE_ENV=production node --loader @bleed-believer/path-alias/esm ./server/core/Server.ts"]
+CMD ["sh", "-c", "pnpm cross-env NODE_ENV=production node --loader ts-paths-esm-loader --experimental-specifier-resolution=node ./server/core/Server.ts"]
 
 FROM base as production
