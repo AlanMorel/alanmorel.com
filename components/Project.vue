@@ -1,8 +1,8 @@
 <template>
     <li
         class="project"
-        :class="'project__theme--' + project.theme"
-        :style="'background-color:' + project.background + ';'"
+        :class="'project__theme--' + getProjectTheme() + ' ' + theme"
+        :style="'background-color:' + getProjectBackground() + ';'"
     >
         <div class="project__inner-container">
             <div class="project__icon-container">
@@ -69,6 +69,8 @@
 </template>
 
 <script lang="ts" setup>
+    import { useTheme } from "@/shared/hooks/useTheme";
+
     const { name, project } = defineProps({
         name: {
             type: String,
@@ -79,6 +81,22 @@
             default: null
         }
     });
+
+    const { theme } = useTheme();
+
+    const getProjectBackground = () => {
+        if (theme.value === "dark") {
+            return project.darkBackground;
+        }
+        return project.background;
+    };
+
+    const getProjectTheme = () => {
+        if (theme.value === "dark") {
+            return "light";
+        }
+        return project.theme;
+    };
 </script>
 
 <style lang="scss">

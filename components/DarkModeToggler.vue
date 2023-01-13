@@ -6,15 +6,16 @@
 </template>
 
 <script lang="ts" setup>
-    import { onBeforeMount, ref } from "vue";
+    import { useTheme } from "@/shared/hooks/useTheme";
+    import { onBeforeMount } from "vue";
 
-    const theme = ref("dark");
+    const { theme, setTheme } = useTheme();
 
     const toggle = () => {
         if (theme.value === "dark") {
-            theme.value = "light";
+            setTheme("light");
         } else {
-            theme.value = "dark";
+            setTheme("dark");
         }
 
         localStorage.setItem("theme", theme.value);
@@ -27,9 +28,9 @@
         const appSet = localStorage.getItem("theme") || "dark";
 
         if (browserSet) {
-            theme.value = "dark";
+            setTheme("dark");
         } else {
-            theme.value = appSet;
+            setTheme(appSet);
         }
 
         document.body.setAttribute("theme", theme.value);
