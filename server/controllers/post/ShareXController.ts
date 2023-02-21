@@ -18,19 +18,26 @@ export default async function (req: Request, res: Response): Promise<void> {
 
     const secret = req.body.secret;
 
+    if (!secret) {
+        sendFailure(res, "Secret is missing");
+        return;
+    }
+
     if (!compareStrings(secret, Config.sharex.secret)) {
         sendFailure(res, "Secret is incorrect");
         return;
     }
 
-    const image = req.files["sharex"] as UploadedFile;
+    const file = req.files["sharex"] as UploadedFile;
+    const extension = file.name.split(".").pop();
+
     const filename = getRandomFilename(filenameLength);
 
-    const path = `/images/${filename}.png`;
+    const path = `/files/${filename}.${extension}`;
 
-    await image.mv(Config.root + path);
+    await file.mv(Config.root + path);
 
-    Logger.log(`Uploaded ${image.name} as ${filename}.png from ShareX successfully`);
+    Logger.log(`Uploaded ${file.name} as ${filename}.${extension} from ShareX successfully`);
 
     const result = {
         link: context.base + path
