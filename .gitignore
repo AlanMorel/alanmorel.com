@@ -14,4 +14,4 @@ dist
 # app-specific
 /assets/downloads
 /server/links.json
-/files/**/*.png
+/files/*
