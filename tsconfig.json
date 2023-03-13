@@ -1,26 +1,49 @@
 {
     "compilerOptions": {
-        "strict": true,
-        "module": "ESNext",
-        "jsx": "preserve",
-        "moduleResolution": "Node",
         "target": "ESNext",
-        "lib": ["DOM", "DOM.Iterable", "ESNext"],
-        "types": ["vite/client"],
-        "skipLibCheck": true,
-        "resolveJsonModule": true,
+        "module": "ESNext",
         "rootDir": "./",
-        "outDir": "./dist",
+        "outDir": "./dist/server",
+        "strict": true,
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "experimentalDecorators": true,
         "esModuleInterop": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "removeComments": true,
+        "types": ["node"],
+        "sourceMap": false,
         "baseUrl": "./",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": false,
+        "noEmit": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
         "paths": {
-            "@/*": [
-                "./*"
-            ]
-        }
+            "@/*": ["./*"]
+        },
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
     },
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        ".next/types/**/*.ts",
+        "next.config.js",
+        "next.config.js",
+        "C:\\Users\\alan\\Desktop\\projects\\alanmorel.com\\.next/types/**/*.ts"
+    ],
+    "exclude": ["node_modules", "dist", "test"],
     "ts-node": {
         "esm": true
-    },
-    "lib": ["esnext"]
+    }
 }

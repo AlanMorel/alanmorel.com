@@ -2,27 +2,32 @@
     "root": true,
     "env": {
         "node": true,
-        "browser": true,
         "es2021": true,
-        "jest": true
+        "jest": true,
+        "browser": true
     },
     "globals": {
         "page": true,
         "browser": true,
         "context": true,
-        "jestPuppeteer": true
+        "jestPuppeteer": true,
+        "JSX": "readonly",
+        "React": true
     },
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint", "security", "prettier"],
+    "plugins": ["@typescript-eslint", "security", "prettier", "react"],
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:security/recommended"
+        "plugin:security/recommended",
+        "next/core-web-vitals",
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": ["./tsconfig.json"]
     },
     "rules": {
         "no-console": "warn",
@@ -55,5 +60,5 @@
         "no-prototype-builtins": 1,
         "prettier/prettier": ["error"]
     },
-    "ignorePatterns": ["**/*.ejs", "**/*.vue", "components.d.ts", "dist"]
+    "ignorePatterns": [".next"]
 }

@@ -1,0 +1,47 @@
+{
+    "name": "Alan Morel",
+    "short_name": "Alan Morel",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#2196F3",
+    "background_color": "white",
+    "description": "Alan Morel - Software Engineer, Photographer, Music Producer",
+    "icons": [
+        {
+            "src": "/images/meta-image.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/meta-image.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/meta-image.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/meta-image.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/meta-image.png",
+            "sizes": "168x168",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/meta-image.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "related_applications": [
+        {
+            "platform": "web",
+            "url": "http://alanmorel.com"
+        }
+    ]
+}

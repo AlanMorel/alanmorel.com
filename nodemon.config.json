@@ -1,6 +1,0 @@
-{
-    "watch": ["./server/"],
-    "ext": "ts",
-    "ignore": ["**/*.test.ts"],
-    "exec": "node --loader ts-paths-esm-loader --experimental-specifier-resolution=node ./server/core/Server.ts"
-}

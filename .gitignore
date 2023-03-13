@@ -6,12 +6,23 @@ dist
 .env
 
 # log files
-*.log
+/logs
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
 # editor directories and files
 .vscode
 
 # app-specific
-/assets/downloads
-/server/links.json
-/files/*
+/public/downloads
+/src/redirects.json
+/files

@@ -12,8 +12,10 @@ RUN pnpm install --frozen-lockfile --prod
 
 COPY . .
 
-RUN pnpm ts:check && pnpm build:client
+RUN pnpm build
 
-CMD ["sh", "-c", "pnpm cross-env NODE_ENV=production node --loader ts-paths-esm-loader --experimental-specifier-resolution=node ./server/core/Server.ts"]
+ENV NEXT_TELEMETRY_DISABLED 1
+
+CMD ["sh", "-c", "pnpm cross-env NODE_ENV=production next start -p 8080"]
 
 FROM base as production
