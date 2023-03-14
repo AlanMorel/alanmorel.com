@@ -1,4 +1,5 @@
 import { promises as fs } from "fs";
+import mime from "mime-types";
 
 export async function GET(request: Request): Promise<Response> {
     const url = new URL(request.url);
@@ -6,7 +7,14 @@ export async function GET(request: Request): Promise<Response> {
 
     try {
         const file = await fs.readFile(`files/${pathname}`);
-        return new Response(file);
+        const type = mime.lookup(pathname) as string;
+
+        return new Response(file, {
+            status: 200,
+            headers: {
+                "Content-Type": type
+            }
+        });
     } catch (error) {
         return new Response("Not found", { status: 404 });
     }
