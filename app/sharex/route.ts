@@ -34,7 +34,7 @@ export async function POST(request: Request): Promise<Response> {
     const filename = getRandomFilename(filenameLength);
     const extension = file.name.split(".").pop();
 
-    const path = `files/${filename}.${extension}`;
+    const path = `public/files/${filename}.${extension}`;
 
     const buffer = await file.arrayBuffer();
     const data = Buffer.from(buffer);

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Intro(): JSX.Element {
     return (
         <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-10 px-4 pt-16 pb-8 md:gap-x-14">
@@ -21,9 +23,9 @@ export default function Intro(): JSX.Element {
                         email
                     </a>
                     . My resume can be{" "}
-                    <a href="/resume" target="_blank" className="text-slate-900 underline hover:no-underline">
+                    <Link href="/resume" target="_blank" className="text-slate-900 underline hover:no-underline">
                         found here
-                    </a>
+                    </Link>
                     .
                 </p>
             </div>
