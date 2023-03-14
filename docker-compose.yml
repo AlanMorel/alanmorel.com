@@ -15,7 +15,7 @@ services:
             DOCKER: "true"
         volumes:
             - "./logs:/app/logs"
-            - "./public/files:/app/public/files"
+            - "./files:/app/files"
         expose:
             - "${PORT}"
         networks:
