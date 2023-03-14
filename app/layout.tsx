@@ -1,6 +1,7 @@
 import Config from "@/src/Config";
 import "@/src/globals.css";
 import Analytics from "@/src/helpers/client/Analytics";
+import "@fontsource/inter/variable.css";
 import { ReactNode } from "react";
 
 interface Props {

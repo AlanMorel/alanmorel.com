@@ -34,7 +34,7 @@ TZ=America/New_York
 
 SHAREX_SECRET=
 
-TWITTER_HANDLE=
+NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID=
 ```
 
 Create a folder called `logs` at the root:

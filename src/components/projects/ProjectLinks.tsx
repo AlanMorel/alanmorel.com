@@ -26,7 +26,7 @@ export default function ProjectLinks(props: Prop): JSX.Element {
     const { project } = props;
 
     return (
-        <ul className="mx-0 mt-4 mb-2 flex flex-wrap justify-center space-x-4 py-4">
+        <ul className="mx-0 mt-4 mb-2 flex flex-wrap justify-center py-4">
             {project.links.map(link => (
                 <li key={link.url} className="inline-flex">
                     <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-white">

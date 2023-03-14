@@ -1,16 +1,16 @@
 export default function Intro(): JSX.Element {
     return (
-        <header className="mx-auto flex max-w-[60rem] flex-col py-16 px-4 sm:flex-row">
-            <div className="mx-auto mb-8 w-[70%] text-center sm:mr-6 sm:mb-0 md:mr-12">
+        <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-10 px-4 pt-16 pb-8 md:gap-x-14">
+            <div className="col-span-2 mx-auto w-full max-w-xs sm:col-span-1">
                 <img src="/images/profile-picture.png" className="w-full rounded-full shadow-lg" alt="profile pic" />
             </div>
-            <div className="text-gray-900">
-                <div className="text-center">
-                    <h1 className="highlight mx-auto my-0 mb-4 inline-flex text-center text-[4rem] font-bold leading-none tracking-[-0.25rem] sm:text-[5rem] sm:tracking-[-0.5rem] md:text-[7rem] md:tracking-[-0.75rem]">
+            <div className="col-span-2 text-gray-900 sm:col-span-1">
+                <div className="mx-auto w-full text-center sm:text-left">
+                    <h1 className="highlight mx-auto my-0 mb-4 inline-flex text-6xl font-bold leading-none tracking-tighter sm:text-7xl md:text-8xl">
                         Alan Morel
                     </h1>
                 </div>
-                <p className="mb-4 leading-normal">
+                <p className="mb-4 leading-7">
                     Hey! My name is Alan and I am a senior software engineer, photographer, music producer, and
                     technical writer, from New York. I like writing software to build cool things, and this is my
                     collection of my works, art, and projects.

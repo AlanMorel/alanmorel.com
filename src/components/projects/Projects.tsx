@@ -35,29 +35,31 @@ export default function Projects(): JSX.Element {
         <ul className="flex list-none flex-col">
             {projects.map(project => (
                 <li key={project.name} style={{ backgroundColor: project.background }}>
-                    <div className={`mx-auto flex max-w-[70rem] px-4 pt-8 sm:pb-4 ${getColor(project)}`}>
-                        <div className="translate--4 absolute w-[20%] flex-[20%] sm:relative sm:w-auto">
+                    <div
+                        className={`mx-auto grid max-w-[70rem] grid-cols-[20%_80%] grid-rows-[auto,_auto] gap-x-4 px-4 pt-8 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pb-4 ${getColor(
+                            project
+                        )}`}
+                    >
+                        <div className="relative">
                             <img
                                 src={`/images/projects/${project.slug}/icon.png`}
-                                alt="name"
+                                alt={`${project.name} icon`}
                                 loading="lazy"
-                                className="w-full rounded-2xl"
+                                className="absolute w-full rounded-sm sm:rounded-xl"
                             />
                         </div>
-                        <div className="box-border flex-[80%] sm:pl-[5%]">
-                            <div className="mb-2 pl-[30%] text-left sm:pl-0">
-                                <div>
-                                    <h2 className="highlight mt--3 mb-2 inline-flex text-3xl font-bold sm:mb-4 sm:text-6xl">
-                                        {project.name}
-                                    </h2>
-                                    <div className="mx-0 mt-1 mb-2 font-bold">Released {project.date}</div>
-                                </div>
-                                <div className="mb-4">{project.description}</div>
-                            </div>
+                        <div className="mb-2 text-left">
                             <div>
-                                <ProjectTechnologies project={project} />
-                                <ProjectPlatforms project={project} />
+                                <h2 className="highlight mt--3 mb-2 inline-flex text-3xl font-bold sm:mb-4 sm:text-6xl">
+                                    {project.name}
+                                </h2>
+                                <div className="mx-0 mt-1 mb-2 font-bold">Released {project.date}</div>
                             </div>
+                            <div className="mb-4">{project.description}</div>
+                        </div>
+                        <div className="col-span-2 sm:col-span-1 sm:col-start-2">
+                            <ProjectTechnologies project={project} />
+                            <ProjectPlatforms project={project} />
                         </div>
                     </div>
                     <div className="px-4 sm:px-0">

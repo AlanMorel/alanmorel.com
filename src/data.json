@@ -623,7 +623,7 @@
         {
             "name": "Prime Factorizer",
             "slug": "prime",
-            "background": "#eee",
+            "background": "#aaa",
             "darkBackground": "#444",
             "theme": "dark",
             "date": "September 2013",
