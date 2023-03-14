@@ -34,12 +34,12 @@ export async function POST(request: Request): Promise<Response> {
     const filename = getRandomFilename(filenameLength);
     const extension = file.name.split(".").pop();
 
-    const path = `public/files/${filename}.${extension}`;
+    const path = `/files/${filename}.${extension}`;
 
     const buffer = await file.arrayBuffer();
     const data = Buffer.from(buffer);
 
-    await fs.writeFile(path, data);
+    await fs.writeFile(`public/${path}`, data);
 
     Logger.log(`Uploaded ${file.name} as ${filename}.${extension} from ShareX successfully`);
 
