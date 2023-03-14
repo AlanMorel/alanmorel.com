@@ -21,7 +21,7 @@ export default async function ResumePage(): Promise<JSX.Element> {
     const resume = DataJSON.resume;
 
     return (
-        <div className="bg-slate-50 print:text-[90%] lg:min-h-[100vh] lg:pt-20">
+        <div className="bg-slate-50 lg:min-h-[100vh] lg:pt-20">
             <div className="mx-auto box-border w-full border border-slate-200 bg-white px-4 py-4 print:border-0 lg:h-[1056px] lg:w-[816px] lg:py-6 lg:px-12">
                 <div className="mb-4 inline-flex w-full flex-wrap justify-center space-x-4 text-sm">
                     {resume.links.map(link => (
