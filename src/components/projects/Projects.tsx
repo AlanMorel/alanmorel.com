@@ -53,11 +53,13 @@ export default function Projects(): JSX.Element {
                                 <h2 className="highlight mt--3 mb-2 inline-flex text-3xl font-bold sm:mb-4 sm:text-6xl">
                                     {project.name}
                                 </h2>
-                                <div className="mx-0 mt-1 mb-2 font-bold">Released {project.date}</div>
+                                <div className="mx-0 mt-1 mb-2 text-sm font-bold sm:text-base">
+                                    Released {project.date}
+                                </div>
                             </div>
-                            <div className="mb-4">{project.description}</div>
+                            <div className="mb-4 text-sm sm:text-base">{project.description}</div>
                         </div>
-                        <div className="col-span-2 sm:col-span-1 sm:col-start-2">
+                        <div className="col-span-2 text-sm sm:col-span-1 sm:col-start-2 sm:text-base">
                             <ProjectTechnologies project={project} />
                             <ProjectPlatforms project={project} />
                         </div>

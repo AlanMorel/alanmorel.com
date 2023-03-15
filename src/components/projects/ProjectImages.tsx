@@ -8,7 +8,7 @@ export default function ProjectImages(props: Prop): JSX.Element {
     const { project } = props;
 
     return (
-        <ul className="mx-0 mb-2 flex flex-wrap justify-center sm:mt-4 sm:py-4">
+        <ul className="mx-0 flex flex-wrap justify-center sm:mt-4 sm:py-2">
             {Array.from(Array(project.images).keys()).map(image => (
                 <li key={image}>
                     <img
