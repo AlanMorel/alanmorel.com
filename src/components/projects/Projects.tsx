@@ -36,7 +36,7 @@ export default function Projects(): JSX.Element {
             {projects.map(project => (
                 <li key={project.name} style={{ backgroundColor: project.background }}>
                     <div
-                        className={`mx-auto grid max-w-[70rem] grid-cols-[20%_80%] grid-rows-[auto,_auto] gap-x-4 px-4 pt-8 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pb-4 ${getColor(
+                        className={`mx-auto grid max-w-[70rem] grid-cols-[1fr_4fr] grid-rows-[auto,_auto] gap-x-4 px-4 pt-4 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pt-8 sm:pb-4 ${getColor(
                             project
                         )}`}
                     >
