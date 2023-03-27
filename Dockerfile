@@ -12,7 +12,7 @@ RUN pnpm install --frozen-lockfile --prod
 
 COPY . .
 
-RUN pnpm build
+RUN pnpm ts:check && pnpm build
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
