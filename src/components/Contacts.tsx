@@ -34,9 +34,9 @@ const contacts = [
 
 export default function Contacts(): JSX.Element {
     return (
-        <ul className="mt-4 mb-4 flex list-none flex-wrap justify-center">
+        <ul className="mb-4 mt-4 flex list-none flex-wrap justify-center">
             {contacts.map(contact => (
-                <li key={contact.type} className="mb-8 mr-4 ml-4">
+                <li key={contact.type} className="mb-8 ml-4 mr-4">
                     <a
                         href={contact.href}
                         target="_blank"

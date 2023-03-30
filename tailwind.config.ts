@@ -1,4 +1,6 @@
-module.exports = {
+import type { Config } from "tailwindcss";
+
+export default {
     content: ["./app/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
@@ -14,10 +16,10 @@ module.exports = {
             keyframes: {
                 "fade-out": {
                     "0%": {
-                        opacity: 1
+                        opacity: "1"
                     },
                     "100%": {
-                        opacity: 0
+                        opacity: "0"
                     }
                 },
                 "scale-down": {
@@ -38,10 +40,10 @@ module.exports = {
                 },
                 "fade-in": {
                     "0%": {
-                        opacity: 0
+                        opacity: "0"
                     },
                     "100%": {
-                        opacity: 1
+                        opacity: "1"
                     }
                 },
                 "slide-in": {
@@ -61,4 +63,4 @@ module.exports = {
             }
         }
     }
-};
+} satisfies Config;

@@ -35,12 +35,12 @@ export default function Lightbox(props: Props): JSX.Element {
 
     return (
         <div
-            className="fixed top-0 left-0 z-50 flex h-full w-full max-w-full animate-fade flex-col items-center justify-center bg-black bg-opacity-90 px-16 pb-16"
+            className="fixed left-0 top-0 z-50 flex h-full w-full max-w-full animate-fade flex-col items-center justify-center bg-black bg-opacity-90 px-16 pb-16"
             onClick={close}
         >
             <div className="relative animate-slide-in duration-slow">
                 <button
-                    className="absolute top-1/2 right-full mx-6 -translate-y-1/2 transform text-5xl font-bold text-white focus:outline-none"
+                    className="absolute right-full top-1/2 mx-6 -translate-y-1/2 transform text-5xl font-bold text-white focus:outline-none"
                     onClick={handlePrev}
                 >
                     «
@@ -54,7 +54,7 @@ export default function Lightbox(props: Props): JSX.Element {
                     height={6000}
                 />
                 <button
-                    className="absolute top-1/2 left-full mx-6 -translate-y-1/2 transform text-5xl font-bold text-white focus:outline-none"
+                    className="absolute left-full top-1/2 mx-6 -translate-y-1/2 transform text-5xl font-bold text-white focus:outline-none"
                     onClick={handleNext}
                 >
                     »

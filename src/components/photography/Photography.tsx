@@ -105,7 +105,7 @@ export default function Photography(): JSX.Element {
                                     height={6000}
                                     className="w-full rounded-md object-cover object-right"
                                 />
-                                <div className="absolute top-0 bottom-0 left-0 right-0 w-full cursor-pointer rounded-lg bg-gradient-to-b from-transparent to-slate-900 opacity-50 transition hover:opacity-30" />
+                                <div className="absolute bottom-0 left-0 right-0 top-0 w-full cursor-pointer rounded-lg bg-gradient-to-b from-transparent to-slate-900 opacity-50 transition hover:opacity-30" />
                             </div>
                         </li>
                     ))}
