@@ -14,8 +14,8 @@ COPY . .
 
 RUN pnpm ts:check && pnpm build
 
+ENV NODE_ENV production
+
 ENV NEXT_TELEMETRY_DISABLED 1
 
-CMD ["sh", "-c", "pnpm cross-env NODE_ENV=production next start -p 8080"]
-
-FROM base as production
+CMD ["pnpm", "start"]
