@@ -2,7 +2,7 @@
 
 import { Location } from "@/src/components/photography/Photography";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Props {
     location: Location;
@@ -13,6 +13,22 @@ export default function Lightbox(props: Props): JSX.Element {
     const { location, close } = props;
 
     const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        function handleKeyDown(event: KeyboardEvent): void {
+            if (event.key === "ArrowLeft") {
+                setIndex((index - 1 + location.images.length) % location.images.length);
+            } else if (event.key === "ArrowRight") {
+                setIndex((index + 1) % location.images.length);
+            }
+        }
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [index]);
 
     const handlePrev = (e: React.MouseEvent<HTMLButtonElement>): void => {
         e.stopPropagation();
