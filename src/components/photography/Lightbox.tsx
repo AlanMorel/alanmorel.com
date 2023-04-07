@@ -35,7 +35,7 @@ export default function Lightbox(props: Props): JSX.Element {
 
     return (
         <div
-            className="fixed left-0 top-0 z-50 flex h-full w-full max-w-full animate-fade flex-col items-center justify-center bg-black bg-opacity-90 px-16 pb-16"
+            className="fixed left-0 top-0 z-50 flex h-full w-full max-w-full animate-fade flex-col items-center justify-center bg-black bg-opacity-90 px-16 pb-36"
             onClick={close}
         >
             <div className="relative animate-slide-in duration-slow">
@@ -47,7 +47,7 @@ export default function Lightbox(props: Props): JSX.Element {
                 </button>
                 <Image
                     src={`/images/photos/${location.slug}/DSC0${location.images[index]}.jpg`}
-                    className="w-full max-w-2xl rounded-xl"
+                    className="max-h-[calc(100vh-10rem)] w-full max-w-2xl rounded-xl"
                     alt={location.header}
                     loading="lazy"
                     width={4000}
