@@ -65,7 +65,7 @@ const buildMetadata = (base: BaseMetadata): Metadata => {
             description: base.description,
             creator: handle,
             images: {
-                url: image,
+                url: base.image ?? image,
                 alt: `${Config.app.name} Logo`
             }
         },
