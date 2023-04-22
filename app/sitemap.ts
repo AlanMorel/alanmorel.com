@@ -1,11 +1,7 @@
 import Config from "@/src/Config";
+import { MetadataRoute } from "next";
 
-type Route = {
-    url: string;
-    lastModified: string;
-};
-
-export default async function sitemap(): Promise<Route[]> {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const routes = ["", "/resume"];
 
     return routes.map(route => ({
