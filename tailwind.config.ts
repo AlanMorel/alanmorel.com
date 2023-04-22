@@ -1,11 +1,12 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
     content: ["./app/**/*.{ts,tsx}", "./src/components/**/*.{ts,tsx}"],
     theme: {
         extend: {
             fontFamily: {
-                sans: ["InterVariable", "Open Sans", "sans-serif"]
+                sans: ["var(--font-inter)", "Open Sans", ...defaultTheme.fontFamily.sans]
             },
             animation: {
                 enter: "fade-in 200ms ease-out, scale-up 200ms ease-out",

@@ -1,18 +1,23 @@
 import "@/src/globals.css";
 import Analytics from "@/src/helpers/client/Analytics";
 import { withMetadata } from "@/src/helpers/server/MetadataHelper";
-import "@fontsource/inter/variable.css";
+import { Inter } from "next/font/google";
 import { ReactNode } from "react";
 
 interface Props {
     children: ReactNode;
 }
 
+const inter = Inter({
+    subsets: ["latin"],
+    variable: "--font-inter"
+});
+
 export default async function RootLayout(props: Props): Promise<JSX.Element> {
     const { children } = props;
 
     return (
-        <html lang="en">
+        <html lang="en" className={`${inter.variable}`}>
             <body className="m-0 font-sans">{children}</body>
             <Analytics />
         </html>
