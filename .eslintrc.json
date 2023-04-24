@@ -15,14 +15,15 @@
         "React": true
     },
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint", "security", "prettier", "react"],
+    "plugins": ["@typescript-eslint", "security", "prettier", "react", "import", "jsx-a11y"],
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:security/recommended",
         "next/core-web-vitals",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
