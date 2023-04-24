@@ -18,7 +18,7 @@ export default async function RootLayout(props: Props): Promise<JSX.Element> {
 
     return (
         <html lang="en" className={`${inter.variable}`}>
-            <body className="m-0 font-sans">{children}</body>
+            <body className="m-0 font-text">{children}</body>
             <Analytics />
         </html>
     );

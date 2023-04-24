@@ -6,7 +6,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["var(--font-inter)", "Open Sans", ...defaultTheme.fontFamily.sans]
+                text: ["var(--font-inter)", "Open Sans", ...defaultTheme.fontFamily.sans]
             },
             animation: {
                 enter: "fade-in 200ms ease-out, scale-up 200ms ease-out",
