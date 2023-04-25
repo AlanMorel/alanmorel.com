@@ -28,8 +28,6 @@ Create a `.env` file
 VERSION=0
 NODE_ENV=development
 PORT=8080
-ORIGIN=http://localhost:8080
-DOCKER_ORIGIN=http://localhost:8080
 TZ=America/New_York
 
 SHAREX_SECRET=
