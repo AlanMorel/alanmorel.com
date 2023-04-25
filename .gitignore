@@ -26,3 +26,4 @@ next-env.d.ts
 /public/downloads
 /files
 /src/redirects.json
+/entries
