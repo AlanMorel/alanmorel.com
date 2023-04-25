@@ -1,4 +1,4 @@
-import { fileExists } from "@/src/helpers/server/FileSystemHelper";
+import { pathExists } from "@/src/helpers/server/FileSystemHelper";
 import { formatTimestamp } from "@/src/helpers/shared/DateFormatter";
 import { promises as fs } from "fs";
 import picocolors from "picocolors";
@@ -56,7 +56,7 @@ export class Logger {
     private static async write(directory: string, timestamp: string, log: string): Promise<void> {
         const path = `${directory}/${timestamp}.log`;
 
-        const exists = await fileExists(directory);
+        const exists = await pathExists(directory);
 
         if (!exists) {
             await fs.mkdir(directory, { recursive: true });
