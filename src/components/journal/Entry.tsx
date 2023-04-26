@@ -1,6 +1,6 @@
 "use client";
 
-import { addDays, getReadableDate } from "@/src/helpers/server/DateHelper";
+import { addDays, getReadableDate, isDateEarlier } from "@/src/helpers/server/DateHelper";
 import { useState } from "react";
 
 interface Props {
@@ -8,8 +8,10 @@ interface Props {
 }
 
 export default function Entry(props: Props): JSX.Element {
+    const today = new Date();
+
     const [entry, setEntry] = useState(props.entry);
-    const [date, setDate] = useState(new Date());
+    const [date, setDate] = useState(today);
 
     const fetchNewEntry = async (days: number): Promise<any> => {
         const newDate = addDays(date, days);
@@ -67,9 +69,14 @@ export default function Entry(props: Props): JSX.Element {
                 <button className="mt-4 rounded bg-slate-100 px-4 py-2 transition hover:bg-slate-200" onClick={onSave}>
                     Save
                 </button>
-                <button className="mt-4 rounded bg-slate-100 px-4 py-2 transition hover:bg-slate-200" onClick={onNext}>
-                    Next
-                </button>
+                {isDateEarlier(date, today) && (
+                    <button
+                        className="mt-4 rounded bg-slate-100 px-4 py-2 transition hover:bg-slate-200"
+                        onClick={onNext}
+                    >
+                        Next
+                    </button>
+                )}
             </div>
         </div>
     );
