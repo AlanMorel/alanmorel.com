@@ -1,6 +1,8 @@
 "use client";
 
+import EntryButton from "@/src/components/journal/EntryButton";
 import { addDays, getReadableDate, isDateEarlier } from "@/src/helpers/server/DateHelper";
+import { ArrowSmallLeftIcon, ArrowSmallRightIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 
 interface Props {
@@ -63,19 +65,16 @@ export default function Entry(props: Props): JSX.Element {
                 onChange={onTextareaChange}
             />
             <div className="space-x-6">
-                <button className="mt-4 rounded bg-slate-100 px-4 py-2 transition hover:bg-slate-200" onClick={onPrev}>
-                    Prev
-                </button>
-                <button className="mt-4 rounded bg-slate-100 px-4 py-2 transition hover:bg-slate-200" onClick={onSave}>
-                    Save
-                </button>
+                <EntryButton onClick={onPrev}>
+                    <ArrowSmallLeftIcon className="mr-2 h-4 w-4" /> Prev
+                </EntryButton>
+                <EntryButton onClick={onSave}>
+                    <DocumentArrowDownIcon className="mr-2 h-4 w-4" /> Save
+                </EntryButton>
                 {isDateEarlier(date, today) && (
-                    <button
-                        className="mt-4 rounded bg-slate-100 px-4 py-2 transition hover:bg-slate-200"
-                        onClick={onNext}
-                    >
-                        Next
-                    </button>
+                    <EntryButton onClick={onNext}>
+                        Next <ArrowSmallRightIcon className="ml-2 h-4 w-4" />
+                    </EntryButton>
                 )}
             </div>
         </div>
