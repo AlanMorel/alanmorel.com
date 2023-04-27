@@ -44,3 +44,22 @@ export async function getJournalEntry(date: Date): Promise<string> {
 
     return entry;
 }
+
+export async function saveJournalEntry(date: Date, entry: string): Promise<boolean> {
+    const dateStr = getYYYYMMDD(date);
+
+    const split = dateStr.split("-");
+    const year = split[0];
+    const month = split[1];
+
+    const path = `./entries/${year}/${month}/${dateStr}.txt`;
+
+    try {
+        await fs.writeFile(path, entry, "utf-8");
+        return true;
+    } catch (error) {
+        Logger.error(error as string);
+    }
+
+    return false;
+}

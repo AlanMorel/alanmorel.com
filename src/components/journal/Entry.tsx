@@ -34,6 +34,7 @@ export default function Entry(props: Props): JSX.Element {
         const response = await request.json();
 
         if (!response.success) {
+            showInfoToast(response.data);
             return;
         }
 
@@ -51,8 +52,28 @@ export default function Entry(props: Props): JSX.Element {
         fetchNewEntry(1);
     };
 
-    const onSave = (): void => {
-        console.log("save");
+    const onSave = async (): Promise<void> => {
+        const payload = {
+            date: date.getTime(),
+            entry: entry
+        };
+
+        const request = await fetch("/journal/save", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        const response = await request.json();
+
+        if (!response.success) {
+            showInfoToast(response.data);
+            return;
+        }
+
+        showInfoToast(`Saved ${getReadableDate(date)}`);
     };
 
     const onTextareaChange = (event: React.ChangeEvent<HTMLTextAreaElement>): void => {
