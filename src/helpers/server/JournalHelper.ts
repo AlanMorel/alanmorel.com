@@ -25,34 +25,30 @@ export function isJournalAuthenticated(): boolean {
     return true;
 }
 
-export async function getJournalEntry(date: Date): Promise<string> {
-    let entry = "";
-
+function getEntryPath(date: Date): string {
     const dateStr = getYYYYMMDD(date);
 
     const split = dateStr.split("-");
     const year = split[0];
     const month = split[1];
 
-    const path = `./entries/${year}/${month}/${dateStr}.txt`;
+    return `./entries/${year}/${month}/${dateStr}.txt`;
+}
+
+export async function getJournalEntry(date: Date): Promise<string> {
+    const path = getEntryPath(date);
 
     const entryExists = await pathExists(path);
 
     if (entryExists) {
-        entry = await fs.readFile(path, "utf-8");
+        return await fs.readFile(path, "utf-8");
     }
 
-    return entry;
+    return "";
 }
 
 export async function saveJournalEntry(date: Date, entry: string): Promise<boolean> {
-    const dateStr = getYYYYMMDD(date);
-
-    const split = dateStr.split("-");
-    const year = split[0];
-    const month = split[1];
-
-    const path = `./entries/${year}/${month}/${dateStr}.txt`;
+    const path = getEntryPath(date);
 
     try {
         await fs.writeFile(path, entry, "utf-8");
