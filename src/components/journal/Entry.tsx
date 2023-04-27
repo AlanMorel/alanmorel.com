@@ -1,6 +1,7 @@
 "use client";
 
 import EntryButton from "@/src/components/journal/EntryButton";
+import { showInfoToast } from "@/src/components/toasts/Toasts";
 import { addDays, getReadableDate, isDateEarlier } from "@/src/helpers/server/DateHelper";
 import { ArrowSmallLeftIcon, ArrowSmallRightIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
@@ -35,6 +36,8 @@ export default function Entry(props: Props): JSX.Element {
         if (!response.success) {
             return;
         }
+
+        showInfoToast(`Loaded ${getReadableDate(newDate)}`);
 
         setEntry(response.data);
         setDate(newDate);
