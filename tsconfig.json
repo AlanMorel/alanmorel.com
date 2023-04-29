@@ -32,14 +32,7 @@
             }
         ]
     },
-    "include": [
-        "next-env.d.ts",
-        "**/*.ts",
-        "**/*.tsx",
-        ".next/types/**/*.ts",
-        "tailwind.config.cjs",
-        "C:\\Users\\alan\\Desktop\\projects\\alanmorel.com\\.next/types/**/*.ts"
-    ],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.cjs"],
     "exclude": ["node_modules", "dist", "test"],
     "ts-node": {
         "esm": true

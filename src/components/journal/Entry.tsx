@@ -2,25 +2,35 @@
 
 import EntryButton from "@/src/components/journal/EntryButton";
 import { showInfoToast } from "@/src/components/toasts/Toasts";
-import { addDays, getReadableDate, isDateEarlier } from "@/src/helpers/server/DateHelper";
+import { addDays, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
 import { ArrowSmallLeftIcon, ArrowSmallRightIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 
 interface Props {
+    startDate: number;
     entry: string;
 }
 
 export default function Entry(props: Props): JSX.Element {
     const today = new Date();
+    const startDate = new Date(props.startDate + today.getTimezoneOffset() * 60 * 1000);
 
     const [entry, setEntry] = useState(props.entry);
     const [date, setDate] = useState(today);
 
-    const fetchNewEntry = async (days: number): Promise<any> => {
-        const newDate = addDays(date, days);
+    const fetchNewEntry = async (date: Date): Promise<any> => {
+        if (!isDateEarlier(addDays(date, -1), today)) {
+            showInfoToast("Cannot load future entries");
+            return;
+        }
+
+        if (isDateEarlier(date, startDate)) {
+            showInfoToast("Cannot load earlier entries");
+            return;
+        }
 
         const payload = {
-            date: newDate.getTime()
+            date: date.getTime()
         };
 
         const request = await fetch("/journal/fetch", {
@@ -38,18 +48,22 @@ export default function Entry(props: Props): JSX.Element {
             return;
         }
 
-        showInfoToast(`Loaded ${getReadableDate(newDate)}`);
+        showInfoToast(`Loaded ${getReadableDate(date)}`);
 
         setEntry(response.data);
-        setDate(newDate);
+        setDate(date);
     };
 
     const onPrev = (): void => {
-        fetchNewEntry(-1);
+        const newDate = addDays(date, -1);
+
+        fetchNewEntry(newDate);
     };
 
     const onNext = (): void => {
-        fetchNewEntry(1);
+        const newDate = addDays(date, 1);
+
+        fetchNewEntry(newDate);
     };
 
     const onSave = async (): Promise<void> => {
@@ -80,18 +94,37 @@ export default function Entry(props: Props): JSX.Element {
         setEntry(event.target.value);
     };
 
+    const onDateChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        const rawDate = new Date(event.target.value);
+
+        const newDate = new Date(rawDate.getTime() + rawDate.getTimezoneOffset() * 60 * 1000);
+
+        fetchNewEntry(newDate);
+    };
+
     return (
         <div>
-            <h2 className="mb-8 text-slate-800">{getReadableDate(date)}</h2>
+            <div className="mb-4 flex items-center justify-center">
+                <h2 className="mr-2">{getReadableDate(date)}</h2>
+                <input
+                    type="date"
+                    name="date"
+                    className="w-[1.25rem] outline-none"
+                    value={getYYYYMMDD(date)}
+                    onChange={onDateChange}
+                />
+            </div>
             <textarea
                 className="h-[50rem] w-full rounded-2xl bg-slate-100 p-4 outline-none"
                 value={entry}
                 onChange={onTextareaChange}
             />
             <div className="space-x-6">
-                <EntryButton onClick={onPrev}>
-                    <ArrowSmallLeftIcon className="mr-2 h-4 w-4" /> Prev
-                </EntryButton>
+                {!isDateEarlier(addDays(date, -1), startDate) && (
+                    <EntryButton onClick={onPrev}>
+                        <ArrowSmallLeftIcon className="mr-2 h-4 w-4" /> Prev
+                    </EntryButton>
+                )}
                 <EntryButton onClick={onSave}>
                     <DocumentArrowDownIcon className="mr-2 h-4 w-4" /> Save
                 </EntryButton>
