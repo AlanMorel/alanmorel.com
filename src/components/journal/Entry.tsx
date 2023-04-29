@@ -4,7 +4,7 @@ import EntryButton from "@/src/components/journal/EntryButton";
 import { showInfoToast } from "@/src/components/toasts/Toasts";
 import { addDays, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
 import { ArrowSmallLeftIcon, ArrowSmallRightIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Props {
     startDate: number;
@@ -17,6 +17,21 @@ export default function Entry(props: Props): JSX.Element {
 
     const [entry, setEntry] = useState(props.entry);
     const [date, setDate] = useState(today);
+
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent): void => {
+            if (event.ctrlKey && event.key === "s") {
+                event.preventDefault();
+                onSave();
+            }
+        };
+
+        document.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            document.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [entry]);
 
     const fetchNewEntry = async (date: Date): Promise<any> => {
         if (!isDateEarlier(addDays(date, -1), today)) {
@@ -115,7 +130,7 @@ export default function Entry(props: Props): JSX.Element {
                 />
             </div>
             <textarea
-                className="h-[50rem] w-full rounded-2xl bg-slate-100 p-4 outline-none"
+                className="h-[60rem] w-full rounded-2xl bg-slate-100 p-4 outline-none"
                 value={entry}
                 onChange={onTextareaChange}
             />
