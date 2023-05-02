@@ -126,6 +126,8 @@ export default function Entry(props: Props): JSX.Element {
                     name="date"
                     className="w-[1.25rem] outline-none"
                     value={getYYYYMMDD(date)}
+                    min={getYYYYMMDD(startDate)}
+                    max={getYYYYMMDD(today)}
                     onChange={onDateChange}
                 />
             </div>
