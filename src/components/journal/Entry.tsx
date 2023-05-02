@@ -63,8 +63,6 @@ export default function Entry(props: Props): JSX.Element {
             return;
         }
 
-        showInfoToast(`Loaded ${getReadableDate(date)}`);
-
         setEntry(response.data);
         setDate(date);
     };
