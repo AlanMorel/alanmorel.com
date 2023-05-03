@@ -18,7 +18,7 @@ export default async function JournalPage(): Promise<JSX.Element> {
     return (
         <div className="mx-auto max-w-3xl text-center">
             <div className="mx-4">
-                <h1 className="mb-2 mt-4 text-4xl font-bold">Journal</h1>
+                <h1 className="mb-2 mt-4 text-3xl font-bold">Journal</h1>
                 <Entry entry={entry} startDate={Config.journal.startDate.getTime()} />
             </div>
             <HotToast />
