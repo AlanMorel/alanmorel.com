@@ -2,6 +2,7 @@ import Entry from "@/src/components/journal/Entry";
 import Config from "@/src/helpers/Config";
 import HotToast from "@/src/helpers/client/HotToast";
 import { getJournalEntry, isJournalAuthenticated } from "@/src/helpers/server/JournalHelper";
+import { withMetadata } from "@/src/helpers/server/MetadataHelper";
 import { redirect } from "next/navigation";
 
 export default async function JournalPage(): Promise<JSX.Element> {
@@ -24,3 +25,8 @@ export default async function JournalPage(): Promise<JSX.Element> {
         </div>
     );
 }
+
+export const metadata = withMetadata({
+    title: "Journal",
+    description: "Add and view journal entries."
+});
