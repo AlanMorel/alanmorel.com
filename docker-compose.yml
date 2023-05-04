@@ -16,6 +16,7 @@ services:
         volumes:
             - "./logs:/app/logs"
             - "./files:/app/files"
+            - "./entries:/app/entries"
         expose:
             - "${PORT}"
         networks:
