@@ -82,6 +82,11 @@ export default function Entry(props: Props): JSX.Element {
     };
 
     const onSave = async (): Promise<void> => {
+        if (control === entry) {
+            showInfoToast("No changes to save");
+            return;
+        }
+
         const payload = {
             date: date.getTime(),
             entry: entry
