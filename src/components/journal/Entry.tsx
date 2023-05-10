@@ -15,6 +15,7 @@ export default function Entry(props: Props): JSX.Element {
     const today = new Date();
     const startDate = new Date(props.startDate + today.getTimezoneOffset() * 60 * 1000);
 
+    const [control, setControl] = useState(props.entry);
     const [entry, setEntry] = useState(props.entry);
     const [date, setDate] = useState(today);
 
@@ -63,6 +64,7 @@ export default function Entry(props: Props): JSX.Element {
             return;
         }
 
+        setControl(response.data);
         setEntry(response.data);
         setDate(date);
     };
@@ -100,6 +102,7 @@ export default function Entry(props: Props): JSX.Element {
             return;
         }
 
+        setControl(entry);
         showInfoToast(`Saved ${getReadableDate(date)}`);
     };
 
@@ -134,14 +137,14 @@ export default function Entry(props: Props): JSX.Element {
                 value={entry}
                 onChange={onTextareaChange}
             />
-            <div className="space-x-6">
+            <div className="mb-6 space-x-6">
                 {!isDateEarlier(addDays(date, -1), startDate) && (
                     <EntryButton onClick={onPrev}>
                         <ArrowSmallLeftIcon className="mr-2 h-4 w-4" /> Prev
                     </EntryButton>
                 )}
                 <EntryButton onClick={onSave}>
-                    <DocumentArrowDownIcon className="mr-2 h-4 w-4" /> Save
+                    <DocumentArrowDownIcon className="mr-2 h-4 w-4" /> Save {control !== entry && "*"}
                 </EntryButton>
                 {isDateEarlier(date, today) && (
                     <EntryButton onClick={onNext}>
