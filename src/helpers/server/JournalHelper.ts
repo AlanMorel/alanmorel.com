@@ -50,7 +50,10 @@ export async function getJournalEntry(date: Date): Promise<string> {
 export async function saveJournalEntry(date: Date, entry: string): Promise<boolean> {
     const path = getEntryPath(date);
 
+    const directory = path.substring(0, path.lastIndexOf("/"));
+
     try {
+        await fs.mkdir(directory, { recursive: true });
         await fs.writeFile(path, entry, "utf-8");
         return true;
     } catch (error) {
