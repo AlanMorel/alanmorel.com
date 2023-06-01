@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 interface Props {
     children: ReactNode;
-    onClick: () => void;
+    onClick: () => void | Promise<void>;
 }
 
 export default function EntryButton(props: Props): JSX.Element {
