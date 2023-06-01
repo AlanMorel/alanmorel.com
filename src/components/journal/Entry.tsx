@@ -104,6 +104,7 @@ export default function Entry(props: Props): JSX.Element {
 
         if (!response.success) {
             showInfoToast(response.data);
+            localStorage.setItem(getYYYYMMDD(date), entry);
             return;
         }
 
