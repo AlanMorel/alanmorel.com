@@ -139,7 +139,7 @@ export default function Entry(props: Props): JSX.Element {
                 />
             </div>
             <textarea
-                className="h-[calc(100vh-12rem)] w-full rounded-2xl bg-slate-100 p-4 outline-none"
+                className="h-[calc(100vh-16rem)] w-full rounded-2xl bg-slate-100 p-4 outline-none"
                 value={entry}
                 onChange={onTextareaChange}
             />
