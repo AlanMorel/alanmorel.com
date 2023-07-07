@@ -23,7 +23,8 @@
         "plugin:security/recommended",
         "next/core-web-vitals",
         "plugin:react/recommended",
-        "next"
+        "next",
+        "plugin:tailwindcss/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
