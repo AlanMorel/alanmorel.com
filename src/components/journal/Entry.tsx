@@ -2,7 +2,7 @@
 
 import EntryButton from "@/src/components/journal/EntryButton";
 import { showInfoToast } from "@/src/components/toasts/Toasts";
-import { addDays, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
+import { addDays, getNowDate, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
 import { ArrowSmallLeftIcon, ArrowSmallRightIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 
@@ -11,8 +11,8 @@ interface Props {
     entry: string;
 }
 
-export default function Entry(props: Props): JSX.Element {
-    const today = new Date();
+export default function Entry(props: Props): React.JSX.Element {
+    const today = getNowDate(new Date().getTime());
     const startDate = new Date(props.startDate + today.getTimezoneOffset() * 60 * 1000);
 
     const [control, setControl] = useState(props.entry);

@@ -3,16 +3,18 @@ import Config from "@/src/helpers/Config";
 import HotToast from "@/src/helpers/client/HotToast";
 import { getJournalEntry, isJournalAuthenticated } from "@/src/helpers/server/JournalHelper";
 import { withMetadata } from "@/src/helpers/server/MetadataHelper";
+import { getNowDate } from "@/src/helpers/shared/DateFormatter";
 import { redirect } from "next/navigation";
 
-export default async function JournalPage(): Promise<JSX.Element> {
+export default async function JournalPage(): Promise<React.JSX.Element> {
     const isAuthenticated = isJournalAuthenticated();
 
     if (!isAuthenticated) {
         return redirect("/");
     }
 
-    const today = new Date();
+    const now = new Date();
+    const today = getNowDate(now.getTime());
     const entry = await getJournalEntry(today);
 
     return (

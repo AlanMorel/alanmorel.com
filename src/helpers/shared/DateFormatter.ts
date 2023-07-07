@@ -1,3 +1,9 @@
+export function getNowDate(date: number, offset: number = 5): Date {
+    const timeOffset = offset * 60 * 60 * 1000;
+
+    return new Date(date - timeOffset);
+}
+
 export function formatDatestamp(date: string | Date): string {
     const options: Intl.DateTimeFormatOptions = {
         month: "short",
