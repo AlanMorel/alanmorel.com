@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function WindowsIcon(): JSX.Element {
+export default function WindowsIcon(): ReactElement {
     return (
         <Icon viewBox="512 512">
             <polygon fill="#90c300" points="242.526,40.421 512,0 512,239.832 242.526,239.832" />

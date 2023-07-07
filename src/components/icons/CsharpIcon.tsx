@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function CsharpIcon(): JSX.Element {
+export default function CsharpIcon(): ReactElement {
     return (
         <Icon viewBox="1343 1471">
             <g fill="#05930c">

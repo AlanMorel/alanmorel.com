@@ -2,14 +2,14 @@
 
 import { Location } from "@/src/components/photography/Photography";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 
 interface Props {
     location: Location;
     close: () => void;
 }
 
-export default function Lightbox(props: Props): JSX.Element {
+export default function Lightbox(props: Props): ReactElement {
     const { location, close } = props;
 
     const [index, setIndex] = useState(0);

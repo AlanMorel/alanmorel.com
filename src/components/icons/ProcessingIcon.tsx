@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function ProcessingIcon(): JSX.Element {
+export default function ProcessingIcon(): ReactElement {
     return (
         <Icon viewBox="710 690">
             <path d="M400 500C700 500 700 100 400 100" stroke="#0468FF" strokeWidth="150px" fill="none" />

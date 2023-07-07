@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function DockerIcon(): JSX.Element {
+export default function DockerIcon(): ReactElement {
     return (
         <Icon viewBox="512 512">
             <rect height="43.193" fill="#099cec" width="47.506" x="229.999" y="147.225" />

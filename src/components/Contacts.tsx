@@ -3,6 +3,7 @@ import GitHubIcon from "@/src/components/icons/GitHubIcon";
 import InstagramIcon from "@/src/components/icons/InstagramIcon";
 import LinkedInIcon from "@/src/components/icons/LinkedInIcon";
 import TwitterIcon from "@/src/components/icons/TwitterIcon";
+import { ReactElement } from "react";
 
 const contacts = [
     {
@@ -32,7 +33,7 @@ const contacts = [
     }
 ];
 
-export default function Contacts(): JSX.Element {
+export default function Contacts(): ReactElement {
     return (
         <ul className="mb-4 mt-4 flex list-none flex-wrap justify-center">
             {contacts.map(contact => (

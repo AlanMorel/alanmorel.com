@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function StylusIcon(): JSX.Element {
+export default function StylusIcon(): ReactElement {
     return (
         <Icon viewBox="393 241">
             <path

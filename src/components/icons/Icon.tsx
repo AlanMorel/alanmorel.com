@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 
 interface Props {
     children: ReactNode;
@@ -6,7 +6,7 @@ interface Props {
     fill?: string;
 }
 
-export default function Contacts(props: Props): JSX.Element {
+export default function Contacts(props: Props): ReactElement {
     const { children, viewBox, fill } = props;
 
     return (

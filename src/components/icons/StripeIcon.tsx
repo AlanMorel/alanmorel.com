@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function StripeIcon(): JSX.Element {
+export default function StripeIcon(): ReactElement {
     return (
         <Icon viewBox="28 28">
             <rect fill="#6772e5" width="28" height="28" rx="6.48" ry="6.48" />

@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function LinuxIcon(): JSX.Element {
+export default function LinuxIcon(): ReactElement {
     return (
         <Icon viewBox="266 312">
             <g transform="translate(-3.3359375,285.2793)">

@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function GooglePlayIcon(): JSX.Element {
+export default function GooglePlayIcon(): ReactElement {
     return (
         <Icon viewBox="289 289">
             <path

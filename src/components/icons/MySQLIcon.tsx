@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function MySQLIcon(): JSX.Element {
+export default function MySQLIcon(): ReactElement {
     return (
         <Icon viewBox="1000 1000">
             <path

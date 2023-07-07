@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function TypeScriptIcon(): JSX.Element {
+export default function TypeScriptIcon(): ReactElement {
     return (
         <Icon viewBox="512 512">
             <rect width="512" height="512" rx="50" fill="#3178c6" />

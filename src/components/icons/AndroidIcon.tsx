@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function AndroidIcon(): JSX.Element {
+export default function AndroidIcon(): ReactElement {
     return (
         <Icon viewBox="553 553">
             <g fill="#3ddb84">

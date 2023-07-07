@@ -6,7 +6,7 @@ import { withMetadata } from "@/src/helpers/server/MetadataHelper";
 import { getNowDate } from "@/src/helpers/shared/DateFormatter";
 import { redirect } from "next/navigation";
 
-export default async function JournalPage(): Promise<React.JSX.Element> {
+export default async function JournalPage(): Promise<React.ReactElement> {
     const isAuthenticated = isJournalAuthenticated();
 
     if (!isAuthenticated) {

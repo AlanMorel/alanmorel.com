@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function MacIcon(): JSX.Element {
+export default function MacIcon(): ReactElement {
     return (
         <Icon viewBox="1000 1187.198">
             <path

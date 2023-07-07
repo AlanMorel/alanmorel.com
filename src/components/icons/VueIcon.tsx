@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function VueIcon(): JSX.Element {
+export default function VueIcon(): ReactElement {
     return (
         <Icon viewBox="261.76 226.69">
             <g transform="matrix(1.3333 0 0 -1.3333 -76.311 313.34)">

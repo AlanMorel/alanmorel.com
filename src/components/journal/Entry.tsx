@@ -11,7 +11,7 @@ interface Props {
     entry: string;
 }
 
-export default function Entry(props: Props): React.JSX.Element {
+export default function Entry(props: Props): React.ReactElement {
     const today = getNowDate(new Date().getTime());
     const startDate = new Date(props.startDate + today.getTimezoneOffset() * 60 * 1000);
 

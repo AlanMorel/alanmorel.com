@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function MongoDBIcon(): JSX.Element {
+export default function MongoDBIcon(): ReactElement {
     return (
         <Icon viewBox="48 48">
             <defs>

@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function ElectronIcon(): JSX.Element {
+export default function ElectronIcon(): ReactElement {
     return (
         <Icon viewBox="256 256">
             <g fill="none" fillRule="evenodd">

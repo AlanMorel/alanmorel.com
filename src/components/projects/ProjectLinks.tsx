@@ -1,6 +1,7 @@
 import getIcon from "@/src/components/Icons";
 import Pill from "@/src/components/Pill";
 import { Project } from "@/src/components/projects/Projects";
+import { ReactElement } from "react";
 
 interface Prop {
     project: Project;
@@ -22,7 +23,7 @@ const getIconName = (linkName: string): string => {
     return "web";
 };
 
-export default function ProjectLinks(props: Prop): JSX.Element {
+export default function ProjectLinks(props: Prop): ReactElement {
     const { project } = props;
 
     return (

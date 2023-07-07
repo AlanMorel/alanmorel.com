@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { ReactElement } from "react";
 
-export default function Intro(): JSX.Element {
+export default function Intro(): ReactElement {
     return (
         <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-10 px-4 pb-8 pt-12 sm:pt-16 md:gap-x-14">
             <div className="col-span-2 mx-auto w-full max-w-xs sm:col-span-1">

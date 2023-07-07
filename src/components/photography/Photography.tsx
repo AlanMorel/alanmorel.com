@@ -2,7 +2,7 @@
 
 import Lightbox from "@/src/components/photography/Lightbox";
 import Image from "next/image";
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 
 export interface Location {
     header: string;
@@ -76,7 +76,7 @@ const locations: Location[] = [
     }
 ];
 
-export default function Photography(): JSX.Element {
+export default function Photography(): ReactElement {
     const [location, setLocation] = useState<Location | null>(null);
 
     const closeLightbox = (): void => {

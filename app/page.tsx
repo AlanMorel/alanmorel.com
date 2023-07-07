@@ -3,8 +3,9 @@ import Intro from "@/src/components/Intro";
 import Photography from "@/src/components/photography/Photography";
 import Projects from "@/src/components/projects/Projects";
 import StructuredData from "@/src/components/StructuredData";
+import { ReactElement } from "react";
 
-export default async function HomePage(): Promise<JSX.Element> {
+export default async function HomePage(): Promise<ReactElement> {
     return (
         <main className="bg-slate-50 tracking-[0.025rem]">
             <Intro />

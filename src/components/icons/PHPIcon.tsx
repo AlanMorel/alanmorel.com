@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function PHPIcon(): JSX.Element {
+export default function PHPIcon(): ReactElement {
     return (
         <Icon viewBox="512 512">
             <path

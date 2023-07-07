@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 
 interface Props {
     children: ReactNode;
     onClick: () => void | Promise<void>;
 }
 
-export default function EntryButton(props: Props): JSX.Element {
+export default function EntryButton(props: Props): ReactElement {
     const { children, onClick } = props;
 
     return (

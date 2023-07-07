@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function AWSIcon(): JSX.Element {
+export default function AWSIcon(): ReactElement {
     return (
         <Icon viewBox="251.038 259.969">
             <g fill="none" fillRule="evenodd">

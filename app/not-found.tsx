@@ -1,4 +1,6 @@
-export default function NotFound(): JSX.Element {
+import { ReactElement } from "react";
+
+export default function NotFound(): ReactElement {
     return (
         <>
             <h2>Not Found</h2>

@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function SassIcon(): JSX.Element {
+export default function SassIcon(): ReactElement {
     return (
         <Icon viewBox="547.8 410.6">
             <path

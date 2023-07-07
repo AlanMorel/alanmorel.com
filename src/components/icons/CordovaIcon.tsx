@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function CordovaIcon(): JSX.Element {
+export default function CordovaIcon(): ReactElement {
     return (
         <Icon viewBox="256 245">
             <path

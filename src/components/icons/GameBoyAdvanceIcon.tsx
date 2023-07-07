@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function GameBoyAdvanceIcon(): JSX.Element {
+export default function GameBoyAdvanceIcon(): ReactElement {
     return (
         <Icon viewBox="511 511">
             <path

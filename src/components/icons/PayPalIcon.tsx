@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function PayPalIcon(): JSX.Element {
+export default function PayPalIcon(): ReactElement {
     return (
         <Icon viewBox="25 30">
             <path

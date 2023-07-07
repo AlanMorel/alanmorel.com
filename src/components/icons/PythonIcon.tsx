@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function PythonIcon(): JSX.Element {
+export default function PythonIcon(): ReactElement {
     return (
         <Icon viewBox="110 110">
             <g transform="translate(-473.36088,-251.72485)">

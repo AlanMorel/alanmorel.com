@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function NETIcon(): JSX.Element {
+export default function NETIcon(): ReactElement {
     return (
         <Icon viewBox="128 128">
             <path

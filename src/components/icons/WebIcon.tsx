@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function WebIcon(): JSX.Element {
+export default function WebIcon(): ReactElement {
     return (
         <Icon viewBox="209 209">
             <path

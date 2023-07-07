@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function GithubIcon(): JSX.Element {
+export default function GithubIcon(): ReactElement {
     return (
         <Icon viewBox="1024 1024" fill="currentColor">
             <path

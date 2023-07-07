@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function CSSIcon(): JSX.Element {
+export default function CSSIcon(): ReactElement {
     return (
         <Icon viewBox="48 48">
             <path fill="#0277BD" d="M41 5H7l3 34 14 4 14-4z" />

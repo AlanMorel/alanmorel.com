@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function PostgreSQLIcon(): JSX.Element {
+export default function PostgreSQLIcon(): ReactElement {
     return (
         <Icon viewBox="432.1 445.4">
             <g fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="12.5">

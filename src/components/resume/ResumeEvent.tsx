@@ -1,10 +1,12 @@
+import { ReactElement } from "react";
+
 interface Props {
     header: string;
     subheader: string;
     date: string;
 }
 
-export default function ResumeEvent(props: Props): JSX.Element {
+export default function ResumeEvent(props: Props): ReactElement {
     const { header, subheader, date } = props;
 
     return (

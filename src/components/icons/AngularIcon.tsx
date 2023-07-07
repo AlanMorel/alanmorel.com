@@ -1,6 +1,7 @@
 import Icon from "@/src/components/icons/Icon";
+import { ReactElement } from "react";
 
-export default function AngularIcon(): JSX.Element {
+export default function AngularIcon(): ReactElement {
     return (
         <Icon viewBox="250 250">
             <g fill="#ff4f76">

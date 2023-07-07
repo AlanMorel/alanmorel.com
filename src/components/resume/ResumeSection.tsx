@@ -1,9 +1,11 @@
+import { ReactElement } from "react";
+
 interface Props {
     header: string;
     children: React.ReactNode;
 }
 
-export default function ResumeSection(props: Props): JSX.Element {
+export default function ResumeSection(props: Props): ReactElement {
     const { header, children } = props;
 
     return (

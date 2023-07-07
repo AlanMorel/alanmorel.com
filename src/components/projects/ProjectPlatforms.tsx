@@ -1,12 +1,13 @@
 import getIcon from "@/src/components/Icons";
 import Pill from "@/src/components/Pill";
 import { Project } from "@/src/components/projects/Projects";
+import { ReactElement } from "react";
 
 interface Prop {
     project: Project;
 }
 
-export default function ProjectPlatforms(props: Prop): JSX.Element {
+export default function ProjectPlatforms(props: Prop): ReactElement {
     const { project } = props;
 
     return (

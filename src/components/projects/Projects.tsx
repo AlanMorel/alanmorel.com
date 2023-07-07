@@ -3,6 +3,7 @@ import ProjectLinks from "@/src/components/projects/ProjectLinks";
 import ProjectPlatforms from "@/src/components/projects/ProjectPlatforms";
 import ProjectTechnologies from "@/src/components/projects/ProjectTechnologies";
 import DataJSON from "@/src/data.json" assert { type: "json" };
+import { ReactElement } from "react";
 
 export type Project = {
     name: string;
@@ -28,7 +29,7 @@ const getColor = (project: Project): string | undefined => {
     }
 };
 
-export default function Projects(): JSX.Element {
+export default function Projects(): ReactElement {
     const projects: Project[] = DataJSON.projects;
 
     return (

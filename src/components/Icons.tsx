@@ -34,8 +34,9 @@ import TypeScriptIcon from "@/src/components/icons/TypeScriptIcon";
 import VueIcon from "@/src/components/icons/VueIcon";
 import WebIcon from "@/src/components/icons/WebIcon";
 import WindowsIcon from "@/src/components/icons/WindowsIcon";
+import { ReactElement } from "react";
 
-export default function getIcon(slug: string): JSX.Element {
+export default function getIcon(slug: string): ReactElement {
     switch (slug) {
         case "android":
             return <AndroidIcon />;

@@ -1,6 +1,7 @@
 import ResumeEvent from "@/src/components/resume/ResumeEvent";
 import ResumeSection from "@/src/components/resume/ResumeSection";
 import DataJSON from "@/src/data.json" assert { type: "json" };
+import { ReactElement } from "react";
 
 export type Resume = {
     header: string;
@@ -17,7 +18,7 @@ export type Resume = {
     }[];
 };
 
-export default async function ResumePage(): Promise<JSX.Element> {
+export default async function ResumePage(): Promise<ReactElement> {
     const resume = DataJSON.resume;
 
     return (

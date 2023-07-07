@@ -1,10 +1,11 @@
 import { Project } from "@/src/components/projects/Projects";
+import { ReactElement } from "react";
 
 interface Prop {
     project: Project;
 }
 
-export default function ProjectImages(props: Prop): JSX.Element {
+export default function ProjectImages(props: Prop): ReactElement {
     const { project } = props;
 
     return (

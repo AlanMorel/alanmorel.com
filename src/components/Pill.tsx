@@ -1,10 +1,12 @@
+import { ReactElement } from "react";
+
 interface Prop {
-    Icon: JSX.Element;
+    Icon: ReactElement;
     label: string;
     className?: string;
 }
 
-export default function Pill(props: Prop): JSX.Element {
+export default function Pill(props: Prop): ReactElement {
     const { Icon, label, className } = props;
 
     return (
