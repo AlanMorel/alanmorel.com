@@ -1,6 +1,8 @@
 "use client";
 
+import useModalState from "@/src/atoms/ModalAtom";
 import EntryButton from "@/src/components/journal/EntryButton";
+import YesNoModal from "@/src/components/modals/YesNoModal";
 import { showInfoToast } from "@/src/components/toasts/Toasts";
 import { addDays, getNowDate, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
 import { ArrowSmallLeftIcon, ArrowSmallRightIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
@@ -18,6 +20,7 @@ export default function Entry(props: Props): React.ReactElement {
     const [control, setControl] = useState(props.entry);
     const [entry, setEntry] = useState(props.entry);
     const [date, setDate] = useState(today);
+    const { openModal, closeModal } = useModalState();
 
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent): void => {
@@ -69,16 +72,34 @@ export default function Entry(props: Props): React.ReactElement {
         setDate(date);
     };
 
-    const onPrev = (): void => {
+    const fetchPrev = async (): Promise<void> => {
         const newDate = addDays(date, -1);
-
+        closeModal();
         fetchNewEntry(newDate);
     };
 
-    const onNext = (): void => {
+    const fetchNext = async (): Promise<void> => {
         const newDate = addDays(date, 1);
-
+        closeModal();
         fetchNewEntry(newDate);
+    };
+
+    const onPrev = (): void => {
+        if (control !== entry) {
+            openModal(<YesNoModal title="Unsaved changes!" content="Do you want to proceed?" onYes={fetchPrev} />);
+            return;
+        }
+
+        fetchPrev();
+    };
+
+    const onNext = (): void => {
+        if (control !== entry) {
+            openModal(<YesNoModal title="Unsaved changes!" content="Do you want to proceed?" onYes={fetchNext} />);
+            return;
+        }
+
+        fetchNext();
     };
 
     const onSave = async (): Promise<void> => {

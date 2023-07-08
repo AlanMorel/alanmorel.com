@@ -1,4 +1,5 @@
 import Entry from "@/src/components/journal/Entry";
+import Modal from "@/src/components/modals/Modal";
 import Config from "@/src/helpers/Config";
 import HotToast from "@/src/helpers/client/HotToast";
 import { getJournalEntry, isJournalAuthenticated } from "@/src/helpers/server/JournalHelper";
@@ -23,6 +24,7 @@ export default async function JournalPage(): Promise<React.ReactElement> {
                 <h1 className="mb-2 mt-4 text-3xl font-bold">Journal</h1>
                 <Entry entry={entry} startDate={Config.journal.startDate.getTime()} />
             </div>
+            <Modal />
             <HotToast />
         </div>
     );
