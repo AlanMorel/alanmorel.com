@@ -7,18 +7,10 @@ import { Cross2Icon } from "@radix-ui/react-icons";
 import { ReactElement } from "react";
 
 export default function Modal(): ReactElement {
-    const { modal, openModal, closeModal } = useModalState();
-
-    const onOpenChange = (open: boolean): void => {
-        if (open) {
-            openModal(<></>);
-        } else {
-            closeModal();
-        }
-    };
+    const { modal, setOpenState } = useModalState();
 
     return (
-        <Root open={modal.open} onOpenChange={onOpenChange}>
+        <Root open={modal.open} onOpenChange={setOpenState}>
             <Portal>
                 <Overlay className="fixed inset-0 z-20 bg-black/25 data-[state=closed]:animate-fade-out data-[state=open]:animate-fade-in" />
                 <Content

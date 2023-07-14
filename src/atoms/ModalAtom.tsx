@@ -8,6 +8,7 @@ type ModalState = {
 
 interface IModalState {
     modal: ModalState;
+    setOpenState: (open: boolean) => void;
     openModal: (content: ReactElement) => void;
     closeModal: () => void;
 }
@@ -19,6 +20,14 @@ const modalAtom = atom<ModalState>({
 
 const useModalState = (): IModalState => {
     const [modal, setModal] = useAtom(modalAtom);
+
+    const setOpenState = (open: boolean): void => {
+        const newModal = {
+            content: modal.content,
+            open
+        };
+        setModal(newModal);
+    };
 
     const closeModal = (): void => {
         const newModal = {
@@ -38,6 +47,7 @@ const useModalState = (): IModalState => {
 
     return {
         modal,
+        setOpenState,
         openModal,
         closeModal
     };
