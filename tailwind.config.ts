@@ -12,7 +12,11 @@ export default {
                 enter: "fade-in 200ms ease-out, scale-up 200ms ease-out",
                 leave: "fade-out 150ms ease-in forwards, scale-down 150ms ease-in forwards",
                 fade: "fade-in 200ms cubic-bezier(.41,.73,.51,1.02)",
-                "slide-in": "slide-in 400ms cubic-bezier(.41,.73,.51,1.02)"
+                "slide-in": "slide-in 400ms cubic-bezier(.41,.73,.51,1.02)",
+                "fade-in": "fade-in 300ms ease-out",
+                "fade-out": "fade-out 300ms ease-in",
+                "enter-centered": "fade-in 300ms ease-out, scale-centered 300ms ease-out",
+                "leave-centered": "fade-out 200ms ease-in, scale-centered-reverse 200ms ease-in"
             },
             keyframes: {
                 "fade-out": {
@@ -53,6 +57,22 @@ export default {
                     },
                     "100%": {
                         transform: "translateY(0)"
+                    }
+                },
+                "scale-centered": {
+                    "0%": {
+                        transform: "translate(-50%, -50%) scale(0.95)"
+                    },
+                    "100%": {
+                        transform: "translate(-50%, -50%) scale(1)"
+                    }
+                },
+                "scale-centered-reverse": {
+                    "0%": {
+                        transform: "translate(-50%, -50%) scale(1)"
+                    },
+                    "100%": {
+                        transform: "translate(-50%, -50%) scale(0.95)"
                     }
                 }
             },

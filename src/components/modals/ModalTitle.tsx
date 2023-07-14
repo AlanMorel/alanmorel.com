@@ -1,4 +1,4 @@
-import { Dialog } from "@headlessui/react";
+import { Title } from "@radix-ui/react-dialog";
 import { ReactElement } from "react";
 
 interface Props {
@@ -8,9 +8,5 @@ interface Props {
 export default function ModalTitle(props: Props): ReactElement {
     const { children } = props;
 
-    return (
-        <Dialog.Title as="h3" className="mb-6 text-2xl font-bold leading-6 text-slate-900">
-            {children}
-        </Dialog.Title>
-    );
+    return <Title className="mb-6 text-2xl font-bold leading-6 text-slate-900">{children}</Title>;
 }
