@@ -5,7 +5,7 @@ import EntryButton from "@/src/components/journal/EntryButton";
 import YesNoModal from "@/src/components/modals/YesNoModal";
 import If from "@/src/components/other/If";
 import { showInfoToast } from "@/src/components/toasts/Toasts";
-import { addDays, getNowDate, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
+import { addDays, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
 import { ArrowSmallLeftIcon, ArrowSmallRightIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 
@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default function Entry(props: Props): React.ReactElement {
-    const today = getNowDate(new Date().getTime());
+    const today = new Date();
     const startDate = new Date(props.startDate + today.getTimezoneOffset() * 60 * 1000);
 
     const [control, setControl] = useState(props.entry);
