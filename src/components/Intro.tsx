@@ -3,9 +3,13 @@ import { ReactElement } from "react";
 
 export default function Intro(): ReactElement {
     return (
-        <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-10 px-4 pb-8 pt-12 sm:pt-16 md:gap-x-14">
+        <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-4 px-4 pb-8 pt-12 sm:gap-x-14 sm:pt-16">
             <div className="col-span-2 mx-auto w-full max-w-xs sm:col-span-1">
-                <img src="/images/profile-picture.png" className="w-full rounded-full shadow-lg" alt="profile pic" />
+                <img
+                    src="/images/profile-picture.png"
+                    className="mx-auto max-w-[10rem] rounded-full shadow-lg sm:w-full sm:max-w-full"
+                    alt="profile pic"
+                />
             </div>
             <div className="col-span-2 text-gray-900 sm:col-span-1">
                 <div className="mx-auto w-full text-center sm:text-left">
