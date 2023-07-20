@@ -35,14 +35,15 @@ const contacts = [
 
 export default function Contacts(): ReactElement {
     return (
-        <ul className="mb-4 mt-4 flex list-none flex-wrap justify-center">
+        <ul className="my-4 flex list-none flex-wrap justify-center">
             {contacts.map(contact => (
-                <li key={contact.type} className="mb-8 ml-4 mr-4">
+                <li key={contact.type} className="mx-4 mb-8">
                     <a
                         href={contact.href}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-slate-400 transition hover:text-slate-600"
+                        aria-label={`Link to my ${contact.type} profile`}
                     >
                         <div className="h-10 w-10 ">
                             <contact.Icon />

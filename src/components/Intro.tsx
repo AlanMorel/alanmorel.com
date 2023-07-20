@@ -1,3 +1,5 @@
+import profilePic from "@/public/images/profile-picture.png";
+import Image from "next/image";
 import Link from "next/link";
 import { ReactElement } from "react";
 
@@ -5,10 +7,11 @@ export default function Intro(): ReactElement {
     return (
         <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-4 px-4 pb-8 pt-12 sm:gap-x-14 sm:pt-16">
             <div className="col-span-2 mx-auto w-full max-w-xs sm:col-span-1">
-                <img
-                    src="/images/profile-picture.png"
+                <Image
+                    src={profilePic}
                     className="mx-auto max-w-[10rem] rounded-full shadow-lg sm:w-full sm:max-w-full"
                     alt="profile pic"
+                    priority
                 />
             </div>
             <div className="col-span-2 text-gray-900 sm:col-span-1">

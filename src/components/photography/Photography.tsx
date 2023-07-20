@@ -101,9 +101,10 @@ export default function Photography(): ReactElement {
                                     src={`/images/photos/${location.slug}/DSC0${location.images[0]}.jpg`}
                                     alt={location.header}
                                     loading="lazy"
-                                    width={4000}
-                                    height={6000}
+                                    width={180}
+                                    height={270}
                                     className="w-full rounded-md object-cover object-right"
+                                    quality={50}
                                 />
                                 <div className="absolute inset-0 w-full cursor-pointer rounded-lg bg-gradient-to-b from-transparent to-slate-900 opacity-50 transition hover:opacity-30" />
                             </div>

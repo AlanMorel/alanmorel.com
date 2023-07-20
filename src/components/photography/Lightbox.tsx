@@ -56,7 +56,7 @@ export default function Lightbox(props: Props): ReactElement {
         >
             <div className="relative animate-slide-in duration-slow">
                 <button
-                    className="absolute right-full top-1/2 mx-6 -translate-y-1/2 transform text-5xl font-bold text-white focus:outline-none"
+                    className="absolute right-full top-1/2 mx-6 -translate-y-1/2 text-5xl font-bold text-white focus:outline-none"
                     onClick={handlePrev}
                 >
                     «
@@ -66,11 +66,11 @@ export default function Lightbox(props: Props): ReactElement {
                     className="max-h-[calc(100vh-10rem)] w-full max-w-2xl rounded-xl"
                     alt={location.header}
                     loading="lazy"
-                    width={4000}
-                    height={6000}
+                    width={1000}
+                    height={1500}
                 />
                 <button
-                    className="absolute left-full top-1/2 mx-6 -translate-y-1/2 transform text-5xl font-bold text-white focus:outline-none"
+                    className="absolute left-full top-1/2 mx-6 -translate-y-1/2 text-5xl font-bold text-white focus:outline-none"
                     onClick={handleNext}
                 >
                     »
@@ -87,8 +87,8 @@ export default function Lightbox(props: Props): ReactElement {
                                 )}`}
                                 onClick={(e: React.MouseEvent<HTMLImageElement>): void => selectPhoto(e, i)}
                                 loading="lazy"
-                                width={4000}
-                                height={6000}
+                                width={1000}
+                                height={1500}
                                 alt={location.header}
                             />
                         </li>
