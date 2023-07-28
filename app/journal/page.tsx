@@ -5,8 +5,9 @@ import HotToast from "@/src/helpers/client/HotToast";
 import { getJournalEntry, isJournalAuthenticated } from "@/src/helpers/server/JournalHelper";
 import { withMetadata } from "@/src/helpers/server/MetadataHelper";
 import { redirect } from "next/navigation";
+import { ReactElement } from "react";
 
-export default async function JournalPage(): Promise<React.ReactElement> {
+export default async function JournalPage(): Promise<ReactElement> {
     const isAuthenticated = isJournalAuthenticated();
 
     if (!isAuthenticated) {

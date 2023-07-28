@@ -7,14 +7,14 @@ import If from "@/src/components/other/If";
 import { showInfoToast } from "@/src/components/toasts/Toasts";
 import { addDays, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
 import { ArrowSmallLeftIcon, ArrowSmallRightIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 
 interface Props {
     startDate: number;
     entry: string;
 }
 
-export default function Entry(props: Props): React.ReactElement {
+export default function Entry(props: Props): ReactElement {
     const today = new Date();
     const startDate = new Date(props.startDate + today.getTimezoneOffset() * 60 * 1000);
 
@@ -36,7 +36,7 @@ export default function Entry(props: Props): React.ReactElement {
         return () => {
             document.removeEventListener("keydown", handleKeyDown);
         };
-    }, [entry]);
+    }, [entry, control]);
 
     const fetchNewEntry = async (date: Date): Promise<any> => {
         if (!isDateEarlier(addDays(date, -1), today)) {
