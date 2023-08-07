@@ -132,9 +132,18 @@ export default function Entry(props: Props): ReactElement {
 
         setControl(entry);
         showInfoToast(`Saved ${getReadableDate(date)}`);
+        window.onbeforeunload = null;
     };
 
     const onTextareaChange = (event: React.ChangeEvent<HTMLTextAreaElement>): void => {
+        if (control === event.target.value) {
+            window.onbeforeunload = null;
+        } else if (!window.onbeforeunload) {
+            window.onbeforeunload = (): boolean => {
+                return true;
+            };
+        }
+
         setEntry(event.target.value);
     };
 
