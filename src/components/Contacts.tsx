@@ -2,7 +2,7 @@ import FacebookIcon from "@/src/components/icons/FacebookIcon";
 import GitHubIcon from "@/src/components/icons/GitHubIcon";
 import InstagramIcon from "@/src/components/icons/InstagramIcon";
 import LinkedInIcon from "@/src/components/icons/LinkedInIcon";
-import TwitterIcon from "@/src/components/icons/TwitterIcon";
+import XIcon from "@/src/components/icons/XIcon";
 import { ReactElement } from "react";
 
 const contacts = [
@@ -22,9 +22,9 @@ const contacts = [
         Icon: FacebookIcon
     },
     {
-        type: "Twitter",
-        href: "https://twitter.com/AlanMorelX",
-        Icon: TwitterIcon
+        type: "X",
+        href: "https://x.com/AlanMorelX",
+        Icon: XIcon
     },
     {
         type: "Instagram",
