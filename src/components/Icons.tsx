@@ -16,19 +16,22 @@ import JavaIcon from "@/src/components/icons/JavaIcon";
 import JavaScriptIcon from "@/src/components/icons/JavaScriptIcon";
 import LinuxIcon from "@/src/components/icons/LinuxIcon";
 import MacIcon from "@/src/components/icons/MacIcon";
+import MDXIcon from "@/src/components/icons/MDXIcon";
 import MongoDBIcon from "@/src/components/icons/MongoDBIcon";
 import MySQLIcon from "@/src/components/icons/MySQLIcon";
 import NETIcon from "@/src/components/icons/NETIcon";
+import NextjsIcon from "@/src/components/icons/NextjsIcon";
 import NodeIcon from "@/src/components/icons/NodeIcon";
 import PayPalIcon from "@/src/components/icons/PayPalIcon";
 import PHPIcon from "@/src/components/icons/PHPIcon";
-import PostgreSQLIcon from "@/src/components/icons/PostgreSQLIcon";
+import PrismaIcon from "@/src/components/icons/PrismaIcon";
 import ProcessingIcon from "@/src/components/icons/ProcessingIcon";
 import PythonIcon from "@/src/components/icons/PythonIcon";
 import ReactIcon from "@/src/components/icons/ReactIcon";
 import SassIcon from "@/src/components/icons/SassIcon";
 import StripeIcon from "@/src/components/icons/StripeIcon";
 import StylusIcon from "@/src/components/icons/StylusIcon";
+import TailwindIcon from "@/src/components/icons/TailwindIcon";
 import TwitterIcon from "@/src/components/icons/TwitterIcon";
 import TypeScriptIcon from "@/src/components/icons/TypeScriptIcon";
 import VueIcon from "@/src/components/icons/VueIcon";
@@ -58,6 +61,7 @@ export default function getIcon(slug: string): ReactElement {
         case "aws s3":
         case "aws cloudfront":
         case "aws route 53":
+        case "aws ses":
             return <AWSIcon />;
         case "cordova":
             return <CordovaIcon />;
@@ -88,10 +92,14 @@ export default function getIcon(slug: string): ReactElement {
             return <LinuxIcon />;
         case "mac":
             return <MacIcon />;
+        case "mdx":
+            return <MDXIcon />;
         case "mongodb":
             return <MongoDBIcon />;
         case "mysql":
             return <MySQLIcon />;
+        case "next.js":
+            return <NextjsIcon />;
         case "asp.net":
         case ".net":
             return <NETIcon />;
@@ -104,8 +112,8 @@ export default function getIcon(slug: string): ReactElement {
             return <PayPalIcon />;
         case "php":
             return <PHPIcon />;
-        case "postgresql":
-            return <PostgreSQLIcon />;
+        case "prisma":
+            return <PrismaIcon />;
         case "processing":
             return <ProcessingIcon />;
         case "python":
@@ -121,6 +129,8 @@ export default function getIcon(slug: string): ReactElement {
             return <StripeIcon />;
         case "stylus":
             return <StylusIcon />;
+        case "tailwind":
+            return <TailwindIcon />;
         case "twitter":
             return <TwitterIcon />;
         case "typescript":

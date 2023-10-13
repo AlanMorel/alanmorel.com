@@ -134,7 +134,38 @@
     },
     "projects": [
         {
-            "name": "Sabe.io",
+            "name": "Mailriser",
+            "slug": "mailriser",
+            "background": "#2563eb",
+            "darkBackground": "#002066",
+            "theme": "light",
+            "date": "June 2023",
+            "description": "Send bulk emails cheaply using Amazon SES and have it all: low-cost, high delivery rate, and happy users.",
+            "images": 3,
+            "technologies": [
+                "Next.js",
+                "TypeScript",
+                "Tailwind",
+                "React",
+                "MDX",
+                "Node",
+                "Docker",
+                "AWS SES",
+                "Prisma",
+                "MySQL",
+                "Sass",
+                "Stripe"
+            ],
+            "platforms": ["Web"],
+            "links": [
+                {
+                    "name": "Mailriser.com",
+                    "url": "https://mailriser.com/"
+                }
+            ]
+        },
+        {
+            "name": "Sabe",
             "slug": "sabe",
             "background": "#26272f",
             "darkBackground": "#1c1d24",
@@ -146,7 +177,7 @@
                 "Node",
                 "Docker",
                 "Express",
-                "PostgreSQL",
+                "MySQL",
                 "TypeScript",
                 "JavaScript",
                 "HTML",
@@ -163,7 +194,7 @@
             ]
         },
         {
-            "name": "Mixcurb.com",
+            "name": "Mixcurb",
             "slug": "mixcurb",
             "background": "#2256ef",
             "darkBackground": "#000f39",
