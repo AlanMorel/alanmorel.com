@@ -7,7 +7,7 @@ import If from "@/src/components/other/If";
 import { showInfoToast } from "@/src/components/toasts/Toasts";
 import { addDays, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
 import { ArrowSmallLeftIcon, ArrowSmallRightIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
-import { ReactElement, useEffect, useState } from "react";
+import { ChangeEvent, ReactElement, useEffect, useState } from "react";
 
 interface Props {
     startDate: number;
@@ -135,7 +135,7 @@ export default function Entry(props: Props): ReactElement {
         window.onbeforeunload = null;
     };
 
-    const onTextareaChange = (event: React.ChangeEvent<HTMLTextAreaElement>): void => {
+    const onTextareaChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
         if (control === event.target.value) {
             window.onbeforeunload = null;
         } else if (!window.onbeforeunload) {
@@ -147,7 +147,7 @@ export default function Entry(props: Props): ReactElement {
         setEntry(event.target.value);
     };
 
-    const onDateChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const onDateChange = (event: ChangeEvent<HTMLInputElement>): void => {
         const rawDate = new Date(event.target.value);
 
         const newDate = new Date(rawDate.getTime() + rawDate.getTimezoneOffset() * 60 * 1000);

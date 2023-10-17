@@ -1,10 +1,10 @@
 import { XMarkIcon } from "@heroicons/react/24/solid";
-import { ReactElement } from "react";
+import { ForwardRefExoticComponent, ReactElement, SVGProps } from "react";
 import toast, { Toast } from "react-hot-toast";
 
 interface Props {
     instance: Toast;
-    Icon: React.ForwardRefExoticComponent<Omit<React.SVGProps<SVGSVGElement>, "ref">>;
+    Icon: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, "ref">>;
     message: string;
 }
 

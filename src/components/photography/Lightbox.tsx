@@ -2,7 +2,7 @@
 
 import { Location } from "@/src/components/photography/Photography";
 import Image from "next/image";
-import { ReactElement, useEffect, useState } from "react";
+import { MouseEvent, ReactElement, useEffect, useState } from "react";
 
 interface Props {
     location: Location;
@@ -30,17 +30,17 @@ export default function Lightbox(props: Props): ReactElement {
         };
     }, [index]);
 
-    const handlePrev = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    const handlePrev = (e: MouseEvent<HTMLButtonElement>): void => {
         e.stopPropagation();
         setIndex((index - 1 + location.images.length) % location.images.length);
     };
 
-    const handleNext = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    const handleNext = (e: MouseEvent<HTMLButtonElement>): void => {
         e.stopPropagation();
         setIndex((index + 1) % location.images.length);
     };
 
-    const selectPhoto = (e: React.MouseEvent<HTMLImageElement>, index: number): void => {
+    const selectPhoto = (e: MouseEvent<HTMLImageElement>, index: number): void => {
         e.stopPropagation();
         setIndex(index);
     };
@@ -85,7 +85,7 @@ export default function Lightbox(props: Props): ReactElement {
                                 className={`w-[5rem] cursor-pointer rounded-sm transition hover:brightness-110 md:rounded ${getImageClasses(
                                     i
                                 )}`}
-                                onClick={(e: React.MouseEvent<HTMLImageElement>): void => selectPhoto(e, i)}
+                                onClick={(e: MouseEvent<HTMLImageElement>): void => selectPhoto(e, i)}
                                 loading="lazy"
                                 width={1000}
                                 height={1500}

@@ -1,8 +1,8 @@
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
 
 interface Props {
     header: string;
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
 export default function ResumeSection(props: Props): ReactElement {
