@@ -20,8 +20,10 @@ const google = {
     }
 };
 
-export default {
+const config = {
     app,
     metaInfo,
     google
 };
+
+export default config;

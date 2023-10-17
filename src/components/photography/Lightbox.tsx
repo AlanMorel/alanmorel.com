@@ -51,7 +51,7 @@ export default function Lightbox(props: Props): ReactElement {
 
     return (
         <div
-            className="fixed left-0 top-0 z-50 flex h-full w-full max-w-full animate-fade flex-col items-center justify-center bg-black bg-opacity-90 px-16 pb-36"
+            className="fixed left-0 top-0 z-50 flex h-full w-full max-w-full animate-fade flex-col items-center justify-center bg-black/90 px-16 pb-36"
             onClick={close}
         >
             <div className="relative animate-slide-in duration-slow">

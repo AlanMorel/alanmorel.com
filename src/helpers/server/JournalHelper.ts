@@ -52,6 +52,8 @@ export async function saveJournalEntry(date: Date, entry: string): Promise<boole
 
     const directory = path.substring(0, path.lastIndexOf("/"));
 
+    Logger.log(`Date:\r\n${new Date()}\r\nEntry:\r\n${entry}`);
+
     try {
         await fs.mkdir(directory, { recursive: true });
         await fs.writeFile(path, entry, "utf-8");
