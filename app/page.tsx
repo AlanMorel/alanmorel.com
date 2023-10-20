@@ -7,7 +7,7 @@ import { ReactElement } from "react";
 
 export default async function HomePage(): Promise<ReactElement> {
     return (
-        <main className="bg-slate-50 tracking-[0.025rem]">
+        <main className="tracking-[0.025rem]">
             <Intro />
             <Contacts />
             <Photography />

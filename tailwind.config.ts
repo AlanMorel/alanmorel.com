@@ -1,8 +1,24 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 import defaultTheme from "tailwindcss/defaultTheme";
+import { createThemes } from "tw-colors";
 
 export default {
     content: ["./app/**/*.{ts,tsx}", "./src/components/**/*.{ts,tsx}"],
+    plugins: [
+        createThemes({
+            light: {
+                white: colors.white,
+                black: colors.black,
+                slate: colors.slate
+            },
+            dark: {
+                white: colors.black,
+                black: colors.white,
+                slate: reverseObjectValues(colors.slate)
+            }
+        })
+    ],
     theme: {
         extend: {
             fontFamily: {
@@ -17,6 +33,12 @@ export default {
                 "fade-out": "fade-out 300ms ease-in",
                 "enter-centered": "fade-in 300ms ease-out, scale-centered 300ms ease-out",
                 "leave-centered": "fade-out 200ms ease-in, scale-centered-reverse 200ms ease-in"
+            },
+            transitionDuration: {
+                DEFAULT: "100ms",
+                fast: "650ms",
+                medium: "800ms",
+                slow: "950ms"
             },
             keyframes: {
                 "fade-out": {
@@ -75,13 +97,21 @@ export default {
                         transform: "translate(-50%, -50%) scale(0.95)"
                     }
                 }
-            },
-            transitionDuration: {
-                DEFAULT: "100ms",
-                fast: "650ms",
-                medium: "800ms",
-                slow: "950ms"
             }
         }
     }
 } satisfies Config;
+
+function reverseObjectValues(inputObject: Record<string, any>): Record<string, any> {
+    const reversedObject: Record<string, any> = {};
+
+    const objectKeys = Object.keys(inputObject);
+    const objectValues = Object.values(inputObject);
+
+    for (let i = 0; i < objectKeys.length; i++) {
+        const reversedIndex = objectKeys.length - 1 - i;
+        reversedObject[objectKeys[i]] = objectValues[reversedIndex];
+    }
+
+    return reversedObject;
+}

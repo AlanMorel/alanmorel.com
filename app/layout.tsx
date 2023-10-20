@@ -17,8 +17,8 @@ export default async function RootLayout(props: Props): Promise<ReactElement> {
     const { children } = props;
 
     return (
-        <html lang="en" className={`${inter.variable}`}>
-            <body className="m-0 font-text">{children}</body>
+        <html lang="en" className={`${inter.variable}`} data-theme="light">
+            <body className="m-0 bg-slate-50 font-text text-black">{children}</body>
             <Analytics />
         </html>
     );

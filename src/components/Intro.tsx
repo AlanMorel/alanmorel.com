@@ -14,7 +14,7 @@ export default function Intro(): ReactElement {
                     priority
                 />
             </div>
-            <div className="col-span-2 text-gray-900 sm:col-span-1">
+            <div className="col-span-2 text-slate-900 sm:col-span-1">
                 <div className="mx-auto w-full text-center sm:text-left">
                     <h1 className="highlight mx-auto my-0 mb-4 inline-flex text-6xl font-bold leading-none tracking-tighter sm:text-7xl md:text-8xl">
                         Alan Morel

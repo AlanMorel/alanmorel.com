@@ -28,8 +28,8 @@ const variants = {
         textColor: "text-black",
         bgColor: "bg-white",
         borderColor: "border-white",
-        borderHoverColor: "hover:border-gray-200",
-        bgHoverColor: "hover:bg-gray-200"
+        borderHoverColor: "hover:border-slate-200",
+        bgHoverColor: "hover:bg-slate-200"
     }
 };
 
