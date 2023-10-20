@@ -2,8 +2,8 @@
 
 import useModalState from "@/src/atoms/ModalAtom";
 import { cn } from "@/src/components/other/ClassNamesHelper";
+import { XMarkIcon } from "@heroicons/react/24/solid";
 import { Close, Content, Overlay, Portal, Root } from "@radix-ui/react-dialog";
-import { Cross2Icon } from "@radix-ui/react-icons";
 import { ReactElement } from "react";
 
 export default function Modal(): ReactElement {
@@ -30,7 +30,7 @@ export default function Modal(): ReactElement {
                             "focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75"
                         )}
                     >
-                        <Cross2Icon className="h-5 w-5 text-slate-400 group-hover:text-black" />
+                        <XMarkIcon className="h-5 w-5 text-slate-400 group-hover:text-black" />
                         <span className="sr-only">Close</span>
                     </Close>
                 </Content>
