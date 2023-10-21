@@ -9,7 +9,7 @@ export function redirects() {
     }
 }
 
-const nextConfig = {
+const config = {
     reactStrictMode: true,
     swcMinify: true,
     images: {
@@ -20,4 +20,4 @@ const nextConfig = {
     }
 };
 
-export default nextConfig;
+export default config;

@@ -4,7 +4,7 @@ This repository hosts home to the code that powers my [personal site](https://al
 
 ## Installation
 
-Install node, npm, clone this repository, then install the dependencies
+Install node, pnpm, clone this repository, then install the dependencies
 
 ```sh
 git clone https://github.com/AlanMorel/alanmorel.com
