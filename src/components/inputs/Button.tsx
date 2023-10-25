@@ -1,5 +1,6 @@
 "use client";
 
+import { tw } from "@/src/components/other/ClassNamesHelper";
 import { ButtonHTMLAttributes, DetailedHTMLProps, MouseEvent, ReactElement } from "react";
 
 interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
@@ -74,7 +75,7 @@ export default function Button(props: Props): ReactElement {
     };
 
     return (
-        <button className={classes.join(" ")} onClick={onClickHandler} type={type}>
+        <button className={tw(classes)} onClick={onClickHandler} type={type}>
             {text}
         </button>
     );

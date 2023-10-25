@@ -1,3 +1,4 @@
+import { tw } from "@/src/components/other/ClassNamesHelper";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { ForwardRefExoticComponent, ReactElement, SVGProps } from "react";
 import toast, { Toast } from "react-hot-toast";
@@ -18,7 +19,10 @@ const ToastContainer = (props: Props): ReactElement => {
     return (
         <div
             id="toast-default"
-            className={`flex w-full max-w-sm items-center rounded-lg bg-slate-600 p-4 text-slate-100 shadow ${animateClass}`}
+            className={tw(
+                "flex w-full max-w-sm items-center rounded-lg bg-slate-600 p-4 text-slate-100 shadow",
+                animateClass
+            )}
             role="alert"
         >
             <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white">

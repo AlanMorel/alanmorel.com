@@ -1,5 +1,6 @@
 "use client";
 
+import { tw } from "@/src/components/other/ClassNamesHelper";
 import { Location } from "@/src/components/photography/Photography";
 import Image from "next/image";
 import { MouseEvent, ReactElement, useEffect, useState } from "react";
@@ -82,9 +83,10 @@ export default function Lightbox(props: Props): ReactElement {
                         <li key={image}>
                             <Image
                                 src={`/images/photos/${location.slug}/DSC0${image}.jpg`}
-                                className={`w-[5rem] cursor-pointer rounded-sm transition hover:brightness-110 md:rounded ${getImageClasses(
-                                    i
-                                )}`}
+                                className={tw(
+                                    "w-[5rem] cursor-pointer rounded-sm transition hover:brightness-110 md:rounded",
+                                    getImageClasses(i)
+                                )}
                                 onClick={(e: MouseEvent<HTMLImageElement>): void => selectPhoto(e, i)}
                                 loading="lazy"
                                 width={1000}

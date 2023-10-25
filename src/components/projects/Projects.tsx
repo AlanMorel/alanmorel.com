@@ -1,3 +1,4 @@
+import { tw } from "@/src/components/other/ClassNamesHelper";
 import ProjectImages from "@/src/components/projects/ProjectImages";
 import ProjectLinks from "@/src/components/projects/ProjectLinks";
 import ProjectPlatforms from "@/src/components/projects/ProjectPlatforms";
@@ -37,9 +38,10 @@ export default function Projects(): ReactElement {
             {projects.map(project => (
                 <li key={project.name} style={{ backgroundColor: project.background }}>
                     <div
-                        className={`mx-auto grid max-w-[70rem] grid-cols-[1fr_4fr] grid-rows-[auto,_auto] gap-x-4 px-4 pt-4 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pb-4 sm:pt-8 ${getColor(
-                            project
-                        )}`}
+                        className={tw(
+                            "mx-auto grid max-w-[70rem] grid-cols-[1fr_4fr] grid-rows-[auto,_auto] gap-x-4 px-4 pt-4 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pb-4 sm:pt-8",
+                            getColor(project)
+                        )}
                     >
                         <div className="relative">
                             <img
