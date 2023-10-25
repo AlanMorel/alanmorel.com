@@ -9,7 +9,7 @@ interface Props {
     message: string;
 }
 
-const ToastContainer = (props: Props): ReactElement => {
+export default function ToastContainer(props: Props): ReactElement {
     const { instance, Icon, message } = props;
 
     const dismiss = (): void => toast.dismiss(instance.id);
@@ -40,6 +40,4 @@ const ToastContainer = (props: Props): ReactElement => {
             </button>
         </div>
     );
-};
-
-export default ToastContainer;
+}
