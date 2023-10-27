@@ -16,9 +16,9 @@
         "no-console": "warn",
         "no-debugger": "warn",
         "indent": "off",
-        "semi": 2,
+        "semi": "error",
         "quotes": [
-            2,
+            "error",
             "double",
             {
                 "avoidEscape": true,
@@ -29,8 +29,8 @@
         "no-case-declarations": "off",
         "prefer-template": "error",
         "eol-last": "error",
-        "no-undef": 1,
-        "no-prototype-builtins": 1,
+        "no-undef": "warn",
+        "no-prototype-builtins": "warn",
         "@typescript-eslint/explicit-function-return-type": "error",
         "@typescript-eslint/no-inferrable-types": "off",
         "@typescript-eslint/explicit-member-accessibility": "error",
