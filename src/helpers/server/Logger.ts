@@ -1,67 +1,89 @@
-import { pathExists } from "@/src/helpers/server/FileSystemHelper";
-import { formatTimestamp } from "@/src/helpers/shared/DateFormatter";
-import { promises as fs } from "fs";
-import picocolors from "picocolors";
-import { Formatter } from "picocolors/types";
+import { checkFileSize, createIfNotExists, deleteFile } from "@/src/helpers/server/FileSystemHelper";
+import pino, { Logger, StreamEntry, multistream } from "pino";
+import pretty from "pino-pretty";
+import { createStream } from "rotating-file-stream";
 
-const { blue, yellow, magenta } = picocolors;
+const base = "logs";
+const levels = ["info", "error", "fatal"];
 
-export class Logger {
-    public static log(message: string, id: string | null = null): void {
-        const color = blue;
-        this.print(message, color);
-        this.writeToFile("log", message, id);
-    }
+const getGenerator = (prefix: string, level: string) => {
+    return (time: number | Date): string => {
+        let directory = `${base}${prefix}/${level}`;
 
-    public static error(error: string, id: string | null = null): void {
-        const color = yellow;
-        this.print(error, color);
-        this.writeToFile("error", error, id);
-    }
+        if (!time) {
+            createIfNotExists(directory);
 
-    public static critical(error: string, id: string | null = null): void {
-        const color = yellow;
-        this.print(error, color);
-        this.writeToFile("error", error, id);
-        this.writeToFile("critical", error, id);
-    }
+            return `${directory}/${level}.log`;
+        }
 
-    public static debug(message: string, id: string | null = null): void {
-        const color = magenta;
-        this.print(message, color);
-        this.writeToFile("debug", message, id);
-    }
-
-    private static print(message: string, color: Formatter): void {
-        console.log(`${color(message)}`);
-        this.writeToFile("all", message);
-    }
-
-    private static async writeToFile(type: string, message: string, id: string | null = null): Promise<void> {
-        const now = new Date();
+        const now = new Date(time);
 
         const timestamp = now.toISOString().split("T")[0];
         const [year, month] = [...timestamp.split("-")];
 
-        const timestampReadable = formatTimestamp(now);
-        const log = `[${timestampReadable}]: ${message}\r\n`;
+        directory += `/${year}/${month}`;
 
-        await this.write(`logs/${type}/${year}/${month}`, timestamp, log);
+        createIfNotExists(directory);
 
-        if (id) {
-            await this.write(`logs/users/${id}/${type}/${year}/${month}`, timestamp, log);
+        return `${directory}/${timestamp}.log`;
+    };
+};
+
+function getStreams(prefix: string): StreamEntry<string>[] {
+    return [
+        ...levels.map(level => {
+            const stream = createStream(getGenerator(prefix, level), {
+                interval: "1d"
+            });
+
+            stream.addListener("rotated", (filename: string) => {
+                const size = checkFileSize(filename);
+
+                if (size === 0) {
+                    deleteFile(filename);
+                }
+            });
+
+            return {
+                level,
+                stream: stream
+            };
+        }),
+        {
+            stream: pretty({
+                colorize: true,
+                translateTime: "SYS:dd-mm-yyyy HH:MM:ss TT"
+            })
         }
-    }
-
-    private static async write(directory: string, timestamp: string, log: string): Promise<void> {
-        const path = `${directory}/${timestamp}.log`;
-
-        const exists = await pathExists(directory);
-
-        if (!exists) {
-            await fs.mkdir(directory, { recursive: true });
-        }
-
-        await fs.appendFile(path, log);
-    }
+    ];
 }
+
+const pinoOptions = {
+    level: "debug",
+    safe: true,
+    redact: {
+        paths: ["pid", "hostname"],
+        remove: true
+    }
+};
+
+function createPinoLogger(prefix: string): Logger {
+    return pino(pinoOptions, multistream(getStreams(prefix)));
+}
+
+const pinoLogger = createPinoLogger("");
+
+const logger = {
+    log: (message: string): void => {
+        pinoLogger.info(message);
+    },
+    error: (error: string): void => {
+        pinoLogger.error(error);
+    },
+    critical: (error: string): void => {
+        pinoLogger.error(error);
+        pinoLogger.fatal(error);
+    }
+};
+
+export default logger;

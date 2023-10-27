@@ -1,6 +1,6 @@
 import Config from "@/src/Config";
 import { default as ServerConfig } from "@/src/helpers/Config";
-import { Logger } from "@/src/helpers/server/Logger";
+import logger from "@/src/helpers/server/Logger";
 import { compareStrings, getRandomFilename } from "@/src/helpers/server/StringHelper";
 import { promises as fs } from "fs";
 
@@ -41,7 +41,7 @@ export async function POST(request: Request): Promise<Response> {
 
     await fs.writeFile(path, data);
 
-    Logger.log(`Uploaded ${file.name} as ${filename}.${extension} from ShareX successfully`);
+    logger.log(`Uploaded ${file.name} as ${filename}.${extension} from ShareX successfully`);
 
     const result = {
         link: `${Config.app.url}/${path}`

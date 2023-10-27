@@ -1,6 +1,6 @@
 import Config from "@/src/helpers/Config";
-import { pathExists } from "@/src/helpers/server/FileSystemHelper";
-import { Logger } from "@/src/helpers/server/Logger";
+import { fileExists } from "@/src/helpers/server/FileSystemHelper";
+import logger from "@/src/helpers/server/Logger";
 import { compareStrings } from "@/src/helpers/server/StringHelper";
 import { getYYYYMMDD } from "@/src/helpers/shared/DateFormatter";
 import { promises as fs } from "fs";
@@ -11,14 +11,14 @@ export function isJournalAuthenticated(): boolean {
     const password = cookieStore.get(Config.journal.cookieName)?.value;
 
     if (!password) {
-        Logger.critical("No password cookie found");
+        logger.critical("No password cookie found");
         return false;
     }
 
     const journalPassword = Config.journal.password;
 
     if (!compareStrings(password, journalPassword)) {
-        Logger.critical("Password cookie does not match");
+        logger.critical("Password cookie does not match");
         return false;
     }
 
@@ -38,7 +38,7 @@ function getEntryPath(date: Date): string {
 export async function getJournalEntry(date: Date): Promise<string> {
     const path = getEntryPath(date);
 
-    const entryExists = await pathExists(path);
+    const entryExists = await fileExists(path);
 
     if (entryExists) {
         return await fs.readFile(path, "utf-8");
@@ -52,14 +52,14 @@ export async function saveJournalEntry(date: Date, entry: string): Promise<boole
 
     const directory = path.substring(0, path.lastIndexOf("/"));
 
-    Logger.log(`Date:\r\n${new Date()}\r\nEntry:\r\n${entry}`);
+    logger.log(`Date:\r\n${new Date()}\r\nEntry:\r\n${entry}`);
 
     try {
         await fs.mkdir(directory, { recursive: true });
         await fs.writeFile(path, entry, "utf-8");
         return true;
     } catch (error) {
-        Logger.error(error as string);
+        logger.error(error as string);
     }
 
     return false;

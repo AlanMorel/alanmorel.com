@@ -1,4 +1,4 @@
-import { Logger } from "@/src/helpers/server/Logger";
+import logger from "@/src/helpers/server/Logger";
 import { NextResponse } from "next/server";
 
 export type Result = ResultSuccess | ResultFailure;
@@ -29,7 +29,7 @@ export function sendFailure(error: string = ""): NextResponse {
     } as ResultFailure;
 
     if (error.length) {
-        Logger.error(error);
+        logger.error(error);
     }
 
     return NextResponse.json(data);
