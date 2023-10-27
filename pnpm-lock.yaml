@@ -75,8 +75,8 @@ dependencies:
     specifier: ^3.3.5
     version: 3.3.5
   tw-colors:
-    specifier: ^3.1.1
-    version: 3.1.1(tailwindcss@3.3.5)
+    specifier: ^3.2.0
+    version: 3.2.0(tailwindcss@3.3.5)
   typescript:
     specifier: ^5.2.2
     version: 5.2.2
@@ -4582,8 +4582,8 @@ packages:
       safe-buffer: 5.2.1
     dev: false
 
-  /tw-colors@3.1.1(tailwindcss@3.3.5):
-    resolution: {integrity: sha512-HLLYN628NV1kRS6+wYH++MMRvFl3do3L43llxP60YjxuEp4JDviyvnj3dMPbmMFZTskT/x9lw16w9S2IGTID8A==}
+  /tw-colors@3.2.0(tailwindcss@3.3.5):
+    resolution: {integrity: sha512-R2gm6fPOqxPeNed2JMvYtbaqXGCBqvuXnET3K6bWRIu9lQo+zuVZYkLBbarZTbjogqGOfWav4mfAbyHjFPrQyw==}
     peerDependencies:
       tailwindcss: '>=3.0.0'
     dependencies:
