@@ -4,6 +4,8 @@ import { withMetadata } from "@/src/helpers/server/MetadataHelper";
 import { Inter } from "next/font/google";
 import { ReactElement, ReactNode } from "react";
 
+export { viewport } from "@/src/helpers/server/MetadataHelper";
+
 interface Props {
     children: ReactNode;
 }

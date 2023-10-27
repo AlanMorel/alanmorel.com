@@ -1,9 +1,15 @@
 import Config from "@/src/Config";
 import { redirect } from "next/navigation";
-import { Metadata } from "next/types";
+import { Metadata, Viewport } from "next/types";
+
+export const viewport: Viewport = {
+    colorScheme: "light",
+    width: "device-width",
+    initialScale: 1,
+    minimumScale: 1
+};
 
 type MetadataGenerator = (props: MetadataProps) => Promise<BaseMetadata>;
-
 type MetadataHandler = (props: MetadataProps) => Promise<Metadata>;
 
 export type BaseMetadata = {
@@ -43,7 +49,6 @@ const buildMetadata = (base: BaseMetadata): Metadata => {
         title: base.title,
         description: base.description,
         applicationName: Config.app.name,
-        colorScheme: "light",
         openGraph: {
             title: base.title,
             description: base.description,
@@ -118,11 +123,6 @@ const buildMetadata = (base: BaseMetadata): Metadata => {
                 rel: "apple-touch-icon-precomposed",
                 url: "/favicons/apple-touch-icon-152x152.png"
             }
-        },
-        viewport: {
-            width: "device-width",
-            initialScale: 1,
-            minimumScale: 1
         }
     };
 };

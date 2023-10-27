@@ -3,7 +3,7 @@ import colors from "tailwindcss/colors";
 import defaultTheme from "tailwindcss/defaultTheme";
 import { createThemes } from "tw-colors";
 
-export default {
+const config: Config = {
     content: ["./app/**/*.{ts,tsx}", "./src/components/**/*.{ts,tsx}"],
     plugins: [
         createThemes({
@@ -100,7 +100,7 @@ export default {
             }
         }
     }
-} satisfies Config;
+};
 
 function reverseObjectValues(inputObject: Record<string, any>): Record<string, any> {
     const reversedValues = Object.values(inputObject).reverse();
@@ -112,3 +112,5 @@ function reverseObjectValues(inputObject: Record<string, any>): Record<string, a
 
     return reversedObject;
 }
+
+export default config;
