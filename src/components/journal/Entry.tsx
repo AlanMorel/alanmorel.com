@@ -6,7 +6,7 @@ import YesNoModal from "@/src/components/modals/YesNoModal";
 import If from "@/src/components/other/If";
 import { showInfoToast } from "@/src/components/toasts/Toasts";
 import { addDays, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
-import { ArrowSmallLeftIcon, ArrowSmallRightIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
+import { ArrowLeft, ArrowRight, SaveIcon } from "lucide-react";
 import { ChangeEvent, ReactElement, useEffect, useState } from "react";
 
 interface Props {
@@ -177,16 +177,16 @@ export default function Entry(props: Props): ReactElement {
             <div className="mb-6 space-x-6">
                 <If condition={!isDateEarlier(addDays(date, -1), startDate)}>
                     <EntryButton onClick={onPrev}>
-                        <ArrowSmallLeftIcon className="mr-2 h-4 w-4" /> Prev
+                        <ArrowLeft className="mr-2 h-4 w-4" /> Prev
                     </EntryButton>
                 </If>
                 <EntryButton onClick={onSave}>
-                    <DocumentArrowDownIcon className="mr-2 h-4 w-4" /> Save
+                    <SaveIcon className="mr-2 h-4 w-4" /> Save
                     <If condition={control !== entry}> *</If>
                 </EntryButton>
                 <If condition={isDateEarlier(date, today)}>
                     <EntryButton onClick={onNext}>
-                        Next <ArrowSmallRightIcon className="ml-2 h-4 w-4" />
+                        Next <ArrowRight className="ml-2 h-4 w-4" />
                     </EntryButton>
                 </If>
             </div>
