@@ -1,21 +1,31 @@
 FROM node:20.1.0-alpine AS base
 
-ARG ENV
-
-RUN npm install -g pnpm
-
 WORKDIR /app
+
+ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED 1
+
+RUN npm install -g pnpm@8.9.0
+
+FROM base AS deps
 
 COPY package.json pnpm-lock.yaml ./
 
 RUN pnpm install --frozen-lockfile --prod
 
+FROM base AS builder
+
 COPY . .
+COPY --from=deps /app/node_modules ./node_modules
 
 RUN pnpm ts:check && pnpm build
 
-ENV NODE_ENV production
+FROM base AS app
 
-ENV NEXT_TELEMETRY_DISABLED 1
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.env ./.env
+COPY --from=builder /app/package.json ./package.json
 
 CMD ["pnpm", "start"]
