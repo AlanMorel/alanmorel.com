@@ -3,6 +3,7 @@ import GitHubIcon from "@/src/components/icons/GitHubIcon";
 import InstagramIcon from "@/src/components/icons/InstagramIcon";
 import LinkedInIcon from "@/src/components/icons/LinkedInIcon";
 import XIcon from "@/src/components/icons/XIcon";
+import ThemeSwitcher from "@/src/components/other/ThemeSwitcher";
 import { ReactElement } from "react";
 
 const contacts = [
@@ -51,6 +52,9 @@ export default function Contacts(): ReactElement {
                     </a>
                 </li>
             ))}
+            <li className="mx-4 mb-8">
+                <ThemeSwitcher />
+            </li>
         </ul>
     );
 }
