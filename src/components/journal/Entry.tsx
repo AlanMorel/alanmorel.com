@@ -4,6 +4,7 @@ import useModalState from "@/src/atoms/ModalAtom";
 import EntryButton from "@/src/components/journal/EntryButton";
 import YesNoModal from "@/src/components/modals/YesNoModal";
 import If from "@/src/components/other/If";
+import ThemeSwitcher from "@/src/components/other/ThemeSwitcher";
 import { showInfoToast } from "@/src/components/toasts/Toasts";
 import { addDays, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
 import { ArrowLeft, ArrowRight, SaveIcon } from "lucide-react";
@@ -162,7 +163,7 @@ export default function Entry(props: Props): ReactElement {
                 <input
                     type="date"
                     name="date"
-                    className="w-[1.25rem] outline-none"
+                    className="w-[1.25rem] bg-transparent outline-none dark:invert"
                     value={getYYYYMMDD(date)}
                     min={getYYYYMMDD(startDate)}
                     max={getYYYYMMDD(today)}
@@ -189,6 +190,9 @@ export default function Entry(props: Props): ReactElement {
                         Next <ArrowRight className="ml-2 h-4 w-4" />
                     </EntryButton>
                 </If>
+            </div>
+            <div className="absolute right-4">
+                <ThemeSwitcher />
             </div>
         </div>
     );
