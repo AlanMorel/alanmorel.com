@@ -1,4 +1,4 @@
-import { tw } from "@/src/components/other/ClassNamesHelper";
+import tw from "@/src/components/other/TailwindHelper";
 import { ReactElement } from "react";
 
 interface Prop {

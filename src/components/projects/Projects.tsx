@@ -1,4 +1,4 @@
-import { tw } from "@/src/components/other/ClassNamesHelper";
+import tw from "@/src/components/other/TailwindHelper";
 import ProjectImages from "@/src/components/projects/ProjectImages";
 import ProjectLinks from "@/src/components/projects/ProjectLinks";
 import ProjectPlatforms from "@/src/components/projects/ProjectPlatforms";
