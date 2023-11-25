@@ -18,7 +18,7 @@ const modalAtom = atom<ModalState>({
     open: false
 });
 
-function useModalState(): IModalState {
+function useModal(): IModalState {
     const [modal, setModal] = useAtom(modalAtom);
 
     function setOpenState(open: boolean): void {
@@ -53,4 +53,4 @@ function useModalState(): IModalState {
     };
 }
 
-export default useModalState;
+export default useModal;

@@ -1,6 +1,6 @@
 "use client";
 
-import useModalState from "@/src/atoms/ModalAtom";
+import useModal from "@/src/atoms/ModalAtom";
 import EntryButton from "@/src/components/journal/EntryButton";
 import YesNoModal from "@/src/components/modals/YesNoModal";
 import If from "@/src/components/other/If";
@@ -22,7 +22,7 @@ export default function Entry(props: Props): ReactElement {
     const [control, setControl] = useState(props.entry);
     const [entry, setEntry] = useState(props.entry);
     const [date, setDate] = useState(today);
-    const { openModal, closeModal } = useModalState();
+    const { openModal, closeModal } = useModal();
 
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent): void => {

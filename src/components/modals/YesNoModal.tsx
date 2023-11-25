@@ -1,6 +1,6 @@
 "useClient";
 
-import useModalState from "@/src/atoms/ModalAtom";
+import useModal from "@/src/atoms/ModalAtom";
 import Button from "@/src/components/inputs/Button";
 import ModalButtons from "@/src/components/modals/ModalButtons";
 import ModalContent from "@/src/components/modals/ModalContent";
@@ -15,7 +15,7 @@ interface Props {
 
 export default function YesNoModal(props: Props): ReactElement {
     const { title, content: description, onYes } = props;
-    const { closeModal } = useModalState();
+    const { closeModal } = useModal();
 
     return (
         <div className="w-screen max-w-lg">
