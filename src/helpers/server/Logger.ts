@@ -6,7 +6,7 @@ import { createStream } from "rotating-file-stream";
 const base = "logs";
 const levels = ["info", "error", "fatal"];
 
-const getGenerator = (prefix: string, level: string) => {
+function getGenerator(prefix: string, level: string) {
     return (time: number | Date): string => {
         let directory = `${base}${prefix}/${level}`;
 
@@ -27,7 +27,7 @@ const getGenerator = (prefix: string, level: string) => {
 
         return `${directory}/${timestamp}.log`;
     };
-};
+}
 
 function getStreams(prefix: string): StreamEntry<string>[] {
     return [
@@ -74,13 +74,13 @@ function createPinoLogger(prefix: string): Logger {
 const pinoLogger = createPinoLogger("");
 
 const logger = {
-    log: (message: string): void => {
+    log: function (message: string): void {
         pinoLogger.info(message);
     },
-    error: (error: string): void => {
+    error: function (error: string): void {
         pinoLogger.error(error);
     },
-    critical: (error: string): void => {
+    critical: function (error: string): void {
         pinoLogger.error(error);
         pinoLogger.fatal(error);
     }

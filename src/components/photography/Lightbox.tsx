@@ -31,24 +31,24 @@ export default function Lightbox(props: Props): ReactElement {
         };
     }, [index]);
 
-    const handlePrev = (e: MouseEvent<HTMLButtonElement>): void => {
+    function handlePrev(e: MouseEvent<HTMLButtonElement>): void {
         e.stopPropagation();
         setIndex((index - 1 + location.images.length) % location.images.length);
-    };
+    }
 
-    const handleNext = (e: MouseEvent<HTMLButtonElement>): void => {
+    function handleNext(e: MouseEvent<HTMLButtonElement>): void {
         e.stopPropagation();
         setIndex((index + 1) % location.images.length);
-    };
+    }
 
-    const selectPhoto = (e: MouseEvent<HTMLImageElement>, index: number): void => {
+    function selectPhoto(e: MouseEvent<HTMLImageElement>, index: number): void {
         e.stopPropagation();
         setIndex(index);
-    };
+    }
 
-    const getImageClasses = (i: number): string => {
+    function getImageClasses(i: number): string {
         return i === index ? "brightness-110" : "brightness-75";
-    };
+    }
 
     return (
         <div

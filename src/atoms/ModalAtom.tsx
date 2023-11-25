@@ -18,32 +18,32 @@ const modalAtom = atom<ModalState>({
     open: false
 });
 
-const useModalState = (): IModalState => {
+function useModalState(): IModalState {
     const [modal, setModal] = useAtom(modalAtom);
 
-    const setOpenState = (open: boolean): void => {
+    function setOpenState(open: boolean): void {
         const newModal = {
             content: modal.content,
             open
         };
         setModal(newModal);
-    };
+    }
 
-    const closeModal = (): void => {
+    function closeModal(): void {
         const newModal = {
             content: modal.content,
             open: false
         };
         setModal(newModal);
-    };
+    }
 
-    const openModal = (content: ReactElement): void => {
+    function openModal(content: ReactElement): void {
         const newModal = {
             content,
             open: true
         };
         setModal(newModal);
-    };
+    }
 
     return {
         modal,
@@ -51,6 +51,6 @@ const useModalState = (): IModalState => {
         openModal,
         closeModal
     };
-};
+}
 
 export default useModalState;

@@ -7,7 +7,7 @@ interface Prop {
     project: Project;
 }
 
-const getIconName = (linkName: string): string => {
+function getIconName(linkName: string): string {
     if (linkName.includes("windows")) {
         return "windows";
     } else if (linkName.includes("github")) {
@@ -21,7 +21,7 @@ const getIconName = (linkName: string): string => {
     }
 
     return "web";
-};
+}
 
 export default function ProjectLinks(props: Prop): ReactElement {
     const { project } = props;

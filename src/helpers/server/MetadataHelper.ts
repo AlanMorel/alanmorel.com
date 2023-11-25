@@ -23,7 +23,7 @@ export type MetadataProps = {
     searchParams: any;
 };
 
-export const withDynamicMetadata = (handler: MetadataGenerator): MetadataHandler => {
+export function withDynamicMetadata(handler: MetadataGenerator): MetadataHandler {
     return async function generateMetadata(props: MetadataProps): Promise<Metadata> {
         try {
             const baseMetadata = await handler(props);
@@ -33,11 +33,11 @@ export const withDynamicMetadata = (handler: MetadataGenerator): MetadataHandler
             return redirect("/error");
         }
     };
-};
+}
 
-export const withMetadata = (baseMetadata: BaseMetadata): Metadata => {
+export function withMetadata(baseMetadata: BaseMetadata): Metadata {
     return buildMetadata(baseMetadata);
-};
+}
 
 const favicon = "/favicons/favicon.ico";
 const image = "/images/meta-image.png";

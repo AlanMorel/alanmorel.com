@@ -79,13 +79,13 @@ const locations: Location[] = [
 export default function Photography(): ReactElement {
     const [location, setLocation] = useState<Location | null>(null);
 
-    const closeLightbox = (): void => {
+    function closeLightbox(): void {
         setLocation(null);
-    };
+    }
 
-    const openLightbox = (location: Location): void => {
+    function openLightbox(location: Location): void {
         setLocation(location);
-    };
+    }
 
     return (
         <div>

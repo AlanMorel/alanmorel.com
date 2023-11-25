@@ -39,7 +39,7 @@ export default function Entry(props: Props): ReactElement {
         };
     }, [entry, control]);
 
-    const fetchNewEntry = async (date: Date): Promise<any> => {
+    async function fetchNewEntry(date: Date): Promise<any> {
         if (!isDateEarlier(addDays(date, -1), today)) {
             showInfoToast("Cannot load future entries");
             return;
@@ -72,39 +72,39 @@ export default function Entry(props: Props): ReactElement {
         setControl(response.data);
         setEntry(response.data);
         setDate(date);
-    };
+    }
 
-    const fetchPrev = async (): Promise<void> => {
+    async function fetchPrev(): Promise<void> {
         const newDate = addDays(date, -1);
         closeModal();
         fetchNewEntry(newDate);
-    };
+    }
 
-    const fetchNext = async (): Promise<void> => {
+    async function fetchNext(): Promise<void> {
         const newDate = addDays(date, 1);
         closeModal();
         fetchNewEntry(newDate);
-    };
+    }
 
-    const onPrev = (): void => {
+    function onPrev(): void {
         if (control !== entry) {
             openModal(<YesNoModal title="Unsaved changes!" content="Do you want to proceed?" onYes={fetchPrev} />);
             return;
         }
 
         fetchPrev();
-    };
+    }
 
-    const onNext = (): void => {
+    function onNext(): void {
         if (control !== entry) {
             openModal(<YesNoModal title="Unsaved changes!" content="Do you want to proceed?" onYes={fetchNext} />);
             return;
         }
 
         fetchNext();
-    };
+    }
 
-    const onSave = async (): Promise<void> => {
+    async function onSave(): Promise<void> {
         if (control === entry) {
             showInfoToast("No changes to save");
             return;
@@ -134,9 +134,9 @@ export default function Entry(props: Props): ReactElement {
         setControl(entry);
         showInfoToast(`Saved ${getReadableDate(date)}`);
         window.onbeforeunload = null;
-    };
+    }
 
-    const onTextareaChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
+    function onTextareaChange(event: ChangeEvent<HTMLTextAreaElement>): void {
         if (control === event.target.value) {
             window.onbeforeunload = null;
         } else if (!window.onbeforeunload) {
@@ -146,15 +146,15 @@ export default function Entry(props: Props): ReactElement {
         }
 
         setEntry(event.target.value);
-    };
+    }
 
-    const onDateChange = (event: ChangeEvent<HTMLInputElement>): void => {
+    function onDateChange(event: ChangeEvent<HTMLInputElement>): void {
         const rawDate = new Date(event.target.value);
 
         const newDate = new Date(rawDate.getTime() + rawDate.getTimezoneOffset() * 60 * 1000);
 
         fetchNewEntry(newDate);
-    };
+    }
 
     return (
         <div>

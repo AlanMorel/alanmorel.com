@@ -65,14 +65,14 @@ export default function Button(props: Props): ReactElement {
 
     classes.push(intent.textColor);
 
-    const onClickHandler = (e: MouseEvent): void => {
+    function onClickHandler(e: MouseEvent): void {
         if (!onClick) {
             return;
         }
 
         e.preventDefault();
         onClick();
-    };
+    }
 
     return (
         <button className={tw(classes)} onClick={onClickHandler} type={type}>

@@ -22,13 +22,13 @@ export type Project = {
     }[];
 };
 
-const getColor = (project: Project): string | undefined => {
+function getColor(project: Project): string | undefined {
     if (project.theme === "dark") {
         return "text-black";
     } else {
         return "text-white";
     }
-};
+}
 
 export default function Projects(): ReactElement {
     const projects: Project[] = DataJSON.projects;
