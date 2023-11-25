@@ -4,7 +4,7 @@ import tw from "@/src/components/other/TailwindHelper";
 import { ButtonHTMLAttributes, DetailedHTMLProps, MouseEvent, ReactElement } from "react";
 
 interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-    text: string;
+    children: string;
     variant: "primary" | "secondary" | "tertiary";
     className?: string;
     onClick?: () => void;
@@ -35,7 +35,7 @@ const variants = {
 };
 
 export default function Button(props: Props): ReactElement {
-    const { onClick, text, className } = props;
+    const { onClick, children, className } = props;
     let { type } = props;
 
     if (!type) {
@@ -76,7 +76,7 @@ export default function Button(props: Props): ReactElement {
 
     return (
         <button className={tw(classes)} onClick={onClickHandler} type={type}>
-            {text}
+            {children}
         </button>
     );
 }

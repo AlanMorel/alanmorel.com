@@ -22,8 +22,12 @@ export default function YesNoModal(props: Props): ReactElement {
             <ModalTitle>{title}</ModalTitle>
             <ModalContent>{description}</ModalContent>
             <ModalButtons>
-                <Button variant="secondary" onClick={closeModal} text="No" />
-                <Button variant="primary" onClick={onYes} text="Yes" />
+                <Button variant="secondary" onClick={closeModal}>
+                    No
+                </Button>
+                <Button variant="primary" onClick={onYes}>
+                    Yes
+                </Button>
             </ModalButtons>
         </div>
     );
