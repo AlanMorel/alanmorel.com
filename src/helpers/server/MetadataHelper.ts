@@ -15,6 +15,7 @@ type MetadataHandler = (props: MetadataProps) => Promise<Metadata>;
 export type BaseMetadata = {
     title: string;
     description: string;
+    canonical: string;
     image?: string;
 };
 
@@ -46,6 +47,9 @@ const handle = "@AlanMorelX";
 const buildMetadata = (base: BaseMetadata): Metadata => {
     return {
         metadataBase: new URL(`https://${Config.app.domain}`),
+        alternates: {
+            canonical: `https://${Config.app.domain}${base.canonical}`
+        },
         title: base.title,
         description: base.description,
         applicationName: Config.app.name,

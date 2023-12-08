@@ -31,5 +31,6 @@ export default async function RootLayout(props: Props): Promise<ReactElement> {
 
 export const metadata = withMetadata({
     title: "Alan Morel",
-    description: "Alan Morel - Software Engineer, Photographer, Music Producer"
+    description: "Alan Morel - Software Engineer, Photographer, Music Producer",
+    canonical: "/"
 });

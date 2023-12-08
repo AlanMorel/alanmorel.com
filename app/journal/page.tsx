@@ -31,5 +31,6 @@ export default async function JournalPage(): Promise<ReactElement> {
 
 export const metadata = withMetadata({
     title: "Journal",
-    description: "Add and view journal entries."
+    description: "Add and view journal entries.",
+    canonical: "/journal"
 });
