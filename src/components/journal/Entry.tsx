@@ -54,7 +54,7 @@ export default function Entry(props: Props): ReactElement {
             date: date.getTime()
         };
 
-        const request = await fetch("/journal/fetch", {
+        const request = await fetch("/api/journal/fetch", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -115,7 +115,7 @@ export default function Entry(props: Props): ReactElement {
             entry: entry
         };
 
-        const request = await fetch("/journal/save", {
+        const request = await fetch("/api/journal/save", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

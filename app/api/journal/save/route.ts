@@ -10,7 +10,6 @@ export async function POST(request: Request): Promise<NextResponse> {
     }
 
     const { date, entry } = await request.json();
-
     const result = await saveJournalEntry(new Date(date), entry);
 
     if (!result) {
