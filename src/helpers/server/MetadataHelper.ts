@@ -127,6 +127,9 @@ const buildMetadata = (base: BaseMetadata): Metadata => {
                 rel: "apple-touch-icon-precomposed",
                 url: "/favicons/apple-touch-icon-152x152.png"
             }
+        },
+        robots: {
+            index: false
         }
     };
 };
