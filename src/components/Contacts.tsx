@@ -1,8 +1,6 @@
-import FacebookIcon from "@/src/components/icons/FacebookIcon";
 import GitHubIcon from "@/src/components/icons/GitHubIcon";
 import InstagramIcon from "@/src/components/icons/InstagramIcon";
 import LinkedInIcon from "@/src/components/icons/LinkedInIcon";
-import XIcon from "@/src/components/icons/XIcon";
 import ThemeSwitcher from "@/src/components/other/ThemeSwitcher";
 import { ReactElement } from "react";
 
@@ -16,16 +14,6 @@ const contacts = [
         type: "LinkedIn",
         href: "https://linkedin.com/in/AlanMorel",
         Icon: LinkedInIcon
-    },
-    {
-        type: "Facebook",
-        href: "https://facebook.com/AlanMorelX",
-        Icon: FacebookIcon
-    },
-    {
-        type: "X",
-        href: "https://x.com/AlanMorelX",
-        Icon: XIcon
     },
     {
         type: "Instagram",
