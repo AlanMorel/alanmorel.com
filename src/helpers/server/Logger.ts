@@ -1,4 +1,4 @@
-import { checkFileSize, createIfNotExists, deleteFile } from "@/src/helpers/server/FileSystemHelper";
+import { createIfNotExists } from "@/src/helpers/server/FileSystemHelper";
 import pino, { Logger, StreamEntry, multistream } from "pino";
 import pretty from "pino-pretty";
 import { createStream } from "rotating-file-stream";
@@ -34,14 +34,6 @@ function getStreams(prefix: string): StreamEntry<string>[] {
         ...levels.map(level => {
             const stream = createStream(getGenerator(prefix, level), {
                 interval: "1d"
-            });
-
-            stream.addListener("rotated", (filename: string) => {
-                const size = checkFileSize(filename);
-
-                if (size === 0) {
-                    deleteFile(filename);
-                }
             });
 
             return {
