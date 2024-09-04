@@ -22,8 +22,8 @@ export default async function ResumePage(): Promise<ReactElement> {
     const resume = DataJSON.resume;
 
     return (
-        <div className="bg-slate-50 lg:min-h-[100vh] lg:pt-20">
-            <div className="mx-auto box-border w-full border border-slate-200 bg-white p-4 print:border-0 lg:h-[1056px] lg:w-[816px] lg:px-12 lg:py-6">
+        <div className="bg-slate-50 lg:min-h-screen lg:pt-20">
+            <div className="mx-auto box-border w-full border border-slate-200 bg-white p-4 lg:h-[1056px] lg:w-[816px] lg:px-12 lg:py-6 print:border-0">
                 <div className="mb-4 inline-flex w-full flex-wrap justify-center space-x-4 text-sm">
                     {resume.links.map(link => (
                         <a key={link.name} className="hover:underline" href={link.url}>
@@ -31,7 +31,7 @@ export default async function ResumePage(): Promise<ReactElement> {
                         </a>
                     ))}
                 </div>
-                <h1 className="mb-[-0.5rem] text-center text-3xl font-bold">{resume.header}</h1>
+                <h1 className="-mb-2 text-center text-3xl font-bold">{resume.header}</h1>
                 <ResumeSection header="Skills">
                     <div className="text-sm">{resume.skills.join(", ")}</div>
                 </ResumeSection>

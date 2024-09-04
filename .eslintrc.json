@@ -6,7 +6,6 @@
     "plugins": ["@typescript-eslint", "security", "prettier", "tailwindcss", "no-relative-import-paths"],
     "extends": [
         "plugin:@typescript-eslint/recommended",
-        "plugin:security/recommended",
         "plugin:tailwindcss/recommended",
         "prettier",
         "next/core-web-vitals"

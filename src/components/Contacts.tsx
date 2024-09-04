@@ -34,7 +34,7 @@ export default function Contacts(): ReactElement {
                         className="text-slate-400 transition hover:text-slate-600"
                         aria-label={`Link to my ${contact.type} profile`}
                     >
-                        <div className="h-10 w-10 ">
+                        <div className="size-10">
                             <contact.Icon />
                         </div>
                     </a>

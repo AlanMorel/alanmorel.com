@@ -34,7 +34,7 @@ export default function Entry(props: Props): ReactElement {
 
         document.addEventListener("keydown", handleKeyDown);
 
-        return () => {
+        return (): void => {
             document.removeEventListener("keydown", handleKeyDown);
         };
     }, [entry, control]);
@@ -163,7 +163,7 @@ export default function Entry(props: Props): ReactElement {
                 <input
                     type="date"
                     name="date"
-                    className="w-[1.25rem] bg-transparent outline-none dark:invert"
+                    className="w-5 bg-transparent outline-none dark:invert"
                     value={getYYYYMMDD(date)}
                     min={getYYYYMMDD(startDate)}
                     max={getYYYYMMDD(today)}
@@ -178,16 +178,16 @@ export default function Entry(props: Props): ReactElement {
             <div className="mb-6 space-x-6">
                 <If condition={!isDateEarlier(addDays(date, -1), startDate)}>
                     <EntryButton onClick={onPrev}>
-                        <ArrowLeft className="mr-2 h-4 w-4" /> Prev
+                        <ArrowLeft className="mr-2 size-4" /> Prev
                     </EntryButton>
                 </If>
                 <EntryButton onClick={onSave}>
-                    <SaveIcon className="mr-2 h-4 w-4" /> Save
+                    <SaveIcon className="mr-2 size-4" /> Save
                     <If condition={control !== entry}> *</If>
                 </EntryButton>
                 <If condition={isDateEarlier(date, today)}>
                     <EntryButton onClick={onNext}>
-                        Next <ArrowRight className="ml-2 h-4 w-4" />
+                        Next <ArrowRight className="ml-2 size-4" />
                     </EntryButton>
                 </If>
             </div>

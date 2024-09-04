@@ -14,11 +14,11 @@ export default function ThemeSwitcher(): ReactElement {
 
     function getIcon(): ReactElement {
         if (!mounted || theme === "light") {
-            return <SunIcon className="h-10 w-10" onClick={(): void => setTheme("dark")} />;
+            return <SunIcon className="size-10" onClick={(): void => setTheme("dark")} />;
         } else if (theme === "system") {
-            return <Laptop2Icon className="h-10 w-10" onClick={(): void => setTheme("light")} />;
+            return <Laptop2Icon className="size-10" onClick={(): void => setTheme("light")} />;
         } else if (theme === "dark") {
-            return <MoonIcon className="h-10 w-10" onClick={(): void => setTheme("system")} />;
+            return <MoonIcon className="size-10" onClick={(): void => setTheme("system")} />;
         }
 
         return <></>;

@@ -9,7 +9,7 @@ export default function Intro(): ReactElement {
             <div className="col-span-2 mx-auto w-full max-w-xs sm:col-span-1">
                 <Image
                     src={profilePic}
-                    className="mx-auto max-w-[10rem] rounded-full shadow-lg sm:w-full sm:max-w-full"
+                    className="mx-auto max-w-40 rounded-full shadow-lg sm:w-full sm:max-w-full"
                     alt="profile pic"
                     priority
                 />
