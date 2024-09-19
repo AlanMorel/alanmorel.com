@@ -21,8 +21,8 @@ export default function Intro(): ReactElement {
                     </h1>
                 </div>
                 <p className="mb-4 leading-7">
-                    Hey! My name is Alan and I am a senior software engineer, photographer, music producer, and
-                    technical writer, from New York. I like writing software to build cool things, and this is my
+                    Hey! My name is Alan and I am a senior software engineer, game developer, photographer, music
+                    producer, and technical writer. I like writing software to build cool things, and this is my
                     collection of my works, art, and projects.
                 </p>
                 <p className="text-lg">
