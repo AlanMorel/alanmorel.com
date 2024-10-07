@@ -1,3 +1,4 @@
+import config from "@/src/Config";
 import "@/src/globals.css";
 import Analytics from "@/src/helpers/client/Analytics";
 import Providers from "@/src/helpers/client/Providers";
@@ -30,7 +31,7 @@ export default async function RootLayout(props: Props): Promise<ReactElement> {
 }
 
 export const metadata = withMetadata({
-    title: "Alan Morel",
-    description: "Alan Morel - Software Engineer, Photographer, Music Producer",
+    title: config.metaInfo.title,
+    description: config.metaInfo.description,
     canonical: "/"
 });

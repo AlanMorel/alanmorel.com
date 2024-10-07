@@ -9,7 +9,7 @@ const app = {
 
 const metaInfo = {
     title: "Alan Morel",
-    description: "Alan Morel - Software Engineer, Photographer, Music Producer",
+    description: "Alan Morel - Software Engineer, Game Developer, Photographer, Music Producer",
     image: "/images/meta-image.png",
     twitter: "AlanMorelX"
 };
