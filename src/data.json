@@ -70,14 +70,14 @@
                 "title": "Senior Software Engineer II",
                 "date": "Feb 2017 — Present",
                 "achievements": [
-                    "Work on an agile team building responsive websites using a component-based front end framework.",
+                    "Work on an agile team building innovative products on the D/Cipher team using Vue and TypeScript.",
                     "Collaborate closely with designers, product, QA, and others, to develop beautiful products and features.",
                     "Mentor other engineers to help bring them up to speed and facilitate knowledge transfer.",
                     "Pride myself on writing clean, scalable, and maintainable code that is cross-browser compatible.",
                     "Write technical articles for the company tech blog and documentation on internal Confluence instance.",
-                    "Actively identify, prioritize, and eliminate tech debt to ensure health of codebase remains high.",
+                    "Actively identify, prioritize, and eliminate tech debt to ensure quality of codebase remains high.",
                     "Created and maintain the much-loved 'Dashy the Dog' Slack bot in JavaScript, deployed on AWS.",
-                    "Led the engineering team to re-write Dotdash Meredith's site in Vue, Nuxt, and Prismic CMS."
+                    "Led the engineering team to re-write Dotdash Meredith's homepage in Vue, Nuxt, and the Prismic CMS."
                 ]
             },
             {
