@@ -56,7 +56,7 @@ export default async function ResumePage(): Promise<ReactElement> {
                 <ResumeSection header="Projects">
                     <ul className="mb-2 list-disc space-y-1 pl-4 text-sm">
                         {resume.projects.map(project => (
-                            <li key={project.name}>
+                            <li key={project.name} className="text-sm">
                                 <strong>{project.name}</strong> {project.description}
                             </li>
                         ))}

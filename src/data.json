@@ -74,8 +74,9 @@
                     "Collaborate closely with designers, product, QA, and others, to develop beautiful products and features.",
                     "Mentor other engineers to help bring them up to speed and facilitate knowledge transfer.",
                     "Pride myself on writing clean, scalable, and maintainable code that is cross-browser compatible.",
-                    "Write technical articles for the company tech blog and documentation on internal Confluence instance.",
                     "Actively identify, prioritize, and eliminate tech debt to ensure quality of codebase remains high.",
+                    "Member of the technical interviewing team, responsible for assessing and hiring new engineers.",
+                    "Write technical articles for the company tech blog and documentation on internal Confluence instance.",
                     "Created and maintain the much-loved 'Dashy the Dog' Slack bot in JavaScript, deployed on AWS.",
                     "Led the engineering team to re-write Dotdash Meredith's homepage in Vue, Nuxt, and the Prismic CMS."
                 ]
@@ -106,6 +107,10 @@
                 "description": "is a publisher where I write high-quality classes, tutorials, and resources on web development and tech. My content reaches thousands of people a day across the site and shares on social media."
             },
             {
+                "name": "Mailriser",
+                "description": "is a Next.js-powered platform to send bulk emails cheaply using Amazon SES. The app is deployed on Docker and uses Prisma and MySQL for the database."
+            },
+            {
                 "name": "Mixcurb.com",
                 "description": "is a Vue-powered e-commerce platform to discover, buy, and sell music and beats. Content uploaded by users is stored securely on an AWS S3 bucket and served by Amazon Cloudfront."
             },
@@ -116,14 +121,6 @@
             {
                 "name": "WASD With Me",
                 "description": "is a Node-powered social network created to meet and play with gamers. The app is deployed on Heroku and uses mutliple different gaming APIs to pull gamer libraries and other data."
-            },
-            {
-                "name": "Zhigly",
-                "description": "is an ASP.NET service aimed at college students that allows you to buy buy or sell items, browse upcoming events, search for jobs/internships/opportunities, look for housing, and much more."
-            },
-            {
-                "name": "Trumpulse",
-                "description": "is an Angular single-page application that aggregates data from multiple news sources so you can remain an informed and empowered citizen. Available on the web and Google Play for Android."
             }
         ],
         "education": [
