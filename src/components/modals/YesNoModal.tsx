@@ -1,10 +1,10 @@
 "useClient";
 
-import useModal from "@/src/atoms/ModalAtom";
-import Button from "@/src/components/inputs/Button";
-import ModalButtons from "@/src/components/modals/ModalButtons";
-import ModalContent from "@/src/components/modals/ModalContent";
-import ModalTitle from "@/src/components/modals/ModalTitle";
+import useModal from "@/src/atoms/ModalAtom.tsx";
+import Button from "@/src/components/inputs/Button.tsx";
+import ModalButtons from "@/src/components/modals/ModalButtons.tsx";
+import ModalContent from "@/src/components/modals/ModalContent.tsx";
+import ModalTitle from "@/src/components/modals/ModalTitle.tsx";
 import { ReactElement } from "react";
 
 interface Props {

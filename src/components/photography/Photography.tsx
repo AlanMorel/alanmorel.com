@@ -1,6 +1,6 @@
 "use client";
 
-import Lightbox from "@/src/components/photography/Lightbox";
+import Lightbox from "@/src/components/photography/Lightbox.tsx";
 import Image from "next/image";
 import { ReactElement, useState } from "react";
 

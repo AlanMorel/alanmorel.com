@@ -1,9 +1,9 @@
-import Entry from "@/src/components/journal/Entry";
-import Modal from "@/src/components/modals/Modal";
-import Config from "@/src/helpers/Config";
-import HotToast from "@/src/helpers/client/HotToast";
-import { getJournalEntry, isJournalAuthenticated } from "@/src/helpers/server/JournalHelper";
-import { withMetadata } from "@/src/helpers/server/MetadataHelper";
+import Entry from "@/src/components/journal/Entry.tsx";
+import Modal from "@/src/components/modals/Modal.tsx";
+import Config from "@/src/helpers/Config.ts";
+import HotToast from "@/src/helpers/client/HotToast.tsx";
+import { getJournalEntry, isJournalAuthenticated } from "@/src/helpers/server/JournalHelper.ts";
+import { withMetadata } from "@/src/helpers/server/MetadataHelper.ts";
 import { redirect } from "next/navigation";
 import { ReactElement } from "react";
 

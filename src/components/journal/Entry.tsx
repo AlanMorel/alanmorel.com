@@ -1,12 +1,12 @@
 "use client";
 
-import useModal from "@/src/atoms/ModalAtom";
-import EntryButton from "@/src/components/journal/EntryButton";
-import YesNoModal from "@/src/components/modals/YesNoModal";
-import If from "@/src/components/other/If";
-import ThemeSwitcher from "@/src/components/other/ThemeSwitcher";
-import { showInfoToast } from "@/src/components/toasts/Toasts";
-import { addDays, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter";
+import useModal from "@/src/atoms/ModalAtom.tsx";
+import EntryButton from "@/src/components/journal/EntryButton.tsx";
+import YesNoModal from "@/src/components/modals/YesNoModal.tsx";
+import If from "@/src/components/other/If.tsx";
+import ThemeSwitcher from "@/src/components/other/ThemeSwitcher.tsx";
+import { showInfoToast } from "@/src/components/toasts/Toasts.tsx";
+import { addDays, getReadableDate, getYYYYMMDD, isDateEarlier } from "@/src/helpers/shared/DateFormatter.ts";
 import { ArrowLeft, ArrowRight, SaveIcon } from "lucide-react";
 import { ChangeEvent, ReactElement, useEffect, useState } from "react";
 

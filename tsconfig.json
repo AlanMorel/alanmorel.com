@@ -12,7 +12,9 @@
         "isolatedModules": true,
         "incremental": true,
         "forceConsistentCasingInFileNames": true,
+        "allowImportingTsExtensions": true,
         "jsx": "preserve",
+        "baseUrl": ".",
         "paths": {
             "@/*": ["./*"]
         },

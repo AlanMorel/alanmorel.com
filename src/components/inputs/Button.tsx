@@ -1,6 +1,6 @@
 "use client";
 
-import tw from "@/src/components/other/TailwindHelper";
+import tw from "@/src/components/other/TailwindHelper.ts";
 import { ButtonHTMLAttributes, DetailedHTMLProps, MouseEvent, ReactElement } from "react";
 
 interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {

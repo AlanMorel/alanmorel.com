@@ -1,8 +1,8 @@
-import Config from "@/src/helpers/Config";
-import { fileExists } from "@/src/helpers/server/FileSystemHelper";
-import logger from "@/src/helpers/server/Logger";
-import { compareStrings } from "@/src/helpers/server/StringHelper";
-import { getYYYYMMDD } from "@/src/helpers/shared/DateFormatter";
+import Config from "@/src/helpers/Config.ts";
+import { fileExists } from "@/src/helpers/server/FileSystemHelper.ts";
+import logger from "@/src/helpers/server/Logger.ts";
+import { compareStrings } from "@/src/helpers/server/StringHelper.ts";
+import { getYYYYMMDD } from "@/src/helpers/shared/DateFormatter.ts";
 import { promises as fs } from "fs";
 import { cookies } from "next/headers";
 

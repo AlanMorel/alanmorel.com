@@ -1,4 +1,4 @@
-import Config from "@/src/Config";
+import Config from "@/src/Config.ts";
 
 export const organization = {
     "@context": "https://schema.org",

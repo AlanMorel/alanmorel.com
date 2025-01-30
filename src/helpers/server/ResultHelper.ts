@@ -1,4 +1,4 @@
-import logger from "@/src/helpers/server/Logger";
+import logger from "@/src/helpers/server/Logger.ts";
 import { NextResponse } from "next/server";
 
 export type Result = ResultSuccess | ResultFailure;

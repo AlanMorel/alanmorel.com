@@ -1,6 +1,6 @@
-import getIcon from "@/src/components/Icons";
-import Pill from "@/src/components/Pill";
-import { Project } from "@/src/components/projects/Projects";
+import getIcon from "@/src/components/Icons.tsx";
+import Pill from "@/src/components/Pill.tsx";
+import { Project } from "@/src/components/projects/Projects.tsx";
 import { ReactElement } from "react";
 
 interface Prop {

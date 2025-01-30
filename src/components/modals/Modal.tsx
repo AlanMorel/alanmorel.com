@@ -1,7 +1,7 @@
 "use client";
 
-import useModal from "@/src/atoms/ModalAtom";
-import tw from "@/src/components/other/TailwindHelper";
+import useModal from "@/src/atoms/ModalAtom.tsx";
+import tw from "@/src/components/other/TailwindHelper.ts";
 import { Close, Content, Overlay, Portal, Root } from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
 import { ReactElement } from "react";

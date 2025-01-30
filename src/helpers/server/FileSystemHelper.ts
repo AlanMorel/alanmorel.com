@@ -1,4 +1,4 @@
-import logger from "@/src/helpers/server/Logger.js";
+import logger from "@/src/helpers/server/Logger.ts";
 import fs, { promises as fsAsync } from "fs";
 
 export async function fileExists(path: string): Promise<boolean> {

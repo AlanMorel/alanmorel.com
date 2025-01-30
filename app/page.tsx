@@ -1,8 +1,8 @@
-import Contacts from "@/src/components/Contacts";
-import Intro from "@/src/components/Intro";
-import Photography from "@/src/components/photography/Photography";
-import Projects from "@/src/components/projects/Projects";
-import StructuredData from "@/src/components/StructuredData";
+import Contacts from "@/src/components/Contacts.tsx";
+import Intro from "@/src/components/Intro.tsx";
+import Photography from "@/src/components/photography/Photography.tsx";
+import Projects from "@/src/components/projects/Projects.tsx";
+import StructuredData from "@/src/components/StructuredData.tsx";
 import { ReactElement } from "react";
 
 export default async function HomePage(): Promise<ReactElement> {

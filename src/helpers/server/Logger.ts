@@ -1,4 +1,4 @@
-import { createIfNotExists } from "@/src/helpers/server/FileSystemHelper";
+import { createIfNotExists } from "@/src/helpers/server/FileSystemHelper.ts";
 import pino, { Logger, StreamEntry, multistream } from "pino";
 import pretty from "pino-pretty";
 import { createStream } from "rotating-file-stream";

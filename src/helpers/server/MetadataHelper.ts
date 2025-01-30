@@ -1,5 +1,5 @@
-import Config from "@/src/Config";
-import logger from "@/src/helpers/server/Logger.js";
+import Config from "@/src/Config.ts";
+import logger from "@/src/helpers/server/Logger.ts";
 import { redirect } from "next/navigation";
 import { Metadata, Viewport } from "next/types";
 

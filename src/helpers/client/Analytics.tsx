@@ -1,6 +1,6 @@
 "use client";
 
-import Config from "@/src/Config";
+import Config from "@/src/Config.ts";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { ReactElement } from "react";
 

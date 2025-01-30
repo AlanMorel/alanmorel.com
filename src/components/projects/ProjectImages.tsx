@@ -1,4 +1,4 @@
-import { Project } from "@/src/components/projects/Projects";
+import { Project } from "@/src/components/projects/Projects.tsx";
 import { ReactElement } from "react";
 
 interface Prop {

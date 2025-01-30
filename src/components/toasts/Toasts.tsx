@@ -1,4 +1,4 @@
-import ToastContainer from "@/src/components/toasts/ToastContainer";
+import ToastContainer from "@/src/components/toasts/ToastContainer.tsx";
 import { InfoIcon } from "lucide-react";
 import toast, { Toast } from "react-hot-toast";
 

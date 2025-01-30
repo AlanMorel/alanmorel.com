@@ -1,12 +1,12 @@
-import config from "@/src/Config";
+import config from "@/src/Config.ts";
 import "@/src/globals.css";
-import Analytics from "@/src/helpers/client/Analytics";
-import Providers from "@/src/helpers/client/Providers";
-import { withMetadata } from "@/src/helpers/server/MetadataHelper";
+import Analytics from "@/src/helpers/client/Analytics.tsx";
+import Providers from "@/src/helpers/client/Providers.tsx";
+import { withMetadata } from "@/src/helpers/server/MetadataHelper.ts";
 import { Inter } from "next/font/google";
 import { ReactElement, ReactNode } from "react";
 
-export { viewport } from "@/src/helpers/server/MetadataHelper";
+export { viewport } from "@/src/helpers/server/MetadataHelper.ts";
 
 interface Props {
     children: ReactNode;

@@ -1,4 +1,4 @@
-import logger from "@/src/helpers/server/Logger.js";
+import logger from "@/src/helpers/server/Logger.ts";
 import { promises as fs } from "fs";
 import mime from "mime-types";
 

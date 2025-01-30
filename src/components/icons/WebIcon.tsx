@@ -1,4 +1,4 @@
-import Icon from "@/src/components/icons/Icon";
+import Icon from "@/src/components/icons/Icon.tsx";
 import { ReactElement } from "react";
 
 export default function WebIcon(): ReactElement {

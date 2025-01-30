@@ -1,4 +1,4 @@
-import Config from "@/src/Config";
+import Config from "@/src/Config.ts";
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {

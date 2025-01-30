@@ -1,5 +1,5 @@
-import ResumeEvent from "@/src/components/resume/ResumeEvent";
-import ResumeSection from "@/src/components/resume/ResumeSection";
+import ResumeEvent from "@/src/components/resume/ResumeEvent.tsx";
+import ResumeSection from "@/src/components/resume/ResumeSection.tsx";
 import DataJSON from "@/src/data.json" assert { type: "json" };
 import { ReactElement } from "react";
 

@@ -1,7 +1,7 @@
 "use client";
 
-import tw from "@/src/components/other/TailwindHelper";
-import { Location } from "@/src/components/photography/Photography";
+import tw from "@/src/components/other/TailwindHelper.ts";
+import { Location } from "@/src/components/photography/Photography.ts";
 import Image from "next/image";
 import { MouseEvent, ReactElement, useEffect, useState } from "react";
 

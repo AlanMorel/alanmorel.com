@@ -1,7 +1,7 @@
-import GitHubIcon from "@/src/components/icons/GitHubIcon";
-import InstagramIcon from "@/src/components/icons/InstagramIcon";
-import LinkedInIcon from "@/src/components/icons/LinkedInIcon";
-import ThemeSwitcher from "@/src/components/other/ThemeSwitcher";
+import GitHubIcon from "@/src/components/icons/GitHubIcon.tsx";
+import InstagramIcon from "@/src/components/icons/InstagramIcon.tsx";
+import LinkedInIcon from "@/src/components/icons/LinkedInIcon.tsx";
+import ThemeSwitcher from "@/src/components/other/ThemeSwitcher.tsx";
 import { ReactElement } from "react";
 
 const contacts = [

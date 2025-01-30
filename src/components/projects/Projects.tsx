@@ -1,8 +1,8 @@
-import tw from "@/src/components/other/TailwindHelper";
-import ProjectImages from "@/src/components/projects/ProjectImages";
-import ProjectLinks from "@/src/components/projects/ProjectLinks";
-import ProjectPlatforms from "@/src/components/projects/ProjectPlatforms";
-import ProjectTechnologies from "@/src/components/projects/ProjectTechnologies";
+import tw from "@/src/components/other/TailwindHelper.ts";
+import ProjectImages from "@/src/components/projects/ProjectImages.tsx";
+import ProjectLinks from "@/src/components/projects/ProjectLinks.tsx";
+import ProjectPlatforms from "@/src/components/projects/ProjectPlatforms.tsx";
+import ProjectTechnologies from "@/src/components/projects/ProjectTechnologies.tsx";
 import DataJSON from "@/src/data.json" assert { type: "json" };
 import { ReactElement } from "react";
 

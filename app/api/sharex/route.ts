@@ -1,7 +1,7 @@
-import Config from "@/src/Config";
-import { default as ServerConfig } from "@/src/helpers/Config";
-import logger from "@/src/helpers/server/Logger";
-import { compareStrings, getRandomFilename } from "@/src/helpers/server/StringHelper";
+import Config from "@/src/Config.ts";
+import { default as ServerConfig } from "@/src/helpers/Config.ts";
+import logger from "@/src/helpers/server/Logger.ts";
+import { compareStrings, getRandomFilename } from "@/src/helpers/server/StringHelper.ts";
 import { promises as fs } from "fs";
 
 const filenameLength = 8;
