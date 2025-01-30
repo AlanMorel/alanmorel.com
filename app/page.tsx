@@ -19,7 +19,7 @@ export default async function HomePage(): Promise<ReactElement> {
 }
 
 const organization = {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "Organization",
     name: "AlanMorel",
     url: "https://alanmorel.com",
@@ -34,7 +34,7 @@ const organization = {
 };
 
 const website = {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "WebSite",
     name: "AlanMorel",
     url: "https://alanmorel.com"

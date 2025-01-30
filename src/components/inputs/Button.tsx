@@ -34,7 +34,7 @@ const variants = {
     }
 };
 
-export default function Button(props: Props): ReactElement {
+export default function Button(props: Readonly<Props>): ReactElement {
     const { onClick, children, className } = props;
     let { type } = props;
 

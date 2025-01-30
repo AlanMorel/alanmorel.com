@@ -13,7 +13,7 @@ interface Props {
     onYes: () => void;
 }
 
-export default function YesNoModal(props: Props): ReactElement {
+export default function YesNoModal(props: Readonly<Props>): ReactElement {
     const { title, content: description, onYes } = props;
     const { closeModal } = useModal();
 

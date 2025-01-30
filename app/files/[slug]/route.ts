@@ -1,3 +1,4 @@
+import logger from "@/src/helpers/server/Logger.js";
 import { promises as fs } from "fs";
 import mime from "mime-types";
 
@@ -16,6 +17,7 @@ export async function GET(request: Request): Promise<Response> {
             }
         });
     } catch (error) {
+        logger.error(JSON.stringify(error));
         return new Response("Not found", { status: 404 });
     }
 }

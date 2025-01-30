@@ -7,7 +7,7 @@ interface Prop {
     project: Project;
 }
 
-export default function ProjectPlatforms(props: Prop): ReactElement {
+export default function ProjectPlatforms(props: Readonly<Prop>): ReactElement {
     const { project } = props;
 
     return (

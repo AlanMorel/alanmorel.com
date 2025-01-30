@@ -15,7 +15,7 @@ interface Props {
     entry: string;
 }
 
-export default function Entry(props: Props): ReactElement {
+export default function Entry(props: Readonly<Props>): ReactElement {
     const today = new Date();
     const startDate = new Date(props.startDate + today.getTimezoneOffset() * 60 * 1000);
 
@@ -25,10 +25,10 @@ export default function Entry(props: Props): ReactElement {
     const { openModal, closeModal } = useModal();
 
     useEffect(() => {
-        const handleKeyDown = (event: KeyboardEvent): void => {
+        const handleKeyDown = async (event: KeyboardEvent): Promise<void> => {
             if (event.ctrlKey && event.key === "s") {
                 event.preventDefault();
-                onSave();
+                await onSave();
             }
         };
 
@@ -77,31 +77,31 @@ export default function Entry(props: Props): ReactElement {
     async function fetchPrev(): Promise<void> {
         const newDate = addDays(date, -1);
         closeModal();
-        fetchNewEntry(newDate);
+        await fetchNewEntry(newDate);
     }
 
     async function fetchNext(): Promise<void> {
         const newDate = addDays(date, 1);
         closeModal();
-        fetchNewEntry(newDate);
+        await fetchNewEntry(newDate);
     }
 
-    function onPrev(): void {
+    async function onPrev(): Promise<void> {
         if (control !== entry) {
             openModal(<YesNoModal title="Unsaved changes!" content="Do you want to proceed?" onYes={fetchPrev} />);
             return;
         }
 
-        fetchPrev();
+        await fetchPrev();
     }
 
-    function onNext(): void {
+    async function onNext(): Promise<void> {
         if (control !== entry) {
             openModal(<YesNoModal title="Unsaved changes!" content="Do you want to proceed?" onYes={fetchNext} />);
             return;
         }
 
-        fetchNext();
+        await fetchNext();
     }
 
     async function onSave(): Promise<void> {
@@ -148,12 +148,12 @@ export default function Entry(props: Props): ReactElement {
         setEntry(event.target.value);
     }
 
-    function onDateChange(event: ChangeEvent<HTMLInputElement>): void {
+    async function onDateChange(event: ChangeEvent<HTMLInputElement>): Promise<void> {
         const rawDate = new Date(event.target.value);
 
         const newDate = new Date(rawDate.getTime() + rawDate.getTimezoneOffset() * 60 * 1000);
 
-        fetchNewEntry(newDate);
+        await fetchNewEntry(newDate);
     }
 
     return (

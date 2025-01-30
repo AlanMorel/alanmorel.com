@@ -6,7 +6,7 @@ interface Props {
     fill?: string;
 }
 
-export default function Contacts(props: Props): ReactElement {
+export default function Contacts(props: Readonly<Props>): ReactElement {
     const { children, viewBox, fill } = props;
 
     return (

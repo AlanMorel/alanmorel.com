@@ -23,7 +23,7 @@ function getIconName(linkName: string): string {
     return "web";
 }
 
-export default function ProjectLinks(props: Prop): ReactElement {
+export default function ProjectLinks(props: Readonly<Prop>): ReactElement {
     const { project } = props;
 
     return (

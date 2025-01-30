@@ -1,9 +1,11 @@
+import logger from "@/src/helpers/server/Logger.js";
 import fs, { promises as fsAsync } from "fs";
 
 export async function fileExists(path: string): Promise<boolean> {
     try {
         await fsAsync.stat(path);
     } catch (error) {
+        logger.critical(JSON.stringify(error));
         return false;
     }
 
@@ -21,6 +23,7 @@ export function checkFileSize(filePath: string): number {
         const stats = fs.statSync(filePath);
         return stats.size;
     } catch (error) {
+        logger.critical(JSON.stringify(error));
         return -1;
     }
 }
@@ -28,5 +31,7 @@ export function checkFileSize(filePath: string): number {
 export function deleteFile(filePath: string): void {
     try {
         fs.unlinkSync(filePath);
-    } catch (error) {}
+    } catch (error) {
+        logger.critical(JSON.stringify(error));
+    }
 }

@@ -6,7 +6,7 @@ interface Props {
     date: string;
 }
 
-export default function ResumeEvent(props: Props): ReactElement {
+export default function ResumeEvent(props: Readonly<Props>): ReactElement {
     const { header, subheader, date } = props;
 
     return (

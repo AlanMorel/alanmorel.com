@@ -7,7 +7,7 @@ interface Props {
     children: ReactNode;
 }
 
-export default function Providers(props: Props): ReactElement {
+export default function Providers(props: Readonly<Props>): ReactElement {
     const { children } = props;
 
     return (

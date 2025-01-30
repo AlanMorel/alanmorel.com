@@ -9,7 +9,7 @@ interface Props {
     message: string;
 }
 
-export default function ToastContainer(props: Props): ReactElement {
+export default function ToastContainer(props: Readonly<Props>): ReactElement {
     const { instance, Icon, message } = props;
 
     const dismiss = (): void => toast.dismiss(instance.id);

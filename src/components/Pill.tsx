@@ -7,7 +7,7 @@ interface Prop {
     className?: string;
 }
 
-export default function Pill(props: Prop): ReactElement {
+export default function Pill(props: Readonly<Prop>): ReactElement {
     const { Icon, label, className } = props;
 
     return (

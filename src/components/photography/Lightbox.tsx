@@ -10,7 +10,7 @@ interface Props {
     close: () => void;
 }
 
-export default function Lightbox(props: Props): ReactElement {
+export default function Lightbox(props: Readonly<Props>): ReactElement {
     const { location, close } = props;
 
     const [index, setIndex] = useState(0);
@@ -29,7 +29,7 @@ export default function Lightbox(props: Props): ReactElement {
         return (): void => {
             window.removeEventListener("keydown", handleKeyDown);
         };
-    }, [index]);
+    }, [index, location.images.length]);
 
     function handlePrev(e: MouseEvent<HTMLButtonElement>): void {
         e.stopPropagation();

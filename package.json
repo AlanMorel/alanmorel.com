@@ -15,7 +15,7 @@
         "turbo": "next dev -p 8080 --turbo",
         "build": "next build",
         "start": "next start -p 8080",
-        "lint": "next lint && eslint . --ext .ts,tsx --fix",
+        "lint": "next lint && eslint . --ext .ts,tsx --fix --quiet",
         "ts:check": "tsc --noEmit"
     },
     "dependencies": {
@@ -56,9 +56,14 @@
         "eslint": "^9.19.0",
         "eslint-config-next": "^15.1.6",
         "eslint-config-prettier": "^10.0.1",
+        "eslint-plugin-import": "^2.31.0",
         "eslint-plugin-no-relative-import-paths": "^1.6.1",
+        "eslint-plugin-perfectionist": "^4.7.0",
         "eslint-plugin-prettier": "^5.2.3",
+        "eslint-plugin-react": "^7.37.4",
+        "eslint-plugin-react-hooks": "^5.1.0",
         "eslint-plugin-security": "^3.0.1",
+        "eslint-plugin-sonarjs": "^3.0.1",
         "eslint-plugin-tailwindcss": "^3.18.0",
         "globals": "^15.14.0",
         "husky": "^9.1.7",

@@ -1,4 +1,5 @@
 import Config from "@/src/Config";
+import logger from "@/src/helpers/server/Logger.js";
 import { redirect } from "next/navigation";
 import { Metadata, Viewport } from "next/types";
 
@@ -31,6 +32,7 @@ export function withDynamicMetadata(handler: MetadataGenerator): MetadataHandler
 
             return buildMetadata(baseMetadata);
         } catch (error) {
+            logger.critical(JSON.stringify(error));
             return redirect("/error");
         }
     };

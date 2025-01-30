@@ -5,7 +5,7 @@ interface Props {
     onClick: () => void | Promise<void>;
 }
 
-export default function EntryButton(props: Props): ReactElement {
+export default function EntryButton(props: Readonly<Props>): ReactElement {
     const { children, onClick } = props;
 
     return (

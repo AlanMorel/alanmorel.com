@@ -2,9 +2,14 @@ import { FlatCompat } from "@eslint/eslintrc";
 import stylistic from "@stylistic/eslint-plugin";
 import typeScriptESLint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+import importPlugin from "eslint-plugin-import";
 import relative from "eslint-plugin-no-relative-import-paths";
+import perfectionist from "eslint-plugin-perfectionist";
 import prettier from "eslint-plugin-prettier";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
 import security from "eslint-plugin-security";
+import sonarjs from "eslint-plugin-sonarjs";
 import tailwindcss from "eslint-plugin-tailwindcss";
 import globals from "globals";
 
@@ -29,13 +34,42 @@ export default [
         },
         plugins: {
             "@typescript-eslint": typeScriptESLint,
+            "@stylistic": stylistic,
             security: security,
             prettier: prettier,
-            tailwindcss: tailwindcss,
             "no-relative-import-paths": relative,
-            "@stylistic": stylistic
+            tailwindcss,
+            sonarjs,
+            perfectionist,
+            react,
+            import: importPlugin,
+            "react-hooks": reactHooks
+        },
+        settings: {
+            react: {
+                version: "detect"
+            }
         },
         rules: {
+            ...typeScriptESLint.configs.recommended.rules,
+            //...stylistic.configs.recommended.rules,
+            ...security.configs.recommended.rules,
+            ...prettier.configs.recommended.rules,
+            //...relative.configs.recommended.rules,
+            ...tailwindcss.configs.recommended.rules,
+            ...sonarjs.configs.recommended.rules,
+            //...perfectionist.configs.recommended.rules,
+            ...react.configs.recommended.rules,
+            //...importPlugin.configs.recommended.rules,
+            ...reactHooks.configs.recommended.rules,
+            "react/react-in-jsx-scope": "off",
+            "react/self-closing-comp": [
+                "error",
+                {
+                    component: true,
+                    html: false
+                }
+            ],
             "no-console": "warn",
             "no-debugger": "warn",
             "no-case-declarations": "off",
@@ -81,6 +115,8 @@ export default [
                     prefix: "@"
                 }
             ],
+            "sonarjs/max-switch-cases": "warn",
+            "sonarjs/pseudo-random": "warn",
             "tailwindcss/no-custom-classname": "warn",
             "tailwindcss/enforces-shorthand": "error",
             "tailwindcss/migration-from-tailwind-2": "error"

@@ -5,7 +5,7 @@ interface Props {
     children: ReactElement | ReactElement[] | string;
 }
 
-export default function If(props: Props): ReactElement {
+export default function If(props: Readonly<Props>): ReactElement {
     const { condition, children } = props;
 
     return <>{condition && children}</>;

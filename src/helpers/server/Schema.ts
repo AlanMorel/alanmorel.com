@@ -1,7 +1,7 @@
 import Config from "@/src/Config";
 
 export const organization = {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "Organization",
     name: Config.app.name,
     url: Config.app.url,
@@ -16,7 +16,7 @@ export const organization = {
 };
 
 export const website = {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "WebSite",
     name: Config.app.name,
     url: Config.app.url

@@ -5,7 +5,7 @@ interface Props {
     children: ReactNode;
 }
 
-export default function ResumeSection(props: Props): ReactElement {
+export default function ResumeSection(props: Readonly<Props>): ReactElement {
     const { header, children } = props;
 
     return (

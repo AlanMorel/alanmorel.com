@@ -5,7 +5,7 @@ interface Prop {
     project: Project;
 }
 
-export default function ProjectImages(props: Prop): ReactElement {
+export default function ProjectImages(props: Readonly<Prop>): ReactElement {
     const { project } = props;
 
     return (

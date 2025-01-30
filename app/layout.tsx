@@ -17,7 +17,7 @@ const inter = Inter({
     variable: "--font-inter"
 });
 
-export default async function RootLayout(props: Props): Promise<ReactElement> {
+export default async function RootLayout(props: Readonly<Props>): Promise<ReactElement> {
     const { children } = props;
 
     return (
