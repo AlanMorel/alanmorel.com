@@ -1,5 +1,4 @@
 import Config from "@/src/helpers/Config.ts";
-import { fileExists } from "@/src/helpers/server/FileSystemHelper.ts";
 import logger from "@/src/helpers/server/Logger.ts";
 import { compareStrings } from "@/src/helpers/server/StringHelper.ts";
 import { getYYYYMMDD } from "@/src/helpers/shared/DateFormatter.ts";
@@ -38,7 +37,7 @@ function getEntryPath(date: Date): string {
 export async function getJournalEntry(date: Date): Promise<string> {
     const path = getEntryPath(date);
 
-    const entryExists = await fileExists(path);
+    const entryExists = await fs.stat(path);
 
     if (entryExists) {
         return await fs.readFile(path, "utf-8");

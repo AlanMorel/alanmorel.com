@@ -7,6 +7,8 @@ import { withMetadata } from "@/src/helpers/server/MetadataHelper.ts";
 import { redirect } from "next/navigation";
 import { ReactElement } from "react";
 
+export const dynamic = "force-dynamic";
+
 export default async function JournalPage(): Promise<ReactElement> {
     const isAuthenticated = await isJournalAuthenticated();
 

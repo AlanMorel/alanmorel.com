@@ -1,16 +1,5 @@
 import logger from "@/src/helpers/server/Logger.ts";
-import fs, { promises as fsAsync } from "fs";
-
-export async function fileExists(path: string): Promise<boolean> {
-    try {
-        await fsAsync.stat(path);
-    } catch (error) {
-        logger.critical(JSON.stringify(error));
-        return false;
-    }
-
-    return true;
-}
+import fs from "fs";
 
 export function createIfNotExists(directory: string): void {
     if (!fs.existsSync(directory)) {
