@@ -3,7 +3,7 @@ import { sendFailure, sendSuccess } from "@/src/helpers/server/ResultHelper";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request): Promise<NextResponse> {
-    const isAuthenticated = isJournalAuthenticated();
+    const isAuthenticated = await isJournalAuthenticated();
 
     if (!isAuthenticated) {
         return sendFailure("not authenticated");

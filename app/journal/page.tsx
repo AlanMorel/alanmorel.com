@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 import { ReactElement } from "react";
 
 export default async function JournalPage(): Promise<ReactElement> {
-    const isAuthenticated = isJournalAuthenticated();
+    const isAuthenticated = await isJournalAuthenticated();
 
     if (!isAuthenticated) {
         return redirect("/");

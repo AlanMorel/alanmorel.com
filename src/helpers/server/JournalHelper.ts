@@ -6,8 +6,8 @@ import { getYYYYMMDD } from "@/src/helpers/shared/DateFormatter";
 import { promises as fs } from "fs";
 import { cookies } from "next/headers";
 
-export function isJournalAuthenticated(): boolean {
-    const cookieStore = cookies();
+export async function isJournalAuthenticated(): Promise<boolean> {
+    const cookieStore = await cookies();
     const password = cookieStore.get(Config.journal.cookieName)?.value;
 
     if (!password) {

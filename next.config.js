@@ -17,7 +17,6 @@ export function redirects() {
 
 const config = {
     reactStrictMode: true,
-    swcMinify: true,
     images: {
         minimumCacheTTL: 60
     },
