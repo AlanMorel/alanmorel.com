@@ -29,6 +29,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      colorette:
+        specifier: ^2.0.20
+        version: 2.0.20
       dotenv:
         specifier: ^16.4.7
         version: 16.4.7
@@ -68,9 +71,6 @@ importers:
       react-hot-toast:
         specifier: ^2.5.1
         version: 2.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      rotating-file-stream:
-        specifier: ^3.2.5
-        version: 3.2.5
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
@@ -3040,10 +3040,6 @@ packages:
 
   rfdc@1.4.1:
     resolution: {integrity: sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==}
-
-  rotating-file-stream@3.2.5:
-    resolution: {integrity: sha512-T8iBxUA4SookMTU97cIHUPck7beLOvN4g+y4db9E2eLn54OFsdp4qMnxuqmmJ05lcQHzueEVnPRykxfnPG948g==}
-    engines: {node: '>=14.0'}
 
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -6587,8 +6583,6 @@ snapshots:
   reusify@1.0.4: {}
 
   rfdc@1.4.1: {}
-
-  rotating-file-stream@3.2.5: {}
 
   run-parallel@1.2.0:
     dependencies:
