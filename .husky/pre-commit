@@ -3,4 +3,4 @@
 
 echo "Running pre-commit hook..."
 
-pnpm ts:check && pnpx lint-staged
+bun ts:check && bunx lint-staged

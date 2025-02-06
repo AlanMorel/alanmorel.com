@@ -4,7 +4,7 @@ This repository hosts home to the code that powers my [personal site](https://al
 
 ## Installation
 
-Install node, pnpm, clone this repository, then install the dependencies
+Install node, bun, clone this repository, then install the dependencies
 
 ```sh
 git clone https://github.com/AlanMorel/alanmorel.com
@@ -15,11 +15,11 @@ cd alanmorel.com
 ```
 
 ```sh
-npm install pnpm -g
+npm install bun -g
 ```
 
 ```sh
-pnpm install
+bun install
 ```
 
 Create a `.env` file
