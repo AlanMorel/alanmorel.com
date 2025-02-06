@@ -2,7 +2,7 @@ import Config from "@/src/helpers/Config.ts";
 import logger from "@/src/helpers/server/Logger.ts";
 import { compareStrings } from "@/src/helpers/server/StringHelper.ts";
 import { getYYYYMMDD } from "@/src/helpers/shared/DateFormatter.ts";
-import { promises as fs } from "fs";
+import { constants, promises as fs } from "fs";
 import { cookies } from "next/headers";
 
 export async function isJournalAuthenticated(): Promise<boolean> {
@@ -37,13 +37,22 @@ function getEntryPath(date: Date): string {
 export async function getJournalEntry(date: Date): Promise<string> {
     const path = getEntryPath(date);
 
-    const entryExists = await fs.stat(path);
+    const entryExists = await fileExists(path);
 
     if (entryExists) {
         return await fs.readFile(path, "utf-8");
     }
 
     return "";
+}
+
+async function fileExists(filePath: string): Promise<boolean> {
+    try {
+        await fs.access(filePath, constants.F_OK);
+        return true;
+    } catch {
+        return false;
+    }
 }
 
 export async function saveJournalEntry(date: Date, entry: string): Promise<boolean> {
