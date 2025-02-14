@@ -1,11 +1,11 @@
-import { getYearMonthDate } from "@/src/helpers/server/NumberHelper.ts";
+import { getDateStamp, getYearMonthDate } from "@/src/helpers/server/NumberHelper.ts";
 import { dim, white } from "colorette";
 import fs from "fs";
 import path from "path";
 import pino, { Level, Logger, multistream, MultiStreamRes } from "pino";
 import pretty from "pino-pretty";
 
-const DAY = 24 * 60 * 60 * 1000;
+let datestamp = getDateStamp();
 
 const base = "logs";
 const levels: Level[] = ["info", "error", "fatal"];
@@ -44,7 +44,9 @@ function getFileTransports(prefix: string): MultiStreamRes<Level> {
 
     levels.forEach((level: Level) => {
         const directory = path.join(basePath, level, year, month);
-        fs.mkdirSync(directory, { recursive: true });
+        fs.mkdirSync(directory, {
+            recursive: true
+        });
     });
 
     return multistream(
@@ -61,37 +63,34 @@ let fileLogger = createPinoLogger("");
 
 const logger = {
     log: function (message: string): void {
+        setLoggers();
         consoleLogger.info(message);
         fileLogger.info(message);
     },
     error: function (error: string): void {
+        setLoggers();
         consoleLogger.error(error);
         fileLogger.error(error);
     },
     critical: function (error: string): void {
+        setLoggers();
         consoleLogger.fatal(error);
         fileLogger.fatal(error);
     }
 };
 
-function refreshLoggers(): void {
+function setLoggers(): void {
+    const currentDatestamp = getDateStamp();
+
+    if (currentDatestamp === datestamp) {
+        return;
+    }
+
+    datestamp = currentDatestamp;
+
     logger.log("Refreshing loggers...");
+
     fileLogger = createPinoLogger("");
 }
-
-function scheduleLoggerRefresh(): void {
-    const now = new Date();
-    const midnight = new Date(now);
-    midnight.setHours(24, 0, 0, 0);
-
-    const timeUntilMidnight = midnight.getTime() - now.getTime();
-
-    setTimeout(() => {
-        refreshLoggers();
-        setInterval(refreshLoggers, DAY);
-    }, timeUntilMidnight);
-}
-
-scheduleLoggerRefresh();
 
 export default logger;

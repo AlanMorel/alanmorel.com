@@ -6,3 +6,9 @@ export function getYearMonthDate(): [string, string, string] {
 
     return [year, month, day];
 }
+
+export function getDateStamp(): string {
+    const [year, month, day] = getYearMonthDate();
+
+    return `${year}-${month}-${day}`;
+}
