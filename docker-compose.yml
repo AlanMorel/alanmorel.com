@@ -8,9 +8,9 @@ services:
             dockerfile: Dockerfile
             target: app
         volumes:
-            - "./logs:/usr/src/app/logs"
-            - "./files:/usr/src/app/files"
-            - "./entries:/usr/src/app/entries"
+            - ./logs:/usr/src/app/logs
+            - ./files:/usr/src/app/files
+            - ./entries:/usr/src/app/entries
         expose:
             - "${PORT}"
         networks:

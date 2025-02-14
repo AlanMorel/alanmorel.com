@@ -75,6 +75,7 @@ const logger = {
 };
 
 function refreshLoggers(): void {
+    logger.log("Refreshing loggers...");
     fileLogger = createPinoLogger("");
 }
 
