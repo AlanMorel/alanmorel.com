@@ -1,6 +1,5 @@
 import Contacts from "@/src/components/Contacts.tsx";
 import Intro from "@/src/components/Intro.tsx";
-import Photography from "@/src/components/photography/Photography.tsx";
 import Projects from "@/src/components/projects/Projects.tsx";
 import StructuredData from "@/src/components/StructuredData.tsx";
 import { ReactElement } from "react";
@@ -10,7 +9,6 @@ export default async function HomePage(): Promise<ReactElement> {
         <main className="tracking-[0.025rem]">
             <Intro />
             <Contacts />
-            <Photography />
             <Projects />
             <StructuredData data={organization} />
             <StructuredData data={website} />
