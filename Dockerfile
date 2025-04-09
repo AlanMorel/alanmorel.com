@@ -3,6 +3,7 @@ FROM oven/bun:1.2 AS base
 WORKDIR /usr/src/app
 
 ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED 1
 
 FROM base AS deps
 

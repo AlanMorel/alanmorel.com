@@ -74,7 +74,7 @@ export default [
             "no-debugger": "warn",
             "no-case-declarations": "off",
             "prefer-template": "error",
-            "no-undef": "warn",
+            "no-undef": "error",
             "no-prototype-builtins": "warn",
             "@stylistic/no-trailing-spaces": "error",
             "@stylistic/eol-last": "error",
