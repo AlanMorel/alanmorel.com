@@ -44,7 +44,6 @@ export function withMetadata(baseMetadata: BaseMetadata): Metadata {
 
 const favicon = "/favicons/favicon.ico";
 const image = "/images/meta-image.png";
-const handle = "@AlanMorelX";
 
 const buildMetadata = (base: BaseMetadata): Metadata => {
     return {
@@ -74,7 +73,7 @@ const buildMetadata = (base: BaseMetadata): Metadata => {
             card: "summary_large_image",
             title: base.title,
             description: base.description,
-            creator: handle,
+            creator: `@${Config.app.socials.twitter}`,
             images: {
                 url: base.image ?? image,
                 alt: `${Config.app.name} Logo`

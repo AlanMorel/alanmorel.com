@@ -2,22 +2,23 @@ import GitHubIcon from "@/src/components/icons/GitHubIcon.tsx";
 import InstagramIcon from "@/src/components/icons/InstagramIcon.tsx";
 import LinkedInIcon from "@/src/components/icons/LinkedInIcon.tsx";
 import ThemeSwitcher from "@/src/components/other/ThemeSwitcher.tsx";
+import config from "@/src/Config.ts";
 import { ReactElement } from "react";
 
 const contacts = [
     {
         type: "GitHub",
-        href: "https://github.com/AlanMorel",
+        href: `https://github.com/${config.app.socials.gitHub}`,
         Icon: GitHubIcon
     },
     {
         type: "LinkedIn",
-        href: "https://linkedin.com/in/AlanMorel",
+        href: `https://linkedin.com/in/${config.app.socials.linkedIn}`,
         Icon: LinkedInIcon
     },
     {
         type: "Instagram",
-        href: "https://instagram.com/AlanMorelX",
+        href: `https://instagram.com/${config.app.socials.instagram}`,
         Icon: InstagramIcon
     }
 ];

@@ -2,6 +2,7 @@ import Contacts from "@/src/components/Contacts.tsx";
 import Intro from "@/src/components/Intro.tsx";
 import Projects from "@/src/components/projects/Projects.tsx";
 import StructuredData from "@/src/components/StructuredData.tsx";
+import config from "@/src/Config.ts";
 import { ReactElement } from "react";
 
 export default async function HomePage(): Promise<ReactElement> {
@@ -19,21 +20,21 @@ export default async function HomePage(): Promise<ReactElement> {
 const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "AlanMorel",
-    url: "https://alanmorel.com",
+    name: config.app.name,
+    url: config.app.url,
     logo: {
         "@type": "ImageObject",
-        url: "https://alanmorel.com/images/meta-logo.png",
+        url: `${config.app.url}/images/meta-logo.png`,
         width: 1024,
         height: 1024
     },
-    brand: "AlanMorel",
-    sameAs: ["https://twitter.com/AlanMorelX"]
+    brand: config.app.name,
+    sameAs: [`https://twitter.com/${config.app.socials.twitter}`]
 };
 
 const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "AlanMorel",
-    url: "https://alanmorel.com"
+    name: config.app.name,
+    url: config.app.url
 };

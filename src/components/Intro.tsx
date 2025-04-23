@@ -1,9 +1,18 @@
+"use client";
+
 import profilePic from "@/public/images/profile-picture.png";
+import config from "@/src/Config.ts";
 import Image from "next/image";
 import Link from "next/link";
-import { ReactElement } from "react";
+import { MouseEvent, ReactElement } from "react";
 
 export default function Intro(): ReactElement {
+    function handleEmailClick(event: MouseEvent): void {
+        event.preventDefault();
+
+        window.location.href = `mailto:${config.app.email}`;
+    }
+
     return (
         <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-4 px-4 pb-8 pt-12 sm:gap-x-14 sm:pt-16">
             <div className="col-span-2 mx-auto w-full max-w-xs sm:col-span-1">
@@ -17,7 +26,7 @@ export default function Intro(): ReactElement {
             <div className="col-span-2 text-slate-900 sm:col-span-1">
                 <div className="mx-auto w-full text-center sm:text-left">
                     <h1 className="highlight mx-auto my-0 mb-4 inline-flex text-6xl font-bold leading-none tracking-tighter sm:text-7xl md:text-8xl">
-                        Alan Morel
+                        {config.metaInfo.title}
                     </h1>
                 </div>
                 <p className="mb-4 leading-7">
@@ -27,7 +36,7 @@ export default function Intro(): ReactElement {
                 </p>
                 <p className="text-lg">
                     Feel free to reach out to me via{" "}
-                    <a href="mailto:alan@alanmorel.com" className="text-slate-900 underline hover:no-underline">
+                    <a href="#" onClick={handleEmailClick} className="text-slate-900 underline hover:no-underline">
                         email
                     </a>
                     . My resume can be{" "}

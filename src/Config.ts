@@ -2,8 +2,12 @@ const app = {
     name: "AlanMorel",
     url: "https://alanmorel.com",
     domain: "alanmorel.com",
+    email: "alan@alanmorel.com",
     socials: {
-        twitter: "https://twitter.com/AlanMorelX"
+        instagram: "AlanMorelX",
+        twitter: "AlanMorelX",
+        gitHub: "AlanMorel",
+        linkedIn: "AlanMorel"
     }
 };
 
