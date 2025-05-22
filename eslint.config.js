@@ -10,7 +10,7 @@ import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import security from "eslint-plugin-security";
 import sonarjs from "eslint-plugin-sonarjs";
-import tailwindcss from "eslint-plugin-tailwindcss";
+// import tailwindcss from "eslint-plugin-tailwindcss";
 import globals from "globals";
 
 const compat = new FlatCompat();
@@ -38,7 +38,7 @@ export default [
             security: security,
             prettier: prettier,
             "no-relative-import-paths": relative,
-            tailwindcss,
+            // tailwindcss,
             sonarjs,
             perfectionist,
             react,
@@ -56,7 +56,7 @@ export default [
             ...security.configs.recommended.rules,
             ...prettier.configs.recommended.rules,
             //...relative.configs.recommended.rules,
-            ...tailwindcss.configs.recommended.rules,
+            // ...tailwindcss.configs.recommended.rules,
             ...sonarjs.configs.recommended.rules,
             //...perfectionist.configs.recommended.rules,
             ...react.configs.recommended.rules,
@@ -116,10 +116,12 @@ export default [
                 }
             ],
             "sonarjs/max-switch-cases": "warn",
-            "sonarjs/pseudo-random": "warn",
+            "sonarjs/pseudo-random": "warn"
+            /*
             "tailwindcss/no-custom-classname": "warn",
             "tailwindcss/enforces-shorthand": "error",
             "tailwindcss/migration-from-tailwind-2": "error"
+            */
         }
     }
 ];

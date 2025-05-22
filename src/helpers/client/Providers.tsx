@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeProvider } from "next-themes";
+import useTheme from "@/src/atoms/ThemeAtom.ts";
 import { ReactElement, ReactNode } from "react";
 
 interface Props {
@@ -10,9 +10,11 @@ interface Props {
 export default function Providers(props: Readonly<Props>): ReactElement {
     const { children } = props;
 
+    const { theme } = useTheme();
+
     return (
-        <ThemeProvider enableColorScheme={false} defaultTheme="light">
-            {children}
-        </ThemeProvider>
+        <div data-theme={theme}>
+            <div className="text-dark min-h-screen bg-slate-50">{children}</div>
+        </div>
     );
 }

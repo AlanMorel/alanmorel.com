@@ -22,7 +22,7 @@ export default async function RootLayout(props: Readonly<Props>): Promise<ReactE
 
     return (
         <html lang="en" className={inter.variable} suppressHydrationWarning>
-            <body className="m-0 bg-slate-50 font-text text-black">
+            <body className="font-text m-0">
                 <Providers>{children}</Providers>
                 <Analytics />
             </body>
