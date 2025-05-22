@@ -40,7 +40,7 @@
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
         "react-hot-toast": "^2.5.2",
-        "sharp": "^0.34.2",
+        "sharp": "^0.32.6",
         "tailwind-merge": "^3.3.0",
         "tailwindcss": "^4.1.7",
         "tw-colors": "^3.3.2",
