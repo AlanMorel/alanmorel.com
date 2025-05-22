@@ -163,7 +163,7 @@ export default function Entry(props: Readonly<Props>): ReactElement {
                 <input
                     type="date"
                     name="date"
-                    className="w-5 bg-transparent outline-none dark:invert"
+                    className="w-5 bg-transparent outline-hidden dark:invert"
                     value={getYYYYMMDD(date)}
                     min={getYYYYMMDD(startDate)}
                     max={getYYYYMMDD(today)}
@@ -171,7 +171,7 @@ export default function Entry(props: Readonly<Props>): ReactElement {
                 />
             </div>
             <textarea
-                className="h-[calc(100vh-16rem)] w-full rounded-2xl bg-slate-100 p-4 outline-none"
+                className="h-[calc(100vh-16rem)] w-full rounded-2xl bg-slate-100 p-4 outline-hidden"
                 value={entry}
                 onChange={onTextareaChange}
             />

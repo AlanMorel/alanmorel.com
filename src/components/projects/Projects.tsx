@@ -39,7 +39,7 @@ export default function Projects(): ReactElement {
                 <li key={project.name} style={{ backgroundColor: project.background }}>
                     <div
                         className={tw(
-                            "mx-auto grid max-w-[70rem] grid-cols-[1fr_4fr] grid-rows-[auto,_auto] gap-x-4 px-4 pt-4 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pb-4 sm:pt-8",
+                            "mx-auto grid max-w-[70rem] grid-cols-[1fr_4fr] grid-rows-[auto__auto] gap-x-4 px-4 pt-4 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pb-4 sm:pt-8",
                             getColor(project)
                         )}
                     >
@@ -48,7 +48,7 @@ export default function Projects(): ReactElement {
                                 src={`/images/projects/${project.slug}/icon.png`}
                                 alt={`${project.name} icon`}
                                 loading="lazy"
-                                className="absolute w-full rounded-sm sm:rounded-xl"
+                                className="absolute w-full rounded-xs sm:rounded-xl"
                             />
                         </div>
                         <div className="mb-2 text-left">

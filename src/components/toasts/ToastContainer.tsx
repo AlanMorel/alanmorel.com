@@ -20,7 +20,7 @@ export default function ToastContainer(props: Readonly<Props>): ReactElement {
         <div
             id="toast-default"
             className={tw(
-                "flex w-full max-w-sm items-center rounded-lg bg-slate-600 p-4 text-slate-100 shadow",
+                "flex w-full max-w-sm items-center rounded-lg bg-slate-600 p-4 text-slate-100 shadow-sm",
                 animateClass
             )}
             role="alert"

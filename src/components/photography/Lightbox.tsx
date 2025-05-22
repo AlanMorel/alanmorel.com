@@ -57,7 +57,7 @@ export default function Lightbox(props: Readonly<Props>): ReactElement {
         >
             <div className="relative animate-slide-in duration-slow">
                 <button
-                    className="absolute right-full top-1/2 mx-6 -translate-y-1/2 text-5xl font-bold text-white focus:outline-none"
+                    className="absolute right-full top-1/2 mx-6 -translate-y-1/2 text-5xl font-bold text-white focus:outline-hidden"
                     onClick={handlePrev}
                 >
                     «
@@ -71,7 +71,7 @@ export default function Lightbox(props: Readonly<Props>): ReactElement {
                     height={1500}
                 />
                 <button
-                    className="absolute left-full top-1/2 mx-6 -translate-y-1/2 text-5xl font-bold text-white focus:outline-none"
+                    className="absolute left-full top-1/2 mx-6 -translate-y-1/2 text-5xl font-bold text-white focus:outline-hidden"
                     onClick={handleNext}
                 >
                     »
@@ -84,7 +84,7 @@ export default function Lightbox(props: Readonly<Props>): ReactElement {
                             <Image
                                 src={`/images/photos/${location.slug}/DSC0${image}.jpg`}
                                 className={tw(
-                                    "w-[5rem] cursor-pointer rounded-sm transition hover:brightness-110 md:rounded",
+                                    "w-[5rem] cursor-pointer rounded-xs transition hover:brightness-110 md:rounded-sm",
                                     getImageClasses(i)
                                 )}
                                 onClick={(e: MouseEvent<HTMLImageElement>): void => selectPhoto(e, i)}

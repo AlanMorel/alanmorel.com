@@ -48,7 +48,7 @@ export default function Photography(): ReactElement {
                                     className="w-full rounded-md object-cover object-right"
                                     quality={50}
                                 />
-                                <div className="absolute inset-0 w-full cursor-pointer rounded-lg bg-gradient-to-b from-transparent to-slate-900 opacity-50 transition hover:opacity-30" />
+                                <div className="absolute inset-0 w-full cursor-pointer rounded-lg bg-linear-to-b from-transparent to-slate-900 opacity-50 transition hover:opacity-30" />
                             </div>
                         </li>
                     ))}
