@@ -1,20 +1,14 @@
 "use client";
 
-import useTheme from "@/src/atoms/ThemeAtom.ts";
+import { useTheme } from "@/src/atoms/ThemeAtom.ts";
 import { MoonIcon, SunIcon } from "lucide-react";
-import { ReactElement, useEffect, useState } from "react";
+import { ReactElement } from "react";
 
 export default function ThemeSwitcher(): ReactElement {
-    const [mounted, setMounted] = useState(false);
-
     const { theme, setTheme } = useTheme();
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
     function getIcon(): ReactElement {
-        if (!mounted || theme === "light") {
+        if (theme === "light") {
             return <SunIcon className="size-10" onClick={(): void => setTheme("dark")} />;
         } else if (theme === "dark") {
             return <MoonIcon className="size-10" onClick={(): void => setTheme("light")} />;

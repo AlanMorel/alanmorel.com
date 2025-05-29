@@ -1,6 +1,7 @@
+import { setCookie } from "@/src/helpers/shared/CookieHelper.ts";
 import { atom, useAtom } from "jotai";
 
-type ThemeState = "dark" | "light";
+export type ThemeState = "dark" | "light";
 
 interface IThemeState {
     theme: ThemeState;
@@ -9,13 +10,18 @@ interface IThemeState {
 
 const themeAtom = atom<ThemeState>("light");
 
-function useTheme(): IThemeState {
+export function useTheme(): IThemeState {
     const [theme, setTheme] = useAtom(themeAtom);
+
+    function setThemeWithCookie(value: ThemeState): void {
+        setTheme(value);
+        setCookie("theme", value, 365);
+    }
 
     return {
         theme,
-        setTheme
+        setTheme: setThemeWithCookie
     };
 }
 
-export default useTheme;
+export { themeAtom };

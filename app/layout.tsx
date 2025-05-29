@@ -1,9 +1,11 @@
+import { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import config from "@/src/Config.ts";
 import "@/src/globals.css";
 import Analytics from "@/src/helpers/client/Analytics.tsx";
 import Providers from "@/src/helpers/client/Providers.tsx";
 import { withMetadata } from "@/src/helpers/server/MetadataHelper.ts";
 import { Inter } from "next/font/google";
+import { cookies } from "next/headers";
 import { ReactElement, ReactNode } from "react";
 
 export { viewport } from "@/src/helpers/server/MetadataHelper.ts";
@@ -20,10 +22,13 @@ const inter = Inter({
 export default async function RootLayout(props: Readonly<Props>): Promise<ReactElement> {
     const { children } = props;
 
+    const cookieStore = await cookies();
+    const theme = (cookieStore.get("theme")?.value ?? "light") as ThemeState;
+
     return (
         <html lang="en" className={inter.variable} suppressHydrationWarning>
             <body className="font-text m-0">
-                <Providers>{children}</Providers>
+                <Providers initialTheme={theme}>{children}</Providers>
                 <Analytics />
             </body>
         </html>

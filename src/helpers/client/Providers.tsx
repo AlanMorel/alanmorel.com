@@ -1,20 +1,20 @@
 "use client";
 
-import useTheme from "@/src/atoms/ThemeAtom.ts";
+import { ThemeState } from "@/src/atoms/ThemeAtom.ts";
+import ThemeProviders from "@/src/helpers/client/ThemeProviders.tsx";
 import { ReactElement, ReactNode } from "react";
 
 interface Props {
     children: ReactNode;
+    initialTheme: ThemeState;
 }
 
 export default function Providers(props: Readonly<Props>): ReactElement {
-    const { children } = props;
-
-    const { theme } = useTheme();
+    const { children, initialTheme } = props;
 
     return (
-        <div data-theme={theme}>
+        <ThemeProviders initialTheme={initialTheme}>
             <div className="text-dark min-h-screen bg-slate-50">{children}</div>
-        </div>
+        </ThemeProviders>
     );
 }
