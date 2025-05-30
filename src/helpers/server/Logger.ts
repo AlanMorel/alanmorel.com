@@ -1,7 +1,7 @@
 import { getDateStamp, getYearMonthDate } from "@/src/helpers/server/NumberHelper.ts";
 import { dim, white } from "colorette";
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import pino, { Level, Logger, multistream, MultiStreamRes } from "pino";
 import pretty from "pino-pretty";
 

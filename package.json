@@ -16,7 +16,8 @@
         "build": "next build",
         "start": "next start -p 8080",
         "lint": "next lint && eslint . --ext .ts,tsx --fix --quiet",
-        "ts:check": "tsc --noEmit"
+        "ts:check": "tsc --noEmit",
+        "deno": "deno task dev"
     },
     "dependencies": {
         "@radix-ui/react-dialog": "^1.1.14",

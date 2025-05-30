@@ -1,6 +1,6 @@
 import logger from "@/src/helpers/server/Logger.ts";
-import { promises as fs } from "fs";
 import mime from "mime-types";
+import { promises as fs } from "node:fs";
 
 export async function GET(request: Request): Promise<Response> {
     const url = new URL(request.url);

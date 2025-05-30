@@ -2,8 +2,8 @@ import Config from "@/src/helpers/Config.ts";
 import logger from "@/src/helpers/server/Logger.ts";
 import { compareStrings } from "@/src/helpers/server/StringHelper.ts";
 import { getYYYYMMDD } from "@/src/helpers/shared/DateFormatter.ts";
-import { constants, promises as fs } from "fs";
 import { cookies } from "next/headers";
+import { constants, promises as fs } from "node:fs";
 
 export async function isJournalAuthenticated(): Promise<boolean> {
     const cookieStore = await cookies();

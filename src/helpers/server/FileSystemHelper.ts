@@ -1,5 +1,5 @@
 import logger from "@/src/helpers/server/Logger.ts";
-import fs from "fs";
+import fs from "node:fs";
 
 export function createIfNotExists(directory: string): void {
     if (!fs.existsSync(directory)) {
