@@ -14,9 +14,9 @@ export default function ProjectImages(props: Readonly<Prop>): ReactElement {
                 <li key={image}>
                     <img
                         src={`/images/projects/${project.slug}/image${image + 1}.png`}
-                        alt={`${project.name} image`}
+                        alt={project.name}
                         loading="lazy"
-                        className="mb-5 ml-0 mr-4 mt-0 max-h-[30rem] max-w-full rounded-lg shadow-xl"
+                        className="mt-0 mr-4 mb-5 ml-0 max-h-[30rem] max-w-full rounded-lg shadow-xl"
                     />
                 </li>
             ))}

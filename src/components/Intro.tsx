@@ -14,7 +14,7 @@ export default function Intro(): ReactElement {
     }
 
     return (
-        <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-4 px-4 pb-8 pt-12 sm:gap-x-14 sm:pt-16">
+        <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-4 px-4 pt-12 pb-8 sm:gap-x-14 sm:pt-16">
             <div className="col-span-2 mx-auto w-full max-w-xs sm:col-span-1">
                 <Image
                     src={profilePic}
@@ -25,7 +25,7 @@ export default function Intro(): ReactElement {
             </div>
             <div className="col-span-2 text-slate-900 sm:col-span-1">
                 <div className="mx-auto w-full text-center sm:text-left">
-                    <h1 className="highlight mx-auto my-0 mb-4 inline-flex text-6xl font-bold leading-none tracking-tighter sm:text-7xl md:text-8xl">
+                    <h1 className="highlight mx-auto my-0 mb-4 inline-flex text-6xl leading-none font-bold tracking-tighter sm:text-7xl md:text-8xl">
                         {config.metaInfo.title}
                     </h1>
                 </div>

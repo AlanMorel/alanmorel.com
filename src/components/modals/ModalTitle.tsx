@@ -8,5 +8,5 @@ interface Props {
 export default function ModalTitle(props: Readonly<Props>): ReactElement {
     const { children } = props;
 
-    return <Title className="mb-6 text-2xl font-bold leading-6 text-slate-900">{children}</Title>;
+    return <Title className="mb-6 text-2xl leading-6 font-bold text-slate-900">{children}</Title>;
 }

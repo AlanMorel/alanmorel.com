@@ -4,6 +4,7 @@ import ProjectLinks from "@/src/components/projects/ProjectLinks.tsx";
 import ProjectPlatforms from "@/src/components/projects/ProjectPlatforms.tsx";
 import ProjectTechnologies from "@/src/components/projects/ProjectTechnologies.tsx";
 import DataJSON from "@/src/data.json" assert { type: "json" };
+import { getColor } from "@/src/helpers/client/ColorHelpers.ts";
 import { ReactElement } from "react";
 
 export type Project = {
@@ -22,14 +23,6 @@ export type Project = {
     }[];
 };
 
-function getColor(project: Project): string | undefined {
-    if (project.theme === "dark") {
-        return "text-black";
-    } else {
-        return "text-white";
-    }
-}
-
 export default function Projects(): ReactElement {
     const projects: Project[] = DataJSON.projects;
 
@@ -39,8 +32,8 @@ export default function Projects(): ReactElement {
                 <li key={project.name} style={{ backgroundColor: project.background }}>
                     <div
                         className={tw(
-                            "mx-auto grid max-w-[70rem] grid-cols-[1fr_4fr] grid-rows-[auto__auto] gap-x-4 px-4 pt-4 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pb-4 sm:pt-8",
-                            getColor(project)
+                            "mx-auto grid max-w-[70rem] grid-cols-[1fr_4fr] grid-rows-[auto__auto] gap-x-4 px-4 pt-4 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pt-8 sm:pb-4",
+                            getColor(project.theme)
                         )}
                     >
                         <div className="relative">
@@ -53,10 +46,10 @@ export default function Projects(): ReactElement {
                         </div>
                         <div className="mb-2 text-left">
                             <div>
-                                <h2 className="highlight mb-2 mt--3 inline-flex text-3xl font-bold sm:mb-4 sm:text-6xl">
+                                <h2 className="highlight mt--3 mb-2 inline-flex text-3xl font-bold sm:mb-4 sm:text-6xl">
                                     {project.name}
                                 </h2>
-                                <div className="mx-0 mb-2 mt-1 text-sm font-bold sm:text-base">
+                                <div className="mx-0 mt-1 mb-2 text-sm font-bold sm:text-base">
                                     Released {project.date}
                                 </div>
                             </div>

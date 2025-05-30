@@ -52,12 +52,12 @@ export default function Lightbox(props: Readonly<Props>): ReactElement {
 
     return (
         <div
-            className="fixed left-0 top-0 z-50 flex size-full max-w-full animate-fade flex-col items-center justify-center bg-black/90 px-16 pb-36"
+            className="animate-fade fixed top-0 left-0 z-50 flex size-full max-w-full flex-col items-center justify-center bg-black/90 px-16 pb-36"
             onClick={close}
         >
-            <div className="relative animate-slide-in duration-slow">
+            <div className="animate-slide-in duration-slow relative">
                 <button
-                    className="absolute right-full top-1/2 mx-6 -translate-y-1/2 text-5xl font-bold text-white focus:outline-hidden"
+                    className="absolute top-1/2 right-full mx-6 -translate-y-1/2 text-5xl font-bold text-white focus:outline-hidden"
                     onClick={handlePrev}
                 >
                     «
@@ -71,7 +71,7 @@ export default function Lightbox(props: Readonly<Props>): ReactElement {
                     height={1500}
                 />
                 <button
-                    className="absolute left-full top-1/2 mx-6 -translate-y-1/2 text-5xl font-bold text-white focus:outline-hidden"
+                    className="absolute top-1/2 left-full mx-6 -translate-y-1/2 text-5xl font-bold text-white focus:outline-hidden"
                     onClick={handleNext}
                 >
                     »

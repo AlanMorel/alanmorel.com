@@ -107,8 +107,6 @@
 [data-theme="dark"] {
     --color-white: #000000;
     --color-black: #ffffff;
-    --color-dark: #ffffff;
-    --color-light: #000000;
 
     --color-slate-50: #020617;
     --color-slate-100: #0f172a;

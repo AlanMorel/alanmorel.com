@@ -1,9 +1,9 @@
 import { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import config from "@/src/Config.ts";
-import "@/src/globals.css";
 import Analytics from "@/src/helpers/client/Analytics.tsx";
 import Providers from "@/src/helpers/client/Providers.tsx";
 import { withMetadata } from "@/src/helpers/server/MetadataHelper.ts";
+import "@/src/styles.css";
 import { Inter } from "next/font/google";
 import { cookies } from "next/headers";
 import { ReactElement, ReactNode } from "react";

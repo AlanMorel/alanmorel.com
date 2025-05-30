@@ -33,6 +33,7 @@ export default function ProjectLinks(props: Readonly<Prop>): ReactElement {
                     <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-white">
                         <Pill
                             label={link.name}
+                            theme={project.theme}
                             Icon={getIcon(getIconName(link.name.toLowerCase()))}
                             className="hover:bg-black/20"
                         />

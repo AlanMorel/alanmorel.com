@@ -16,7 +16,7 @@ export default function ProjectImages(props: Readonly<Prop>): ReactElement {
             <ul>
                 {project.technologies.map(tech => (
                     <li key={tech} className="inline-flex">
-                        <Pill label={tech} Icon={getIcon(tech.toLowerCase())} />
+                        <Pill label={tech} theme={project.theme} Icon={getIcon(tech.toLowerCase())} />
                     </li>
                 ))}
             </ul>
