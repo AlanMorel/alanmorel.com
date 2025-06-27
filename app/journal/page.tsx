@@ -20,7 +20,7 @@ export default async function JournalPage(): Promise<ReactElement> {
     const entry = await getJournalEntry(today);
 
     return (
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl text-center text-black">
             <div className="mx-4">
                 <h1 className="mb-2 pt-4 text-3xl font-bold">Journal</h1>
                 <Entry entry={entry} startDate={Config.journal.startDate.getTime()} />
