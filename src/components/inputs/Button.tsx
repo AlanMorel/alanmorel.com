@@ -48,6 +48,7 @@ export default function Button(props: Readonly<Props>): ReactElement {
         className,
         intent.bgColor,
         intent.borderColor,
+        intent.bgHoverColor,
         "border",
         "px-4",
         "py-2",

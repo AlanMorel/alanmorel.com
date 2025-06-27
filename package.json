@@ -20,7 +20,7 @@
         "deno": "deno task dev"
     },
     "dependencies": {
-        "@radix-ui/react-dialog": "^1.1.14",
+        "@base-ui-components/react": "^1.0.0-beta.0",
         "@tailwindcss/postcss": "^4.1.8",
         "@types/mime-types": "^2.1.4",
         "@types/node": "^22.15.24",

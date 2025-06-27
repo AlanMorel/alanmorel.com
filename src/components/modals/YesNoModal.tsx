@@ -18,7 +18,7 @@ export default function YesNoModal(props: Readonly<Props>): ReactElement {
     const { closeModal } = useModal();
 
     return (
-        <div className="w-screen max-w-lg">
+        <div className="w-screen max-w-lg rounded-2xl bg-white p-8">
             <ModalTitle>{title}</ModalTitle>
             <ModalContent>{description}</ModalContent>
             <ModalButtons>
