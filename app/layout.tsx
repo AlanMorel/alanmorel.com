@@ -1,6 +1,5 @@
 import { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import config from "@/src/Config.ts";
-import Analytics from "@/src/helpers/client/Analytics.tsx";
 import Providers from "@/src/helpers/client/Providers.tsx";
 import { withMetadata } from "@/src/helpers/server/MetadataHelper.ts";
 import "@/src/styles.css";
@@ -29,7 +28,6 @@ export default async function RootLayout(props: Readonly<Props>): Promise<ReactE
         <html lang="en" className={inter.variable} suppressHydrationWarning>
             <body className="font-text m-0">
                 <Providers initialTheme={theme}>{children}</Providers>
-                <Analytics />
             </body>
         </html>
     );

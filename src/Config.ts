@@ -18,16 +18,9 @@ const metaInfo = {
     twitter: "AlanMorelX"
 };
 
-const google = {
-    analytics: {
-        measurementId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID
-    }
-};
-
 const config = {
     app,
-    metaInfo,
-    google
+    metaInfo
 };
 
 export default config;

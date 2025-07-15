@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 const safeStylesheet = [].join(" ");
 
-const safeScripts = ["*.googletagmanager.com"].join(" ");
+const safeScripts = [""].join(" ");
 
 const contentSecurityPolicy = `style-src 'self' 'unsafe-eval' 'unsafe-inline' ${safeStylesheet}; script-src 'self' ${safeScripts} 'unsafe-eval' 'unsafe-inline';`;
 
