@@ -1,4 +1,4 @@
-import tw from "@/src/components/other/TailwindHelper.ts";
+import cn from "@/src/components/other/TailwindHelper.ts";
 import ProjectImages from "@/src/components/projects/ProjectImages.tsx";
 import ProjectLinks from "@/src/components/projects/ProjectLinks.tsx";
 import ProjectPlatforms from "@/src/components/projects/ProjectPlatforms.tsx";
@@ -31,7 +31,7 @@ export default function Projects(): ReactElement {
             {projects.map(project => (
                 <li key={project.name} style={{ backgroundColor: project.background }}>
                     <div
-                        className={tw(
+                        className={cn(
                             "mx-auto grid max-w-[70rem] grid-cols-[1fr_4fr] grid-rows-[auto__auto] gap-x-4 px-4 pt-4 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pt-8 sm:pb-4",
                             getColor(project.theme)
                         )}

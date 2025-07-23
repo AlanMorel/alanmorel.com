@@ -1,6 +1,6 @@
 "use client";
 
-import tw from "@/src/components/other/TailwindHelper.ts";
+import cn from "@/src/components/other/TailwindHelper.ts";
 import { ButtonHTMLAttributes, DetailedHTMLProps, MouseEvent, ReactElement } from "react";
 
 interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
@@ -76,7 +76,7 @@ export default function Button(props: Readonly<Props>): ReactElement {
     }
 
     return (
-        <button className={tw(classes)} onClick={onClickHandler} type={type}>
+        <button className={cn(classes)} onClick={onClickHandler} type={type}>
             {children}
         </button>
     );

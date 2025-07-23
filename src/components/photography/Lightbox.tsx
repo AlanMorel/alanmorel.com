@@ -1,6 +1,6 @@
 "use client";
 
-import tw from "@/src/components/other/TailwindHelper.ts";
+import cn from "@/src/components/other/TailwindHelper.ts";
 import { Location } from "@/src/components/photography/Photography.ts";
 import Image from "next/image";
 import { MouseEvent, ReactElement, useEffect, useState } from "react";
@@ -83,7 +83,7 @@ export default function Lightbox(props: Readonly<Props>): ReactElement {
                         <li key={image}>
                             <Image
                                 src={`/images/photos/${location.slug}/DSC0${image}.jpg`}
-                                className={tw(
+                                className={cn(
                                     "w-[5rem] cursor-pointer rounded-xs transition hover:brightness-110 md:rounded-sm",
                                     getImageClasses(i)
                                 )}

@@ -1,4 +1,4 @@
-import tw from "@/src/components/other/TailwindHelper.ts";
+import cn from "@/src/components/other/TailwindHelper.ts";
 import { XIcon } from "lucide-react";
 import { ForwardRefExoticComponent, ReactElement, SVGProps } from "react";
 import toast, { Toast } from "react-hot-toast";
@@ -19,7 +19,7 @@ export default function ToastContainer(props: Readonly<Props>): ReactElement {
     return (
         <div
             id="toast-default"
-            className={tw(
+            className={cn(
                 "flex w-full max-w-sm items-center rounded-lg bg-slate-600 p-4 text-slate-100 shadow-sm",
                 animateClass
             )}
