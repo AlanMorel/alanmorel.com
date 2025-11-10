@@ -3,9 +3,31 @@ import Intro from "@/src/components/Intro.tsx";
 import Projects from "@/src/components/projects/Projects.tsx";
 import StructuredData from "@/src/components/StructuredData.tsx";
 import config from "@/src/Config.ts";
+import { getTanStackLinks, getTanStackMeta } from "@/src/helpers/client/MetadataHelper";
+import { createFileRoute } from "@tanstack/react-router";
 import { ReactElement } from "react";
 
-export default async function HomePage(): Promise<ReactElement> {
+export const Route = createFileRoute("/")({
+    head: () => ({
+        meta: getTanStackMeta({
+            title: config.metaInfo.title,
+            description: config.metaInfo.description,
+            canonical: "/",
+            image: {
+                url: config.metaInfo.image,
+                width: 1280,
+                height: 800,
+                alt: config.metaInfo.title
+            }
+        }),
+        links: getTanStackLinks({
+            canonical: "/"
+        })
+    }),
+    component: HomePage
+});
+
+function HomePage(): ReactElement {
     return (
         <main className="tracking-[0.025rem]">
             <Intro />

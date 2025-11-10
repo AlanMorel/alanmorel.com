@@ -6,7 +6,6 @@
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
 
 # editor
 .vscode
@@ -14,10 +13,10 @@ next-env.d.ts
 # log files
 /logs
 
-# next.js
-/.next
-/out
-/build
+# tanstack
+/.tanstack
+/.output
+/.nitro
 
 # app-specific
 /public/downloads

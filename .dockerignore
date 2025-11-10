@@ -10,4 +10,5 @@ docker-compose.yml
 README.md
 
 # app-specific
-.next
+dist
+logs

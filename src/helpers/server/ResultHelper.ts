@@ -1,5 +1,4 @@
 import logger from "@/src/helpers/server/Logger.ts";
-import { NextResponse } from "next/server";
 
 export type Result = ResultSuccess | ResultFailure;
 
@@ -13,16 +12,21 @@ export interface ResultFailure {
     error: string;
 }
 
-export function sendSuccess(payload: unknown = {}): NextResponse {
+export function sendSuccess(payload: unknown = {}): Response {
     const data = {
         success: true,
         data: payload
     } as ResultSuccess;
 
-    return NextResponse.json(data);
+    return new Response(JSON.stringify(data), {
+        status: 200,
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
 }
 
-export function sendFailure(error: string = ""): NextResponse {
+export function sendFailure(error: string = ""): Response {
     const data = {
         success: false,
         error
@@ -32,5 +36,10 @@ export function sendFailure(error: string = ""): NextResponse {
         logger.error(error);
     }
 
-    return NextResponse.json(data);
+    return new Response(JSON.stringify(data), {
+        status: 200,
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
 }

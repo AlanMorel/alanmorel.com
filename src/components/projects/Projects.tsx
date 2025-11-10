@@ -3,7 +3,7 @@ import ProjectImages from "@/src/components/projects/ProjectImages.tsx";
 import ProjectLinks from "@/src/components/projects/ProjectLinks.tsx";
 import ProjectPlatforms from "@/src/components/projects/ProjectPlatforms.tsx";
 import ProjectTechnologies from "@/src/components/projects/ProjectTechnologies.tsx";
-import DataJSON from "@/src/data.json" assert { type: "json" };
+import DataJSON from "@/src/data.json" with { type: "json" };
 import { getColor } from "@/src/helpers/client/ColorHelpers.ts";
 import { ReactElement } from "react";
 

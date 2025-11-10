@@ -3,7 +3,6 @@ FROM oven/bun:1.2 AS base
 WORKDIR /usr/src/app
 
 ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED 1
 
 FROM base AS deps
 
@@ -21,9 +20,7 @@ RUN bun ts:check && bun run build
 FROM base AS app
 
 COPY --from=deps /temp/prod/node_modules ./node_modules
-COPY --from=builder /usr/src/app/.next ./.next
-COPY --from=builder /usr/src/app/public ./public
+COPY --from=builder /usr/src/app/.output ./.output
 COPY --from=builder /usr/src/app/.env ./.env
-COPY --from=builder /usr/src/app/package.json ./package.json
 
-CMD ["bun", "start"]
+CMD ["bun", ".output/server/index.mjs"]

@@ -1,9 +1,8 @@
 "use client";
 
-import profilePic from "@/public/images/profile-picture.png";
 import config from "@/src/Config.ts";
-import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@tanstack/react-router";
+import { Image } from "@unpic/react";
 import { MouseEvent, ReactElement } from "react";
 
 export default function Intro(): ReactElement {
@@ -17,10 +16,11 @@ export default function Intro(): ReactElement {
         <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-4 px-4 pt-12 pb-8 sm:gap-x-14 sm:pt-16">
             <div className="col-span-2 mx-auto w-full max-w-xs sm:col-span-1">
                 <Image
-                    src={profilePic}
+                    src={"/images/profile-picture.png"}
                     className="mx-auto max-w-40 rounded-full shadow-lg sm:w-full sm:max-w-full"
                     alt="profile pic"
-                    priority
+                    width={640}
+                    height={640}
                 />
             </div>
             <div className="col-span-2 text-slate-900 sm:col-span-1">
@@ -40,7 +40,7 @@ export default function Intro(): ReactElement {
                         email
                     </a>
                     . My resume can be{" "}
-                    <Link href="/resume" target="_blank" className="text-slate-900 underline hover:no-underline">
+                    <Link to="/resume" target="_blank" className="text-slate-900 underline hover:no-underline">
                         found here
                     </Link>
                     .

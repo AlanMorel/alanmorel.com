@@ -1,7 +1,7 @@
 "use client";
 
 import Lightbox from "@/src/components/photography/Lightbox.tsx";
-import Image from "next/image";
+import { Image } from "@unpic/react";
 import { ReactElement, useState } from "react";
 
 export interface Location {
@@ -46,7 +46,6 @@ export default function Photography(): ReactElement {
                                     width={180}
                                     height={270}
                                     className="w-full rounded-md object-cover object-right"
-                                    quality={50}
                                 />
                                 <div className="absolute inset-0 w-full cursor-pointer rounded-lg bg-linear-to-b from-transparent to-slate-900 opacity-50 transition hover:opacity-30" />
                             </div>

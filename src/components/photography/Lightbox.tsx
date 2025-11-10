@@ -2,7 +2,7 @@
 
 import cn from "@/src/components/other/TailwindHelper.ts";
 import { Location } from "@/src/components/photography/Photography.ts";
-import Image from "next/image";
+import { Image } from "@unpic/react";
 import { MouseEvent, ReactElement, useEffect, useState } from "react";
 
 interface Props {

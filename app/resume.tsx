@@ -1,6 +1,9 @@
 import ResumeEvent from "@/src/components/resume/ResumeEvent.tsx";
 import ResumeSection from "@/src/components/resume/ResumeSection.tsx";
-import DataJSON from "@/src/data.json" assert { type: "json" };
+import config from "@/src/Config.ts";
+import DataJSON from "@/src/data.json" with { type: "json" };
+import { getTanStackLinks, getTanStackMeta } from "@/src/helpers/client/MetadataHelper";
+import { createFileRoute } from "@tanstack/react-router";
 import { ReactElement } from "react";
 
 export type Resume = {
@@ -18,7 +21,27 @@ export type Resume = {
     }[];
 };
 
-export default async function ResumePage(): Promise<ReactElement> {
+export const Route = createFileRoute("/resume")({
+    head: () => ({
+        meta: getTanStackMeta({
+            title: `Resume - ${config.metaInfo.title}`,
+            description: `Resume - ${config.metaInfo.description}`,
+            canonical: "/resume",
+            image: {
+                url: config.metaInfo.image,
+                width: 1280,
+                height: 800,
+                alt: config.metaInfo.title
+            }
+        }),
+        links: getTanStackLinks({
+            canonical: "/resume"
+        })
+    }),
+    component: ResumePage
+});
+
+function ResumePage(): ReactElement {
     const resume = DataJSON.resume;
 
     return (

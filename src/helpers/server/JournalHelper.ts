@@ -1,30 +1,8 @@
-import Config from "@/src/helpers/Config.ts";
 import logger from "@/src/helpers/server/Logger.ts";
-import { compareStrings } from "@/src/helpers/server/StringHelper.ts";
 import { getYYYYMMDD } from "@/src/helpers/shared/DateFormatter.ts";
-import { cookies } from "next/headers";
 import { constants, promises as fs } from "node:fs";
 
-export async function isJournalAuthenticated(): Promise<boolean> {
-    const cookieStore = await cookies();
-    const password = cookieStore.get(Config.journal.cookieName)?.value;
-
-    if (!password) {
-        logger.critical("No password cookie found");
-        return false;
-    }
-
-    const journalPassword = Config.journal.password;
-
-    if (!compareStrings(password, journalPassword)) {
-        logger.critical("Password cookie does not match");
-        return false;
-    }
-
-    return true;
-}
-
-function getEntryPath(date: Date): string {
+export function getEntryPath(date: Date): string {
     const dateStr = getYYYYMMDD(date);
 
     const split = dateStr.split("-");
@@ -34,24 +12,21 @@ function getEntryPath(date: Date): string {
     return `./entries/${year}/${month}/${dateStr}.txt`;
 }
 
-export async function getJournalEntry(date: Date): Promise<string> {
-    const path = getEntryPath(date);
-
-    const entryExists = await fileExists(path);
-
-    if (entryExists) {
-        return await fs.readFile(path, "utf-8");
-    }
-
-    return "";
-}
-
-async function fileExists(filePath: string): Promise<boolean> {
+export async function fileExists(filePath: string): Promise<boolean> {
     try {
         await fs.access(filePath, constants.F_OK);
         return true;
     } catch {
         return false;
+    }
+}
+
+export async function readFile(filePath: string): Promise<string> {
+    try {
+        return await fs.readFile(filePath, "utf-8");
+    } catch (error) {
+        logger.critical(JSON.stringify(error));
+        return "";
     }
 }
 
