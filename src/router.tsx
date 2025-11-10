@@ -1,4 +1,4 @@
-import NotFound from "@/app/not-found.tsx";
+import NotFound from "@/src/components/not-found";
 import { routeTree } from "@/src/routeTree.gen.ts";
 import { createRouter, Router } from "@tanstack/react-router";
 
