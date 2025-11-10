@@ -12,3 +12,6 @@ README.md
 # app-specific
 dist
 logs
+.output
+.tanstack
+.nitro
