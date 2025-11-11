@@ -3,7 +3,7 @@ import Entry from "@/src/components/journal/Entry.tsx";
 import Modal from "@/src/components/modals/Modal.tsx";
 import Config from "@/src/helpers/Config.ts";
 import HotToast from "@/src/helpers/client/HotToast.tsx";
-import { getTanStackLinks, getTanStackMeta } from "@/src/helpers/client/MetadataHelper.ts";
+import { getLinks, getMeta } from "@/src/helpers/client/MetadataHelper.ts";
 import { getJournalEntry, isJournalAuthenticated } from "@/src/helpers/server/ServerFunctions.ts";
 import { createFileRoute, redirect } from "@tanstack/react-router";
 import { ReactElement } from "react";
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/journal")({
         };
     },
     head: () => ({
-        meta: getTanStackMeta({
+        meta: getMeta({
             title: "Journal",
             description: "Add and view journal entries.",
             canonical: "/journal",
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/journal")({
                 alt: config.metaInfo.title
             }
         }),
-        links: getTanStackLinks({
+        links: getLinks({
             canonical: "/journal"
         })
     }),

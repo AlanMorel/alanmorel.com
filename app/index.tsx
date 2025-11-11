@@ -3,13 +3,13 @@ import Intro from "@/src/components/Intro.tsx";
 import Projects from "@/src/components/projects/Projects.tsx";
 import StructuredData from "@/src/components/StructuredData.tsx";
 import config from "@/src/Config.ts";
-import { getTanStackLinks, getTanStackMeta } from "@/src/helpers/client/MetadataHelper";
+import { getLinks, getMeta } from "@/src/helpers/client/MetadataHelper";
 import { createFileRoute } from "@tanstack/react-router";
 import { ReactElement } from "react";
 
 export const Route = createFileRoute("/")({
     head: () => ({
-        meta: getTanStackMeta({
+        meta: getMeta({
             title: config.metaInfo.title,
             description: config.metaInfo.description,
             canonical: "/",
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
                 alt: config.metaInfo.title
             }
         }),
-        links: getTanStackLinks({
+        links: getLinks({
             canonical: "/"
         })
     }),
