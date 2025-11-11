@@ -28,10 +28,10 @@ export const Route = createFileRoute("/resume")({
             description: `Resume - ${config.metaInfo.description}`,
             canonical: "/resume",
             image: {
-                url: config.metaInfo.image,
-                width: 1280,
-                height: 800,
-                alt: config.metaInfo.title
+                url: config.metaInfo.image.url,
+                width: config.metaInfo.image.width,
+                height: config.metaInfo.image.height,
+                alt: config.metaInfo.image.alt
             }
         }),
         links: getLinks({
