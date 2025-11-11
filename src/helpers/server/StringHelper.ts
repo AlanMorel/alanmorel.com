@@ -17,17 +17,3 @@ export function getRandomFilename(length: number): string {
     }
     return result;
 }
-
-export function getCookieByName(rawCookies: string, cookieName: string): string | null {
-    const cookies = rawCookies.split(";");
-
-    for (const cookie of cookies) {
-        const trimmedCookie = cookie.trim();
-
-        if (trimmedCookie.startsWith(`${cookieName}=`)) {
-            return trimmedCookie.substring(cookieName.length + 1);
-        }
-    }
-
-    return null;
-}

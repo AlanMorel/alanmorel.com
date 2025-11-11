@@ -2,10 +2,11 @@ import { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import Config from "@/src/helpers/Config.ts";
 import { fileExists, getEntryPath, readFile } from "@/src/helpers/server/JournalHelper.ts";
 import logger from "@/src/helpers/server/Logger.ts";
-import { compareStrings, getCookieByName } from "@/src/helpers/server/StringHelper.ts";
+import { compareStrings } from "@/src/helpers/server/StringHelper.ts";
 import redirects from "@/src/redirects.json";
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
+import cookie from "cookie";
 
 interface Redirect {
     source: string;
@@ -31,7 +32,9 @@ export const getRedirect = createServerFn({ method: "GET" })
 export const getTheme = createServerFn().handler((): ThemeState => {
     const headers = getRequestHeaders();
 
-    const theme = getCookieByName(headers.get("cookie") || "", "theme");
+    const cookies = cookie.parse(headers.get("cookie") || "");
+
+    const theme = cookies.theme;
 
     return (theme as ThemeState) || "light";
 });
@@ -39,7 +42,9 @@ export const getTheme = createServerFn().handler((): ThemeState => {
 export const isJournalAuthenticated = createServerFn().handler((): boolean => {
     const headers = getRequestHeaders();
 
-    const password = getCookieByName(headers.get("cookie") || "", Config.journal.cookieName);
+    const cookies = cookie.parse(headers.get("cookie") || "");
+
+    const password = cookies[Config.journal.cookieName];
 
     if (!password) {
         logger.critical("No password cookie found");

@@ -1,5 +1,5 @@
-import { setCookie } from "@/src/helpers/shared/CookieHelper.ts";
 import { atom, useAtom } from "jotai";
+import Cookies from "js-cookie";
 
 export type ThemeState = "dark" | "light";
 
@@ -15,7 +15,9 @@ export function useTheme(): IThemeState {
 
     function setThemeWithCookie(value: ThemeState): void {
         setTheme(value);
-        setCookie("theme", value, 365);
+        Cookies.set("theme", value, {
+            expires: 365
+        });
     }
 
     return {
