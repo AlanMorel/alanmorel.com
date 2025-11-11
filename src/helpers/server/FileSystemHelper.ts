@@ -1,5 +1,5 @@
 import logger from "@/src/helpers/server/Logger.ts";
-import fs from "node:fs";
+import fs, { constants } from "node:fs";
 
 export function createIfNotExists(directory: string): void {
     if (!fs.existsSync(directory)) {
@@ -22,5 +22,23 @@ export function deleteFile(filePath: string): void {
         fs.unlinkSync(filePath);
     } catch (error) {
         logger.critical(JSON.stringify(error));
+    }
+}
+
+export async function fileExists(filePath: string): Promise<boolean> {
+    try {
+        await fs.promises.access(filePath, constants.F_OK);
+        return true;
+    } catch {
+        return false;
+    }
+}
+
+export async function readFile(filePath: string): Promise<string> {
+    try {
+        return await fs.promises.readFile(filePath, "utf-8");
+    } catch (error) {
+        logger.critical(JSON.stringify(error));
+        return "";
     }
 }

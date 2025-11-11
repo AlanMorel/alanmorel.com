@@ -5,20 +5,20 @@ import { SitemapStream, streamToPromise } from "sitemap";
 const routes = ["", "/resume"];
 
 async function getSitemapXML(routes: string[]): Promise<string> {
-    const smStream = new SitemapStream({ hostname: Config.app.url });
+    const stream = new SitemapStream({ hostname: Config.app.url });
 
     routes.forEach(route => {
         const lastModified = new Date().toISOString();
 
-        smStream.write({
+        stream.write({
             url: route,
             lastmod: lastModified
         });
     });
 
-    smStream.end();
+    stream.end();
 
-    const sitemap = await streamToPromise(smStream);
+    const sitemap = await streamToPromise(stream);
 
     return sitemap.toString();
 }

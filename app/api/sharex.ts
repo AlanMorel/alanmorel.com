@@ -1,5 +1,5 @@
 import Config from "@/src/Config.ts";
-import { default as ServerConfig } from "@/src/helpers/Config.ts";
+import ServerConfig from "@/src/helpers/Config.ts";
 import logger from "@/src/helpers/server/Logger.ts";
 import { compareStrings, getRandomFilename } from "@/src/helpers/server/StringHelper.ts";
 import { createFileRoute } from "@tanstack/react-router";

@@ -2,129 +2,121 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## Development Commands
 
-This is a Next.js 15 personal website built with TypeScript, React 19, and Tailwind CSS 4. The site uses the Next.js App Router and includes features like a resume page, photography portfolio, project showcase, and a private journal system.
+- **Install dependencies**: `bun install`
+- **Run development server**: `bun dev` (runs on http://localhost:8080)
+- **Build for production**: `bun run build` (also runs type checking)
+- **Start production server**: `bun start` (runs `.output/server/index.mjs` on port 8080)
+- **Lint code**: `bun run lint` (runs ESLint with auto-fix)
+- **Type check**: `bun ts:check` (runs TypeScript compiler without emitting files)
 
-## Package Manager
+## Architecture Overview
 
-This project uses **Bun** as its package manager. Always use `bun install` instead of `npm install`.
+### TanStack Start Framework
 
-## Common Commands
+This project uses **TanStack Start** (formerly TanStack Router), a full-stack React framework built on TanStack Router. Key characteristics:
 
-```bash
-# Development
-bun run dev              # Start dev server on port 8080
-bun run turbo            # Start dev server with Turbo mode
+- **File-based routing**: Routes are defined in the `app/` directory
+  - `app/__root.tsx`: Root layout component with theme loader
+  - `app/index.tsx`: Home page (`/`)
+  - `app/journal.tsx`: Journal page (`/journal`) with authentication
+  - `app/resume.tsx`: Resume page (`/resume`)
+  - `app/$$.tsx`: 404 catch-all route
+  - Special route syntax: `sitemap[.]xml.ts`, `robots[.]txt.ts` for static files
 
-# Building
-bun run build            # Build production bundle
-bun run start            # Start production server on port 8080
+- **Server functions**: Use `createServerFn()` from `@tanstack/react-start` for server-side operations
+  - Defined in `src/helpers/server/ServerFunctions.ts`
+  - Examples: `getTheme()`, `isJournalAuthenticated()`, `getJournalEntry()`
 
-# Linting & Type Checking
-bun run lint             # Run Next.js lint + ESLint with auto-fix
-bun run ts:check         # Run TypeScript compiler checks (no emit)
-```
+- **Route metadata**: Use `head` property in routes for SEO meta tags and links
+  - Helper functions in `src/helpers/client/MetadataHelper.ts`
 
-## Project Structure
+- **API routes**: Located in `app/api/` directory
+  - Use `createFileRoute().server.handlers` pattern
+  - Example: `app/api/sharex.ts` handles POST requests for file uploads
 
-### Directory Organization
+### Configuration Architecture
 
-- `app/` - Next.js App Router pages and API routes
-  - `api/journal/` - Journal fetch/save endpoints
-  - `api/sharex/` - ShareX upload endpoint
-  - `files/[slug]/` - Dynamic file serving route
-- `src/` - Application source code
-  - `atoms/` - Jotai state management (theme, modals)
-  - `components/` - React components organized by feature
-  - `helpers/` - Utility functions split by environment:
-    - `client/` - Client-side only utilities
-    - `server/` - Server-side only utilities (Next.js server components)
-    - `shared/` - Isomorphic utilities
-  - `data.json` - Static site content (projects, resume, etc.)
-  - `Config.ts` - App configuration constants
-- `public/` - Static assets (images, favicons, manifest.json)
+Two separate config files with distinct purposes:
 
-### Import Paths
+- **`src/Config.ts`**: Client-safe configuration (app name, URLs, social links, meta info)
+  - Can be imported on both client and server
 
-The project uses TypeScript path mapping with `@/` prefix for absolute imports:
-```typescript
-import config from "@/src/Config.ts";
-import { ThemeState } from "@/src/atoms/ThemeAtom.ts";
-```
+- **`src/helpers/Config.ts`**: Server-only configuration (reads from environment variables)
+  - Contains secrets like `SHAREX_SECRET`, `JOURNAL_COOKIE_PASSWORD`
+  - Never import this in client-side code
 
-ESLint enforces this - relative imports are not allowed (`no-relative-import-paths` rule).
+### Routing & Code Generation
+
+- **Route tree**: Auto-generated at `src/routeTree.gen.ts` by TanStack Router plugin
+- **Router setup**: `src/router.tsx` exports `getRouter()` function
+- **Path aliases**: Use `@/*` for imports (maps to project root via `tsconfig.json` and `vite-tsconfig-paths`)
+
+### Helpers Organization
+
+- **`src/helpers/client/`**: Client-side utilities (theme, toast notifications, metadata)
+- **`src/helpers/server/`**: Server-side utilities (file system, logging, string operations, schema)
+- **`src/helpers/shared/`**: Shared utilities (date formatting)
+
+### Key Features
+
+1. **Theme System**:
+   - Cookie-based theme persistence
+   - Server-side theme detection in `__root.tsx` loader
+   - Theme state managed with Jotai atoms (`src/atoms/ThemeAtom.ts`)
+
+2. **Journal System**:
+   - Protected by cookie authentication
+   - Entries stored in `entries/YYYY/MM/YYYY-MM-DD.txt` format
+   - Server functions handle authentication and file operations
+
+3. **ShareX Integration**:
+   - POST endpoint at `/api/sharex`
+   - Uploads files to `files/` directory with random 8-character filenames
+   - Requires `SHAREX_SECRET` authentication
+
+4. **Logging**:
+   - Uses Pino logger (`src/helpers/server/Logger.ts`)
+   - Logs written to `logs/` directory (must exist)
+
+### Build & Deployment
+
+- **Vite + Nitro**: Uses Vite for bundling, Nitro preset for Node.js server
+- **Docker**: Multi-stage build (see `Dockerfile`)
+  - Base: `oven/bun:1.2`
+  - Runs type checking and build
+  - Production image only includes `.output/` and `node_modules/`
+
+### Data Management
+
+- **Project data**: Stored in `src/data.json` (resume, projects, skills, contacts)
+- **Redirects**: Configured in `src/redirects.json`
 
 ## Code Style & Linting
 
-### TypeScript Requirements
-
-- **Explicit return types required** on all functions (`@typescript-eslint/explicit-function-return-type`)
-- **Explicit member accessibility required** on class members (`@typescript-eslint/explicit-member-accessibility`)
-- Use double quotes (enforced by `@stylistic/quotes`)
-- 4-space indentation (enforced by `@stylistic/indent`)
-- Always include semicolons (enforced by `@stylistic/semi`)
-- File extensions must be included in imports (`.ts`, `.tsx`)
-
-### Security
-
-ESLint includes security plugin rules. Be mindful of:
-- XSS vulnerabilities
-- Command injection
-- SQL injection (though this project doesn't use SQL directly)
-
-The Next.js config includes strict CSP headers and security headers.
-
-## State Management
-
-- **Jotai** is used for global state management
-- Current atoms:
-  - `ThemeAtom.ts` - Light/dark theme state (persisted in cookies)
-  - `ModalAtom.tsx` - Modal visibility state
-
-## Styling
-
-- **Tailwind CSS 4** with custom configuration
-- PostCSS for processing
-- Prettier with Tailwind plugin for class sorting
-- Uses `clsx` and `tailwind-merge` for conditional classes (see utility function pattern)
+Strict ESLint configuration with:
+- TypeScript rules: explicit return types, no floating promises, await thenable
+- Stylistic rules: 4-space indentation, double quotes, semicolons required
+- No relative imports (use `@/` prefix)
+- React hooks rules enforced
+- Security plugin enabled
 
 ## Environment Setup
 
-Required `.env` file structure:
-```env
+Required `.env` variables:
+```
 VERSION=0
 NODE_ENV=development
 PORT=8080
 TZ=America/New_York
-
 SHAREX_SECRET=
 JOURNAL_START_DATE=
 JOURNAL_COOKIE_NAME=
 JOURNAL_COOKIE_PASSWORD=
 ```
 
-A `logs/` directory must exist at the project root for logging.
-
-## Key Patterns
-
-### Server vs Client Code
-
-The codebase strictly separates server and client code:
-- Components in `app/` may use server components (async functions)
-- Client-side interactions require `"use client"` directive
-- Helpers are organized by environment (`client/`, `server/`, `shared/`)
-
-### Metadata Generation
-
-Use `withMetadata()` helper from `@/src/helpers/server/MetadataHelper.ts` for consistent SEO metadata across pages.
-
-### Theming
-
-Theme is managed server-side via cookies and client-side via Jotai. Initial theme is read from cookies in `app/layout.tsx` and passed to providers.
-
-## Git Workflow
-
-- **Conventional Commits** enforced via commitlint
-- **Husky** pre-commit hooks run lint-staged
-- Lint-staged runs Prettier and ESLint on TypeScript files before commit
+Required directories:
+- `logs/` - for Pino logger output
+- `files/` - for ShareX uploads
+- `entries/` - for journal entries (auto-created with nested year/month structure)

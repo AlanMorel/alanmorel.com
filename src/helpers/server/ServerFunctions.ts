@@ -1,6 +1,7 @@
 import { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import Config from "@/src/helpers/Config.ts";
-import { fileExists, getEntryPath, readFile } from "@/src/helpers/server/JournalHelper.ts";
+import { fileExists, readFile } from "@/src/helpers/server/FileSystemHelper.ts";
+import { getEntryPath } from "@/src/helpers/server/JournalHelper.ts";
 import logger from "@/src/helpers/server/Logger.ts";
 import { compareStrings } from "@/src/helpers/server/StringHelper.ts";
 import redirects from "@/src/redirects.json";
