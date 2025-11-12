@@ -44,7 +44,7 @@ export function getLinks(info: LinksInfo): Link[] {
         { rel: "stylesheet", href: appCss },
         {
             rel: "canonical",
-            href: canonical
+            href: Config.app.url + canonical
         },
         {
             rel: "shortcut icon",
