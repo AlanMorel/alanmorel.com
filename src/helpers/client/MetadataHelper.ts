@@ -3,7 +3,7 @@
 // other imports...
 
 import Config from "@/src/Config.ts";
-import appCss from "@/src/styles.css?url";
+import styles from "@/src/styles.css?url";
 import { DetailedHTMLProps, LinkHTMLAttributes, MetaHTMLAttributes } from "react";
 
 type Meta = DetailedHTMLProps<MetaHTMLAttributes<HTMLMetaElement>, HTMLMetaElement>;
@@ -41,7 +41,10 @@ export function getLinks(info: LinksInfo): Link[] {
     }
 
     return [
-        { rel: "stylesheet", href: appCss },
+        {
+            rel: "stylesheet",
+            href: styles
+        },
         {
             rel: "canonical",
             href: Config.app.url + canonical
