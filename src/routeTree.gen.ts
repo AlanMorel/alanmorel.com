@@ -8,17 +8,17 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './../app/__root'
-import { Route as SitemapDotxmlRouteImport } from './../app/sitemap[.]xml'
-import { Route as RobotsDottxtRouteImport } from './../app/robots[.]txt'
-import { Route as ResumeRouteImport } from './../app/resume'
-import { Route as JournalRouteImport } from './../app/journal'
-import { Route as SplatRouteImport } from './../app/$$'
-import { Route as IndexRouteImport } from './../app/index'
-import { Route as FilesSplatRouteImport } from './../app/files.$'
-import { Route as ApiSharexRouteImport } from './../app/api/sharex'
-import { Route as ApiJournalSaveRouteImport } from './../app/api/journal/save'
-import { Route as ApiJournalFetchRouteImport } from './../app/api/journal/fetch'
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as ResumeRouteImport } from './routes/resume'
+import { Route as JournalRouteImport } from './routes/journal'
+import { Route as SplatRouteImport } from './routes/$$'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as FilesSplatRouteImport } from './routes/files.$'
+import { Route as ApiSharexRouteImport } from './routes/api/sharex'
+import { Route as ApiJournalSaveRouteImport } from './routes/api/journal/save'
+import { Route as ApiJournalFetchRouteImport } from './routes/api/journal/fetch'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',

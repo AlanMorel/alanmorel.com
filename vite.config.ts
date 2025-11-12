@@ -11,15 +11,9 @@ export default defineConfig({
     },
     plugins: [
         tsconfigPaths(),
-        tanstackStart({
-            router: {
-                routesDirectory: "../app"
-            }
-        }),
+        tanstackStart(),
         nitro({
-            config: {
-                preset: "node-server"
-            }
+            preset: "node-server"
         }),
         viteReact(),
         tailwindcss()
