@@ -10,7 +10,7 @@ export default function ProjectImages(props: Readonly<Prop>): ReactElement {
 
     return (
         <ul className="mx-0 flex flex-wrap justify-center sm:mt-4 sm:py-2">
-            {Array.from(Array(project.images).keys()).map(image => (
+            {Array.from(new Array(project.images).keys()).map(image => (
                 <li key={image}>
                     <img
                         src={`/images/projects/${project.slug}/image${image + 1}.png`}

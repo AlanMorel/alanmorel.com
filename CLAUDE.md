@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 - **Install dependencies**: `bun install`
-- **Run development server**: `bun dev` (runs on http://localhost:8080)
+- **Run development server**: `bun dev` (runs on <http://localhost:8080>)
 - **Build for production**: `bun run build` (also runs type checking)
 - **Start production server**: `bun start` (runs `.output/server/index.mjs` on port 8080)
 - **Lint code**: `bun run lint` (runs ESLint with auto-fix)
@@ -96,6 +96,7 @@ Two separate config files with distinct purposes:
 ## Code Style & Linting
 
 Strict ESLint configuration with:
+
 - TypeScript rules: explicit return types, no floating promises, await thenable
 - Stylistic rules: 4-space indentation, double quotes, semicolons required
 - No relative imports (use `@/` prefix)
@@ -105,7 +106,8 @@ Strict ESLint configuration with:
 ## Environment Setup
 
 Required `.env` variables:
-```
+
+```env
 VERSION=0
 NODE_ENV=development
 PORT=8080
@@ -117,6 +119,7 @@ JOURNAL_COOKIE_PASSWORD=
 ```
 
 Required directories:
+
 - `logs/` - for Pino logger output
 - `files/` - for ShareX uploads
 - `entries/` - for journal entries (auto-created with nested year/month structure)

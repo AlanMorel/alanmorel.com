@@ -24,21 +24,6 @@ export default function Entry(props: Readonly<Props>): ReactElement {
     const [date, setDate] = useState(today);
     const { openModal, closeModal } = useModal();
 
-    useEffect(() => {
-        const handleKeyDown = async (event: KeyboardEvent): Promise<void> => {
-            if (event.ctrlKey && event.key === "s") {
-                event.preventDefault();
-                await onSave();
-            }
-        };
-
-        document.addEventListener("keydown", handleKeyDown);
-
-        return (): void => {
-            document.removeEventListener("keydown", handleKeyDown);
-        };
-    }, [entry, control]);
-
     async function fetchNewEntry(date: Date): Promise<any> {
         if (!isDateEarlier(addDays(date, -1), today)) {
             showInfoToast("Cannot load future entries");
@@ -155,6 +140,21 @@ export default function Entry(props: Readonly<Props>): ReactElement {
 
         await fetchNewEntry(newDate);
     }
+
+    useEffect(() => {
+        const handleKeyDown = async (event: KeyboardEvent): Promise<void> => {
+            if (event.ctrlKey && event.key === "s") {
+                event.preventDefault();
+                await onSave();
+            }
+        };
+
+        document.addEventListener("keydown", handleKeyDown);
+
+        return (): void => {
+            document.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [entry, control]);
 
     return (
         <div>

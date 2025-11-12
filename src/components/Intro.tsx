@@ -9,11 +9,11 @@ export default function Intro(): ReactElement {
     function handleEmailClick(event: MouseEvent): void {
         event.preventDefault();
 
-        window.location.href = `mailto:${config.app.email}`;
+        globalThis.location.href = `mailto:${config.app.email}`;
     }
 
     return (
-        <header className="mx-auto box-border grid max-w-[60rem] grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-4 px-4 pt-12 pb-8 sm:gap-x-14 sm:pt-16">
+        <header className="mx-auto box-border grid max-w-240 grid-cols-[1fr_3fr] grid-rows-[auto_auto] gap-4 px-4 pt-12 pb-8 sm:gap-x-14 sm:pt-16">
             <div className="col-span-2 mx-auto w-full max-w-xs sm:col-span-1">
                 <Image
                     src={"/images/profile-picture.png"}
@@ -36,9 +36,12 @@ export default function Intro(): ReactElement {
                 </p>
                 <p className="text-lg">
                     Feel free to reach out to me via{" "}
-                    <a href="#" onClick={handleEmailClick} className="text-slate-900 underline hover:no-underline">
+                    <button
+                        onClick={handleEmailClick}
+                        className="cursor-pointer text-slate-900 underline hover:no-underline"
+                    >
                         email
-                    </a>
+                    </button>
                     . My resume can be{" "}
                     <Link to="/resume" target="_blank" className="text-slate-900 underline hover:no-underline">
                         found here

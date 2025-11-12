@@ -6,9 +6,11 @@ ENV NODE_ENV=production
 
 FROM base AS deps
 
-RUN mkdir -p /temp/prod
-COPY package.json bun.lock /temp/prod/
-RUN cd /temp/prod && bun install --frozen-lockfile --production
+WORKDIR /temp/prod
+
+COPY package.json bun.lock ./
+
+RUN bun install --frozen-lockfile --production
 
 FROM base AS builder
 

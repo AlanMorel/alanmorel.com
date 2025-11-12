@@ -7,14 +7,14 @@ const routes = ["", "/resume"];
 async function getSitemapXML(routes: string[]): Promise<string> {
     const stream = new SitemapStream({ hostname: Config.app.url });
 
-    routes.forEach(route => {
+    for (const route of routes) {
         const lastModified = new Date().toISOString();
 
         stream.write({
             url: route,
             lastmod: lastModified
         });
-    });
+    }
 
     stream.end();
 

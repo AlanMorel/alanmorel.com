@@ -24,10 +24,10 @@ export default function Lightbox(props: Readonly<Props>): ReactElement {
             }
         }
 
-        window.addEventListener("keydown", handleKeyDown);
+        globalThis.addEventListener("keydown", handleKeyDown);
 
         return (): void => {
-            window.removeEventListener("keydown", handleKeyDown);
+            globalThis.removeEventListener("keydown", handleKeyDown);
         };
     }, [index, location.images.length]);
 
@@ -84,7 +84,7 @@ export default function Lightbox(props: Readonly<Props>): ReactElement {
                             <Image
                                 src={`/images/photos/${location.slug}/DSC0${image}.jpg`}
                                 className={cn(
-                                    "w-[5rem] cursor-pointer rounded-xs transition hover:brightness-110 md:rounded-sm",
+                                    "w-12 cursor-pointer rounded-xs transition hover:brightness-110 md:rounded-sm",
                                     getImageClasses(i)
                                 )}
                                 onClick={(e: MouseEvent<HTMLImageElement>): void => selectPhoto(e, i)}
