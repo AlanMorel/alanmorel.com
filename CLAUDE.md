@@ -51,7 +51,7 @@ Two separate config files with distinct purposes:
 
 - **Route tree**: Auto-generated at `src/routeTree.gen.ts` by TanStack Router plugin
 - **Router setup**: `src/router.tsx` exports `getRouter()` function
-- **Path aliases**: Use `@/*` for imports (maps to project root via `tsconfig.json` and `vite-tsconfig-paths`)
+- **Path aliases**: Use `@/*` for imports (maps to project root via `tsconfig.json`)
 
 ### Helpers Organization
 
