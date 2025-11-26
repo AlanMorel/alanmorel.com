@@ -20,14 +20,13 @@ This project uses **TanStack Start** (formerly TanStack Router), a full-stack Re
 - **File-based routing**: Routes are defined in the `app/` directory
   - `app/__root.tsx`: Root layout component with theme loader
   - `app/index.tsx`: Home page (`/`)
-  - `app/journal.tsx`: Journal page (`/journal`) with authentication
   - `app/resume.tsx`: Resume page (`/resume`)
   - `app/$$.tsx`: 404 catch-all route
   - Special route syntax: `sitemap[.]xml.ts`, `robots[.]txt.ts` for static files
 
 - **Server functions**: Use `createServerFn()` from `@tanstack/react-start` for server-side operations
   - Defined in `src/helpers/server/ServerFunctions.ts`
-  - Examples: `getTheme()`, `isJournalAuthenticated()`, `getJournalEntry()`
+  - Examples: `getTheme()`
 
 - **Route metadata**: Use `head` property in routes for SEO meta tags and links
   - Helper functions in `src/helpers/client/MetadataHelper.ts`
@@ -44,7 +43,7 @@ Two separate config files with distinct purposes:
   - Can be imported on both client and server
 
 - **`src/helpers/Config.ts`**: Server-only configuration (reads from environment variables)
-  - Contains secrets like `SHAREX_SECRET`, `JOURNAL_COOKIE_PASSWORD`
+  - Contains secrets like `SHAREX_SECRET`
   - Never import this in client-side code
 
 ### Routing & Code Generation
@@ -66,17 +65,12 @@ Two separate config files with distinct purposes:
    - Server-side theme detection in `__root.tsx` loader
    - Theme state managed with Jotai atoms (`src/atoms/ThemeAtom.ts`)
 
-2. **Journal System**:
-   - Protected by cookie authentication
-   - Entries stored in `entries/YYYY/MM/YYYY-MM-DD.txt` format
-   - Server functions handle authentication and file operations
-
-3. **ShareX Integration**:
+2. **ShareX Integration**:
    - POST endpoint at `/api/sharex`
    - Uploads files to `files/` directory with random 8-character filenames
    - Requires `SHAREX_SECRET` authentication
 
-4. **Logging**:
+3. **Logging**:
    - Uses Pino logger (`src/helpers/server/Logger.ts`)
    - Logs written to `logs/` directory (must exist)
 
@@ -113,13 +107,9 @@ NODE_ENV=development
 PORT=8080
 TZ=America/New_York
 SHAREX_SECRET=
-JOURNAL_START_DATE=
-JOURNAL_COOKIE_NAME=
-JOURNAL_COOKIE_PASSWORD=
 ```
 
 Required directories:
 
 - `logs/` - for Pino logger output
-- `files/` - for ShareX uploads
-- `entries/` - for journal entries (auto-created with nested year/month structure)
+- `files/` - for ShareX uploads  

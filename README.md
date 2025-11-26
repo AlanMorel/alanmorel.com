@@ -31,10 +31,6 @@ PORT=8080
 TZ=America/New_York
 
 SHAREX_SECRET=
-
-JOURNAL_START_DATE=
-JOURNAL_COOKIE_NAME=
-JOURNAL_COOKIE_PASSWORD=
 ```
 
 Create a folder called `logs` at the root:

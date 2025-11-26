@@ -8,254 +8,167 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
-import { Route as ResumeRouteImport } from './routes/resume'
-import { Route as JournalRouteImport } from './routes/journal'
-import { Route as SplatRouteImport } from './routes/$$'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as FilesSplatRouteImport } from './routes/files.$'
-import { Route as ApiSharexRouteImport } from './routes/api/sharex'
-import { Route as ApiJournalSaveRouteImport } from './routes/api/journal/save'
-import { Route as ApiJournalFetchRouteImport } from './routes/api/journal/fetch'
+import { Route as rootRouteImport } from "./routes/__root";
+import { Route as SitemapDotxmlRouteImport } from "./routes/sitemap[.]xml";
+import { Route as RobotsDottxtRouteImport } from "./routes/robots[.]txt";
+import { Route as ResumeRouteImport } from "./routes/resume";
+import { Route as SplatRouteImport } from "./routes/$$";
+import { Route as IndexRouteImport } from "./routes/index";
+import { Route as FilesSplatRouteImport } from "./routes/files.$";
+import { Route as ApiSharexRouteImport } from "./routes/api/sharex";
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
+    id: "/sitemap.xml",
+    path: "/sitemap.xml",
+    getParentRoute: () => rootRouteImport
+} as any);
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
-  id: '/robots.txt',
-  path: '/robots.txt',
-  getParentRoute: () => rootRouteImport,
-} as any)
+    id: "/robots.txt",
+    path: "/robots.txt",
+    getParentRoute: () => rootRouteImport
+} as any);
 const ResumeRoute = ResumeRouteImport.update({
-  id: '/resume',
-  path: '/resume',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const JournalRoute = JournalRouteImport.update({
-  id: '/journal',
-  path: '/journal',
-  getParentRoute: () => rootRouteImport,
-} as any)
+    id: "/resume",
+    path: "/resume",
+    getParentRoute: () => rootRouteImport
+} as any);
 const SplatRoute = SplatRouteImport.update({
-  id: '/$$',
-  path: '/$$',
-  getParentRoute: () => rootRouteImport,
-} as any)
+    id: "/$$",
+    path: "/$$",
+    getParentRoute: () => rootRouteImport
+} as any);
 const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
+    id: "/",
+    path: "/",
+    getParentRoute: () => rootRouteImport
+} as any);
 const FilesSplatRoute = FilesSplatRouteImport.update({
-  id: '/files/$',
-  path: '/files/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
+    id: "/files/$",
+    path: "/files/$",
+    getParentRoute: () => rootRouteImport
+} as any);
 const ApiSharexRoute = ApiSharexRouteImport.update({
-  id: '/api/sharex',
-  path: '/api/sharex',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiJournalSaveRoute = ApiJournalSaveRouteImport.update({
-  id: '/api/journal/save',
-  path: '/api/journal/save',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiJournalFetchRoute = ApiJournalFetchRouteImport.update({
-  id: '/api/journal/fetch',
-  path: '/api/journal/fetch',
-  getParentRoute: () => rootRouteImport,
-} as any)
+    id: "/api/sharex",
+    path: "/api/sharex",
+    getParentRoute: () => rootRouteImport
+} as any);
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/$$': typeof SplatRoute
-  '/journal': typeof JournalRoute
-  '/resume': typeof ResumeRoute
-  '/robots.txt': typeof RobotsDottxtRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/api/sharex': typeof ApiSharexRoute
-  '/files/$': typeof FilesSplatRoute
-  '/api/journal/fetch': typeof ApiJournalFetchRoute
-  '/api/journal/save': typeof ApiJournalSaveRoute
+    "/": typeof IndexRoute;
+    "/$$": typeof SplatRoute;
+    "/resume": typeof ResumeRoute;
+    "/robots.txt": typeof RobotsDottxtRoute;
+    "/sitemap.xml": typeof SitemapDotxmlRoute;
+    "/api/sharex": typeof ApiSharexRoute;
+    "/files/$": typeof FilesSplatRoute;
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/$$': typeof SplatRoute
-  '/journal': typeof JournalRoute
-  '/resume': typeof ResumeRoute
-  '/robots.txt': typeof RobotsDottxtRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/api/sharex': typeof ApiSharexRoute
-  '/files/$': typeof FilesSplatRoute
-  '/api/journal/fetch': typeof ApiJournalFetchRoute
-  '/api/journal/save': typeof ApiJournalSaveRoute
+    "/": typeof IndexRoute;
+    "/$$": typeof SplatRoute;
+    "/resume": typeof ResumeRoute;
+    "/robots.txt": typeof RobotsDottxtRoute;
+    "/sitemap.xml": typeof SitemapDotxmlRoute;
+    "/api/sharex": typeof ApiSharexRoute;
+    "/files/$": typeof FilesSplatRoute;
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/$$': typeof SplatRoute
-  '/journal': typeof JournalRoute
-  '/resume': typeof ResumeRoute
-  '/robots.txt': typeof RobotsDottxtRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/api/sharex': typeof ApiSharexRoute
-  '/files/$': typeof FilesSplatRoute
-  '/api/journal/fetch': typeof ApiJournalFetchRoute
-  '/api/journal/save': typeof ApiJournalSaveRoute
+    __root__: typeof rootRouteImport;
+    "/": typeof IndexRoute;
+    "/$$": typeof SplatRoute;
+    "/resume": typeof ResumeRoute;
+    "/robots.txt": typeof RobotsDottxtRoute;
+    "/sitemap.xml": typeof SitemapDotxmlRoute;
+    "/api/sharex": typeof ApiSharexRoute;
+    "/files/$": typeof FilesSplatRoute;
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/$$'
-    | '/journal'
-    | '/resume'
-    | '/robots.txt'
-    | '/sitemap.xml'
-    | '/api/sharex'
-    | '/files/$'
-    | '/api/journal/fetch'
-    | '/api/journal/save'
-  fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/$$'
-    | '/journal'
-    | '/resume'
-    | '/robots.txt'
-    | '/sitemap.xml'
-    | '/api/sharex'
-    | '/files/$'
-    | '/api/journal/fetch'
-    | '/api/journal/save'
-  id:
-    | '__root__'
-    | '/'
-    | '/$$'
-    | '/journal'
-    | '/resume'
-    | '/robots.txt'
-    | '/sitemap.xml'
-    | '/api/sharex'
-    | '/files/$'
-    | '/api/journal/fetch'
-    | '/api/journal/save'
-  fileRoutesById: FileRoutesById
+    fileRoutesByFullPath: FileRoutesByFullPath;
+    fullPaths: "/" | "/$$" | "/resume" | "/robots.txt" | "/sitemap.xml" | "/api/sharex" | "/files/$";
+    fileRoutesByTo: FileRoutesByTo;
+    to: "/" | "/$$" | "/resume" | "/robots.txt" | "/sitemap.xml" | "/api/sharex" | "/files/$";
+    id: "__root__" | "/" | "/$$" | "/resume" | "/robots.txt" | "/sitemap.xml" | "/api/sharex" | "/files/$";
+    fileRoutesById: FileRoutesById;
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  SplatRoute: typeof SplatRoute
-  JournalRoute: typeof JournalRoute
-  ResumeRoute: typeof ResumeRoute
-  RobotsDottxtRoute: typeof RobotsDottxtRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  ApiSharexRoute: typeof ApiSharexRoute
-  FilesSplatRoute: typeof FilesSplatRoute
-  ApiJournalFetchRoute: typeof ApiJournalFetchRoute
-  ApiJournalSaveRoute: typeof ApiJournalSaveRoute
+    IndexRoute: typeof IndexRoute;
+    SplatRoute: typeof SplatRoute;
+    ResumeRoute: typeof ResumeRoute;
+    RobotsDottxtRoute: typeof RobotsDottxtRoute;
+    SitemapDotxmlRoute: typeof SitemapDotxmlRoute;
+    ApiSharexRoute: typeof ApiSharexRoute;
+    FilesSplatRoute: typeof FilesSplatRoute;
 }
 
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
+declare module "@tanstack/react-router" {
+    interface FileRoutesByPath {
+        "/sitemap.xml": {
+            id: "/sitemap.xml";
+            path: "/sitemap.xml";
+            fullPath: "/sitemap.xml";
+            preLoaderRoute: typeof SitemapDotxmlRouteImport;
+            parentRoute: typeof rootRouteImport;
+        };
+        "/robots.txt": {
+            id: "/robots.txt";
+            path: "/robots.txt";
+            fullPath: "/robots.txt";
+            preLoaderRoute: typeof RobotsDottxtRouteImport;
+            parentRoute: typeof rootRouteImport;
+        };
+        "/resume": {
+            id: "/resume";
+            path: "/resume";
+            fullPath: "/resume";
+            preLoaderRoute: typeof ResumeRouteImport;
+            parentRoute: typeof rootRouteImport;
+        };
+        "/$$": {
+            id: "/$$";
+            path: "/$$";
+            fullPath: "/$$";
+            preLoaderRoute: typeof SplatRouteImport;
+            parentRoute: typeof rootRouteImport;
+        };
+        "/": {
+            id: "/";
+            path: "/";
+            fullPath: "/";
+            preLoaderRoute: typeof IndexRouteImport;
+            parentRoute: typeof rootRouteImport;
+        };
+        "/files/$": {
+            id: "/files/$";
+            path: "/files/$";
+            fullPath: "/files/$";
+            preLoaderRoute: typeof FilesSplatRouteImport;
+            parentRoute: typeof rootRouteImport;
+        };
+        "/api/sharex": {
+            id: "/api/sharex";
+            path: "/api/sharex";
+            fullPath: "/api/sharex";
+            preLoaderRoute: typeof ApiSharexRouteImport;
+            parentRoute: typeof rootRouteImport;
+        };
     }
-    '/robots.txt': {
-      id: '/robots.txt'
-      path: '/robots.txt'
-      fullPath: '/robots.txt'
-      preLoaderRoute: typeof RobotsDottxtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/resume': {
-      id: '/resume'
-      path: '/resume'
-      fullPath: '/resume'
-      preLoaderRoute: typeof ResumeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/journal': {
-      id: '/journal'
-      path: '/journal'
-      fullPath: '/journal'
-      preLoaderRoute: typeof JournalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/$$': {
-      id: '/$$'
-      path: '/$$'
-      fullPath: '/$$'
-      preLoaderRoute: typeof SplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/files/$': {
-      id: '/files/$'
-      path: '/files/$'
-      fullPath: '/files/$'
-      preLoaderRoute: typeof FilesSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/sharex': {
-      id: '/api/sharex'
-      path: '/api/sharex'
-      fullPath: '/api/sharex'
-      preLoaderRoute: typeof ApiSharexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/journal/save': {
-      id: '/api/journal/save'
-      path: '/api/journal/save'
-      fullPath: '/api/journal/save'
-      preLoaderRoute: typeof ApiJournalSaveRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/journal/fetch': {
-      id: '/api/journal/fetch'
-      path: '/api/journal/fetch'
-      fullPath: '/api/journal/fetch'
-      preLoaderRoute: typeof ApiJournalFetchRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-  }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  SplatRoute: SplatRoute,
-  JournalRoute: JournalRoute,
-  ResumeRoute: ResumeRoute,
-  RobotsDottxtRoute: RobotsDottxtRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
-  ApiSharexRoute: ApiSharexRoute,
-  FilesSplatRoute: FilesSplatRoute,
-  ApiJournalFetchRoute: ApiJournalFetchRoute,
-  ApiJournalSaveRoute: ApiJournalSaveRoute,
-}
-export const routeTree = rootRouteImport
-  ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+    IndexRoute: IndexRoute,
+    SplatRoute: SplatRoute,
+    ResumeRoute: ResumeRoute,
+    RobotsDottxtRoute: RobotsDottxtRoute,
+    SitemapDotxmlRoute: SitemapDotxmlRoute,
+    ApiSharexRoute: ApiSharexRoute,
+    FilesSplatRoute: FilesSplatRoute
+};
+export const routeTree = rootRouteImport._addFileChildren(rootRouteChildren)._addFileTypes<FileRouteTypes>();
 
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
+import type { getRouter } from "./router.tsx";
+import type { createStart } from "@tanstack/react-start";
+declare module "@tanstack/react-start" {
+    interface Register {
+        ssr: true;
+        router: Awaited<ReturnType<typeof getRouter>>;
+    }
 }
