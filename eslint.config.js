@@ -17,7 +17,7 @@ const compat = new FlatCompat();
 
 export default [
     {
-        ignores: ["**.js", "**.cjs"]
+        ignores: ["**.js", "**.cjs", ".output", ".nitro"]
     },
     ...compat.extends("plugin:@typescript-eslint/eslint-recommended"),
     {
@@ -83,7 +83,7 @@ export default [
                 "double",
                 {
                     avoidEscape: true,
-                    allowTemplateLiterals: true
+                    allowTemplateLiterals: "always"
                 }
             ],
             "@stylistic/semi": "error",
