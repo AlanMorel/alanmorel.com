@@ -10,7 +10,7 @@ import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import security from "eslint-plugin-security";
 import sonarjs from "eslint-plugin-sonarjs";
-// import tailwindcss from "eslint-plugin-tailwindcss";
+import tailwindcss from "eslint-plugin-tailwindcss";
 import globals from "globals";
 
 const compat = new FlatCompat();
@@ -38,7 +38,7 @@ export default [
             security: security,
             prettier: prettier,
             "no-relative-import-paths": relative,
-            // tailwindcss,
+            tailwindcss,
             sonarjs,
             perfectionist,
             react,
