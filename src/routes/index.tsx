@@ -1,6 +1,7 @@
 import Contacts from "@/src/components/Contacts.tsx";
 import Intro from "@/src/components/Intro.tsx";
 import Projects from "@/src/components/projects/Projects.tsx";
+import SimpleHomepage from "@/src/components/SimpleHomepage.tsx";
 import StructuredData from "@/src/components/StructuredData.tsx";
 import config from "@/src/Config.ts";
 import { getLinks, getMeta } from "@/src/helpers/client/MetadataHelper";
@@ -12,7 +13,7 @@ export const Route = createFileRoute("/")({
     head: () => ({
         meta: getMeta({
             title: config.metaInfo.title,
-            description: config.metaInfo.description,
+            description: `${config.metaInfo.title} - ${config.metaInfo.description}`,
             canonical: "/",
             image: {
                 url: config.metaInfo.image.url,
@@ -29,6 +30,12 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage(): ReactElement {
+    const simple = import.meta.env.VITE_SIMPLE_MODE;
+
+    if (simple) {
+        return <SimpleHomepage />;
+    }
+
     return (
         <main className="tracking-[0.025rem]">
             <Intro />

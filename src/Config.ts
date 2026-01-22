@@ -13,7 +13,7 @@ const app = {
 
 const metaInfo = {
     title: "Alan Morel",
-    description: "Alan Morel - Software Engineer, Game Developer, Photographer, Music Producer",
+    description: "Software Engineer, Game Developer, Photographer, Music Producer",
     image: {
         url: "/images/meta-image.png",
         width: 1280,
