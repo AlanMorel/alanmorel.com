@@ -30,9 +30,7 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage(): ReactElement {
-    const simple = import.meta.env.VITE_SIMPLE_MODE;
-
-    if (simple) {
+    if (config.simpleMode) {
         return <SimpleHomepage />;
     }
 

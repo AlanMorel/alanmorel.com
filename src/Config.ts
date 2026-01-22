@@ -24,7 +24,8 @@ const metaInfo = {
 
 const config = {
     app,
-    metaInfo
+    metaInfo,
+    simpleMode: import.meta.env.VITE_SIMPLE_MODE === "true" || false
 };
 
 export default config;
