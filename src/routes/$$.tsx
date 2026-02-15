@@ -1,4 +1,4 @@
-import NotFound from "@/src/components/not-found";
+import NotFound from "@/src/components/not-found.tsx";
 import { getRedirect } from "@/src/helpers/server/ServerFunctions.ts";
 import { createFileRoute, redirect } from "@tanstack/react-router";
 

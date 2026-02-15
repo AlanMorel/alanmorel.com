@@ -37,7 +37,7 @@ import TypeScriptIcon from "@/src/components/icons/TypeScriptIcon.tsx";
 import VueIcon from "@/src/components/icons/VueIcon.tsx";
 import WebIcon from "@/src/components/icons/WebIcon.tsx";
 import WindowsIcon from "@/src/components/icons/WindowsIcon.tsx";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export default function getIcon(slug: string): ReactElement {
     switch (slug) {

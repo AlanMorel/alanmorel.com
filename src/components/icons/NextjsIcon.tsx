@@ -1,5 +1,5 @@
 import Icon from "@/src/components/icons/Icon.tsx";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export default function NextjsIcon(): ReactElement {
     return (

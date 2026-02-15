@@ -2,13 +2,13 @@
 
 import useModal from "@/src/atoms/ModalAtom.tsx";
 import { Dialog } from "@base-ui-components/react/dialog";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export default function Modal(): ReactElement {
     const { modal, setOpenState } = useModal();
 
     return (
-        <Dialog.Root open={modal.open} onOpenChange={setOpenState}>
+        <Dialog.Root onOpenChange={setOpenState} open={modal.open}>
             <Dialog.Portal>
                 <Dialog.Backdrop className="fixed inset-0 bg-black opacity-70 transition-all duration-150 data-ending-style:opacity-0 data-starting-style:opacity-0" />
                 <Dialog.Popup className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-150 data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0 dark:outline-gray-300">

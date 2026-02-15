@@ -1,9 +1,10 @@
 "use client";
 
-import { themeAtom, ThemeState } from "@/src/atoms/ThemeAtom.ts";
+import type { ThemeState } from "@/src/atoms/ThemeAtom.ts";
+import { themeAtom } from "@/src/atoms/ThemeAtom.ts";
 import ThemeContext from "@/src/helpers/client/ThemeContext.tsx";
 import { createStore, Provider as JotaiProvider } from "jotai";
-import { ReactElement, ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 interface Props {
     children: ReactNode;

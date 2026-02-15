@@ -1,4 +1,4 @@
-import { ThemeState } from "@/src/atoms/ThemeAtom.ts";
+import type { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import redirects from "@/src/redirects.json";
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";

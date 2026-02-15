@@ -1,7 +1,7 @@
 import getIcon from "@/src/components/Icons.tsx";
 import Pill from "@/src/components/Pill.tsx";
-import { Project } from "@/src/components/projects/Projects.tsx";
-import { ReactElement } from "react";
+import type { Project } from "@/src/components/projects/Projects.tsx";
+import type { ReactElement } from "react";
 
 interface Prop {
     project: Project;
@@ -29,13 +29,13 @@ export default function ProjectLinks(props: Readonly<Prop>): ReactElement {
     return (
         <ul className="mx-0 my-2 flex flex-wrap justify-center pb-3 text-sm sm:text-base">
             {project.links.map(link => (
-                <li key={link.url} className="inline-flex">
-                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-white">
+                <li className="inline-flex" key={link.url}>
+                    <a className="text-white" href={link.url} rel="noopener noreferrer" target="_blank">
                         <Pill
+                            className="hover:bg-black/20"
+                            Icon={getIcon(getIconName(link.name.toLowerCase()))}
                             label={link.name}
                             theme={project.theme}
-                            Icon={getIcon(getIconName(link.name.toLowerCase()))}
-                            className="hover:bg-black/20"
                         />
                     </a>
                 </li>

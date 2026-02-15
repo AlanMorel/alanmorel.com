@@ -4,7 +4,7 @@
 
 import Config from "@/src/Config.ts";
 import styles from "@/src/styles.css?url";
-import { DetailedHTMLProps, LinkHTMLAttributes, MetaHTMLAttributes } from "react";
+import type { DetailedHTMLProps, LinkHTMLAttributes, MetaHTMLAttributes } from "react";
 
 type Meta = DetailedHTMLProps<MetaHTMLAttributes<HTMLMetaElement>, HTMLMetaElement>;
 type Link = DetailedHTMLProps<LinkHTMLAttributes<HTMLLinkElement>, HTMLLinkElement>;

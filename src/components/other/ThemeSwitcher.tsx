@@ -2,7 +2,7 @@
 
 import { useTheme } from "@/src/atoms/ThemeAtom.ts";
 import { MoonIcon, SunIcon } from "lucide-react";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export default function ThemeSwitcher(): ReactElement {
     const { theme, setTheme } = useTheme();

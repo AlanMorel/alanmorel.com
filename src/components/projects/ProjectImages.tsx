@@ -1,5 +1,5 @@
-import { Project } from "@/src/components/projects/Projects.tsx";
-import { ReactElement } from "react";
+import type { Project } from "@/src/components/projects/Projects.tsx";
+import type { ReactElement } from "react";
 
 interface Prop {
     project: Project;
@@ -13,10 +13,10 @@ export default function ProjectImages(props: Readonly<Prop>): ReactElement {
             {Array.from(new Array(project.images).keys()).map(image => (
                 <li key={image}>
                     <img
-                        src={`/images/projects/${project.slug}/image${image + 1}.png`}
                         alt={project.name}
-                        loading="lazy"
                         className="mt-0 mr-4 mb-5 ml-0 max-h-[30rem] max-w-full rounded-lg shadow-xl"
+                        loading="lazy"
+                        src={`/images/projects/${project.slug}/image${image + 1}.png`}
                     />
                 </li>
             ))}

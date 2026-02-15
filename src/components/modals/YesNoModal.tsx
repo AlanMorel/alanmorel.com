@@ -5,7 +5,7 @@ import Button from "@/src/components/inputs/Button.tsx";
 import ModalButtons from "@/src/components/modals/ModalButtons.tsx";
 import ModalContent from "@/src/components/modals/ModalContent.tsx";
 import ModalTitle from "@/src/components/modals/ModalTitle.tsx";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 interface Props {
     title: string;
@@ -22,10 +22,10 @@ export default function YesNoModal(props: Readonly<Props>): ReactElement {
             <ModalTitle>{title}</ModalTitle>
             <ModalContent>{description}</ModalContent>
             <ModalButtons>
-                <Button variant="secondary" onClick={closeModal}>
+                <Button onClick={closeModal} variant="secondary">
                     No
                 </Button>
-                <Button variant="primary" onClick={onYes}>
+                <Button onClick={onYes} variant="primary">
                     Yes
                 </Button>
             </ModalButtons>

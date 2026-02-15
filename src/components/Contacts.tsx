@@ -3,7 +3,7 @@ import InstagramIcon from "@/src/components/icons/InstagramIcon.tsx";
 import LinkedInIcon from "@/src/components/icons/LinkedInIcon.tsx";
 import ThemeSwitcher from "@/src/components/other/ThemeSwitcher.tsx";
 import config from "@/src/Config.ts";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 const contacts = [
     {
@@ -27,13 +27,13 @@ export default function Contacts(): ReactElement {
     return (
         <ul className="my-4 flex list-none flex-wrap justify-center">
             {contacts.map(contact => (
-                <li key={contact.type} className="mx-4 mb-8">
+                <li className="mx-4 mb-8" key={contact.type}>
                     <a
-                        href={contact.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-slate-400 transition hover:text-slate-600"
                         aria-label={`Link to my ${contact.type} profile`}
+                        className="text-slate-400 transition hover:text-slate-600"
+                        href={contact.href}
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         <div className="size-10">
                             <contact.Icon />

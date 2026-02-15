@@ -1,5 +1,5 @@
 import config from "@/src/Config.ts";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export default function SimpleHomepage(): ReactElement {
     return (

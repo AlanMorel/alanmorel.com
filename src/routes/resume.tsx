@@ -4,7 +4,7 @@ import config from "@/src/Config.ts";
 import DataJSON from "@/src/data.json" with { type: "json" };
 import { getLinks, getMeta } from "@/src/helpers/client/MetadataHelper.ts";
 import { createFileRoute } from "@tanstack/react-router";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export type Resume = {
     header: string;
@@ -49,7 +49,7 @@ function ResumePage(): ReactElement {
             <div className="mx-auto box-border w-full border border-slate-200 bg-white p-4 lg:h-[1056px] lg:w-[816px] lg:px-12 lg:py-6 print:border-0">
                 <div className="mb-4 inline-flex w-full flex-wrap justify-center space-x-4 text-sm">
                     {resume.links.map(link => (
-                        <a key={link.name} className="hover:underline" href={link.url}>
+                        <a className="hover:underline" href={link.url} key={link.name}>
                             {link.name}
                         </a>
                     ))}
@@ -63,9 +63,9 @@ function ResumePage(): ReactElement {
                         {resume.experience.map(experience => (
                             <li key={experience.organization}>
                                 <ResumeEvent
+                                    date={experience.date}
                                     header={experience.organization}
                                     subheader={experience.title}
-                                    date={experience.date}
                                 />
                                 <ul className="mb-2 list-disc pl-4 text-sm">
                                     {experience.achievements.map(achievement => (
@@ -79,7 +79,7 @@ function ResumePage(): ReactElement {
                 <ResumeSection header="Projects">
                     <ul className="mb-2 list-disc space-y-1 pl-4 text-sm">
                         {resume.projects.map(project => (
-                            <li key={project.name} className="text-sm">
+                            <li className="text-sm" key={project.name}>
                                 <strong>{project.name}</strong> {project.description}
                             </li>
                         ))}
@@ -90,9 +90,9 @@ function ResumePage(): ReactElement {
                         {resume.education.map(education => (
                             <li key={education.university}>
                                 <ResumeEvent
+                                    date={education.date}
                                     header={education.university}
                                     subheader={education.college}
-                                    date={education.date}
                                 />
                                 <div className="text-sm lg:text-base">{education.description}</div>
                             </li>

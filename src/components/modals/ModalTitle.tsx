@@ -1,5 +1,5 @@
 import { Dialog } from "@base-ui-components/react/dialog";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 interface Props {
     children: ReactElement | string;

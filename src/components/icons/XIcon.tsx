@@ -1,9 +1,9 @@
 import Icon from "@/src/components/icons/Icon.tsx";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export default function XIcon(): ReactElement {
     return (
-        <Icon viewBox="256 256" fill="currentColor">
+        <Icon fill="currentColor" viewBox="256 256">
             <circle cx="128" cy="128" r="128" />
             <path
                 className="fill-white"

@@ -1,8 +1,8 @@
 "use client";
 
-import { ThemeState } from "@/src/atoms/ThemeAtom.ts";
+import type { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import ThemeProviders from "@/src/helpers/client/ThemeProviders.tsx";
-import { ReactElement, ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 interface Props {
     children: ReactNode;

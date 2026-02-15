@@ -1,7 +1,7 @@
 import Providers from "@/src/helpers/client/Providers.tsx";
 import { getTheme } from "@/src/helpers/server/ServerFunctions.ts";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import { ReactElement, ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 export const Route = createRootRoute({
     loader: async () => {
@@ -16,7 +16,7 @@ function RootComponent({ children }: Readonly<{ children: ReactNode }>): ReactEl
     const { theme } = Route.useLoaderData();
 
     return (
-        <html lang="en" className="font-inter" suppressHydrationWarning>
+        <html className="font-inter" lang="en" suppressHydrationWarning>
             <head>
                 <HeadContent />
             </head>

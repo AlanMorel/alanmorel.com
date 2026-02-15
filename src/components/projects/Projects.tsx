@@ -5,7 +5,7 @@ import ProjectPlatforms from "@/src/components/projects/ProjectPlatforms.tsx";
 import ProjectTechnologies from "@/src/components/projects/ProjectTechnologies.tsx";
 import DataJSON from "@/src/data.json" with { type: "json" };
 import { getColor } from "@/src/helpers/client/ColorHelpers.ts";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export type Project = {
     name: string;
@@ -38,10 +38,10 @@ export default function Projects(): ReactElement {
                     >
                         <div className="relative">
                             <img
-                                src={`/images/projects/${project.slug}/icon.png`}
                                 alt={`${project.name} icon`}
-                                loading="lazy"
                                 className="absolute w-full rounded-xs sm:rounded-xl"
+                                loading="lazy"
+                                src={`/images/projects/${project.slug}/icon.png`}
                             />
                         </div>
                         <div className="mb-2 text-left">

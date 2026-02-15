@@ -1,6 +1,6 @@
 import { themeAtom } from "@/src/atoms/ThemeAtom.ts";
 import { useAtom } from "jotai";
-import { ReactElement, ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 interface Props {
     children: ReactNode;

@@ -4,10 +4,10 @@ import Projects from "@/src/components/projects/Projects.tsx";
 import SimpleHomepage from "@/src/components/SimpleHomepage.tsx";
 import StructuredData from "@/src/components/StructuredData.tsx";
 import config from "@/src/Config.ts";
-import { getLinks, getMeta } from "@/src/helpers/client/MetadataHelper";
+import { getLinks, getMeta } from "@/src/helpers/client/MetadataHelper.ts";
 import { organization, website } from "@/src/helpers/server/Schema.ts";
 import { createFileRoute } from "@tanstack/react-router";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export const Route = createFileRoute("/")({
     head: () => ({

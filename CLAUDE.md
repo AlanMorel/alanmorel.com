@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Run development server**: `bun dev` (runs on <http://localhost:8080>)
 - **Build for production**: `bun run build` (also runs type checking)
 - **Start production server**: `bun start` (runs `.output/server/index.mjs` on port 8080)
-- **Lint code**: `bun run lint` (runs ESLint with auto-fix)
+- **Lint code**: `bun run lint` (runs oxlint with auto-fix)
 - **Type check**: `bun ts:check` (runs TypeScript compiler without emitting files)
 
 ## Architecture Overview
@@ -61,18 +61,18 @@ Two separate config files with distinct purposes:
 ### Key Features
 
 1. **Theme System**:
-   - Cookie-based theme persistence
-   - Server-side theme detection in `__root.tsx` loader
-   - Theme state managed with Jotai atoms (`src/atoms/ThemeAtom.ts`)
+    - Cookie-based theme persistence
+    - Server-side theme detection in `__root.tsx` loader
+    - Theme state managed with Jotai atoms (`src/atoms/ThemeAtom.ts`)
 
 2. **ShareX Integration**:
-   - POST endpoint at `/api/sharex`
-   - Uploads files to `files/` directory with random 8-character filenames
-   - Requires `SHAREX_SECRET` authentication
+    - POST endpoint at `/api/sharex`
+    - Uploads files to `files/` directory with random 8-character filenames
+    - Requires `SHAREX_SECRET` authentication
 
 3. **Logging**:
-   - Uses Pino logger (`src/helpers/server/Logger.ts`)
-   - Logs written to `logs/` directory (must exist)
+    - Uses Pino logger (`src/helpers/server/Logger.ts`)
+    - Logs written to `logs/` directory (must exist)
 
 ### Build & Deployment
 
@@ -89,7 +89,7 @@ Two separate config files with distinct purposes:
 
 ## Code Style & Linting
 
-Strict ESLint configuration with:
+Strict oxlint configuration with:
 
 - TypeScript rules: explicit return types, no floating promises, await thenable
 - Stylistic rules: 4-space indentation, double quotes, semicolons required
@@ -112,4 +112,4 @@ SHAREX_SECRET=
 Required directories:
 
 - `logs/` - for Pino logger output
-- `files/` - for ShareX uploads  
+- `files/` - for ShareX uploads

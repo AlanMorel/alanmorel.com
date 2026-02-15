@@ -1,6 +1,6 @@
 import cn from "@/src/components/other/TailwindHelper.ts";
 import { getColor } from "@/src/helpers/client/ColorHelpers.ts";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 interface Prop {
     Icon: ReactElement;

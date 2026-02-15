@@ -1,5 +1,5 @@
 import { atom, useAtom } from "jotai";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 type ModalState = {
     content: ReactElement;

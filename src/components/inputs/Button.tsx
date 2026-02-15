@@ -1,7 +1,7 @@
 "use client";
 
 import cn from "@/src/components/other/TailwindHelper.ts";
-import { ButtonHTMLAttributes, DetailedHTMLProps, MouseEvent, ReactElement } from "react";
+import type { ButtonHTMLAttributes, DetailedHTMLProps, MouseEvent, ReactElement } from "react";
 
 interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     children: string;

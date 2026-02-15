@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 interface Props {
     children: ReactNode;
@@ -10,7 +10,7 @@ export default function Contacts(props: Readonly<Props>): ReactElement {
     const { children, viewBox, fill } = props;
 
     return (
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${viewBox}`} fill={fill} className="h-full">
+        <svg className="h-full" fill={fill} version="1.1" viewBox={`0 0 ${viewBox}`} xmlns="http://www.w3.org/2000/svg">
             {children}
         </svg>
     );
