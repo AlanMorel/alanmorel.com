@@ -1,13 +1,9 @@
-// src/routes/__root.tsx
-/// <reference types="vite/client" />
-// other imports...
-
-import Config from "@/src/Config.ts";
-import styles from "@/src/styles.css?url";
-import type { DetailedHTMLProps, LinkHTMLAttributes, MetaHTMLAttributes } from "react";
+import config from "@/src/Config.ts";
+import type { DetailedHTMLProps, LinkHTMLAttributes, MetaHTMLAttributes, ScriptHTMLAttributes } from "react";
 
 type Meta = DetailedHTMLProps<MetaHTMLAttributes<HTMLMetaElement>, HTMLMetaElement>;
 type Link = DetailedHTMLProps<LinkHTMLAttributes<HTMLLinkElement>, HTMLLinkElement>;
+type Script = DetailedHTMLProps<ScriptHTMLAttributes<HTMLScriptElement>, HTMLScriptElement>;
 
 type MetaInfo = {
     title: string;
@@ -21,51 +17,87 @@ type MetaInfo = {
     };
 };
 
-export type LinksInfo = {
+type LinksInfo = {
+    canonical: string;
+    preconnect?: string[];
+};
+
+type ScriptsInfo = {
+    title: string;
+    description: string;
+    image: {
+        url: string;
+        width: number;
+        height: number;
+    };
     canonical: string;
 };
 
-export function getLinks(info: LinksInfo): Link[] {
-    const { canonical } = info;
+type HeadInfo = {
+    title: string;
+    description: string;
+    canonical: string;
+    image?: {
+        url: string;
+        width: number;
+        height: number;
+        alt: string;
+    };
+    preconnect?: string[];
+};
 
-    const appleTouchSizes = [57, 60, 72, 76, 114, 120, 144, 152];
+function getLinks(info: LinksInfo): Link[] {
+    const { canonical, preconnect } = info;
+    const links: Link[] = [];
+    const appleTouchSizes = [57, 72, 76, 114, 120, 144, 152, 180];
     const appleTouchIcons: Link[] = [];
 
     for (const size of appleTouchSizes) {
         appleTouchIcons.push({
             rel: "apple-touch-icon",
-            href: `/favicons/apple-touch-icon-${size}x${size}.png`,
+            href: `/images/favicons/apple-touch-icon-${size}x${size}.png`,
             sizes: `${size}x${size}`,
             type: "image/png"
         });
     }
 
-    return [
-        {
-            rel: "stylesheet",
-            href: styles
-        },
+    if (preconnect) {
+        for (const url of preconnect) {
+            links.push({
+                rel: "preconnect",
+                href: url
+            });
+        }
+    }
+
+    links.push(
         {
             rel: "canonical",
-            href: Config.app.url + canonical
+            href: config.app.url + canonical
+        },
+        {
+            rel: "manifest",
+            href: "/manifest.json"
         },
         {
             rel: "shortcut icon",
-            href: "/favicons/favicon.ico"
+            href: "/images/favicons/favicon.ico"
         },
         {
             rel: "icon",
-            href: "/favicons/favicon.ico"
+            href: "/images/favicons/favicon.ico"
         },
         ...appleTouchIcons,
         {
-            rel: "apple-touch-icon-precomposed",
-            href: "/favicons/apple-touch-icon-152x152.png"
+            rel: "apple-touch-icon",
+            href: "/images/favicons/apple-touch-icon.png"
         }
-    ];
+    );
+
+    return links;
 }
 
-export function getMeta(info: MetaInfo): Meta[] {
+function getMeta(info: MetaInfo): Meta[] {
     const { title, description, canonical, image } = info;
     const { url: imageUrl, width: imageWidth, height: imageHeight, alt: imageAlt } = image;
 
@@ -86,11 +118,31 @@ export function getMeta(info: MetaInfo): Meta[] {
         },
         {
             name: "application-name",
-            content: Config.app.name
+            content: config.app.name
         },
         {
-            name: "robots",
-            content: "noindex"
+            name: "theme-color",
+            content: "#000000"
+        },
+        {
+            name: "HandheldFriendly",
+            content: "True"
+        },
+        {
+            name: "mobile-web-app-capable",
+            content: "yes"
+        },
+        {
+            name: "apple-mobile-web-app-capable",
+            content: "yes"
+        },
+        {
+            name: "apple-mobile-web-app-status-bar-style",
+            content: "default"
+        },
+        {
+            name: "apple-mobile-web-app-title",
+            content: config.app.name
         },
         {
             name: "og:title",
@@ -102,11 +154,11 @@ export function getMeta(info: MetaInfo): Meta[] {
         },
         {
             name: "og:url",
-            content: canonical
+            content: config.app.url + canonical
         },
         {
             name: "og:site_name",
-            content: Config.app.name
+            content: config.app.name
         },
         {
             name: "og:locale",
@@ -133,10 +185,6 @@ export function getMeta(info: MetaInfo): Meta[] {
             content: "summary_large_image"
         },
         {
-            name: "twitter:creator",
-            content: `@${Config.app.socials.twitter}`
-        },
-        {
             name: "twitter:title",
             content: title
         },
@@ -153,4 +201,60 @@ export function getMeta(info: MetaInfo): Meta[] {
             content: imageAlt
         }
     ];
+}
+
+function getScripts(info: ScriptsInfo): Script[] {
+    const { title, description, image, canonical } = info;
+    const { url: imageUrl, width: imageWidth, height: imageHeight } = image;
+
+    const scripts = [
+        {
+            type: "application/ld+json",
+            children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                mainEntityOfPage: {
+                    "@type": "Webpage",
+                    "@id": canonical
+                },
+                headline: title,
+                description: description,
+                image: imageUrl,
+                publisher: {
+                    "@type": "Organization",
+                    name: config.app.name,
+                    url: config.app.url,
+                    logo: {
+                        "@type": "ImageObject",
+                        url: imageUrl,
+                        width: imageWidth,
+                        height: imageHeight
+                    }
+                }
+            })
+        }
+    ];
+
+    return scripts;
+}
+
+export function getHead(info: HeadInfo): { meta: Meta[]; links: Link[]; scripts: Script[] } {
+    const { description, canonical, preconnect } = info;
+
+    let { title } = info;
+
+    title = `${title} | ${config.app.name}`;
+
+    const image = info.image ?? {
+        url: "/images/app/meta-image.png",
+        width: 1280,
+        height: 800,
+        alt: `${config.app.name} Logo`
+    };
+
+    return {
+        meta: getMeta({ title, description, canonical, image }),
+        links: getLinks({ canonical, preconnect }),
+        scripts: getScripts({ title, description, image, canonical })
+    };
 }

@@ -2,7 +2,7 @@ import ResumeEvent from "@/src/components/resume/ResumeEvent.tsx";
 import ResumeSection from "@/src/components/resume/ResumeSection.tsx";
 import config from "@/src/Config.ts";
 import DataJSON from "@/src/data.json" with { type: "json" };
-import { getLinks, getMeta } from "@/src/helpers/client/MetadataHelper.ts";
+import { getHead } from "@/src/helpers/client/MetadataHelper.ts";
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactElement } from "react";
 
@@ -22,8 +22,8 @@ export type Resume = {
 };
 
 export const Route = createFileRoute("/resume")({
-    head: () => ({
-        meta: getMeta({
+    head: () =>
+        getHead({
             title: `Resume - ${config.metaInfo.title}`,
             description: `Resume - ${config.metaInfo.description}`,
             canonical: "/resume",
@@ -34,10 +34,6 @@ export const Route = createFileRoute("/resume")({
                 alt: config.metaInfo.image.alt
             }
         }),
-        links: getLinks({
-            canonical: "/resume"
-        })
-    }),
     component: ResumePage
 });
 

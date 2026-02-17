@@ -1,9 +1,18 @@
 import Providers from "@/src/helpers/client/Providers.tsx";
 import { getTheme } from "@/src/helpers/server/ServerFunctions.ts";
+import styles from "@/src/styles.css?url";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import type { ReactElement, ReactNode } from "react";
 
 export const Route = createRootRoute({
+    head: () => ({
+        links: [
+            {
+                rel: "stylesheet",
+                href: styles
+            }
+        ]
+    }),
     loader: async () => {
         const theme = await getTheme();
 
