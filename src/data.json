@@ -99,7 +99,7 @@
         "projects": [
             {
                 "name": "Solaxia Online MMORPG",
-                "description": "is a 2D top-down MMORPG written using React, TypeScript, TanStack Start, Phaser, and Electron. It is a passion project that combines my love of programming gaming."
+                "description": "is a 2D top-down MMORPG written using React, TypeScript, TanStack Start, Phaser, and Electron. It is a passion project that combines my love of programming gaming. It is a monorepo with multiple packages including the server, client, website, Discord bot, and shared utilities."
             },
             {
                 "name": "Sabe.io",
@@ -112,10 +112,6 @@
             {
                 "name": "Mixcurb.com",
                 "description": "is a Vue-powered e-commerce platform to discover, buy, and sell music and beats. Content uploaded by users is stored securely on an AWS S3 bucket and served by Amazon Cloudfront."
-            },
-            {
-                "name": "Aria",
-                "description": "is a React front-end CMS designed for private servers of the MMORPG game game MapleStory."
             }
         ],
         "education": [
@@ -136,7 +132,7 @@
             "date": "Mar 2025",
             "description": "Solaxia Online is a 2D top-down MMORPG written using React, TypeScript, Next.js, Phaser, and Electron. It is a passion project that combines my love of programming gaming.",
             "images": 5,
-            "technologies": ["React", "TypeScript", "Next.js", "Electron"],
+            "technologies": ["React", "TypeScript", "Next.js", "Electron", "Prisma"],
             "platforms": ["Web"],
             "links": [
                 {
