@@ -1,16 +1,14 @@
 import cn from "@/src/components/other/TailwindHelper.ts";
-import { getColor } from "@/src/helpers/client/ColorHelpers.ts";
 import type { ReactElement } from "react";
 
 interface Prop {
     Icon: ReactElement;
     label: string;
-    theme: string;
     className?: string;
 }
 
 export default function Pill(props: Readonly<Prop>): ReactElement {
-    const { Icon, label, theme, className } = props;
+    const { Icon, label, className } = props;
 
     return (
         <div
@@ -20,7 +18,7 @@ export default function Pill(props: Readonly<Prop>): ReactElement {
             )}
         >
             <div className="h-5">{Icon}</div>
-            <div className={cn("ml-2", getColor(theme))}>{label}</div>
+            <div className="ml-2">{label}</div>
         </div>
     );
 }

@@ -16,7 +16,7 @@ export default function ProjectPlatforms(props: Readonly<Prop>): ReactElement {
             <ul>
                 {project.platforms.map(platform => (
                     <li className="inline-flex" key={platform}>
-                        <Pill Icon={getIcon(platform.toLowerCase())} label={platform} theme={project.theme} />
+                        <Pill Icon={getIcon(platform.toLowerCase())} label={platform} />
                     </li>
                 ))}
             </ul>

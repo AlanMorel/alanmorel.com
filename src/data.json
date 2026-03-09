@@ -61,9 +61,9 @@
         ],
         "experience": [
             {
-                "organization": "Dotdash Meredith",
+                "organization": "People Inc. (Formerly Dotdash Meredith)",
                 "title": "Senior Software Engineer II",
-                "date": "Feb 2017 — Present",
+                "date": "Feb 2017 — Mar 2025",
                 "achievements": [
                     "Work on an agile team building innovative products on the D/Cipher team using Vue and TypeScript.",
                     "Collaborate closely with designers, product, QA, and others, to develop beautiful products and features.",
@@ -98,6 +98,10 @@
         ],
         "projects": [
             {
+                "name": "Solaxia Online MMORPG",
+                "description": "is a 2D top-down MMORPG written using React, TypeScript, TanStack Start, Phaser, and Electron. It is a passion project that combines my love of programming gaming."
+            },
+            {
                 "name": "Sabe.io",
                 "description": "is a publisher where I write high-quality classes, tutorials, and resources on web development and tech. My content reaches thousands of people a day across the site and shares on social media."
             },
@@ -112,22 +116,35 @@
             {
                 "name": "Aria",
                 "description": "is a React front-end CMS designed for private servers of the MMORPG game game MapleStory."
-            },
-            {
-                "name": "WASD With Me",
-                "description": "is a Node-powered social network created to meet and play with gamers. The app is deployed on Heroku and uses mutliple different gaming APIs to pull gamer libraries and other data."
             }
         ],
         "education": [
             {
                 "university": "New York University",
                 "college": "College of Arts and Science",
-                "date": "Sept 2012 — May 2016",
                 "description": "Bachelor of Arts in Computer Science, Minor in Web Programming and Applications, 3.61 GPA"
             }
         ]
     },
     "projects": [
+        {
+            "name": "Solaxia Online",
+            "slug": "solaxia-online",
+            "background": "#e03600",
+            "darkBackground": "#691b02",
+            "theme": "light",
+            "date": "Mar 2025",
+            "description": "Solaxia Online is a 2D top-down MMORPG written using React, TypeScript, Next.js, Phaser, and Electron. It is a passion project that combines my love of programming gaming.",
+            "images": 5,
+            "technologies": ["React", "TypeScript", "Next.js", "Electron"],
+            "platforms": ["Web"],
+            "links": [
+                {
+                    "name": "Play on the Web",
+                    "url": "https://solaxiaonline.com"
+                }
+            ]
+        },
         {
             "name": "Mailriser",
             "slug": "mailriser",
@@ -243,7 +260,7 @@
             ]
         },
         {
-            "name": "Solaxia Online",
+            "name": "Solaxia Online (Java)",
             "slug": "solaxia",
             "background": "#88a0d6",
             "darkBackground": "#3c4f7a",

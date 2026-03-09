@@ -3,7 +3,7 @@ import type { ReactElement } from "react";
 interface Props {
     header: string;
     subheader: string;
-    date: string;
+    date?: string;
 }
 
 export default function ResumeEvent(props: Readonly<Props>): ReactElement {
@@ -11,10 +11,10 @@ export default function ResumeEvent(props: Readonly<Props>): ReactElement {
 
     return (
         <div className="flex justify-between">
-            <div>
+            <div className="text-base">
                 <strong>{header}</strong>, <em>{subheader}</em>
             </div>
-            <div className="hidden text-sm font-bold lg:inline-flex">{date}</div>
+            {date && <div className="hidden text-sm font-bold lg:inline-flex">{date}</div>}
         </div>
     );
 }

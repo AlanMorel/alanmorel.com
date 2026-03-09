@@ -35,7 +35,6 @@ export default function ProjectLinks(props: Readonly<Prop>): ReactElement {
                             className="hover:bg-black/20"
                             Icon={getIcon(getIconName(link.name.toLowerCase()))}
                             label={link.name}
-                            theme={project.theme}
                         />
                     </a>
                 </li>

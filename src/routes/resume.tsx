@@ -41,9 +41,9 @@ function ResumePage(): ReactElement {
     const resume = DataJSON.resume;
 
     return (
-        <div className="bg-slate-50 lg:min-h-screen lg:pt-20">
+        <div className="bg-slate-50 text-sm lg:min-h-screen lg:pt-20">
             <div className="mx-auto box-border w-full border border-slate-200 bg-white p-4 lg:h-[1056px] lg:w-[816px] lg:px-12 lg:py-6 print:border-0">
-                <div className="mb-4 inline-flex w-full flex-wrap justify-center space-x-4 text-sm">
+                <div className="mb-4 inline-flex w-full flex-wrap justify-center space-x-4">
                     {resume.links.map(link => (
                         <a className="hover:underline" href={link.url} key={link.name}>
                             {link.name}
@@ -52,7 +52,7 @@ function ResumePage(): ReactElement {
                 </div>
                 <h1 className="-mb-2 text-center text-3xl font-bold">{resume.header}</h1>
                 <ResumeSection header="Skills">
-                    <div className="text-sm">{resume.skills.join(", ")}</div>
+                    <div>{resume.skills.join(", ")}</div>
                 </ResumeSection>
                 <ResumeSection header="Experience">
                     <ul className="list-none">
@@ -63,7 +63,7 @@ function ResumePage(): ReactElement {
                                     header={experience.organization}
                                     subheader={experience.title}
                                 />
-                                <ul className="mb-2 list-disc pl-4 text-sm">
+                                <ul className="mb-2 list-disc pl-4">
                                     {experience.achievements.map(achievement => (
                                         <li key={achievement}>{achievement}</li>
                                     ))}
@@ -73,9 +73,9 @@ function ResumePage(): ReactElement {
                     </ul>
                 </ResumeSection>
                 <ResumeSection header="Projects">
-                    <ul className="mb-2 list-disc space-y-1 pl-4 text-sm">
+                    <ul className="mb-2 list-disc space-y-1 pl-4">
                         {resume.projects.map(project => (
-                            <li className="text-sm" key={project.name}>
+                            <li key={project.name}>
                                 <strong>{project.name}</strong> {project.description}
                             </li>
                         ))}
@@ -85,12 +85,8 @@ function ResumePage(): ReactElement {
                     <ul className="list-none">
                         {resume.education.map(education => (
                             <li key={education.university}>
-                                <ResumeEvent
-                                    date={education.date}
-                                    header={education.university}
-                                    subheader={education.college}
-                                />
-                                <div className="text-sm lg:text-base">{education.description}</div>
+                                <ResumeEvent header={education.university} subheader={education.college} />
+                                <div>{education.description}</div>
                             </li>
                         ))}
                     </ul>
