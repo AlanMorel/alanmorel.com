@@ -1,5 +1,3 @@
-"use client";
-
 import { useTheme } from "@/src/atoms/ThemeAtom.ts";
 import { MoonIcon, SunIcon } from "lucide-react";
 import type { ReactElement } from "react";

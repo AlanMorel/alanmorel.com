@@ -1,7 +1,4 @@
-"use client";
-
 import config from "@/src/Config.ts";
-import { Link } from "@tanstack/react-router";
 import { Image } from "@unpic/react";
 import type { MouseEvent, ReactElement } from "react";
 
@@ -42,10 +39,6 @@ export default function Intro(): ReactElement {
                     >
                         email
                     </button>
-                    . My resume can be{" "}
-                    <Link className="text-slate-900 underline hover:no-underline" target="_blank" to="/resume">
-                        found here
-                    </Link>
                     .
                 </p>
             </div>

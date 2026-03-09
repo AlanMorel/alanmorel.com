@@ -1,5 +1,3 @@
-"use client";
-
 import type { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import ThemeProviders from "@/src/helpers/client/ThemeProviders.tsx";
 import type { ReactElement, ReactNode } from "react";

@@ -4,8 +4,6 @@ const app = {
     domain: "alanmorel.com",
     email: "alan@alanmorel.com",
     socials: {
-        instagram: "AlanMorelX",
-        twitter: "AlanMorelX",
         gitHub: "AlanMorel",
         linkedIn: "AlanMorel"
     }
