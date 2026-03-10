@@ -1,4 +1,5 @@
-import { ThemeState, useTheme } from "@/src/atoms/ThemeAtom.ts";
+import type { ThemeState } from "@/src/atoms/ThemeAtom.ts";
+import { useTheme } from "@/src/atoms/ThemeAtom.ts";
 import cn from "@/src/components/other/TailwindHelper.ts";
 import ProjectImages from "@/src/components/projects/ProjectImages.tsx";
 import ProjectLinks from "@/src/components/projects/ProjectLinks.tsx";
