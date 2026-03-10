@@ -105,7 +105,7 @@
                 "description": "is a publisher where I write high-quality classes, tutorials, and resources on web development and tech. My content reaches thousands of people a day across the site and shares on social media."
             },
             {
-                "name": "Mailriser",
+                "name": "Mailriser.com",
                 "description": "is a Next.js-powered platform to send bulk emails cheaply using Amazon SES. The app is deployed on Docker and uses Prisma and MySQL for the database."
             },
             {

@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as ResumeViewerRouteImport } from './routes/resume-viewer'
 import { Route as ResumeRouteImport } from './routes/resume'
 import { Route as SplatRouteImport } from './routes/$$'
 import { Route as IndexRouteImport } from './routes/index'
@@ -25,6 +26,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
   id: '/robots.txt',
   path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResumeViewerRoute = ResumeViewerRouteImport.update({
+  id: '/resume-viewer',
+  path: '/resume-viewer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResumeRoute = ResumeRouteImport.update({
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$$': typeof SplatRoute
   '/resume': typeof ResumeRoute
+  '/resume-viewer': typeof ResumeViewerRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/sharex': typeof ApiSharexRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$$': typeof SplatRoute
   '/resume': typeof ResumeRoute
+  '/resume-viewer': typeof ResumeViewerRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/sharex': typeof ApiSharexRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$$': typeof SplatRoute
   '/resume': typeof ResumeRoute
+  '/resume-viewer': typeof ResumeViewerRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/sharex': typeof ApiSharexRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$$'
     | '/resume'
+    | '/resume-viewer'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/api/sharex'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$$'
     | '/resume'
+    | '/resume-viewer'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/api/sharex'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$$'
     | '/resume'
+    | '/resume-viewer'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/api/sharex'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
   ResumeRoute: typeof ResumeRoute
+  ResumeViewerRoute: typeof ResumeViewerRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiSharexRoute: typeof ApiSharexRoute
@@ -135,6 +148,13 @@ declare module '@tanstack/react-router' {
       path: '/robots.txt'
       fullPath: '/robots.txt'
       preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resume-viewer': {
+      id: '/resume-viewer'
+      path: '/resume-viewer'
+      fullPath: '/resume-viewer'
+      preLoaderRoute: typeof ResumeViewerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/resume': {
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
   ResumeRoute: ResumeRoute,
+  ResumeViewerRoute: ResumeViewerRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiSharexRoute: ApiSharexRoute,

@@ -1,3 +1,4 @@
+import ResumeDownloadButton from "@/src/components/resume/ResumeDownloadButton.tsx";
 import ResumeEvent from "@/src/components/resume/ResumeEvent.tsx";
 import ResumeSection from "@/src/components/resume/ResumeSection.tsx";
 import config from "@/src/Config.ts";
@@ -18,6 +19,15 @@ export type Resume = {
         title: string;
         date: string;
         achievements: string[];
+    }[];
+    projects: {
+        name: string;
+        description: string;
+    }[];
+    education: {
+        university: string;
+        college: string;
+        description: string;
     }[];
 };
 
@@ -91,6 +101,9 @@ function ResumePage(): ReactElement {
                         ))}
                     </ul>
                 </ResumeSection>
+            </div>
+            <div className="mx-auto flex w-full justify-center py-2 print:hidden">
+                <ResumeDownloadButton />
             </div>
         </div>
     );
