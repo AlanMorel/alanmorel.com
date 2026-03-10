@@ -4,7 +4,8 @@ import { pdf } from "@react-pdf/renderer";
 import type { ReactElement } from "react";
 
 async function downloadPDF(resume: typeof DataJSON.resume, fileName: string): Promise<void> {
-    const blob = await pdf(<ResumePDF resume={resume} />).toBlob();
+    const component = <ResumePDF resume={resume} />;
+    const blob = await pdf(component).toBlob();
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;

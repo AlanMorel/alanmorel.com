@@ -73,7 +73,7 @@ function ResumePage(): ReactElement {
                                     header={experience.organization}
                                     subheader={experience.title}
                                 />
-                                <ul className="mb-2 list-disc pl-4">
+                                <ul className="mb-2 list-disc space-y-1 pl-4">
                                     {experience.achievements.map(achievement => (
                                         <li key={achievement}>{achievement}</li>
                                     ))}
@@ -83,7 +83,7 @@ function ResumePage(): ReactElement {
                     </ul>
                 </ResumeSection>
                 <ResumeSection header="Projects">
-                    <ul className="mb-2 list-disc space-y-1 pl-4">
+                    <ul className="mb-2 list-disc space-y-2 pl-4">
                         {resume.projects.map(project => (
                             <li key={project.name}>
                                 <strong>{project.name}</strong> {project.description}

@@ -10,7 +10,7 @@ export default function ResumeEvent(props: Readonly<Props>): ReactElement {
     const { header, subheader, date } = props;
 
     return (
-        <div className="flex justify-between">
+        <div className="mb-1 flex justify-between">
             <div className="text-base">
                 <strong>{header}</strong>, <em>{subheader}</em>
             </div>

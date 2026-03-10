@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         textDecoration: "none"
     },
     section: {
-        marginBottom: 4
+        marginBottom: 5
     },
     sectionHeader: {
         fontSize: 12,
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     },
     bulletRow: {
         flexDirection: "row",
-        lineHeight: "16px"
+        lineHeight: "17px"
     },
     bulletChar: {
         width: 10,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     },
     projectRow: {
         flexDirection: "row",
-        lineHeight: "15px",
+        lineHeight: "16px",
         marginBottom: 2
     }
 });
@@ -122,7 +122,7 @@ export default function ResumePDF(props: Readonly<Props>): ReactElement {
                 <View style={styles.section}>
                     <Text style={styles.sectionHeader}>Experience</Text>
                     {resume.experience.map(exp => (
-                        <View key={exp.organization} style={{ marginBottom: 4 }}>
+                        <View key={exp.organization} style={{ marginBottom: 5 }}>
                             <View style={styles.eventRow}>
                                 <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
                                     <Text style={styles.eventLeft}>{exp.organization}</Text>
@@ -151,7 +151,7 @@ export default function ResumePDF(props: Readonly<Props>): ReactElement {
                     ))}
                 </View>
                 <View style={styles.section}>
-                    <Text style={styles.sectionHeader}>Education</Text>
+                    <Text style={[styles.sectionHeader, { marginTop: 6 }]}>Education</Text>
                     {resume.education.map(edu => (
                         <View key={edu.university}>
                             <View style={styles.eventRow}>

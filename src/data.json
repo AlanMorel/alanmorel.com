@@ -64,14 +64,14 @@
                 "title": "Senior Software Engineer II",
                 "date": "Feb 2017 — Mar 2025",
                 "achievements": [
-                    "Work on an agile team building innovative products on the D/Cipher team using Vue and TypeScript.",
-                    "Collaborate closely with designers, product, QA, and others, to develop beautiful products and features.",
-                    "Mentor other engineers to help bring them up to speed and facilitate knowledge transfer.",
-                    "Pride myself on writing clean, scalable, and maintainable code that is cross-browser compatible.",
-                    "Actively identify, prioritize, and eliminate tech debt to ensure quality of codebase remains high.",
-                    "Member of the technical interviewing team, responsible for assessing and hiring new engineers.",
-                    "Write technical articles for the company tech blog and documentation on internal Confluence instance.",
-                    "Created and maintain the much-loved 'Dashy the Dog' Slack bot in JavaScript, deployed on AWS.",
+                    "Worked on an agile team building innovative AI-powered products using Next.js and TypeScript.",
+                    "Collaborated closely with design, product, QA, and leadership, to iterate quickly on new features.",
+                    "Mentored other engineers to help bring them up to speed and facilitate knowledge transfer.",
+                    "Prided myself on writing clean, scalable, and maintainable code that is cross-browser compatible.",
+                    "Actively identified, prioritized, and eliminated tech debt to ensure quality of codebase remained high.",
+                    "Facilitated technical interviews for engineers, assessed, and recommended candidates for hire.",
+                    "Wrote technical articles for the company tech blog and documentation on internal Confluence instance.",
+                    "Created and maintained the widely-used 'Dashy the Dog' Slack bot in JavaScript, deployed on AWS.",
                     "Led the engineering team to re-write Dotdash Meredith's homepage in Vue, Nuxt, and the Prismic CMS."
                 ]
             },
@@ -98,7 +98,7 @@
         "projects": [
             {
                 "name": "Solaxia Online MMORPG",
-                "description": "is a 2D top-down MMORPG written using React, TypeScript, TanStack Start, Phaser, and Electron. It is a passion project that combines my love of programming gaming. It is a monorepo with multiple packages including the server, client, website, Discord bot, and shared utilities."
+                "description": "is a 2D top-down MMORPG written using React, TypeScript, TanStack Start, Phaser, and Electron. It is a passion project that combines my love of programming gaming. It is a mono-repo with multiple packages including the server, client, website, Discord bot, and shared utilities."
             },
             {
                 "name": "Sabe.io",
@@ -107,10 +107,6 @@
             {
                 "name": "Mailriser.com",
                 "description": "is a Next.js-powered platform to send bulk emails cheaply using Amazon SES. The app is deployed on Docker and uses Prisma and MySQL for the database."
-            },
-            {
-                "name": "Mixcurb.com",
-                "description": "is a Vue-powered e-commerce platform to discover, buy, and sell music and beats. Content uploaded by users is stored securely on an AWS S3 bucket and served by Amazon Cloudfront."
             }
         ],
         "education": [
