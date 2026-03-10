@@ -2,6 +2,7 @@ import AndroidIcon from "@/src/components/icons/AndroidIcon.tsx";
 import AngularIcon from "@/src/components/icons/AngularIcon.tsx";
 import APIIcon from "@/src/components/icons/APIIcon.tsx";
 import AWSIcon from "@/src/components/icons/AWSIcon.tsx";
+import BunIcon from "@/src/components/icons/BunIcon.tsx";
 import ChromeIcon from "@/src/components/icons/ChromeIcon.tsx";
 import CordovaIcon from "@/src/components/icons/CordovaIcon.tsx";
 import CsharpIcon from "@/src/components/icons/CsharpIcon.tsx";
@@ -24,6 +25,7 @@ import NextjsIcon from "@/src/components/icons/NextjsIcon.tsx";
 import NodeIcon from "@/src/components/icons/NodeIcon.tsx";
 import PayPalIcon from "@/src/components/icons/PayPalIcon.tsx";
 import PHPIcon from "@/src/components/icons/PHPIcon.tsx";
+import PostgreSQLIcon from "@/src/components/icons/PostgreSQLIcon.tsx";
 import PrismaIcon from "@/src/components/icons/PrismaIcon.tsx";
 import ProcessingIcon from "@/src/components/icons/ProcessingIcon.tsx";
 import PythonIcon from "@/src/components/icons/PythonIcon.tsx";
@@ -32,6 +34,7 @@ import SassIcon from "@/src/components/icons/SassIcon.tsx";
 import StripeIcon from "@/src/components/icons/StripeIcon.tsx";
 import StylusIcon from "@/src/components/icons/StylusIcon.tsx";
 import TailwindIcon from "@/src/components/icons/TailwindIcon.tsx";
+import TanStackIcon from "@/src/components/icons/TanStackIcon.tsx";
 import TwitterIcon from "@/src/components/icons/TwitterIcon.tsx";
 import TypeScriptIcon from "@/src/components/icons/TypeScriptIcon.tsx";
 import VueIcon from "@/src/components/icons/VueIcon.tsx";
@@ -63,6 +66,8 @@ export default function getIcon(slug: string): ReactElement {
         case "aws route 53":
         case "aws ses":
             return <AWSIcon />;
+        case "bun":
+            return <BunIcon />;
         case "cordova":
             return <CordovaIcon />;
         case "chrome":
@@ -112,6 +117,8 @@ export default function getIcon(slug: string): ReactElement {
             return <PayPalIcon />;
         case "php":
             return <PHPIcon />;
+        case "postgresql":
+            return <PostgreSQLIcon />;
         case "prisma":
             return <PrismaIcon />;
         case "processing":
@@ -129,6 +136,9 @@ export default function getIcon(slug: string): ReactElement {
             return <StripeIcon />;
         case "stylus":
             return <StylusIcon />;
+        case "tanstack router":
+        case "tanstack start":
+            return <TanStackIcon />;
         case "tailwind":
             return <TailwindIcon />;
         case "twitter":
@@ -145,5 +155,5 @@ export default function getIcon(slug: string): ReactElement {
             return <VueIcon />;
     }
 
-    return <TwitterIcon />;
+    return <></>;
 }

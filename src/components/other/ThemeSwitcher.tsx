@@ -15,5 +15,9 @@ export default function ThemeSwitcher(): ReactElement {
         return <></>;
     }
 
-    return <div className="cursor-pointer text-slate-400 transition hover:text-slate-600">{getIcon()}</div>;
+    return (
+        <div className="fixed right-6 bottom-6 flex size-12 items-center justify-center rounded-full bg-white/10 shadow-md backdrop-blur-3xl transition hover:bg-white/25">
+            <div className="cursor-pointer text-white transition">{getIcon()}</div>
+        </div>
+    );
 }

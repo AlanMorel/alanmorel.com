@@ -1,6 +1,5 @@
 import GitHubIcon from "@/src/components/icons/GitHubIcon.tsx";
 import LinkedInIcon from "@/src/components/icons/LinkedInIcon.tsx";
-import ThemeSwitcher from "@/src/components/other/ThemeSwitcher.tsx";
 import config from "@/src/Config.ts";
 import { FileText } from "lucide-react";
 import type { ReactElement } from "react";
@@ -49,10 +48,6 @@ export default function Contacts(): ReactElement {
                     </div>
                     <span className="text-base">Resume</span>
                 </a>
-            </li>
-            <li className="mx-4 mb-8 flex flex-col items-center gap-1">
-                <ThemeSwitcher />
-                <span className="text-base text-slate-500">Theme</span>
             </li>
         </ul>
     );

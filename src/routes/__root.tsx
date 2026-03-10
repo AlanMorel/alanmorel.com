@@ -1,3 +1,4 @@
+import ThemeSwitcher from "@/src/components/other/ThemeSwitcher.tsx";
 import Providers from "@/src/helpers/client/Providers.tsx";
 import { getTheme } from "@/src/helpers/server/ServerFunctions.ts";
 import styles from "@/src/styles.css?url";
@@ -30,7 +31,10 @@ function RootComponent({ children }: Readonly<{ children: ReactNode }>): ReactEl
                 <HeadContent />
             </head>
             <body className="font-text m-0">
-                <Providers initialTheme={theme}>{children}</Providers>
+                <Providers initialTheme={theme}>
+                    {children}
+                    <ThemeSwitcher />
+                </Providers>
                 <Scripts />
             </body>
         </html>

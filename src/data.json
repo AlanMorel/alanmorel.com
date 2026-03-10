@@ -131,7 +131,19 @@
             "date": "Mar 2025",
             "description": "Solaxia Online is a 2D top-down MMORPG written using React, TypeScript, Next.js, Phaser, and Electron. It is a passion project that combines my love of programming gaming.",
             "images": 5,
-            "technologies": ["React", "TypeScript", "Next.js", "Electron", "Prisma"],
+            "technologies": [
+                "TanStack Start",
+                "TanStack Router",
+                "TypeScript",
+                "Tailwind",
+                "React",
+                "Electron",
+                "Bun",
+                "Node",
+                "Docker",
+                "Prisma",
+                "PostgreSQL"
+            ],
             "platforms": ["Web"],
             "links": [
                 {
@@ -155,11 +167,12 @@
                 "Tailwind",
                 "React",
                 "MDX",
+                "Bun",
                 "Node",
                 "Docker",
                 "AWS SES",
                 "Prisma",
-                "MySQL",
+                "PostgreSQL",
                 "Sass",
                 "Stripe"
             ],
@@ -180,18 +193,7 @@
             "date": "September 2017",
             "description": "Sabe is an online publisher for free high-quality classes, tutorials, tools, and resources on HTML, CSS, JavaScript, Vue, React, PHP, Python, Java, Docker, and more!",
             "images": 3,
-            "technologies": [
-                "Node",
-                "Docker",
-                "Express",
-                "MySQL",
-                "TypeScript",
-                "JavaScript",
-                "HTML",
-                "CSS",
-                "Sass",
-                "Stripe"
-            ],
+            "technologies": ["Bun", "Docker", "TanStack Start", "PostgreSQL", "TypeScript", "Tailwind", "Stripe"],
             "platforms": ["Web"],
             "links": [
                 {
@@ -216,7 +218,7 @@
                 "Vue Router",
                 "Docker",
                 "PHP",
-                "MySQL",
+                "PostgreSQL",
                 "Node",
                 "JavaScript",
                 "HTML",
