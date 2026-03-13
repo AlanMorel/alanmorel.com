@@ -22,7 +22,7 @@ export default function ResumeDownloadButton(): ReactElement {
 
     return (
         <button
-            className="cursor-pointer text-lg text-slate-800 underline hover:no-underline dark:text-slate-200"
+            className="cursor-pointer text-lg text-slate-800 underline hover:no-underline"
             onClick={(): void => {
                 void downloadPDF(resume, fileName);
             }}

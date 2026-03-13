@@ -51,7 +51,7 @@ function ResumePage(): ReactElement {
     const resume = DataJSON.resume;
 
     return (
-        <div className="bg-slate-50 text-sm text-black lg:min-h-screen lg:pt-20 dark:bg-slate-950">
+        <div className="bg-slate-50 text-sm text-black lg:min-h-screen lg:pt-20">
             <div className="mx-auto mb-4 flex w-full justify-center py-2 print:hidden">
                 <ResumeDownloadButton />
             </div>

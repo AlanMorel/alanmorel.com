@@ -22,14 +22,14 @@ export default function Intro(): ReactElement {
             </div>
             <div className="col-span-2 text-slate-900 sm:col-span-1">
                 <div className="mx-auto w-full text-center sm:text-left">
-                    <h1 className="highlight mx-auto my-0 mb-4 inline-flex text-6xl leading-none font-bold tracking-tighter sm:text-7xl md:text-8xl">
+                    <h1 className="highlight mx-auto my-0 mb-6 inline-flex text-6xl leading-none font-bold tracking-tighter sm:text-7xl md:text-8xl">
                         {config.metaInfo.title}
                     </h1>
                 </div>
-                <p className="mb-4 leading-7">
-                    Hey! My name is Alan and I am a senior software engineer, game developer, photographer, music
-                    producer, and technical writer. I like writing software to build cool things, and this is my
-                    collection of my works, art, and projects.
+                <p className="mb-4 leading-8">
+                    Hey! My name is Alan and I am a senior full-stack software engineer, video game developer,
+                    photographer, music producer, and technical writer. I love writing software that brings joy to
+                    people, and this is my collection of those projects.
                 </p>
                 <p className="text-lg">
                     Feel free to reach out to me via{" "}
@@ -39,6 +39,24 @@ export default function Intro(): ReactElement {
                     >
                         email
                     </button>
+                    ,{" "}
+                    <a
+                        className="cursor-pointer text-slate-900 underline hover:no-underline"
+                        href="https://github.com/AlanMorel"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        GitHub
+                    </a>
+                    , or{" "}
+                    <a
+                        className="cursor-pointer text-slate-900 underline hover:no-underline"
+                        href="https://linkedin.com/in/AlanMorel"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        LinkedIn
+                    </a>
                     .
                 </p>
             </div>
