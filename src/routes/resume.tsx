@@ -52,6 +52,9 @@ function ResumePage(): ReactElement {
 
     return (
         <div className="bg-slate-50 text-sm text-black lg:min-h-screen lg:pt-20 dark:bg-slate-950">
+            <div className="mx-auto mb-4 flex w-full justify-center py-2 print:hidden">
+                <ResumeDownloadButton />
+            </div>
             <div className="mx-auto box-border w-full border border-slate-200 bg-white p-4 lg:h-[1056px] lg:w-[816px] lg:px-12 lg:py-8 dark:border-slate-800 print:border-0">
                 <div className="mb-4 inline-flex w-full flex-wrap justify-center space-x-4">
                     {resume.links.map(link => (
@@ -101,9 +104,6 @@ function ResumePage(): ReactElement {
                         ))}
                     </ul>
                 </ResumeSection>
-            </div>
-            <div className="mx-auto flex w-full justify-center py-2 print:hidden">
-                <ResumeDownloadButton />
             </div>
         </div>
     );
