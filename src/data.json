@@ -6,10 +6,12 @@
         "Python",
         "React",
         "Vue",
+        "Vite",
         "Next.js",
         "TanStack Start",
         "TanStack Router",
         "Electron",
+        "Better Auth",
         "Express",
         "Flask",
         "HTML",
@@ -26,7 +28,8 @@
         "AWS SES",
         "AWS S3",
         "AWS CloudFront",
-        "AWS Route 53"
+        "AWS Route 53",
+        "discord.js"
     ],
     "contacts": {
         "Github": "https://github.com/AlanMorel",
@@ -163,12 +166,14 @@
                 "TypeScript",
                 "Tailwind",
                 "React",
+                "Vite",
                 "Electron",
                 "Bun",
                 "Node",
                 "Docker",
                 "Prisma",
-                "PostgreSQL"
+                "PostgreSQL",
+                "discord.js"
             ],
             "platforms": ["Web"],
             "links": [
@@ -219,7 +224,20 @@
             "date": "September 2017",
             "description": "Sabe is an online publisher for free high-quality classes, tutorials, tools, and resources on HTML, CSS, JavaScript, Vue, React, PHP, Python, Java, Docker, and more!",
             "images": 3,
-            "technologies": ["Bun", "Docker", "TanStack Start", "PostgreSQL", "TypeScript", "Tailwind", "Stripe"],
+            "technologies": [
+                "TanStack Start",
+                "TanStack Router",
+                "TypeScript",
+                "Tailwind",
+                "React",
+                "Vite",
+                "Bun",
+                "Node",
+                "Docker",
+                "Prisma",
+                "PostgreSQL",
+                "Stripe"
+            ],
             "platforms": ["Web"],
             "links": [
                 {

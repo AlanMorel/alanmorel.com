@@ -2,11 +2,13 @@ import AndroidIcon from "@/src/components/icons/AndroidIcon.tsx";
 import AngularIcon from "@/src/components/icons/AngularIcon.tsx";
 import APIIcon from "@/src/components/icons/APIIcon.tsx";
 import AWSIcon from "@/src/components/icons/AWSIcon.tsx";
+import BetterAuthIcon from "@/src/components/icons/BetterAuthIcon.tsx";
 import BunIcon from "@/src/components/icons/BunIcon.tsx";
 import ChromeIcon from "@/src/components/icons/ChromeIcon.tsx";
 import CordovaIcon from "@/src/components/icons/CordovaIcon.tsx";
 import CsharpIcon from "@/src/components/icons/CsharpIcon.tsx";
 import CSSIcon from "@/src/components/icons/CSSIcon.tsx";
+import DiscordIcon from "@/src/components/icons/DiscordIcon.tsx";
 import DockerIcon from "@/src/components/icons/DockerIcon.tsx";
 import ElectronIcon from "@/src/components/icons/ElectronIcon.tsx";
 import GameBoyAdvanceIcon from "@/src/components/icons/GameBoyAdvanceIcon.tsx";
@@ -37,6 +39,7 @@ import TailwindIcon from "@/src/components/icons/TailwindIcon.tsx";
 import TanStackIcon from "@/src/components/icons/TanStackIcon.tsx";
 import TwitterIcon from "@/src/components/icons/TwitterIcon.tsx";
 import TypeScriptIcon from "@/src/components/icons/TypeScriptIcon.tsx";
+import ViteIcon from "@/src/components/icons/ViteIcon.tsx";
 import VueIcon from "@/src/components/icons/VueIcon.tsx";
 import WebIcon from "@/src/components/icons/WebIcon.tsx";
 import WindowsIcon from "@/src/components/icons/WindowsIcon.tsx";
@@ -66,6 +69,8 @@ export default function getIcon(slug: string): ReactElement {
         case "aws route 53":
         case "aws ses":
             return <AWSIcon />;
+        case "better auth":
+            return <BetterAuthIcon />;
         case "bun":
             return <BunIcon />;
         case "cordova":
@@ -76,6 +81,8 @@ export default function getIcon(slug: string): ReactElement {
             return <CsharpIcon />;
         case "css":
             return <CSSIcon />;
+        case "discord.js":
+            return <DiscordIcon />;
         case "docker":
             return <DockerIcon />;
         case "electron":
@@ -149,6 +156,8 @@ export default function getIcon(slug: string): ReactElement {
             return <WebIcon />;
         case "windows":
             return <WindowsIcon />;
+        case "vite":
+            return <ViteIcon />;
         case "vue":
         case "vuex":
         case "vue router":
