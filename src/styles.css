@@ -87,6 +87,18 @@
             transform: translate(-50%, -50%) scale(0.95);
         }
     }
+
+    --animate-marquee: marquee 120s linear infinite;
+    --animate-marquee-reverse: marquee 120s linear infinite reverse;
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
 }
 
 @layer base {

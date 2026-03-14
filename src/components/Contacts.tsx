@@ -24,7 +24,7 @@ export default function Contacts(): ReactElement {
                 <li key={contact.type}>
                     <a
                         aria-label={`Link to my ${contact.type} profile`}
-                        className="group mx-4 mb-8 flex flex-col items-center gap-1 text-slate-500 transition hover:text-slate-800"
+                        className="group mx-4 flex flex-col items-center gap-1 text-slate-500 transition hover:text-slate-800"
                         href={contact.href}
                         rel="noopener noreferrer"
                         target="_blank"
@@ -39,7 +39,7 @@ export default function Contacts(): ReactElement {
             <li>
                 <a
                     aria-label="Link to my resume"
-                    className="group mx-4 mb-8 flex flex-col items-center gap-1 text-slate-500 transition hover:text-slate-800"
+                    className="group mx-4 flex flex-col items-center gap-1 text-slate-500 transition hover:text-slate-800"
                     href="/resume"
                     target="_blank"
                 >
