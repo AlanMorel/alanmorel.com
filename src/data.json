@@ -126,7 +126,7 @@
             "darkBackground": "#691b02",
             "theme": "light",
             "date": "Mar 2025",
-            "description": "Solaxia Online is a 2D top-down MMORPG written using React, TypeScript, Next.js, Phaser, and Electron. It is a passion project that combines my love of programming gaming.",
+            "description": "Solaxia Online is a 2D top-down MMORPG written using React, TypeScript, TanStack Start, Phaser, and Electron. It is a passion project that combines my love of programming gaming.",
             "images": 5,
             "technologies": [
                 "TanStack Start",

@@ -1,5 +1,6 @@
 import Contacts from "@/src/components/Contacts.tsx";
 import Intro from "@/src/components/Intro.tsx";
+import OpenSourceAside from "@/src/components/OpenSourceAside.tsx";
 import Projects from "@/src/components/projects/Projects.tsx";
 import SimpleHomepage from "@/src/components/SimpleHomepage.tsx";
 import StructuredData from "@/src/components/StructuredData.tsx";
@@ -34,6 +35,7 @@ function HomePage(): ReactElement {
         <main className="tracking-[0.025rem]">
             <Intro />
             <Contacts />
+            <OpenSourceAside />
             <Projects />
             <StructuredData data={organization} />
             <StructuredData data={website} />
