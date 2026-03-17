@@ -51,7 +51,7 @@ function ResumePage(): ReactElement {
 
     return (
         <div className="h-screen">
-            <PDFViewer width="100%" height="100%">
+            <PDFViewer height="100%" width="100%">
                 <ResumePDF resume={resume} />
             </PDFViewer>
         </div>
