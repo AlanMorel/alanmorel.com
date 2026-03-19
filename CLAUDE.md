@@ -18,33 +18,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This project uses **TanStack Start** (formerly TanStack Router), a full-stack React framework built on TanStack Router. Key characteristics:
 
 - **File-based routing**: Routes are defined in the `app/` directory
-  - `app/__root.tsx`: Root layout component with theme loader
-  - `app/index.tsx`: Home page (`/`)
-  - `app/resume.tsx`: Resume page (`/resume`)
-  - `app/$$.tsx`: 404 catch-all route
-  - Special route syntax: `sitemap[.]xml.ts`, `robots[.]txt.ts` for static files
+    - `app/__root.tsx`: Root layout component with theme loader
+    - `app/index.tsx`: Home page (`/`)
+    - `app/resume.tsx`: Resume page (`/resume`)
+    - `app/$$.tsx`: 404 catch-all route
+    - Special route syntax: `sitemap[.]xml.ts`, `robots[.]txt.ts` for static files
 
 - **Server functions**: Use `createServerFn()` from `@tanstack/react-start` for server-side operations
-  - Defined in `src/helpers/server/ServerFunctions.ts`
-  - Examples: `getTheme()`
+    - Defined in `src/helpers/server/ServerFunctions.ts`
+    - Examples: `getTheme()`
 
 - **Route metadata**: Use `head` property in routes for SEO meta tags and links
-  - Helper functions in `src/helpers/client/MetadataHelper.ts`
+    - Helper functions in `src/helpers/client/MetadataHelper.ts`
 
 - **API routes**: Located in `app/api/` directory
-  - Use `createFileRoute().server.handlers` pattern
-  - Example: `app/api/sharex.ts` handles POST requests for file uploads
+    - Use `createFileRoute().server.handlers` pattern
+    - Example: `app/api/sharex.ts` handles POST requests for file uploads
 
 ### Configuration Architecture
 
 Two separate config files with distinct purposes:
 
 - **`src/Config.ts`**: Client-safe configuration (app name, URLs, social links, meta info)
-  - Can be imported on both client and server
+    - Can be imported on both client and server
 
 - **`src/helpers/Config.ts`**: Server-only configuration (reads from environment variables)
-  - Contains secrets like `SHAREX_SECRET`
-  - Never import this in client-side code
+    - Contains secrets like `SHAREX_SECRET`
+    - Never import this in client-side code
 
 ### Routing & Code Generation
 
@@ -78,9 +78,9 @@ Two separate config files with distinct purposes:
 
 - **Vite + Nitro**: Uses Vite for bundling, Nitro preset for Node.js server
 - **Docker**: Multi-stage build (see `Dockerfile`)
-  - Base: `oven/bun:1.2`
-  - Runs type checking and build
-  - Production image only includes `.output/` and `node_modules/`
+    - Base: `oven/bun:1.2`
+    - Runs type checking and build
+    - Production image only includes `.output/` and `node_modules/`
 
 ### Data Management
 
