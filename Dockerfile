@@ -24,5 +24,6 @@ FROM base AS app
 COPY --from=deps /temp/prod/node_modules ./node_modules
 COPY --from=builder /usr/src/app/.output ./.output
 COPY --from=builder /usr/src/app/.env ./.env
+COPY --from=builder /usr/src/app/files/ai ./files/ai
 
 CMD ["bun", ".output/server/index.mjs"]
