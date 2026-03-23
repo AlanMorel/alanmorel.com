@@ -41,7 +41,7 @@
         "@typescript-eslint/no-unsafe-function-type": "error",
         "no-unused-expressions": "error",
         "no-unused-vars": [
-            "warn",
+            "error",
             {
                 "argsIgnorePattern": "^_",
                 "varsIgnorePattern": "^_"

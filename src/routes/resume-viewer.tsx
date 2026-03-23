@@ -6,30 +6,6 @@ import { PDFViewer } from "@react-pdf/renderer";
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactElement } from "react";
 
-export type Resume = {
-    header: string;
-    links: {
-        name: string;
-        url: string;
-    }[];
-    skills: string[];
-    experience: {
-        organization: string;
-        title: string;
-        date: string;
-        achievements: string[];
-    }[];
-    projects: {
-        name: string;
-        description: string;
-    }[];
-    education: {
-        university: string;
-        college: string;
-        description: string;
-    }[];
-};
-
 export const Route = createFileRoute("/resume-viewer")({
     head: () =>
         getHead({
