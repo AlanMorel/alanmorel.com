@@ -162,6 +162,7 @@
                 "TanStack Start",
                 "TanStack Router",
                 "TypeScript",
+                "Better Auth",
                 "Tailwind",
                 "React",
                 "Vite",
@@ -396,7 +397,7 @@
             "description": "Zhigly is a hub where you can connect with your college campus. Look for items to buy or sell, browse upcoming on-campus events, search for jobs, internships, opportunities, look for housing, and more.",
             "images": 3,
             "technologies": [
-                "ASP.NET",
+                ".NET",
                 "C#",
                 "JavaScript",
                 "HTML",
