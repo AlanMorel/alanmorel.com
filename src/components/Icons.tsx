@@ -1,6 +1,7 @@
 import AndroidIcon from "@/src/components/icons/AndroidIcon.tsx";
 import AngularIcon from "@/src/components/icons/AngularIcon.tsx";
 import APIIcon from "@/src/components/icons/APIIcon.tsx";
+import AppleIcon from "@/src/components/icons/AppleIcon.tsx";
 import AWSIcon from "@/src/components/icons/AWSIcon.tsx";
 import BetterAuthIcon from "@/src/components/icons/BetterAuthIcon.tsx";
 import BunIcon from "@/src/components/icons/BunIcon.tsx";
@@ -18,7 +19,6 @@ import HTMLIcon from "@/src/components/icons/HTMLIcon.tsx";
 import JavaIcon from "@/src/components/icons/JavaIcon.tsx";
 import JavaScriptIcon from "@/src/components/icons/JavaScriptIcon.tsx";
 import LinuxIcon from "@/src/components/icons/LinuxIcon.tsx";
-import MacIcon from "@/src/components/icons/MacIcon.tsx";
 import MDXIcon from "@/src/components/icons/MDXIcon.tsx";
 import MongoDBIcon from "@/src/components/icons/MongoDBIcon.tsx";
 import MySQLIcon from "@/src/components/icons/MySQLIcon.tsx";
@@ -37,7 +37,6 @@ import StripeIcon from "@/src/components/icons/StripeIcon.tsx";
 import StylusIcon from "@/src/components/icons/StylusIcon.tsx";
 import TailwindIcon from "@/src/components/icons/TailwindIcon.tsx";
 import TanStackIcon from "@/src/components/icons/TanStackIcon.tsx";
-import TwitterIcon from "@/src/components/icons/TwitterIcon.tsx";
 import TypeScriptIcon from "@/src/components/icons/TypeScriptIcon.tsx";
 import ViteIcon from "@/src/components/icons/ViteIcon.tsx";
 import VueIcon from "@/src/components/icons/VueIcon.tsx";
@@ -103,7 +102,7 @@ export default function getIcon(slug: string): ReactElement {
         case "linux":
             return <LinuxIcon />;
         case "mac":
-            return <MacIcon />;
+            return <AppleIcon />;
         case "mdx":
             return <MDXIcon />;
         case "mongodb":
@@ -112,7 +111,6 @@ export default function getIcon(slug: string): ReactElement {
             return <MySQLIcon />;
         case "next.js":
             return <NextjsIcon />;
-        case "asp.net":
         case ".net":
             return <NETIcon />;
         case "express":
@@ -148,8 +146,6 @@ export default function getIcon(slug: string): ReactElement {
             return <TanStackIcon />;
         case "tailwind":
             return <TailwindIcon />;
-        case "twitter":
-            return <TwitterIcon />;
         case "typescript":
             return <TypeScriptIcon />;
         case "web":

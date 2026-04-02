@@ -1,13 +1,6 @@
-import Icon from "@/src/components/icons/Icon.tsx";
+import { SiNodedotjs } from "@icons-pack/react-simple-icons";
 import type { ReactElement } from "react";
 
 export default function NodeIcon(): ReactElement {
-    return (
-        <Icon viewBox="16 16">
-            <path
-                d="M7.623.101l-6.246 3.62A.757.757 0 0 0 1 4.377v7.244c0 .27.144.52.377.655L7.624 15.9a.754.754 0 0 0 .754 0l6.245-3.623a.76.76 0 0 0 .377-.655V4.377c0-.27-.144-.52-.378-.656L8.378.1a.757.757 0 0 0-.756 0"
-                fill="#339933"
-            />
-        </Icon>
-    );
+    return <SiNodedotjs color="#5FA04E" height={20} />;
 }
