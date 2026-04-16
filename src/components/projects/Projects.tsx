@@ -1,3 +1,5 @@
+"use client";
+
 import type { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import { useTheme } from "@/src/atoms/ThemeAtom.ts";
 import cn from "@/src/components/other/TailwindHelper.ts";

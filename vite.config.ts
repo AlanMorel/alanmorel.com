@@ -1,6 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import react from "@vitejs/plugin-react";
+import rsc from "@vitejs/plugin-rsc";
 import { nitro } from "nitro/vite";
 import { resolve } from "node:path";
 import type { AliasOptions } from "vite";
@@ -12,7 +13,7 @@ const alias: AliasOptions = {
 
 export default defineConfig({
     plugins: [
-        tanstackStart(),
+        tanstackStart({ rsc: { enabled: true } }),
         nitro({
             preset: "bun",
             alias,
@@ -23,9 +24,13 @@ export default defineConfig({
                 brotli: true
             }
         }),
+        rsc(),
         react(),
         tailwindcss()
     ],
+    optimizeDeps: {
+        exclude: ["lucide-react"]
+    },
     server: {
         port: 8080
     },

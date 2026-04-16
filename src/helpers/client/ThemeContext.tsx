@@ -1,3 +1,5 @@
+"use client";
+
 import { themeAtom } from "@/src/atoms/ThemeAtom.ts";
 import { useAtom } from "jotai";
 import type { ReactElement, ReactNode } from "react";

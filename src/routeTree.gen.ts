@@ -13,7 +13,6 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as ResumeViewerRouteImport } from './routes/resume-viewer'
 import { Route as ResumeRouteImport } from './routes/resume'
-import { Route as AiRouteImport } from './routes/ai'
 import { Route as SplatRouteImport } from './routes/$$'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as FilesSplatRouteImport } from './routes/files.$'
@@ -37,11 +36,6 @@ const ResumeViewerRoute = ResumeViewerRouteImport.update({
 const ResumeRoute = ResumeRouteImport.update({
   id: '/resume',
   path: '/resume',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AiRoute = AiRouteImport.update({
-  id: '/ai',
-  path: '/ai',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SplatRoute = SplatRouteImport.update({
@@ -68,7 +62,6 @@ const ApiSharexRoute = ApiSharexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$$': typeof SplatRoute
-  '/ai': typeof AiRoute
   '/resume': typeof ResumeRoute
   '/resume-viewer': typeof ResumeViewerRoute
   '/robots.txt': typeof RobotsDottxtRoute
@@ -79,7 +72,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$$': typeof SplatRoute
-  '/ai': typeof AiRoute
   '/resume': typeof ResumeRoute
   '/resume-viewer': typeof ResumeViewerRoute
   '/robots.txt': typeof RobotsDottxtRoute
@@ -91,7 +83,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$$': typeof SplatRoute
-  '/ai': typeof AiRoute
   '/resume': typeof ResumeRoute
   '/resume-viewer': typeof ResumeViewerRoute
   '/robots.txt': typeof RobotsDottxtRoute
@@ -104,7 +95,6 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/$$'
-    | '/ai'
     | '/resume'
     | '/resume-viewer'
     | '/robots.txt'
@@ -115,7 +105,6 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/$$'
-    | '/ai'
     | '/resume'
     | '/resume-viewer'
     | '/robots.txt'
@@ -126,7 +115,6 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/$$'
-    | '/ai'
     | '/resume'
     | '/resume-viewer'
     | '/robots.txt'
@@ -138,7 +126,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
-  AiRoute: typeof AiRoute
   ResumeRoute: typeof ResumeRoute
   ResumeViewerRoute: typeof ResumeViewerRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
@@ -177,13 +164,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResumeRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ai': {
-      id: '/ai'
-      path: '/ai'
-      fullPath: '/ai'
-      preLoaderRoute: typeof AiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/$$': {
       id: '/$$'
       path: '/$$'
@@ -218,7 +198,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
-  AiRoute: AiRoute,
   ResumeRoute: ResumeRoute,
   ResumeViewerRoute: ResumeViewerRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,

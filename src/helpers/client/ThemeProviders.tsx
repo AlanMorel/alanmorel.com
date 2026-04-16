@@ -1,3 +1,5 @@
+"use client";
+
 import type { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import { themeAtom } from "@/src/atoms/ThemeAtom.ts";
 import ThemeContext from "@/src/helpers/client/ThemeContext.tsx";

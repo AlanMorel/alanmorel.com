@@ -1,3 +1,5 @@
+"use client";
+
 import GitHubIcon from "@/src/components/icons/GitHubIcon.tsx";
 import LinkedInIcon from "@/src/components/icons/LinkedInIcon.tsx";
 import config from "@/src/Config.ts";

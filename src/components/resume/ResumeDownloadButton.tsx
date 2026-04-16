@@ -1,3 +1,5 @@
+"use client";
+
 import ResumePDF from "@/src/components/resume/Resume.tsx";
 import DataJSON from "@/src/data.json" with { type: "json" };
 import { pdf } from "@react-pdf/renderer";
