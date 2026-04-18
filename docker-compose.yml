@@ -7,6 +7,8 @@ services:
             context: .
             dockerfile: Dockerfile
             target: app
+        env_file:
+            - .env
         volumes:
             - ./logs:/usr/src/app/logs
             - ./files:/usr/src/app/files
