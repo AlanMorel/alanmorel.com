@@ -1,10 +1,9 @@
 import type { ThemeState } from "@/src/atoms/ThemeAtom.ts";
+import logger from "@/src/helpers/server/Logger.ts";
 import redirects from "@/src/redirects.json";
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { parseCookie } from "cookie";
-import { promises as fs } from "node:fs";
-import path from "node:path";
 
 interface Redirect {
     source: string;
@@ -22,18 +21,11 @@ export const getRedirect = createServerFn({ method: "GET" })
 
             return redirectConfig || null;
         } catch (error) {
-            console.error("Error reading redirects:", error);
+            logger.error(`Error reading redirects: ${error}`);
+
             return null;
         }
     });
-
-export const getAIImages = createServerFn({ method: "GET" }).handler(async (): Promise<string[]> => {
-    const imagesDirectory = path.join(process.cwd(), "files", "ai");
-
-    const images = await fs.readdir(imagesDirectory);
-
-    return images.map(image => `/files/ai/${image}`);
-});
 
 export const getTheme = createServerFn().handler((): ThemeState => {
     const headers = getRequestHeaders();

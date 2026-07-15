@@ -5,6 +5,7 @@ import { themeAtom } from "@/src/atoms/ThemeAtom.ts";
 import ThemeContext from "@/src/helpers/client/ThemeContext.tsx";
 import { createStore, Provider as JotaiProvider } from "jotai";
 import type { ReactElement, ReactNode } from "react";
+import { useState } from "react";
 
 interface Props {
     children: ReactNode;
@@ -14,9 +15,13 @@ interface Props {
 export default function ThemeProviders(props: Readonly<Props>): ReactElement {
     const { children, initialTheme } = props;
 
-    const store = createStore();
+    const [store] = useState(() => {
+        const newStore = createStore();
 
-    store.set(themeAtom, initialTheme);
+        newStore.set(themeAtom, initialTheme);
+
+        return newStore;
+    });
 
     return (
         <JotaiProvider store={store}>

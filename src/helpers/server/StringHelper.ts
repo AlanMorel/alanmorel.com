@@ -1,19 +1,16 @@
+import { randomBytes, timingSafeEqual } from "node:crypto";
+
 export function compareStrings(a: string, b: string): boolean {
-    if (a.length !== b.length) {
+    const bufferA = Buffer.from(a);
+    const bufferB = Buffer.from(b);
+
+    if (bufferA.length !== bufferB.length) {
         return false;
     }
-    let x = 0;
-    for (let i = 0; i < a.length; i++) {
-        x |= parseInt(a.charAt(i)) ^ parseInt(b.charAt(i));
-    }
-    return x === 0;
+
+    return timingSafeEqual(bufferA, bufferB);
 }
 
 export function getRandomFilename(length: number): string {
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    let result = "";
-    for (let i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    return result;
+    return randomBytes(length).toString("hex").slice(0, length);
 }

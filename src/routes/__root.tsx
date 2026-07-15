@@ -6,6 +6,11 @@ import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import type { ReactElement, ReactNode } from "react";
 
 export const Route = createRootRoute({
+    loader: async () => {
+        const theme = await getTheme();
+
+        return { theme };
+    },
     head: () => ({
         links: [
             {
@@ -14,11 +19,6 @@ export const Route = createRootRoute({
             }
         ]
     }),
-    loader: async () => {
-        const theme = await getTheme();
-
-        return { theme };
-    },
     shellComponent: RootComponent
 });
 
@@ -26,7 +26,7 @@ function RootComponent({ children }: Readonly<{ children: ReactNode }>): ReactEl
     const { theme } = Route.useLoaderData();
 
     return (
-        <html className="font-inter" lang="en" suppressHydrationWarning>
+        <html className="font-text" lang="en" suppressHydrationWarning>
             <head>
                 <HeadContent />
             </head>

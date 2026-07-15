@@ -15,7 +15,7 @@ export default function ResumeContent(props: Readonly<Props>): ReactElement {
     return (
         <div className="bg-slate-50 text-sm text-black lg:min-h-screen lg:pt-20">
             <div className="mx-auto mb-4 flex w-full justify-center py-2 print:hidden">{renderDownloadButton?.()}</div>
-            <div className="mx-auto box-border w-full border border-slate-200 bg-white p-4 lg:h-[1056px] lg:w-[816px] lg:px-12 lg:py-8 dark:border-slate-800 print:border-0">
+            <div className="mx-auto box-border w-full border border-slate-200 bg-white p-4 lg:h-264 lg:w-204 lg:px-12 lg:py-8 dark:border-slate-800 print:border-0">
                 <div className="mb-4 inline-flex w-full flex-wrap justify-center space-x-4">
                     {resume.links.map(link => (
                         <a className="hover:underline" href={link.url} key={link.name}>

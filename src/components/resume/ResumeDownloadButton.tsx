@@ -28,6 +28,7 @@ export default function ResumeDownloadButton(): ReactElement {
             onClick={(): void => {
                 void downloadPDF(resume, fileName);
             }}
+            type="button"
         >
             Download PDF
         </button>

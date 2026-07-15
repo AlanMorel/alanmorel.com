@@ -54,7 +54,7 @@ export default function Projects(): ReactElement {
                 <li key={project.name} style={{ backgroundColor: getBackground(project, theme) }}>
                     <div
                         className={cn(
-                            "mx-auto grid max-w-[70rem] grid-cols-[1fr_4fr] grid-rows-[auto__auto] gap-x-4 px-4 pt-4 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pt-8 sm:pb-4 ",
+                            "mx-auto grid max-w-280 grid-cols-[1fr_4fr] grid-rows-[auto__auto] gap-x-4 px-4 pt-4 sm:grid-rows-[auto] sm:gap-x-8 sm:px-8 sm:pt-8 sm:pb-4 ",
                             getTheme(project, theme)
                         )}
                     >
@@ -68,7 +68,7 @@ export default function Projects(): ReactElement {
                         </div>
                         <div className="mb-2 text-left">
                             <div>
-                                <h2 className="highlight mt--3 mb-2 inline-flex text-3xl font-bold sm:mb-4 sm:text-6xl">
+                                <h2 className="highlight -mt-3 mb-2 inline-flex text-3xl font-bold sm:mb-4 sm:text-6xl">
                                     {project.name}
                                 </h2>
                                 <div className="mx-0 mt-1 mb-2 text-sm font-bold sm:text-base">

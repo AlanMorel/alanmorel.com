@@ -32,7 +32,7 @@ export default function Contacts(): ReactElement {
     return (
         <ul className="my-4 flex list-none flex-wrap justify-center">
             <li>
-                <button aria-label="Send me an email" className={buttonClasses} onClick={handleEmailClick}>
+                <button aria-label="Send me an email" className={buttonClasses} onClick={handleEmailClick} type="button">
                     <div className="size-10">
                         <Mail className="size-full" />
                     </div>
