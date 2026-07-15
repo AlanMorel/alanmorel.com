@@ -11,6 +11,7 @@
         "url": "https://github.com/AlanMorel/alanmorel.com.git"
     },
     "scripts": {
+        "prepare": "husky",
         "dev": "vite dev",
         "build": "NODE_ENV=production vite build",
         "start": "PORT=8080 node .output/server/index.mjs",
@@ -60,6 +61,7 @@
         "eslint-plugin-no-relative-import-paths": "^1.6.1",
         "eslint-plugin-perfectionist": "^5.10.0",
         "eslint-plugin-security": "^4.0.1",
+        "eslint-plugin-sonarjs": "^4.1.0",
         "eslint-plugin-tailwindcss": "^4.1.0",
         "husky": "^9.1.7",
         "knip": "^6.26.0",
