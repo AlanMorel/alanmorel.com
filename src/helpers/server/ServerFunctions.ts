@@ -2,7 +2,7 @@ import type { ThemeState } from "@/src/atoms/ThemeAtom.ts";
 import redirects from "@/src/redirects.json";
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
-import cookie from "cookie";
+import { parseCookie } from "cookie";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
@@ -13,7 +13,7 @@ interface Redirect {
 }
 
 export const getRedirect = createServerFn({ method: "GET" })
-    .inputValidator((data: { pathname: string }) => data)
+    .validator((data: { pathname: string }) => data)
     .handler(async ({ data }): Promise<Redirect | null> => {
         const { pathname } = data;
 
@@ -38,7 +38,7 @@ export const getAIImages = createServerFn({ method: "GET" }).handler(async (): P
 export const getTheme = createServerFn().handler((): ThemeState => {
     const headers = getRequestHeaders();
 
-    const cookies = cookie.parse(headers.get("cookie") || "");
+    const cookies = parseCookie(headers.get("cookie") || "");
 
     const theme = cookies.theme;
 
