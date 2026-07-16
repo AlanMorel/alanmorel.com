@@ -11,7 +11,7 @@
         "url": "https://github.com/AlanMorel/alanmorel.com.git"
     },
     "scripts": {
-        "prepare": "husky",
+        "husky": "husky",
         "dev": "vite dev",
         "build": "NODE_ENV=production vite build",
         "start": "PORT=8080 node .output/server/index.mjs",
