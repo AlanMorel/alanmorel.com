@@ -23,7 +23,9 @@ export default defineConfig({
             compressPublicAssets: {
                 gzip: true,
                 brotli: true
-            }
+            },
+            // Avoid Rolldown/Vite 8.2 undeclared ssr_exports 500s (TanStack/router#8031).
+            inlineDynamicImports: true
         }),
         rsc(),
         react(),
