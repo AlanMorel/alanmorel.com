@@ -9,7 +9,7 @@ import type { AliasOptions } from "vite";
 import { defineConfig } from "vite";
 
 const alias: AliasOptions = {
-    "@": resolve(__dirname, ".")
+    "@": resolve(import.meta.dirname, ".")
 };
 
 export default defineConfig({
