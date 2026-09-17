@@ -1,7 +1,6 @@
-import babel from "@rolldown/plugin-babel";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-import react, { reactCompilerPreset } from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react";
 import rsc from "@vitejs/plugin-rsc";
 import { nitro } from "nitro/vite";
 import { resolve } from "node:path";
@@ -14,7 +13,11 @@ const alias: AliasOptions = {
 
 export default defineConfig({
     plugins: [
-        tanstackStart({ rsc: { enabled: true } }),
+        tanstackStart({
+            rsc: {
+                enabled: true
+            }
+        }),
         nitro({
             preset: "bun",
             alias,
@@ -23,15 +26,10 @@ export default defineConfig({
             compressPublicAssets: {
                 gzip: true,
                 brotli: true
-            },
-            // Avoid Rolldown/Vite 8.2 undeclared ssr_exports 500s (TanStack/router#8031).
-            inlineDynamicImports: true
+            }
         }),
         rsc(),
-        react(),
-        babel({
-            presets: [reactCompilerPreset()]
-        }),
+        react({ compiler: true }),
         tailwindcss()
     ],
     optimizeDeps: {

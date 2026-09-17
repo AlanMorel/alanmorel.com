@@ -1,4 +1,4 @@
-FROM oven/bun:1.2 AS base
+FROM oven/bun:1.3.2 AS base
 
 WORKDIR /usr/src/app
 
@@ -24,6 +24,8 @@ FROM base AS app
 COPY --from=deps --chown=bun:bun /temp/prod/node_modules ./node_modules
 COPY --from=builder --chown=bun:bun /usr/src/app/.output ./.output
 COPY --from=builder --chown=bun:bun /usr/src/app/files/ai ./files/ai
+
+RUN mkdir -p logs && chown bun:bun logs
 
 USER bun
 
