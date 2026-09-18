@@ -14,6 +14,8 @@ interface Props {
 }
 
 export default function HomePageContent(props: Readonly<Props>): ReactElement {
+    const { renderContacts, renderProjects } = props;
+
     const technologyHighlight: PillItem[] = data.technologies.map(tech => ({
         icon: getIcon(tech.toLowerCase()),
         label: tech
@@ -22,7 +24,7 @@ export default function HomePageContent(props: Readonly<Props>): ReactElement {
     return (
         <main className="tracking-[0.025rem]">
             <Intro />
-            {props.renderContacts?.()}
+            {renderContacts?.()}
             <section className="py-8">
                 <div className="flex flex-col gap-2">
                     <PillCarousel pills={technologyHighlight} />
@@ -30,7 +32,7 @@ export default function HomePageContent(props: Readonly<Props>): ReactElement {
                 </div>
             </section>
             <OpenSourceAside />
-            {props.renderProjects?.()}
+            {renderProjects?.()}
             <StructuredData data={organization} />
             <StructuredData data={website} />
         </main>

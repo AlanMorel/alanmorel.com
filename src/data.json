@@ -128,10 +128,6 @@
         ],
         "projects": [
             {
-                "name": "Solaxia Online MMORPG",
-                "description": "is a 2D top-down MMORPG written using React, TypeScript, TanStack Start, Phaser, and Electron. It is a passion project that combines my love of programming gaming. It is a mono-repo with multiple packages including the server, client, website, Discord bot, and shared utilities."
-            },
-            {
                 "name": "Sabe.io",
                 "description": "is a publisher where I write high-quality classes, tutorials, and resources on web development and tech. My content reaches thousands of people a day across the site and shares on social media."
             },
