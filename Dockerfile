@@ -4,29 +4,35 @@ WORKDIR /usr/src/app
 
 ENV NODE_ENV=production
 
-FROM base AS deps
+FROM base AS install
 
-WORKDIR /temp/prod
+RUN mkdir -p /temp
 
-COPY package.json bun.lock ./
+COPY package.json bun.lock /temp/
 
-RUN bun install --frozen-lockfile --production
+WORKDIR /temp
 
-FROM base AS builder
+RUN --mount=type=cache,target=/root/.bun/install/cache \
+    bun install --frozen-lockfile
 
-COPY --from=deps /temp/prod/node_modules ./node_modules
+FROM base AS build
+
+COPY --from=install /temp/node_modules ./node_modules
+
 COPY . .
 
 RUN bun ts:check && bun run build
 
-FROM base AS app
+FROM oven/bun:1.4-slim AS app
 
-COPY --from=deps --chown=bun:bun /temp/prod/node_modules ./node_modules
-COPY --from=builder --chown=bun:bun /usr/src/app/.output ./.output
-COPY --from=builder --chown=bun:bun /usr/src/app/files/ai ./files/ai
+WORKDIR /usr/src/app
 
 RUN mkdir -p logs && chown bun:bun logs
 
 USER bun
+
+COPY --chown=bun:bun files/ai ./files/ai
+
+COPY --chown=bun:bun --from=build /usr/src/app/.output ./.output
 
 CMD ["bun", ".output/server/index.mjs"]
